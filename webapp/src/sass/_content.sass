@@ -1,0 +1,2432 @@
+
+/* 컴파일되는
+	* 여러 줄
+	* 주석 */
+// variable
+$frontColor: #00cdff
+$backColor: #7d14ff
+$black: #000000
+$white: #ffffff
+$bgColor: #0d1c2f
+$bgColor02: #6414ff
+$bgColor03: #171718
+$bgColor04: #0e1c30
+$bgColor05: #0091ff
+$lightGray: #575757
+$wrongColor: #ff3eb5
+$point: #87fa82
+$darkGray: #c9c9c9
+
+
+//mixin
+=NotoSans ()
+	font-family: 'Noto Sans KR', sans-serif
+
+=colorGradation()
+	background: linear-gradient(to right, $frontColor, $backColor)
+	color: transparent
+	-webkit-background-clip: text
+	font-family: 'Noto Sans KR black', sans-serif
+
+=borderGradient()
+    border: 1px solid transparent
+    background-image: linear-gradient($bgColor, $bgColor), linear-gradient(100deg, $frontColor, $backColor)
+    background-origin: border-box
+    background-clip: content-box, border-box
+
+=font12()
+	font-size: 12px
+	letter-spacing: -0.24px
+	line-height: 1.4
+	font-family: 'Noto Sans KR bold'
+=font14()
+	font-size: 14px
+	letter-spacing: -0.28px
+	line-height: 1.4
+	font-family: 'Noto Sans KR bold'
+=font16()
+	font-size: 16px
+	line-height: 25px
+	letter-spacing: -0.32px
+	font-family: 'Noto Sans KR bold'
+=font24Gradation()
+	+colorGradation()
+	font-size: 24px
+	line-height: 1.6
+	letter-spacing: -0.48px
+=font24()
+	font-size: 24px
+	line-height: 1.6
+	letter-spacing: -0.48px
+	font-family: 'Noto Sans KR bold'
+=font44()
+	+colorGradation()
+	font-size: 44px
+	line-height: 1.1
+	letter-spacing: -0.88px
+=moreArrow()
+	width: 10px
+	height: 10px
+	border-top: 1px solid $white
+	border-right: 1px solid $white
+	transform: rotate(45deg)
+
+/************** Common ***************/
+#content
+	padding-top: 90px
+.quickMenu
+	width: 89.4%
+	position: fixed
+	bottom: 30px
+	left: 50%
+	transform: translateX(-50%)
+	display: flex
+	justify-content: space-around
+	background-color: rgba(100, 20, 255, 0.4)
+	padding: 16px 21px
+	border-radius: 25px
+	z-index: 10
+
+	li
+		position: relative
+		a
+			display: block
+			width: 30px
+			height: 48px
+			font-size: 12px
+			display: flex
+			align-items:  center
+			color: $white
+			font-family: 'Noto Sans KR bold'
+			letter-spacing: -0.24px
+			text-indent: -9999px
+			padding: 13px 0
+		&.on
+			
+			&:before 
+				content: ""
+				background: linear-gradient( 100deg, $frontColor, $backColor )
+				position: absolute
+				top: 0
+				left: 0
+				width: 110px
+				height: 48px
+				border-radius: 14px
+				z-index: -1
+				transition: .3s
+			a
+				text-align: center
+				text-indent: 0
+				width: 110px
+				height: 48px
+				border-radius: 14px
+				padding-left: 40px
+				line-height: 1.4
+
+		&.menuHome
+			a
+				background: url("../images/icon_home.png")
+				background-repeat: no-repeat
+				background-position: center
+			&.on
+				a
+					background-position: 15px center
+					padding-left: 52px
+
+		&.menuTicket
+			a
+				background: url("../images/icon_ticket.png")
+				background-repeat: no-repeat
+				background-position: center
+			&.on
+				a
+					background-position: 14px center
+					padding-left: 45px
+					padding-right: 10px
+		&.menuEvent
+			a
+				background: url("../images/icon_cart.png")
+				background-repeat: no-repeat
+				background-position: center
+			&.on
+				a
+					background-position: 11px center
+					
+		&.menuMad
+			a
+				background: url("../images/icon_mad.png")
+				background-repeat: no-repeat
+				background-position: center
+			&.on
+				a
+					background-position: 10px center
+.arrowBtn
+	display: block
+	margin: 0 auto
+	color: $white
+	margin-top: 30px
+	width: 189px
+	height: 50px
+	line-height: 50px
+	background-color: $bgColor02
+	border-radius: 30px
+	font-size: 16px
+	letter-spacing: -0.32px
+	font-family: 'Noto Sans KR black', sans-serif
+	padding-right: 20px
+	position: relative
+	&:after
+		content: ""
+		width: 10px
+		height: 10px
+		border-top: 1px solid $white
+		border-right: 1px solid $white
+		position: absolute
+		top: 20px
+		right: 45px
+		transform: rotate(45deg)
+.goBtn
+	display: block
+	margin: 0 auto
+	color: $white
+	margin-top: 30px
+	width: 218px
+	height: 50px
+	line-height: 50px
+	background-color: $bgColor02
+	border-radius: 30px
+	font-size: 16px
+	letter-spacing: -0.32px
+	font-family: 'Noto Sans KR bold'
+.closeBtn
+	display: block
+	position: absolute
+	top: -58px
+	left: 50%
+	width: 40px
+	height: 40px
+	border-radius: 50%
+	background-color: $white
+	transform: translateX(-50%)
+	text-indent: -9999px
+	&::before
+		content: ""
+		width: 20px
+		height: 1px
+		background-color: $black
+		position: absolute
+		top: 20px
+		left: 10px
+		transform: rotate(-45deg)
+	&::after
+		content: ""
+		width: 20px
+		height: 1px
+		background-color: $black
+		position: absolute
+		top: 20px
+		left: 10px
+		transform: rotate(45deg)
+.subTitle
+	text-align: center
+	dt
+		font-size: 16px
+		line-height: 25px
+		letter-spacing: -0.32px
+		font-family: 'Noto Sans KR bold'
+	dd
+		+colorGradation()
+		margin-top: 10px
+		font-size: 44px
+		line-height: 1.1
+		letter-spacing: -0.88px
+.eventNotice
+	margin-top: 80px
+	padding: 30px 8% 80px 8%
+	background-color: $bgColor03
+	h5
+		font-size: 12px
+		font-weight: bold
+		letter-spacing: -0.24px
+		line-height: 1.4
+	ul
+		margin-top: 10px
+		li
+			font-size: 12px
+			letter-spacing: -0.24px
+			color: $lightGray
+			line-height: 1.4
+			position: relative
+			padding-left: 10px
+			font-family: 'Noto Sans KR bold'
+			&::before
+				content: ""
+				position: absolute
+				top: 6px
+				left: 0
+				width: 3px
+				height: 3px
+				border-radius: 50%
+				background-color: $lightGray
+.alertWin
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0.7)
+	display: none
+	&.on
+		display: block
+	& > div
+		text-align: center
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translateX(-50%) translateY(-50%)
+		width: 84%
+		height: 240px
+		background-color: $white
+		border-radius: 30px
+		padding-top: 40px 
+		dl
+			dt
+				+colorGradation()
+				font-size: 24px
+				line-height: 1.2
+				letter-spacing: -0.48
+			dd
+				margin-top: 10px
+				font-size: 14px
+				letter-spacing: -0.28px
+				color: $black
+				font-family: 'Noto Sans KR bold'
+		div
+			display: flex
+			padding: 0 15px
+			.goBtn
+				width: 110px
+			.arrowBtn
+				background-color: $lightGray
+				margin-left: 4px
+.cartBtn
+	margin: 0 auto
+	margin-top: 20px
+	width: 230px
+	height: 79px
+	position: relative
+	border-radius: 30px
+	display: block
+	color: $white
+	background: url("../images/upload.png") no-repeat 0 0
+	background-position: center 11px
+	padding: 48px 11px 11px
+	font-size: 14px
+	letter-spacing: -0.28px
+	line-height: 1.4
+	font-family: 'Noto Sans KR bold'
+	
+	span
+		text-indent: -9999px
+		+borderGradient()
+		z-index: -1
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 30px
+.userInfo
+	padding-bottom: 63px
+	margin-bottom: 50px
+	position: relative
+	&::after
+		content: ""
+		width: 100%
+		height: 2px
+		position: absolute
+		bottom: 0
+		left: 0
+		background: linear-gradient(100deg, $frontColor, $backColor)
+	.olklPass
+		div
+			text-align: center
+			font-size: 14px
+			line-height: 1.4
+			letter-spacing: -0.28px
+			font-family: 'Noto Sans KR bold'
+			&:first-child
+				margin-bottom: 10px
+
+	h4
+		margin-top: 30px
+		+colorGradation()
+		font-size: 24px
+		line-height: 1.6
+		letter-spacing: -0.48px
+		font-weight: bold
+		width: 100%
+		text-align: center
+	.userInfo-input
+		margin-top: 10px
+		div
+			width: 100%
+			height: 54px
+			border-radius: 10px
+			margin-top: 31px
+			position: relative
+			strong
+				display: none
+			em
+				font-size: 12px
+				color: $wrongColor
+				position: absolute
+				right: 12px
+				top: 16px
+			&:first-child
+				margin-top: 0
+			&.wrongValue
+				border: 1px solid $wrongColor
+				.effect-24:focus ~ .focus-bg:after,
+				.has-content.effect-24 ~ .focus-bg::after,
+				.effect-24 ~ .focus-bg::after,	
+				.effect-24:focus ~ .focus-bg:before,
+				.has-content.effect-24 ~ .focus-bg:before
+					display: none
+				strong
+					display: block
+					position: absolute
+					bottom: -22px
+					left: 0
+					color: $wrongColor
+					font-size: 12px
+					letter-spacing: -0.24px
+					line-height: 1.4
+
+			input
+				background-color: transparent
+				line-height: 54px
+				height: 54px
+				width: 100%
+				border-radius: 10px
+				padding-left: 20px
+				font-weight: bold
+				font-size: 14px
+				letter-spacing: -0.28px
+				color: $darkGray
+				position: relative
+				border: 0
+				z-index: 2
+				
+			.effect-24
+				border: 0
+				padding: 7px 15px
+				position: relative
+				background: transparent
+			.effect-24 ~ .focus-bg::after
+				content: ""
+				position: absolute
+				left: 0px
+				top: -1px
+				border-radius: 10px
+				transition: 0.3s
+				padding: 1px
+				width: 99%
+				height: 50px
+				border: 1px solid $lightGray
+				box-sizing: content-box
+			.effect-24 ~ .focus-bg:before
+				content: ""
+				position: absolute
+				left: 50%
+				top: 50%
+				width: 0
+				height: 0
+				transition: 0.3s
+				border-radius: 10px
+				background: linear-gradient(100deg, $frontColor, $backColor)
+				opacity: 0.2
+			.effect-24:focus ~ .focus-bg:after,
+			.has-content.effect-24 ~ .focus-bg::after
+				width: 100%
+				transition: 0.3s
+				left: -2px
+				top: -2px
+				height: 51px
+				+borderGradient()
+			.effect-24:focus ~ .focus-bg:before,
+			.has-content.effect-24 ~ .focus-bg:before
+				transition: 0.3s
+				width: 100%
+				left: 0
+				top: 0
+				height: 100%
+			.effect-24 ~ label
+				position: absolute
+				left: 14px
+				width: 100%
+				top: 15px
+				color: transparent
+				transition: 0.3s
+				z-index: -2
+				font-weight: bold
+				letter-spacing: -0.28px
+				font-size: 14px
+			.effect-24:focus ~ label, .has-content.effect-24 ~ label
+				top: 2px
+				left: 15px
+				font-size: 12px
+				color: $lightGray
+				transition: 0.3s
+				z-index: 10
+			& > a
+				display: block
+				height: 54px
+				line-height: 54px
+				padding-left: 20px
+				font-weight: bold
+				font-size: 14px
+				letter-spacing: -0.28px
+				border-radius: 10px
+				color: $darkGray
+			.reissuance
+				position: absolute
+				bottom: -40px
+				right: 5px
+				font-size: 12px
+				letter-spacing: -0.24px
+				padding-right: 12px
+				&::after
+					content: ""
+					position: absolute
+					top: 23px
+					right: 0
+					+moreArrow()
+
+
+		.telecom
+			.select
+				display: block
+				width: 100%
+				height: 54px
+				line-height: 54px
+				position: relative
+				font-size: 14px
+				border: 1px solid $lightGray
+				border-radius: 10px
+
+				& > .def
+					width: 100%
+					height: 54px
+					font-weight: bold
+					display: block
+					position: absolute
+					left: 0
+					top: 0
+					padding-left: 20px
+					color: $darkGray
+					font-size: 14px
+
+				& > .dropdown
+					height: 54px
+					width: 36px
+					display: block
+					position: absolute
+					right: 0
+					top: 0
+					color: $darkGray
+					font-size: 10px
+			
+				& > .options
+					width: 100.5%
+					position: absolute
+					top: 45px
+					left: -1px
+					text-align: center
+					border-radius: 3px
+					z-index: 10
+					& > li
+						border: 1px solid $lightGray
+						border-top: 0
+						background: $bgColor04
+						height: 54px
+						line-height: 54px
+						&:first-child 
+							border-top: 1px solid $lightGray
+		
+						&:last-child 
+							border-bottom-left-radius: 10px
+							border-bottom-right-radius: 10px
+						& > a
+							display: block
+							color: $darkGray
+			select
+				display: none
+	.numberIssuance
+		display: flex
+		a
+			width: 119px
+			text-align: center
+			background-color: $bgColor05
+			font-size: 14px
+			line-height: 36px
+			height: 36px
+			letter-spacing: -0.28px
+	& > ul
+		margin-top: 30px
+		li
+			span
+				font-size: 12px
+				line-height: 27px
+				letter-spacing: -0.24px
+				color: $white
+				margin-left: 5px
+			a
+				font-size: 12px
+				color: $white
+				opacity: 0.4
+				letter-spacing: -0.24px
+				line-height: 27px
+				position: relative
+				padding-right: 10px
+				&::after
+					content: ""
+					position: absolute
+					top: 4px
+					right: 0px
+					+moreArrow()
+	& > .goBtn
+		display: block
+		width: 171px
+		text-align: center
+		background-color: $lightGray
+		&.on
+			background-color: $bgColor02
+
+/************** Main ***************/
+.mainVideo
+	padding: 0 8%
+	div
+		width: 100%
+		height: 178px
+		overflow: hidden
+		background-color: #e5e5e5
+		video
+			width: 100%
+			height: auto
+.mainTab
+	padding: 10px 8% 0 8%
+	margin-top: 20px
+	// tab Title
+	& > ul
+		display: flex
+		justify-content: space-around
+		background: linear-gradient(to right, rgba(0, 204, 255, 0.329), rgba(126, 20, 255, 0.329))
+		width: 100%
+		border-radius: 14px
+		position: relative
+		transition: .3s
+		&.moveLeft
+			&::before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				width: 50%
+				height: 100%
+				border-radius: 14px
+				background: linear-gradient( 100deg, $frontColor, $backColor )
+				transition: .3s
+				transform: translateX(0)
+		&.moveRight
+			&::before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				width: 50%
+				height: 100%
+				border-radius: 14px
+				background: linear-gradient( 100deg, $frontColor, $backColor )
+				transition: .3s
+				transform: translateX(100%)
+		li			
+			width: 100%
+			a
+				display: block
+				height: 54px
+				padding-top: 16px
+				line-height: 26px
+				text-align: center
+				color: $white
+				letter-spacing: -0.32px
+				font-family: 'Noto Sans KR black', sans-serif
+				position: relative
+			&.on
+				a
+					&:after
+						content: ""
+						background: url("../images/icon_planet.png") no-repeat 0 0
+						position: absolute
+						top: -10px
+						left: 50%
+						transform: translateX(-50%)
+						width: 30px
+						height: 24px
+						animation: opacity .3s both
+	// tab Content
+	.tabContent
+		margin-top: 60px
+		ul
+			.leftTab
+				& > dl
+					text-align: center
+					dt
+						font-size: 24px
+						line-height: 38px
+						letter-spacing: -0.48px
+						+colorGradation()
+						span
+							display: inline-block
+							margin-top: 10px
+							font-size: 24px
+							line-height: 38px
+							letter-spacing: -0.48px
+							+colorGradation()
+					dd
+						margin-top: 30px
+						font-family: 'Noto Sans KR bold', sans-serif
+						line-height: 1.6
+						letter-spacing: -0.32px
+						span
+							display: inline-block
+							margin-top: 10px
+
+				h5
+					+colorGradation()
+					margin-top: 30px
+					line-height: 1.6
+					letter-spacing: -0.32px
+					text-align: center
+					font-size: 16px
+				& > div
+					margin-top: 80px
+					text-align: center
+					dl
+						dt
+							+font16()
+						dd
+							margin-top: 10px
+				ul
+					margin-top: 80px
+					li
+						margin-top: 10px
+						width: 100%
+						border-radius: 20px
+						position: relative
+						a
+							&::after
+								content: ""
+								position: absolute
+								top: 27px
+								right: 25px
+								width: 129px
+								height: 93px
+								background: url("../images/img-shop-tmb.png") no-repeat 0 0
+
+						&:first-child
+							margin-top: 0
+							a
+								&::after
+									content: ""
+									position: absolute
+									top: 30px
+									right: 40px
+									width: 96px
+									height: 88px
+									background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0
+						a
+							padding: 20px
+							display: block
+							background-color: rgba(0, 0, 0, 0.1)
+							border-radius: 20px
+							dl
+								dt
+									color: $white
+									+font24()
+								dd
+									color: $lightGray
+									font-size: 14px
+									line-height: 20px
+									letter-spacing: -0.28px
+									margin-top: 50px
+									font-family: 'Noto Sans KR bold', sans-serif
+									position: relative
+									&::after
+										content: ""
+										width: 10px
+										height: 10px
+										border-top: 1px solid $lightGray
+										border-right: 1px solid $lightGray
+										position: absolute
+										top: 5px
+										left: 98px
+										transform: rotate(45deg)
+							span
+								position: absolute
+								top: 0
+								left: 0
+								width: 100%
+								height: 100%
+								+borderGradient()
+								z-index: -1
+								border-radius: 20px
+								text-indent: -9999px
+			.rightTab
+				display: none
+				text-align: center
+				div
+					p
+						+colorGradation()
+						font-size: 24px
+						line-height: 38px
+						letter-spacing: -0.48px
+						&:first-child
+							margin-bottom: 30px
+				ul
+					margin-top: 40px
+					li
+						width: 100%
+						position: relative
+						margin-top: 10px
+						background: url("../images/mini.png") no-repeat 0 0
+						background-position: 90% center
+						&:first-child
+							margin-top: 0 
+							background: url("../images/all.png") no-repeat 0 0
+							background-position: 90% center
+						a
+							padding: 20px
+							text-align: left
+							display: block
+							background-color: rgba(0, 0, 0, 0.1)
+							border-radius: 30px
+							span
+								display: inline-block
+								text-indent: -9999px
+								&::after
+								content: ""
+								position: absolute
+								top: 0
+								left: 0
+								width: 100%
+								height: 100%
+								+borderGradient()
+								z-index: -1
+								border-radius: 30px
+							dl
+								color: $white
+								dt
+									font-size: 24px
+									letter-spacing: -0.48px
+									line-height: 1.6
+									font-family: 'Noto Sans KR bold'
+								dd
+									font-size: 12px
+									line-height: 17px
+									letter-spacing: -0.24px
+									color: rgba(255, 255, 255, 0.493)
+									position: relative
+									&.mini
+										&::before
+											content: ""
+											background-color: $point
+										&::after
+											content: ""
+											background-color: $point
+										strong
+											color: $point
+									&::before
+										content: ""
+										position: absolute
+										top: 11px
+										left: 58px
+										width: 8px
+										height: 1px
+										background-color: $bgColor05
+										transform: rotate(-45deg)
+									&::after
+										content: ""
+										position: absolute
+										top: 9px
+										left: 0
+										width: 64px
+										height: 1px
+										background-color: $bgColor05
+									strong
+										font-size: 16px
+										color: $bgColor05
+										line-height: 1.6
+										letter-spacing: -0.32px
+										font-family: 'Noto Sans KR bold'
+							div
+								margin-top: 10px
+								line-height: 1.4
+								font-size: 14px
+								color: $white
+								font-family: 'Noto Sans KR black'
+								position: relative
+								letter-spacing: -0.24px
+								&::after
+									content: ""
+									position: absolute
+									top: 4px
+									left: 115px
+									+moreArrow()
+.mainPartner
+	margin-top: 94px
+	margin-bottom: 111px
+	text-align: center
+	h5
+		font-size: 24px
+		line-height: 38px
+		letter-spacing: -0.48px
+		font-family: 'Noto Sans KR bold', sans-serif
+	.mainPlanet
+		margin-top: 30px
+		ul
+			li
+				display: none
+				&.on
+					display: block
+					div
+						img
+							width: 100%
+							height: auto
+	//tab slide
+	.tabSlide
+		margin-top: 30px
+		width: 235px
+		padding: 6px
+		& > ul
+			li
+				width: 24px
+				height: 36px
+				margin-right: 15px
+				&.on
+					& > a
+						span
+							display: inline-block
+							text-indent: -9999px
+							position: absolute
+							top: 0
+							left: -6px
+							width: 36px
+							height: 36px
+							+borderGradient()
+							z-index: -1
+							border-radius: 50%
+							animation: rotateOne 1s infinite
+				& > a
+					display: block
+					position: relative
+					padding-top: 6px
+					span
+						text-indent: -9999px
+						display: inline-block
+					img
+						width: 24px
+						height: 24px
+	.moreBenefit
+		.arrowBtn
+			width: 206px
+	.rocketAni
+		display: none
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $white
+		z-index: 10
+		&.on 
+			display: block
+			animation: rocket 2s both
+		&:before
+			content: ""
+			position: absolute
+			top: -166px
+			left: 0
+			width: 100%
+			height: 166px
+			background: url("../images/cloud.png") no-repeat 0 0
+			background-size: 100% 166px
+		&:after
+			content: ""
+			position: absolute
+			top: -220px
+			left: 50%
+			transform: translateX(-50%)
+			width: 31px
+			height: 94px
+			background: url("../images/spaceship.png") no-repeat 0 0
+	.benefitCon
+		display: none
+		position: fixed
+		overflow-y: scroll
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $black
+		z-index: 100
+		&.on
+			display: block
+			animation: opacity 1s both
+			animation-delay: 1s
+			ul
+				position: relative
+				margin-top: 100px
+				width: 100%
+				height: 100%
+				background-color: $white
+				border-top-left-radius: 30px
+				border-top-right-radius: 30px
+				li
+					padding: 0 8%
+					display: none
+					
+					&.on
+						display: block
+					& > dl
+						border-bottom: 2px solid $darkGray
+						padding: 71px 0 8px 0
+						dt
+							padding-bottom: 23px
+						dd
+							text-align: right
+							font-size: 12px
+							letter-spacing: -0.24px
+							line-height: 1.4
+							color: $lightGray
+							font-family: 'Noto Sans KR bold'
+					div
+						margin-top: 20px
+						dl
+							text-align: left
+							font-family: 'Noto Sans KR black'
+							line-height: 1.6
+							dt
+								+colorGradation()
+								font-size: 24px
+								letter-spacing: -0.48px
+							dd
+								margin-top: 20px
+								font-size: 16px
+								color: $black
+								letter-spacing: -0.32px
+						.arrowBtn
+							width: 249px
+							margin-left: 0
+.qrPc
+	display: none
+/************** ticket ***************/
+.ticket
+	.ticketOpen
+		text-align: center
+		
+		.eventContent
+			margin-top: 40px
+			p
+				+font16()
+				
+				&:first-child
+					margin-bottom: 10px
+				span
+					+colorGradation()
+					font-family: 'Noto Sans KR bold'
+				&.second
+					padding-top: 238px
+					+colorGradation()
+					position: relative
+					&::after
+						content: ""
+						width: 100%
+						height: 100%
+						position: absolute
+						top: -80px
+						left: 0
+						background: url("../images/Ticket_KV 1.png") no-repeat 0 0
+						background-size: 100% auto
+						background-position: center top
+
+				&:last-child
+					margin-top: 36px
+		.arrowBtn
+			width: 218px
+			font-size: 16px
+			letter-spacing: -0.32px
+
+		.eventInfo
+			margin: 0 auto
+			margin-top: 50px
+			position: relative
+			background-color: rgba(0, 0, 0, 0.1)
+			height: 248px
+			max-width: 315px
+			border-radius: 30px
+			span
+				+borderGradient()
+				z-index: -1
+				border-radius: 30px
+				width: 100%
+				height: 248px
+				display: inline-block
+				position: absolute
+				top: 0
+				left: 0
+				text-indent: -9999px
+			dl
+				padding-top: 20px
+				dt
+					+colorGradation()
+					font-family: 'Noto Sans KR bold'
+					font-size: 16px
+					line-height: 1.6
+					letter-spacing: -0.32px
+				dd
+					margin-top: 10px
+					font-size: 14px
+					letter-spacing: -0.28px
+					line-height: 1.4
+					font-family: 'Noto Sans KR bold'
+	.ticketRewards
+		padding: 0 8%
+		margin-top: 70px
+		h4
+			text-align: center
+			+colorGradation()
+			font-size: 24px
+			line-height: 1.6
+			letter-spacing: -0.48px
+			font-weight: bold
+		ul
+			margin-top: 6px
+			li
+				background: linear-gradient(100deg, rgba(255, 189, 113, 0.253), rgba(0, 221, 255, 0.247))
+				border-radius: 20px
+				margin-top: 10px
+				position: relative
+				&::before
+					content: ""
+					position: absolute
+					top: 24px
+					right: 13px
+					width: 119px
+					height: 89px
+					background: url("../images/img-tmb-lucky-1.png") no-repeat 0 0
+					
+				&:first-child
+					margin-top: 0
+					background: linear-gradient(100deg, rgba(0, 204, 255, 0.24), rgba(126, 20, 255, 0.267))
+					&::before
+						content: ""
+						position: absolute
+						top: 10px
+						right: 20px
+						width: 146px
+						height: 140px
+						background: url("../images/img-tmb-global.png") no-repeat 0 0
+				a
+					display: block
+					padding: 19px 27px
+					dl
+						dt
+							font-size: 16px
+							color: $white
+							font-family: 'Noto Sans KR bold'
+							letter-spacing: -0.32px
+							line-height: 1.6
+						dd
+							margin-top: 20px
+							line-height: 1.4
+							letter-spacing: -0.24px
+							font-size: 12px
+							color: $white
+							opacity: 0.4
+							position: relative
+							&::after
+								content: ""
+								position: absolute
+								top: 3px
+								left: 58px
+								+moreArrow()
+								opacity: 0.4
+		div
+			margin-top: 10px
+			font-size: 12px
+			letter-spacing: -0.24px
+			line-height: 1.4
+			text-align: center
+	.ticketParticipate
+		padding: 0 8%
+		margin-top: 80px
+		text-align: center
+		h4
+			+colorGradation()
+			font-size: 24px
+			font-weight: bold
+			letter-spacing: -0.48px
+			line-height: 1.6
+		ul
+			margin-top: 10px
+			li
+				margin-top: 90px
+				&.step01
+					margin-top: 0
+					& > div
+						padding-top: 219px
+						background: url("../images/img-ticket-step1.png") no-repeat 0 0
+						background-position: center 14px
+				&.step02
+					& > div
+						padding-top: 214px
+						background: url("../images/img-ticket-step2.png") no-repeat 0 0
+						background-position: center 30px
+				&.step03
+					& > div
+						padding-top: 251px
+						background: url("../images/img-ticket-step3.png") no-repeat 0 0
+						background-position: center 30px
+				dl
+					margin-top: 10px
+					dt
+						+colorGradation()
+						font-weight: 16px
+						line-height: 1.6
+						letter-spacing: -0.32px
+						font-family: 'Noto Sans KR bold'
+					dd
+						font-family: 'Noto Sans KR bold'
+						font-size: 24px
+						line-height: 1.6
+						letter-spacing: -0.48px
+				& > div
+					p
+						font-size: 14px
+						line-height: 1.4
+						letter-spacing: -0.28px
+						font-family: 'Noto Sans KR bold'
+						&:first-child
+							margin-bottom: 10px
+					div
+						padding: 0 5.9%
+						.arrowBtn
+							width: 100%
+							font-size: 16px
+							letter-spacing: -0.32px
+							display: inline-block
+							&:nth-child(2)
+								background-color: $wrongColor
+								&::after
+									right: 70px
+						&.ticketBtn
+							.arrowBtn
+								width: 218px
+			
+/************** ticket 01 ***************/
+#content.ticketInfo
+	padding: 0 8%
+	padding-top: 20px
+
+	
+	.ticketAniWrap
+		display: none
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $black
+		z-index: 5
+		overflow-y: scroll
+		&.on
+			display: block
+		.ticketAni
+			display: none
+			position: relative
+			margin-top: 90px
+			width: 100%
+			height: 100%
+			background-color: $white
+			border-top-left-radius: 40px
+			border-top-right-radius: 40px
+
+			&.on
+				display: block
+				animation: ticketing 2s both
+				
+				.ticketing
+					padding-top: 122px
+					padding-bottom: 613px
+					display: none
+					background: url("../images/img-loading-1.png") no-repeat 0 0
+					background-position: center 100px
+					&.on
+						display: block
+						animation: antiOpacity 2s both
+						animation-delay: 2s
+					h5
+						+colorGradation()
+						font-size: 40px
+						text-align: center
+
+				.issuanceTicket
+					display: none
+					padding-top: 122px
+					&.on
+						display: block
+						animation: opacity 1s both
+						animation-delay: 3s
+					dl
+						text-align: center
+						padding-bottom: 195px
+						background: url("../images/img-ticket-thumb.png") no-repeat 0 0
+						background-position: center 220px
+						dt
+							+colorGradation()
+							font-size: 40px
+							letter-spacing: -0.8px
+							line-height: 48px
+						dd
+							font-size: 16px
+							margin-top: 10px
+							font-family: 'Noto Sans KR black'
+							color: $black
+							line-height: 1.6
+							letter-spacing: -0.32px
+					a
+						text-align: center
+						width: 203px
+				.winning
+					display: none
+					padding-top: 122px
+					position: relative
+					&.on
+						display: block
+						animation: opacity 1s both
+						&::before
+							display: block
+							animation: opacity 3s infinite
+					&::before
+						content: ""
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 160px
+						background: url("../images/img-particle.png") no-repeat 0 0
+						background-size: 92% auto
+						background-position: center 20px
+						display: none
+
+					dl
+						text-align: center
+						padding: 0 100px
+						margin-bottom: 50px
+						dt
+							+colorGradation()
+							font-size: 40px
+						dd
+							font-size: 16px
+							margin-top: 10px
+							font-family: 'Noto Sans KR black'
+							color: $black
+							line-height: 1.6
+							letter-spacing: -0.32px
+					div
+						text-align: center
+					.mms
+						font-size: 12px
+						font-family: 'Noto Sans KR black'
+						color: $black
+						line-height: 1.4
+						letter-spacing: -0.24px
+						margin-top: 51px
+						
+/************** delivery ***************/
+.delivery
+	.deliveryEvent
+		text-align: center
+		background: url("../images/delivery_KV 1.png") no-repeat 0 0
+		background-size: 100% auto
+		background-position: center 90px
+		.deliverContent
+			padding-top: 188px
+			p
+				+font16()
+				margin-top: 10px
+				&:first-child
+					margin-top: 0
+		& > p
+			margin-top: 20px
+			+colorGradation()
+			font-size: 24px
+			letter-spacing: -0.48px
+			line-height: 1.6
+		.arrowBtn
+			width: 256px
+			background: $bgColor02 url("../images/11.png") no-repeat 0 0
+			background-position: 28px center
+			padding-left: 60px
+			&::after
+				right: 25px
+	.deliveryInfo
+		position: relative
+		width: 84%
+		border-radius: 30px
+		margin-left: 8%
+		margin-top: 80px
+		padding: 30px 0 20px 0
+		text-align: center
+		& > span
+			+borderGradient()
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			z-index: -1
+			border-radius: 30px
+			text-indent: -9999px
+		& > dl
+			margin-top: 20px
+			&:first-child
+				margin-top: 0
+			dt
+				+colorGradation()
+				font-size: 16px
+				line-height: 1.6
+				letter-spacing: -0.32px
+			dd
+				margin-top: 10px
+				font-size: 14px
+				line-height: 1.4
+				letter-spacing: -0.28px
+				font-family: 'Noto Sans KR bold'
+				&.winner
+					strong
+						text-align: left
+						display: inline-block
+						width: 80px
+					span
+						display: inline-block
+						width: 70px
+						text-align: right
+						margin-right: 20px
+		& > div
+			margin-top: 20px
+			h4
+				+colorGradation()
+				font-size: 16px
+				line-height: 1.6
+				letter-spacing: -0.32px
+			ul
+				li
+					font-size: 14px
+					line-height: 1.4
+					letter-spacing: -0.28px
+					font-family: 'Noto Sans KR bold'
+					padding-top: 35px
+					h5
+						font-size: 14px
+						line-height: 1.4
+						letter-spacing: -0.28px
+						font-family: 'Noto Sans KR bold'
+					div
+						margin-top: 10px
+						display: flex
+						justify-content: center
+						dl
+							padding: 0 15px
+							border-left: 1px solid $white
+							&:first-child
+								border-left: 0
+							dt
+								font-size: 14px
+								line-height: 1.4
+								letter-spacing: -0.28px
+								font-family: 'Noto Sans KR bold'
+							dd
+								color: $lightGray
+								font-size: 12px
+								letter-spacing: -0.24px
+								line-height: 1.4
+		.arrowBtn
+			width: 84%
+			margin-left: 8%
+			font-size: 16px
+			font-family: 'Noto Sans KR bold'
+			&::after
+				right: 20px
+	.deliveryStep
+		margin-top: 80px
+		padding: 0 8%
+		h5
+			text-align: center
+			+colorGradation()
+			font-size: 24px
+			line-height: 1.6
+			letter-spacing: -0.48px
+		& > ul
+			margin-top: 10px
+			& > li
+				position: relative
+				margin-top: 50px
+				padding-bottom: 35px
+				&:first-child
+					margin-top: 0
+				&::after
+					content: ""
+					width: 100%
+					height: 2px
+					background: linear-gradient(to right, $frontColor, $backColor)
+					position: absolute
+					bottom: 0
+					left: 0
+				&:last-child
+					&::after
+						width: 0
+				& > dl	
+					text-align: center
+					&.step01
+						background: url("../images/img-shop-step1.png") no-repeat 0 0
+						background-position: center 84px
+						padding-bottom: 215px
+					&.step02
+						background: url("../images/img-shop-step2.png") no-repeat 0 0
+						background-position: center 126px
+						padding-bottom: 157px
+					&.step03
+						background: url("../images/img-shop-step3.png") no-repeat 0 0
+						background-position: center 110px
+						padding-bottom: 153px
+					&.step04
+						background: url("../images/img-shop-step4.png") no-repeat 0 0
+						background-position: center 120px
+						padding-bottom: 149px
+					dt
+						+colorGradation()
+						font-size: 16px
+						line-height: 1.6
+						letter-spacing: -0.32px
+					dd
+						font-size: 24px
+						line-height: 1.6
+						letter-spacing: -0.48px
+						font-family: 'Noto Sans KR black'
+				.arrowBtn
+					text-align: center
+					margin-top: 0
+					width: 256px
+					background: $bgColor02 url("../images/11.png") no-repeat 0 0
+					background-position: 28px center
+					padding-left: 60px
+					&::after
+						right: 25px
+				.userInfoWrap
+					&.on
+						& > .cartBtn
+							display: none
+						.userInfo
+							display: block
+					.cartBtn
+						text-align: center
+					.userInfo
+						margin-top: 80px
+						display: none
+						padding-bottom: 0
+						margin-bottom: 0
+						&::after
+							display: none
+						.cartBtn
+							margin-top: 38px
+							label
+								position: absolute
+								top: 0
+								left: 0
+								width: 100%
+								height: 100%
+								cursor: pointer
+								padding-top: 44px
+					.imageFile
+						display: none
+						position: fixed
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						background-color: $black
+						z-index: 100
+						overflow-y: scroll
+						overflow-x: hidden
+						
+						&.on
+							display: block
+							animation: opacity 1s both
+						& > div
+							margin-top: 100px
+							width: 100%
+							height: 100%
+							background-color: $white
+							border-top-left-radius: 30px
+							border-top-right-radius: 30px
+							padding: 40px 8.3%
+							position: relative
+							& > div
+								display: none
+								&.on
+									display: block
+									animation: opacity 1s both
+								dl
+									margin-bottom: 30px
+									dt
+										+colorGradation()
+										font-size: 14px
+										line-height: 1.4
+										letter-spacing: -0.28px
+									dd
+										margin-top: 10px
+										font-size: 24px
+										line-height: 1.6
+										letter-spacing: -0.48px
+										color: $black
+										font-family: 'Noto Sans KR black'
+								div
+									text-align: center
+									position: relative
+									img
+										width: 200px
+										height: auto
+								&.step01
+										label
+											cursor: pointer
+											position: absolute
+											top: 0
+											left: 0
+											width: 100%
+											height: 100%
+								&.step02
+									.btnWrap
+										margin-top: 31px
+										display: flex
+										.goBtn
+											text-align: center
+											maragin: 0
+											background-color: $lightGray
+											&:first-child
+												background-color: $bgColor02
+												width: 40%
+												margin-right: 4px
+										label
+											cursor: pointer
+											position: absolute
+											top: 0
+											left: 0
+											width: 100%
+											height: 100%
+								&.step03
+									padding-top: 250px
+									background: url("../images/btn-check.png") no-repeat 0 0
+									background-position: center 130px
+									p
+										+colorGradation()
+										font-size: 40px
+										line-height: 1.2
+										letter-spacing: -0.8px
+										text-align: center
+										
+
+
+						
+
+	.storeRank
+		margin-top: 80px
+		text-align: center
+		& > dl
+			dt
+				font-size: 16px
+				line-height: 1.6
+				letter-spacing: -0.32px
+				font-family: 'Noto Sans KR bold'
+			dd
+				+colorGradation()
+				font-size: 44px
+				line-height: 1.1
+				letter-spacing: -0.88px
+		.rankSlide
+			padding: 0 8%
+			margin-top: 37px
+			ul
+				li
+					width: 144px
+					padding: 28px 17px
+					background-color: rgba(255, 255, 255, 0.1)
+					margin-left: 8px
+					&:first-child
+						margin-left: 0
+					& > div
+						height: 70px
+						overflow: hidden
+						width: 108px
+						text-align: center
+						img
+							height: 100%
+					dl
+						margin-top: 13px
+						text-align: left
+						dt
+							font-size: 12px
+							line-height: 1.4
+							letter-spacing: -0.24px
+						dd
+							font-size: 12px
+							margin-top: 9px
+							letter-spacing: -0.24px
+							line-height: 1.4
+							a
+								display: block
+								color: rgba(255, 255, 255, 0.4)
+								position: relative
+								&::after
+									content: ""
+									width: 10px
+									height: 10px
+									border-top: 1px solid rgba(255, 255, 255, 0.4)
+									border-right: 1px solid rgba(255, 255, 255, 0.4)
+									transform: rotate(45deg)
+									position: absolute
+									top: 3px
+									left: 55px
+			.swiper-scrollbar
+				width: 100%
+				height: 2px
+				margin-top: 30px
+				position: relative
+				background-color: $lightGray
+				.swiper-scrollbar-drag
+					height: 2px
+					background: linear-gradient(to right, $frontColor, $backColor)
+					position: absolute
+					bottom: 0
+					left: 0
+
+/************** OLKL PASS ***************/
+.spacePass
+	.passTab
+		padding: 207px 8% 0 8%
+		margin-top: 20px
+		// tab Title
+		& > ul
+			display: flex
+			justify-content: space-around
+			background: linear-gradient(to right, rgba(0, 204, 255, 0.329), rgba(126, 20, 255, 0.329))
+			width: 100%
+			border-radius: 14px
+			position: relative
+			transition: .3s
+			&.moveLeft
+				&::before
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					width: 50%
+					height: 100%
+					border-radius: 14px
+					background: linear-gradient( 100deg, $frontColor, $backColor )
+					transition: .3s
+					transform: translateX(0)
+			&.moveRight
+				&::before
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					width: 50%
+					height: 100%
+					border-radius: 14px
+					background: linear-gradient( 100deg, $frontColor, $backColor )
+					transition: .3s
+					transform: translateX(100%)
+			li			
+				width: 100%
+				a
+					display: block
+					height: 54px
+					padding-top: 16px
+					line-height: 26px
+					text-align: center
+					color: $white
+					letter-spacing: -0.32px
+					font-family: 'Noto Sans KR black', sans-serif
+					position: relative
+				&.on
+					a
+						&:after
+							content: ""
+							background: url("../images/icon_planet.png") no-repeat 0 0
+							position: absolute
+							top: -10px
+							left: 50%
+							transform: translateX(-50%)
+							width: 30px
+							height: 24px
+							animation: opacity .3s both
+		// tab Content
+		.tabContent
+			margin-top: 60px
+			ul
+				.leftTab
+					padding-bottom: 121px
+					&::before
+						content: ""
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 375px
+						background: url("../images/pass_bg.png") no-repeat 0 0
+						background-size: cover
+						background-position: center
+						z-index: -1
+					.monthCost
+						position: relative
+						width: 142px
+						height: 47px
+						text-align: center
+						+colorGradation()
+						line-height: 1.6
+						letter-spacing: -0.32px
+						display: flex
+						justify-content: center
+						align-items: center
+						margin: 30px auto
+						span
+							z-index: -1
+							position: absolute
+							top: 0
+							left: 0
+							width: 100%
+							height: 100%
+							+borderGradient()
+							background-image: linear-gradient($black, $black), linear-gradient(100deg, $frontColor, $backColor)
+							border-radius: 50%
+							display: inline-block
+					& > p
+						+font16()
+						text-align: center
+						&.second
+							margin-top: 10px
+					.arrowBtn
+						width: 90%
+						text-align: center
+					.passAllMerit
+						margin-top: 92px
+						& > dl
+							text-align: center
+							dt
+								font-size: 44px
+								letter-spacing: -0.8px
+								line-height: 1.2
+								+colorGradation()
+							dd
+								margin-top: 10px
+								font-size: 24px
+								letter-spacing: -0.48px
+								line-height: 1.6
+								font-family: 'Noto Sans KR bold'
+						ul
+							margin-top: 30px
+							li
+								border-radius: 20px
+								margin-top: 10px
+								position: relative
+								&.listAmazon
+									background: linear-gradient(100deg, rgba(0, 204, 255, 0.288), rgba(126, 20, 255, 0.329))
+									&::before
+										content: ""
+										position: absolute
+										bottom: 14px
+										right: 18px
+										width: 87px
+										height: 27px
+										background: url("../images/logo_amazon.png") no-repeat 0 0
+								&.list11
+									background: linear-gradient(100deg, rgba(255, 255, 255, 0.336), rgba(244, 49, 65, 0.363))
+									&::before
+										content: ""
+										position: absolute
+										bottom: 14px
+										right: 18px
+										width: 67px
+										height: 26px
+										background: url("../images/logo_11.png") no-repeat 0 0
+								&.listGoogle
+									background: linear-gradient(100deg, rgba(114, 228, 215, 0.329), rgba(0, 123, 139, 0.336))
+									&::before
+										content: ""
+										position: absolute
+										bottom: 14px
+										right: 18px
+										width: 28px
+										height: 53px
+										background: url("../images/google_logo.png") no-repeat 0 0
+								a
+									display: block
+									color: $white
+									padding: 19px 27px
+									dl
+										dt
+											letter-spacing: -0.32px
+											font-family: 'Noto Sans KR bold'
+											line-height: 1.6
+										dd
+											font-size: 12px
+											line-height: 1.4
+											letter-spacing: -0.24
+									div
+										margin-top: 29px
+										font-size: 12px
+										letter-spacing: -0.24px
+										line-height: 1.4
+										color: $white
+										opacity: 0.4
+										position: relative
+										&::after
+											content: ""
+											position: absolute
+											top: 3px
+											left: 55px
+											+moreArrow()
+						& > div
+							padding-top: 34px
+							margin-top: 20px
+							background: url("../images/plus_icon.png") no-repeat 0 0
+							background-position: top center
+							p
+								text-align: center
+								+font16()
+								strong
+									display: inline-block
+									+colorGradation()
+									font-size: 24px
+									letter-spacing: -0.48px
+									line-height: 1.6
+									margin: 10px 0
+								&:last-child
+									font-size: 12px
+									letter-spacing: -0.24px
+									line-height: 1.4
+					h5
+						margin-top: 54px
+						margin-bottom: 30px
+						+colorGradation()
+						text-align: center
+						font-size: 24px
+						line-height: 1.6
+						letter-spacing: -0.48px
+					.partnersSlide
+						ul
+							li
+								width: 148px
+								background-color: rgba(87, 87, 87, 0.411)
+								padding: 0 12px 10px 12px
+								position: relative
+								border-radius: 10px
+								margin-left: 6px
+								&:first-child
+									margin-left: 0
+								&::before
+									content: ""
+									position: absolute
+									top: 100px
+									left: 0
+									width: 100%
+									height: 1px
+									border-bottom: 3px dotted $black
+								a
+									display: block
+									color: $white
+									div
+										height: 76px
+										display: flex
+										justify-content: center
+										align-items: center
+									span
+										position: absolute
+										top: 76px
+										left: 50%
+										transform: translateX(-50%)
+										+font12()
+									dl
+										padding-top: 36px
+										+font12()
+										dd
+											margin-top: 10px
+											color: $white
+											opacity: 0.4
+											position: relative
+											&::after
+												content: ""
+												position: absolute
+												top: 3px
+												left: 55px
+												+moreArrow()
+						.swiper-scrollbar
+							width: 100%
+							height: 2px
+							margin-top: 30px
+							position: relative
+							background-color: $lightGray
+							.swiper-scrollbar-drag
+								height: 2px
+								background: linear-gradient(to right, $frontColor, $backColor)
+								position: absolute
+								bottom: 0
+								left: 0				
+				.rightTab
+					display: none
+					text-align: center
+					padding-bottom: 120px
+					&::before
+						content: ""
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 375px
+						background: url("../images/pass_mini.png") no-repeat 0 0
+						background-size: cover
+						background-position: center
+						z-index: -1
+					.monthCost
+						position: relative
+						width: 142px
+						height: 47px
+						text-align: center
+						+colorGradation()
+						line-height: 1.6
+						letter-spacing: -0.32px
+						display: flex
+						justify-content: center
+						align-items: center
+						margin: 30px auto
+						span
+							z-index: -1
+							position: absolute
+							top: 0
+							left: 0
+							width: 100%
+							height: 100%
+							+borderGradient()
+							background-image: linear-gradient($black, $black), linear-gradient(100deg, $frontColor, $backColor)
+							border-radius: 50%
+							display: inline-block
+					& > p
+						+font16()
+						text-align: center
+						&.second
+							margin-top: 10px
+					.arrowBtn
+						width: 90%
+						text-align: center
+					.passAllMerit
+						margin-top: 92px
+						& > dl
+							text-align: center
+							dt
+								font-size: 44px
+								letter-spacing: -0.8px
+								line-height: 1.2
+								+colorGradation()
+							dd
+								margin-top: 10px
+								font-size: 24px
+								letter-spacing: -0.48px
+								line-height: 1.6
+								font-family: 'Noto Sans KR bold'
+						& > ul
+							margin-top: 30px
+							li
+								text-align: left
+								border-radius: 20px
+								margin-top: 10px
+								position: relative
+								&.listAmazon
+									background: linear-gradient(100deg, rgba(0, 204, 255, 0.288), rgba(126, 20, 255, 0.329))
+									&::before
+										content: ""
+										position: absolute
+										bottom: 14px
+										right: 18px
+										width: 87px
+										height: 27px
+										background: url("../images/logo_amazon.png") no-repeat 0 0
+								&.list11
+									background: linear-gradient(100deg, rgba(255, 255, 255, 0.336), rgba(244, 49, 65, 0.363))
+									&::before
+										content: ""
+										position: absolute
+										bottom: 14px
+										right: 18px
+										width: 67px
+										height: 26px
+										background: url("../images/logo_11.png") no-repeat 0 0							
+								a
+									display: block
+									color: $white
+									padding: 19px 27px
+									dl
+										dt
+											letter-spacing: -0.32px
+											font-family: 'Noto Sans KR bold'
+											line-height: 1.6
+										dd
+											font-size: 12px
+											line-height: 1.4
+											letter-spacing: -0.24
+									div
+										margin-top: 29px
+										font-size: 12px
+										letter-spacing: -0.24px
+										line-height: 1.4
+										color: $white
+										opacity: 0.4
+										position: relative
+										&::after
+											content: ""
+											position: absolute
+											top: 3px
+											left: 55px
+											+moreArrow()
+						& > div
+							padding-top: 34px
+							margin-top: 20px
+							background: url("../images/plus_icon.png") no-repeat 0 0
+							background-position: top center
+							p
+								text-align: center
+								+font16()
+							ul
+								display: flex
+								justify-content: center
+								margin-top: 10px
+								li
+									width: 148px
+									background-color: rgba(87, 87, 87, 0.411)
+									padding: 0 12px 10px 12px
+									position: relative
+									border-radius: 10px
+									margin-left: 6px
+									&:first-child
+										margin-left: 0
+									&::before
+										content: ""
+										position: absolute
+										top: 100px
+										left: 0
+										width: 100%
+										height: 1px
+										border-bottom: 3px dotted $black
+									a
+										display: block
+										color: $white
+										div
+											height: 76px
+											display: flex
+											justify-content: center
+											align-items: center
+										span
+											position: absolute
+											top: 76px
+											left: 50%
+											transform: translateX(-50%)
+											+font12()
+											width: 100%
+										dl
+											padding-top: 36px
+											+font12()
+											text-align: left
+											dt
+												height: 34px
+											dd
+												margin-top: 10px
+												color: $white
+												opacity: 0.4
+												position: relative
+												&::after
+													content: ""
+													position: absolute
+													top: 3px
+													left: 55px
+													+moreArrow()
+
+/************** mad ***************/
+.mad
+	padding: 0 8%
+	padding-bottom: 111px
+	.madVideo
+		div
+			text-align: center
+			width: 100%
+			height: 178px
+			overflow: hidden
+			position: relative
+			video
+				width: 100%
+				height: auto
+			span
+				position: absolute
+				bottom: 31px
+				left: 50%
+				transform: translateX(-50%)
+				+font12()
+
+	.madPass
+		& > dl
+			text-align: center
+			margin-top: 32px
+			margin-bottom: 60px
+			dt
+				+font24Gradation()
+			dd
+				+font16()
+				span
+					display: block
+					margin-top: 10px
+		h5
+			+font24()
+			text-align: center
+			margin-bottom: 30px
+		.madSlide
+			ul
+				li
+					div
+						width: 100%
+						max-height: 250px
+						overflow: hidden
+						border-radius: 30px
+						display: flex
+						justify-content: center
+						align-items: center
+						img
+							width: 100%
+
+			.swiper-scrollbar
+				width: 100%
+				height: 2px
+				margin-top: 30px
+				position: relative
+				background-color: $lightGray
+				.swiper-scrollbar-drag
+					height: 2px
+					background: linear-gradient(to right, $frontColor, $backColor)
+					position: absolute
+					bottom: 0
+					left: 0
+
+		& > ul
+			margin-top: 60px
+			li
+				margin-top: 10px
+				width: 100%
+				border-radius: 20px
+				position: relative
+				a
+					&::after
+						content: ""
+						position: absolute
+						top: 27px
+						right: 25px
+						width: 129px
+						height: 93px
+						background: url("../images/img-shop-tmb.png") no-repeat 0 0
+
+				&:first-child
+					margin-top: 0
+					a
+						&::after
+							content: ""
+							position: absolute
+							top: 30px
+							right: 40px
+							width: 96px
+							height: 88px
+							background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0
+				a
+					padding: 20px
+					display: block
+					background-color: rgba(0, 0, 0, 0.1)
+					border-radius: 20px
+					span
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						+borderGradient()
+						z-index: -1
+						border-radius: 20px
+						text-indent: -9999px
+					dl
+						dt
+							color: $white
+							+font24()
+						dd
+							color: $lightGray
+							font-size: 14px
+							line-height: 20px
+							letter-spacing: -0.28px
+							margin-top: 50px
+							font-family: 'Noto Sans KR bold', sans-serif
+							position: relative
+							&::after
+								content: ""
+								width: 10px
+								height: 10px
+								border-top: 1px solid $lightGray
+								border-right: 1px solid $lightGray
+								position: absolute
+								top: 5px
+								left: 98px
+								transform: rotate(45deg)
+			
+/************** partners ***************/
+.partners
+	padding: 0 8%
+	.listPartners
+		& > dl
+			text-align: center
+			dt
+				+font44()
+			dd
+				margin-top: 20px
+				+font16()
+		& > div
+			ul
+				margin-top: 60px
+				li
+					width: 100%
+					background-color: rgba(87, 87, 87, 0.411)
+					position: relative
+					border-radius: 10px
+					overflow: hidden
+					&::before
+						content: ""
+						position: absolute
+						top: 0
+						left: 129px
+						width: 1px
+						height: 100%
+						border-right: 4px dotted $black
+					& > dl
+						
+						float: left
+						padding: 20px 15px
+						width: 129px
+						text-align: center
+						dt
+							height: 126px
+							display: flex
+							justify-content: center
+							align-items: center
+						dd
+							+font14()
+					& > div
+						float: left
+						div
+							+font16()
+
+						a
+							margin-top: 10px
+							+font12()
+							color: $white
+							opacity: 0.4
+							position: relative
+							&::after
+								content: ""
+								position: absolute
+								top: 3px
+								left: 55px
+								+moreArrow()
+		& > ul
+				margin-top: 60px
+				li
+					margin-top: 10px
+					width: 100%
+					border-radius: 20px
+					position: relative
+					a
+						&::after
+							content: ""
+							position: absolute
+							top: 27px
+							right: 25px
+							width: 129px
+							height: 93px
+							background: url("../images/img-shop-tmb.png") no-repeat 0 0
+
+					&:first-child
+						margin-top: 0
+						a
+							&::after
+								content: ""
+								position: absolute
+								top: 30px
+								right: 40px
+								width: 96px
+								height: 88px
+								background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0
+					a
+						padding: 20px
+						display: block
+						background-color: rgba(0, 0, 0, 0.1)
+						border-radius: 20px
+						span
+							position: absolute
+							top: 0
+							left: 0
+							width: 100%
+							height: 100%
+							+borderGradient()
+							z-index: -1
+							border-radius: 20px
+							text-indent: -9999px
+						dl
+							dt
+								color: $white
+								+font24()
+							dd
+								color: $lightGray
+								font-size: 14px
+								line-height: 20px
+								letter-spacing: -0.28px
+								margin-top: 50px
+								font-family: 'Noto Sans KR bold', sans-serif
+								position: relative
+								&::after
+									content: ""
+									width: 10px
+									height: 10px
+									border-top: 1px solid $lightGray
+									border-right: 1px solid $lightGray
+									position: absolute
+									top: 5px
+									left: 98px
+									transform: rotate(45deg)
+			
+		
+
+
+						

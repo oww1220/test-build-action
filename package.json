@@ -1,0 +1,49 @@
+{
+  "name": "KJB",
+  "version": "1.0.0",
+  "description": "KJB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "keywords": [
+    "KJB"
+  ],
+  "author": "sangman_son",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/register": "^7.13.16",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-changed": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.13.0",
+    "node-sass": "^6.0.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-cssnano": "^1.1.0",
+    "gulp-rename": "^2.0.0",
+    "jquery": "^3.6.0",
+    "prettier": "^2.3.1",
+    "smoothscroll-polyfill": "^0.4.4",
+    "swiper": "^6.7.0"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.3"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

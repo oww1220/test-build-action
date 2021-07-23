@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="wrap">
+		<!-- Header -->
+		@@include('./include/header.html')
+		<!-- // Header -->
+		<canvas id="webgl-universe"></canvas>
+
+		<div id="content" class="partners">
+			<!-- 하단 고정메뉴 -->
+			<ul class="quickMenu">
+				<li class="menuHome">
+					<a href="index.html">Home</a>
+				</li>
+				<li class="menuTicket">
+					<a href="ticket.html">우주 티켓부스</a>
+				</li>
+				<li class="menuEvent">
+					<a href="delivery.html">우주 택배 이벤트</a>
+				</li>
+				<li class="menuMad on">
+					<a href="mad.html">우주X 매드몬스터</a>
+				</li>
+			</ul>
+			<article class="listPartners">
+				<dl>
+					<dt>우주<br />파트너스</dt>
+					<dd>우주에서는 아마존 해외직구 제품이<br />
+						무료 배송이라는 사실을 알고 계시나요?
+					</dd>
+				</dl>
+				<div>
+					<ul>
+						<li>
+							<dl>
+								<dt><img src="../images/logo_yo_m.png" alt="요기요"></dt>
+								<dd>요기요</dd>
+							</dl>
+							<div>
+								<div>매달 최대 2,000원의
+									파격적인 할인</div>
+								<a href="#">자세히보기</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<ul>
+					<li>
+						<a href="ticket.html">
+							<dl>
+								<dt>우주 티켓부스</dt>
+								<dd>이벤트 참여하기</dd>
+							</dl>
+							<span>line</span>
+						</a>
+					</li>
+					<li>
+						<a href="delivery.html">
+							<dl>
+								<dt>우주 택배</dt>
+								<dd>이벤트 참여하기</dd>
+							</dl>
+							<span>line</span>
+						</a>
+					</li>
+				</ul>
+			</article>
+		</div>
+		@@include('./include/footer.html')
+	</div>
+</body>
+	@@include('./include/footer_js.html')
+	<script>
+		// Partners slide
+		var mainslider = new Swiper('.madSlide', {
+			slidesPerView : "auto",
+			scrollbar: {
+				el: ".swiper-scrollbar",
+				hide: false,
+			},
+			speed : 1000,
+		});
+	</script>
+</html>

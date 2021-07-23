@@ -1,0 +1,104 @@
+
+//mixin
+=NotoSans ()
+	font-family: 'Noto Sans KR', sans-serif
+
+	
+header
+	position: fixed
+	top: 0
+	left: 0
+	padding: 20px
+	display: flex
+	justify-content: space-between
+	width: 100%
+	z-index: 50
+
+	h1
+		a
+			img
+				width: 80px
+				height: 30px
+	// siteMap
+	nav
+		& > a
+			display: block
+			text-indent: -9999px
+			width: 36px
+			height: 36px
+			position: relative
+			border-radius: 50%
+			background: url("../images/menu.png") no-repeat 0 0
+			
+		& > div
+			overflow-y: scroll 
+			display: none
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: contain
+			background-image: linear-gradient(90deg, #00cdff, #7d14ff)
+			padding: 20px 5.3%
+			animation: opacity 1s both
+
+
+			&.on
+				display: block
+			&::before
+				content: ""
+				background: url("../images/nav_logo.png") no-repeat 0 0
+				background-size: 80px 30px
+				position: absolute
+				top: 20px
+				left: 5.3%
+				width: 80px
+				height: 30px
+				
+			& > a
+				position: absolute
+				top: 20px
+				right: 5.3%
+				width: 36px
+				height: 36px
+				background-color: #ffffff
+				border-radius: 50%
+				text-indent: -9999px
+				&::before
+					content: ""
+					width: 20px
+					height: 1px
+					background-color: #000
+					position: absolute
+					top: 17px
+					left: 8px
+					transform: rotate(-45deg)
+				&::after
+					content: ""
+					width: 20px
+					height: 1px
+					background-color: #000
+					position: absolute
+					top: 17px
+					left: 8px
+					transform: rotate(45deg)
+			ul
+				padding-top: 150px
+				li
+					a
+						display: block
+						font-size: 32px
+						color: #ffffff
+						letter-spacing: -0.64px
+						line-height: 1.6
+						font-family: 'Noto Sans KR bold'
+			p
+				margin-top: 179px
+				font-size: 16px
+				line-height: 25px
+				letter-spacing: -0.32px
+				font-family: 'Noto Sans KR bold'
+				span
+					font-weight: normal
+

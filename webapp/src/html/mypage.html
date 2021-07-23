@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="wrap">
+		<!-- Header -->
+		@@include('./include/header.html')
+		<!-- // Header -->
+		<div id="content">
+			<!-- 하단 고정메뉴 -->
+			<ul class="quickMenu">
+				<li class="menuHome on">
+					<a href="index.html">Home</a>
+				</li>
+				<li class="menuTicket">
+					<a href="ticket.html">우주 티켓부스</a>
+				</li>
+				<li class="menuEvent">
+					<a href="#">우주 택배 이벤트</a>
+				</li>
+				<li class="menuMad">
+					<a href="#">우주X 매드몬스터</a>
+				</li>
+			</ul>
+			<!--main video-->
+			<article class="mainVideo">
+				<div>
+					<video muted autoplay loop playsinline>
+						<source src="" type="video/mp4">
+						<strong>Your browser does not support the video teg.</strong>
+					</video>
+				</div>
+			</article>
+			<!--tab--> 
+			<article class="mainTab">
+				<!-- tab title-->
+				<ul class="moveLeft">
+					<li class="left on">
+						<a href="javascript:;">우주란?</a>
+					</li>
+					<li class="right">
+						<a href="javascript:;">우주패스란?</a>
+					</li>
+				</ul>
+				<!-- tab content -->
+				<div class="tabContent">
+					<ul>
+						<!--left tab-->
+						<li class="leftTab">
+							<dl>
+								<dt>
+									우주에는 우리의 일상이<br /> 
+									담겨 있습니다.<br />
+									<span>
+										저 멀리 바다 건너 알뜰한 쇼핑을<br />
+										배송비 부담 없이 즐길 수 있죠.
+									</span>
+								</dt>
+								<dd>
+									또 신선한 빵을 할인된 가격으로 만나볼 수 있고,<br />
+									좋아하는 콘텐츠를 마음껏 누릴 수 있답니다.<br />
+									<span>
+										무엇보다 매력적인 건 앞으로도 계속<br />
+										우주 곳곳에 존재하는 숨겨진 파트너들을<br />발굴하고 여러분에게<br />딱 맞는 혜택을 선보인다는 거예요.
+									</span>
+								</dd>
+							</dl>
+							<h5>이제 새로운 스케일의<br />구독 생활을 즐겨보세요.</h5>
+							<div>
+								<dl>
+									<dt>모두의 구독 유니버스</dt>
+									<dd><img src="./../images/bi.png" alt="OLKL"></dd>
+								</dl>
+								<a href="#" class="arrowBtn">구독하러 가기</a>	
+							</div>
+							<ul>
+								<li>
+									<a href="#">
+										<dl>
+											<dt>우주 티켓부스</dt>
+											<dd>이벤트 참여하기</dd>
+										</dl>
+										<span>line</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<dl>
+											<dt>우주 택배</dt>
+											<dd>이벤트 참여하기</dd>
+										</dl>
+										<span>line</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<!--right tab-->
+						<li class="rightTab">
+							<div>
+								<p>우주패스는 우리들에게<br />탈지구급 혜택을 가져다 줄<br />새로운 구독 상품입니다.</p>
+								<p>여러분의 생활 패턴에 맞게<br />두 가지로 준비된<br />우주패스를 만나보세요.</p>
+							</div>
+							<ul>
+								<li>
+									<a href="#">
+										<span>one</span>
+										<dl>
+											<dt>우주패스 ALL</dt>
+											<dd>월 9,900원<br />
+												<strong>첫 달 1,000원</strong>
+											</dd>
+										</dl>
+										<div>구독 혜택 알아보기</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>one</span>
+										<dl>
+											<dt>우주패스 MINI</dt>
+											<dd class="mini">월 4,900원<br />
+												<strong>첫 달 100원</strong>
+											</dd>
+										</dl>
+										<div>구독 혜택 알아보기</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<!--partner list-->
+			<article class="mainPartner">
+				<h5>우리의 파트너가<br />궁금하신가요?</h5>
+				<!-- main logo-->
+				<div class="mainPlanet">
+					<ul>
+						<li class="on"><div><img src="../images/logo_02.png" alt="amazon"></div></li>
+						<li><div><img src="../images/logo_06.png" alt="스타벅스"></div></li>
+						<li><div><img src="../images/logo_05.png" alt="구글"></div></li>
+						<li><div><img src="../images/logo_03.png" alt="이마트"></div></li>
+						<li><div><img src="../images/logo_01.png" alt="요기요"></div></li>
+						<li><div><img src="../images/logo_04.png" alt="파리바게트"></div></li>
+					</ul>
+				</div>
+				<!--swiper-->
+				<div class="swiper-container tabSlide">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide on">
+							<a href="javascript:;">
+								<img src="../images/icon_planet.png" alt="스타벅스">
+								<span>one</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img src="../images/icon_planet.png" alt="스타벅스">
+								<span>one</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img src="../images/icon_planet.png" alt="스타벅스">
+								<span>one</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img src="../images/icon_planet.png" alt="스타벅스">
+								<span>one</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img src="../images/icon_planet.png" alt="스타벅스">
+								<span>one</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img src="../images/icon_planet.png" alt="스타벅스">
+								<span>one</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img src="../images/icon_planet.png" alt="스타벅스">
+								<span>one</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img src="../images/icon_planet.png" alt="스타벅스">
+								<span>one</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img src="../images/icon_planet.png" alt="스타벅스">
+								<span>one</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="moreBenefit">
+					<a href="javascript:;" class="arrowBtn">혜택 자세히 보기</a>								
+				</div>
+				<!--rocketAnimation-->
+				<div class="rocketAni">rocket</div>
+				<!--혜택 popup-->
+				<div class="benefitCon">
+					<ul>
+						<li class="on">
+							<a href="javascript:;" class="closeBtn">닫기</a>
+							<dl>
+								<dt><img src="" alt="11번가로고"></dt>
+								<dd>amazon</dd>
+							</dl>
+							<div>
+								<dl>
+									<dt>매달 최대 12,000원의<br />할인 행복</dt>
+									<dd>
+										집에서 편하게 맛집의 배달 음식을 받아볼 수 있는 지구에서의 음식비가 만만치 않으시다구요?<br /><br />우주에서는 배달음식비가 조금 더 가벼워집니다. <br /><br />매달 지급되는 4장의 3,000원 할인 쿠폰으로 우주에서도 맛있는 음식을 부담없이 즐겨보세요. 
+									</dd>
+								</dl>
+								<a href="#" class="arrowBtn">우주패스 구독하러 가기</a>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;" class="closeBtn">닫기</a>
+							<dl>
+								<dt><img src="" alt="로고"></dt>
+								<dd>스타벅스</dd>
+							</dl>
+							<div>
+								<dl>
+									<dt>매달 최대 12,000원의<br />할인 행복</dt>
+									<dd>
+										집에서 편하게 맛집의 배달 음식을 받아볼 수 있는 지구에서의 음식비가 만만치 않으시다구요? 우주에서는 배달음식비가 조금 더 가벼워집니다. 매달 지급되는 4장의 3,000원 할인 쿠폰으로 우주에서도 맛있는 음식을 부담없이 즐겨보세요. 
+									</dd>
+								</dl>
+								<a href="#" class="arrowBtn">우주패스 구독하러 가기</a>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;" class="closeBtn">닫기</a>
+							<dl>
+								<dt><img src="" alt="로고"></dt>
+								<dd>구글원</dd>
+							</dl>
+							<div>
+								<dl>
+									<dt>매달 최대 12,000원의<br />할인 행복</dt>
+									<dd>
+										집에서 편하게 맛집의 배달 음식을 받아볼 수 있는 지구에서의 음식비가 만만치 않으시다구요? 우주에서는 배달음식비가 조금 더 가벼워집니다. 매달 지급되는 4장의 3,000원 할인 쿠폰으로 우주에서도 맛있는 음식을 부담없이 즐겨보세요. 
+									</dd>
+								</dl>
+								<a href="#" class="arrowBtn">우주패스 구독하러 가기</a>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;" class="closeBtn">닫기</a>
+							<dl>
+								<dt><img src="" alt="로고"></dt>
+								<dd>이마트</dd>
+							</dl>
+							<div>
+								<dl>
+									<dt>매달 최대 12,000원의<br />할인 행복</dt>
+									<dd>
+										집에서 편하게 맛집의 배달 음식을 받아볼 수 있는 지구에서의 음식비가 만만치 않으시다구요? 우주에서는 배달음식비가 조금 더 가벼워집니다. 매달 지급되는 4장의 3,000원 할인 쿠폰으로 우주에서도 맛있는 음식을 부담없이 즐겨보세요. 
+									</dd>
+								</dl>
+								<a href="#" class="arrowBtn">우주패스 구독하러 가기</a>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;" class="closeBtn">닫기</a>
+							<dl>
+								<dt><img src="" alt="로고"></dt>
+								<dd>요기요</dd>
+							</dl>
+							<div>
+								<dl>
+									<dt>매달 최대 12,000원의<br />할인 행복</dt>
+									<dd>
+										집에서 편하게 맛집의 배달 음식을 받아볼 수 있는 지구에서의 음식비가 만만치 않으시다구요? 우주에서는 배달음식비가 조금 더 가벼워집니다. 매달 지급되는 4장의 3,000원 할인 쿠폰으로 우주에서도 맛있는 음식을 부담없이 즐겨보세요. 
+									</dd>
+								</dl>
+								<a href="#" class="arrowBtn">우주패스 구독하러 가기</a>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;" class="closeBtn">닫기</a>
+							<dl>
+								<dt><img src="" alt="로고"></dt>
+								<dd>요기요</dd>
+							</dl>
+							<div>
+								<dl>
+									<dt>매달 최대 12,000원의<br />할인 행복</dt>
+									<dd>
+										집에서 편하게 맛집의 배달 음식을 받아볼 수 있는 지구에서의 음식비가 만만치 않으시다구요? 우주에서는 배달음식비가 조금 더 가벼워집니다. 매달 지급되는 4장의 3,000원 할인 쿠폰으로 우주에서도 맛있는 음식을 부담없이 즐겨보세요. 
+									</dd>
+								</dl>
+								<a href="#" class="arrowBtn">우주패스 구독하러 가기</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<!-- pc ver-->
+			<article class="qrPc">
+				<div>
+					<div><img src="" alt="QR코드"></div>
+					<p>우주패스참여는 모바일로만 가능합니다.<br />모바일로 접속해 참여해주세요!</p>
+				</div>
+				<a href="#">공유하기</a>
+			</article>
+		</div>
+		@@include('./include/footer.html')
+	</div>
+</body>
+	@@include('./include/footer_js.html')
+	
+<script>
+	// Main tab slide
+	var swiper01 = new Swiper('.tabSlide', {
+		scrollbarHide: true,
+		slidesPerView: 'auto',
+		spaceBetween: 0
+	});
+
+	// Main tab slide image change
+	function thumbs () {
+		$(".tabSlide ul li").click(function(){
+			$(this).addClass("on").siblings().removeClass("on");
+			var clickIndex = $(this).index();
+			$(".mainPlanet ul li").eq(clickIndex).addClass("on").siblings().removeClass("on")
+		})
+	}
+	thumbs()
+	
+	// 혜택 자세히 보기
+	function rocket(){
+		$(".moreBenefit > a").click(function(){
+			//rocketAni
+			$(".rocketAni").addClass("on");
+			setTimeout(function(){
+				$(".rocketAni").removeClass("on");
+			},3000);
+
+			$(".benefitCon").addClass("on");
+
+			//혜택내용
+			var indexBenefit = $(".mainPlanet > ul > .on").index();
+			$(".benefitCon > ul > li").eq(indexBenefit).addClass("on").siblings().removeClass("on");
+			$("body, html").css ({
+				"overflow-y":"hidden"
+			});
+
+		});
+		
+
+		$(".benefitCon > ul > li > a").click(function(){
+			$(this).parent().parent().parent().removeClass("on");
+			$("body, html").css ({
+				"overflow-y":"auto"
+			});
+		});
+
+	}
+	rocket();
+</script>
+</html>
