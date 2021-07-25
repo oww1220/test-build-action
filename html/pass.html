@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<title>OLKL</title>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- Header -->
+		<header>
+	<!--logo-->
+	<h1>
+		<a href="index.html"><img src="./../images/logo_main.png" alt="OLKL 로고"></a>
+	</h1>
+	<!-- siteMap -->
+	<nav>
+		<a href="javascript:void(0)" class="btn-drawer-open">네비게이션</a>
+		<div class="drawer-cont">
+			<a href="javascript:void(0)" class="btn-drawer-close">닫기</a>
+			<ul>
+				<li>
+					<a href="index.html">HOME</a>
+				</li>
+				<li>
+					<a href="pass.html">우주패스 소개</a>
+				</li>
+				<li>
+					<a href="ticket.html">우주 티켓부스 이벤트</a>
+				</li>
+				<li>
+					<a href="delivery.html">우주 택배 이벤트</a>
+				</li>
+				<li>
+					<a href="mad.html">우주X매드몬스터</a>
+				</li>
+				<li>
+					<a href="mypage.html">마이페이지</a>
+				</li>
+			</ul>
+			<p><span>&copy;</span> OLKL Co., Ltd.</p>
+		</div>
+	</nav>
+</header>
+<div class="bg-overlay"></div>
+		<!-- // Header -->
+		<canvas id="webgl-universe"></canvas>
+
+		<div id="content" class="spacePass">
+			<!-- 하단 고정메뉴 -->
+			<ul class="quickMenu">
+				<li class="menuHome on">
+					<a href="index.html">Home</a>
+				</li>
+				<li class="menuTicket">
+					<a href="ticket.html">우주 티켓부스</a>
+				</li>
+				<li class="menuEvent">
+					<a href="delivery.html">우주 택배 이벤트</a>
+				</li>
+				<li class="menuMad">
+					<a href="mad.html">우주X 매드몬스터</a>
+				</li>
+			</ul>
+			<!--tab--> 
+			<article class="passTab">
+				<!-- tab title-->
+				<ul class="moveLeft">
+					<li class="left on">
+						<a href="javascript:;">우주패스 ALL</a>
+					</li>
+					<li class="right">
+						<a href="javascript:;">우주패스 Mini</a>
+					</li>
+				</ul>
+				<!-- tab content -->
+				<div class="tabContent">
+					<ul>
+						<!--left tab-->
+						<li class="leftTab">
+							<dl class="subTitle">
+								<dt>프리미엄한 우주 라이프를<br />꿈꾸는 당신을 위해</dt>
+								<dd>우주패스 ALL</dd>
+							</dl>
+							<div class="monthCost"><span>one</span>월 9,900원</div>
+							<p>어디에서도 볼 수 없었던<br />
+								탈지구급 기본 혜택과<br />
+								당신의 취향에 맞는 맞춤형 혜택까지!
+							</p>
+							<p class="second">우주패스 ALL과 함께 펼쳐질<br />
+								당신의 우주 라이프를 지금 바로<br />
+								확인해 보세요.
+							</p>
+							<a href="#" class="arrowBtn">첫달 1,000원에 구독하기</a>
+							<div class="passAllMerit">
+								<dl>
+									<dt>우주패스 ALL</dt>
+									<dd>기본 혜택 3가지</dd>
+								</dl>
+								<ul>
+									<li class="listAmazon">
+										<a href="#">
+											<dl>
+												<dt>아마존</dt>
+												<dd>무료 배송 + 5천원 쿠폰 2매</dd>
+											</dl>
+											<div>자세히보기</div>
+										</a>
+									</li>
+									<li class="list11">
+										<a href="#">
+											<dl>
+												<dt>11번가 SK페이포인트</dt>
+												<dd>매달 3,000원 할인 쿠폰 제공</dd>
+											</dl>
+											<div>자세히보기</div>
+										</a>
+									</li>
+									<li class="listGoogle">
+										<a href="#">
+											<dl>
+												<dt>구글원</dt>
+												<dd>100GB 용량 제공</dd>
+											</dl>
+											<div>자세히보기</div>
+										</a>
+									</li>
+								</ul>
+								<div>
+									<p>당신의 라이프 스타일에 맞는 맞춤형 혜택이<br />
+										<strong>무료로 하나 더!</strong>
+									</p>
+									<p>우주패스 ALL을 구독해주신 분들에게는<br />
+										아래 파트너들의 혜택 중<br />
+										1개를 추가로 받아보실 수 있습니다.
+									</p>
+								</div>
+							</div>
+							<h5>우주 파트너스의<br />혜택 알아보기</h5>
+							<!-- swiper -->
+							<div class="swiper-container partnersSlide">
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<a href="#">
+											<div><img src="../images/logo_yo.png" alt="요기요"></div>
+											<span>요기요</span>
+											<dl>
+												<dt>매달 최대 12,000원의<br />
+													파격적인 할인</dt>
+												<dd>자세히보기</dd>
+											</dl>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="#">
+											<div><img src="../images/logo_paris.png" alt="파리바게트"></div>
+											<span>파리바게트</span>
+											<dl>
+												<dt>전 제품30% 할인되는<br />
+													빵빵한 혜택</dt>
+												<dd>자세히보기</dd>
+											</dl>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="#">
+											<div><img src="../images/logo_paris.png" alt="파리바게트"></div>
+											<span>파리바게트</span>
+											<dl>
+												<dt>전 제품30% 할인되는<br />
+													빵빵한 혜택</dt>
+												<dd>자세히보기</dd>
+											</dl>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="#">
+											<div><img src="../images/logo_paris.png" alt="파리바게트"></div>
+											<span>파리바게트</span>
+											<dl>
+												<dt>전 제품30% 할인되는<br />
+													빵빵한 혜택</dt>
+												<dd>자세히보기</dd>
+											</dl>
+										</a>
+									</li>
+								</ul>
+								<div class="swiper-scrollbar"></div>
+							</div>
+							<a href="partners.html" class="arrowBtn">우주 파트너스 전체보기</a>
+						</li>
+						<!--right tab-->
+						<li class="rightTab">
+							<dl class="subTitle">
+								<dt>당신의 합리적인<br />우주 라이프 시작을 위해</dt>
+								<dd>우주패스 MINI</dd>
+							</dl>
+							<div class="monthCost"><span>one</span>월 4,900원</div>
+							<p>우주에서 즐기는 기본적인 혜택들로 충분한
+								당신에게 우주패스 Mini를 추천합니다.<br />
+							</p>
+							<p>보다 합리적인 가격으로 아래의 혜택들을<br />
+								모두 만나보세요!
+							</p>
+							<a href="#" class="arrowBtn">첫달 100원에 구독하기</a>
+							<div class="passAllMerit">
+								<dl>
+									<dt>우주패스 MINI</dt>
+									<dd>기본 혜택 2가지</dd>
+								</dl>
+								<ul>
+									<li class="listAmazon">
+										<a href="#">
+											<dl>
+												<dt>아마존</dt>
+												<dd>무료 배송 + 5천원 쿠폰 2매</dd>
+											</dl>
+											<div>자세히보기</div>
+										</a>
+									</li>
+									<li class="list11">
+										<a href="#">
+											<dl>
+												<dt>11번가 SK페이포인트</dt>
+												<dd>매달 3,000원 할인 쿠폰 제공</dd>
+											</dl>
+											<div>자세히보기</div>
+										</a>
+									</li>
+								</ul>
+								<div>
+									<p>두 가지 혜택 중 하나를 선택하여 즐겨보세요!</p>
+									<ul>
+										<li>
+											<a href="#">
+												<div><img src="../images/logo_google_small.png" alt="구글원"></div>
+												<span>구글원</span>
+												<dl>
+													<dt>100GB 용량 제공</dt>
+													<dd>자세히 보기</dd>
+												</dl>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div><img src="../images/wave_logo.png" alt="wave"></div>
+												<span>웨이브 라이트</span>
+												<dl>
+													<dt>무제한으로 즐기는<br />킬링타임용 콘텐츠</dt>
+													<dd>자세히 보기</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+						</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+		<footer>
+	<div>
+		<ul>
+			<li><a href="#">개인정보처리방침</a></li>
+			<li><a href="#">이용약관</a></li>
+		</ul>
+		<div><address>서울특별시 중구 을지로65 (을지로2가) SK T-타워 SK텔레콤(주)</address></div>
+		<p>&copy; OLKL Co.,Ltd.</p>
+	</div>
+	<div class="fooLogo"><img src="./../images/logo_foo.png" alt="OLKL로고"></div>
+</footer>
+	</div>
+</body>
+	<script src="../js/jquery.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/common.js"></script>
+
+
+<script type="text/javascript" src="../bundle/jquery.chunk.js"></script>
+<script type="text/javascript" src="../bundle/three.chunk.js"></script>
+<script type="text/javascript" src="../bundle/vendors.chunk.js"></script>
+<script type="text/javascript" src="../bundle/main.chunk.js"></script>
+	
+<script>
+	// Partners slide
+	var mainslider = new Swiper('.partnersSlide', {
+		slidesPerView : "auto",
+		scrollbar: {
+			el: ".swiper-scrollbar",
+			hide: false,
+		},
+		speed : 1000,
+	});
+</script>
+</html>

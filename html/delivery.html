@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<title>OLKL</title>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- Header -->
+		<header>
+	<!--logo-->
+	<h1>
+		<a href="index.html"><img src="./../images/logo_main.png" alt="OLKL 로고"></a>
+	</h1>
+	<!-- siteMap -->
+	<nav>
+		<a href="javascript:void(0)" class="btn-drawer-open">네비게이션</a>
+		<div class="drawer-cont">
+			<a href="javascript:void(0)" class="btn-drawer-close">닫기</a>
+			<ul>
+				<li>
+					<a href="index.html">HOME</a>
+				</li>
+				<li>
+					<a href="pass.html">우주패스 소개</a>
+				</li>
+				<li>
+					<a href="ticket.html">우주 티켓부스 이벤트</a>
+				</li>
+				<li>
+					<a href="delivery.html">우주 택배 이벤트</a>
+				</li>
+				<li>
+					<a href="mad.html">우주X매드몬스터</a>
+				</li>
+				<li>
+					<a href="mypage.html">마이페이지</a>
+				</li>
+			</ul>
+			<p><span>&copy;</span> OLKL Co., Ltd.</p>
+		</div>
+	</nav>
+</header>
+<div class="bg-overlay"></div>
+		<!-- // Header -->
+		<canvas id="webgl-universe"></canvas>
+
+		<div id="content" class="delivery">
+			<!-- 하단 고정메뉴 -->
+			<ul class="quickMenu">
+				<li class="menuHome">
+					<a href="index.html">Home</a>
+				</li>
+				<li class="menuTicket">
+					<a href="ticket.html">우주 티켓부스</a>
+				</li>
+				<li class="menuEvent on">
+					<a href="delivery.html">우주 택배 이벤트</a>
+				</li>
+				<li class="menuMad">
+					<a href="mad.html">우주X 매드몬스터</a>
+				</li>
+			</ul>
+			<article class="deliveryEvent">
+				<dl class="subTitle">
+					<dt>최대 천 만원의 해외직구 쇼핑이 무료!</dt>
+					<dd>우주 택배<br />이벤트</dd>
+				</dl>
+				<div class="deliverContent">
+					<p>우주에서는 아마존 해외직구 제품이<br />
+						무료 배송이라는 사실을 알고 계시나요?
+					</p>
+					<p>이번 만큼은 배송비 뿐만 아니라<br />
+						여러분의 해외직구 비용까지 우주가 책임집니다!
+					</p>
+					<p>우주패스를 구독하고 가지고 싶은 제품을 골라<br />
+						여러분의 장바구니에 담고 캡쳐해서<br />
+						등록해 주세요.
+					</p>
+				</div>
+				<p>최대 1,000만원 까지 무료로!<br />
+					우주가 여러분의 집 앞으로<br />
+					배송해 드립니다.<br />
+				</p>
+				<a href="#" target="_blank" class="arrowBtn">장바구니 담으러가기</a>
+				<a href="#importImage" class="cartBtn">장바구니 이미지 등록하기<span>one</span></a>
+			</article>
+			<article class="deliveryInfo">
+				<dl>
+					<dt>이벤트 기간</dt>
+					<dd>2021년 8월 9일 – 9월 5일까지</dd>
+				</dl>
+				<dl>
+					<dt>이벤트 대상</dt>
+					<dd>우주패스(Mini / ALL)에 가입 후<br />
+						장바구니 이미지 업로드를 모두 마친 분</dd>
+				</dl>
+				<div>
+					<h4>당첨자 선발 안내</h4>
+					<ul>
+						<li>
+							<h5>매주 수요일 총 4주에 걸쳐 다음의 인원 선발</h5>
+							<div>
+								<dl>
+									<dt>500만원</dt>
+									<dd>1명</dd>
+								</dl>
+								<dl>
+									<dt>100만원</dt>
+									<dd>3명</dd>
+								</dl>
+								<dl>
+									<dt>50만원</dt>
+									<dd>10명</dd>
+								</dl>
+								<dl>
+									<dt>5만원</dt>
+									<dd>30명</dd>
+								</dl>
+							</div>
+						</li>
+						<li>전체 기간 동안 참여한 분들 중 추첨을 통해<br />
+							총 1,000만원 (1명) 당첨자 선발
+						</li>
+					</ul>
+				</div>
+				<dl>
+					<dt>당첨자 발표</dt>
+					<dd class="winner">
+						<span>1주차</span><strong>8월 18일 (수)</strong><br />
+						<span>2주차</span><strong>8월 25일 (수)</strong><br />
+						<span>3주차</span><strong>9월 1일 (수)</strong><br />
+						<span>4주차</span><strong>9월 8일 (수)</strong><br />
+						<span>최종 당첨자</span><strong>9월 15일 (수)</strong>
+					</dd>
+				</dl>
+				<a href="#" class="arrowBtn">우주패스 첫 달 1,000원에 구독하기</a>
+				<span>one</span>
+			</article>
+			<article class="deliveryStep">
+				<h5>참여방법</h5>
+				<ul>
+					<li>
+						<dl class="step01">
+							<dt>STEP 1</dt>
+							<dd>우주패스 구독하기</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="step02">
+							<dt>STEP 2</dt>
+							<dd>11번가에서 아마존 스토어<br />접속하기</dd>
+						</dl>
+						<a href="#" class="arrowBtn">장바구니 담으러가기</a>
+					</li>
+					<li>
+						<dl class="step03">
+							<dt>STEP 3</dt>
+							<dd>원하는 제품 장바구니에<br />담은 후 캡쳐하기</dd>
+						</dl>
+					</li>
+					<li id="importImage">
+						<dl class="step04">
+							<dt>STEP 4</dt>
+							<dd>이벤트 페이지에<br />캡쳐 이미지 등록하기</dd>
+						</dl>
+						<div class="userInfoWrap">
+							<a href="javascript:;" class="cartBtn">장바구니 이미지 등록하기<span>one</span></a>
+							<div class="userInfo">
+								<h4>연락처 정보를 알려주세요.</h4>
+								<div class="userInfo-input">
+									<!-- 값 오류시 class="wrongValue"추가-->
+									<div class="col-3 input-effect">
+										<input class="effect-24" type="text" placeholder="이름">
+										<label>이름</label>
+										<span class="focus-bg"></span>
+										<strong>이름을 입력해주세요.</strong>
+									</div>
+									<div class="telecom">
+										<span class="select">
+											<a href="#;" class="def"></a>
+											<a href="#;" class="dropdown">▼</a>
+										</span>
+										<select name="" id="sel">
+											<option value="통신사">통신사</option>
+											<option value="SKT">SKT</option>
+											<option value="KT">KT</option>
+											<option value="LG U+">LG U+</option>
+										</select>
+										<strong>통신사를 선택해주세요.</strong>
+									</div>
+									<div class="col-3 input-effect">
+										<input class="effect-24 phone" type="text" placeholder="휴대폰번호" name="phone" maxlength="13" autocomplete="off" >
+										<label>휴대폰번호</label>
+										<span class="focus-bg"></span>
+										<strong>휴대폰번호를 입력해주세요.</strong>
+									</div>
+									<div class="col-3 input-effect wrongValue">
+										<input class="effect-24" type="text" placeholder="인증번호">
+										<label>인증번호</label>
+										<span class="focus-bg"></span>
+										<a href="javascript:;" class="reissuance">인증번호 재발급</a>
+										<strong>인증번호 발급을 해주세요.</strong>
+										<em>2:32</em>
+									</div>
+								</div>
+								<div class="numberIssuance">
+									<a href="javascript:;" class="goBtn">인증번호 발급</a>
+								</div>
+								<ul>
+									<li>
+										<input type="checkbox" id="agree01">
+										<label for="agree01">체크</label>
+										<span>개인정보처리방침 및 이용약관 동의</span>
+										<a href="#" target="_blank">자세히보기</a>
+									</li>
+									<li>
+										<input type="checkbox" id="agree02">
+										<label for="agree02">체크</label>
+										<span>제 3자 정보제공 및 마케팅 수신</span>
+										<a href="#" target="_blank">자세히보기</a>
+									</li>
+									<li>
+										<input type="checkbox" id="agree03">
+										<label for="agree03">체크</label>
+										<span>본인은 상기 내용을 숙지하였으며 이에 동의합니다.</span>
+									</li>
+								</ul>
+								<a href="javascript:;" class="cartBtn">
+									<span>one</span>
+									장바구니 이미지 등록하기
+								</a>
+							</div>
+							<div class="imageFile">
+								<div>
+									<a href="javascript:;" class="closeBtn">닫기</a>
+									<div class="step01 on">
+										<dl>
+											<dt>STEP 1</dt>
+											<dd>아래와 같이 장바구니를<br />캡쳐하여 등록해주세요.</dd>
+										</dl>	
+										<div><img src="../images/img-examples-1.png" alt="장바구니 캡쳐예시"></div>
+										<div class="goBtn">
+											<label for="imageImport01">이미지 불러오기</label>
+											<input type="file" id="imageImport01" class="blind">
+										</div>
+									</div>
+									<div class="step02">
+										<dl>
+											<dt>STEP 2</dt>
+											<dd>이미지를<br />등록하시겠습니까?</dd>
+										</dl>
+										<div><img src="../images/img-examples-1.png" alt="장바구니 캡쳐예시"></div>
+										<div class="btnWrap">
+											<a href="javascript:;" class="goBtn">등록하기</a>
+											<div class="goBtn">
+												<label for="imageImport02">이미지 다시 불러오기</label>
+												<input type="file" id="imageImport02" class="blind">
+											</div>
+										</div>
+									</div>
+									<div class="step03">
+										<p>등록이 모두<br />완료되었습니다.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</article>
+			<article class="storeRank">
+				<dl>
+					<dt>아마존 스토어에서 많이 담은 제품</dt>
+					<dd>TOP 6</dd>
+				</dl>
+				<!-- swiper -->
+				<div class="swiper-container rankSlide">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<div><img src="../images/img-ama-top1.png" alt="Samsung Crystal UHD 125 cm"></div>
+							<dl>
+								<dt>Samsung Crystal UHD 125 cm</dt>
+								<dd>
+									<a href="#">자세히보기</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="swiper-slide">
+							<div><img src="../images/img-ama-top2.png" alt="iPhone 12 Pro Max 6.7형 디스플레이"></div>
+							<dl>
+								<dt>iPhone 12 Pro Max 6.7형 디스플레이</dt>
+								<dd>
+									<a href="#">자세히보기</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="swiper-slide">
+							<div><img src="../images/img-ama-top1.png" alt="Samsung Crystal UHD 125 cm"></div>
+							<dl>
+								<dt>Samsung Crystal UHD 125 cm</dt>
+								<dd>
+									<a href="#">자세히보기</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="swiper-slide">
+							<div><img src="../images/img-ama-top1.png" alt="Samsung Crystal UHD 125 cm"></div>
+							<dl>
+								<dt>Samsung Crystal UHD 125 cm</dt>
+								<dd>
+									<a href="#">자세히보기</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="swiper-slide">
+							<div><img src="../images/img-ama-top1.png" alt="Samsung Crystal UHD 125 cm"></div>
+							<dl>
+								<dt>Samsung Crystal UHD 125 cm</dt>
+								<dd>
+									<a href="#">자세히보기</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="swiper-slide">
+							<div><img src="../images/img-ama-top1.png" alt="Samsung Crystal UHD 125 cm"></div>
+							<dl>
+								<dt>Samsung Crystal UHD 125 cm</dt>
+								<dd>
+									<a href="#">자세히보기</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<div class="swiper-scrollbar"></div>
+				</div>
+			</article>
+			<article class="eventNotice">
+				<h5>*유의사항</h5>
+				<ul>
+					<li>해당 이벤트는 누구나 참여 가능합니다.</li>
+					<li>리워드들은 당사의 사정에 따라 이유없이 변동될 수 있습니다.</li>
+					<li>타인의 정보 도용, 비정상적인 참여로 당첨되신 경우 당첨이 취소될 수 있고, 이벤트 참여시 불이익이 있을 수 있습니다. </li>
+					<li>당첨되신 이벤트 경품은 현금 또는 다른 경품으로 교환되지 않으며, 타인에게 양도하거나 판매하실 수 없습니다. </li>
+					<li>모든 리워드는 랜덤으로 추첨하며, 중복 당첨이 불가합니다.</li>
+					<li>당첨 안내 후 7일 이내에 연락이 닿지 않을 시, 당첨에서 제외될 수 있습니다.</li>
+				</ul>
+			</article>
+			<!--event alret-->
+			<div class="alertWin">
+				<div>
+					<dl>
+						<dt>이미 이벤트에 참여<br />하셨습니다.</dt>
+						<dd>참여 내역은 마이페이지에서 확인해주세요.</dd>
+					</dl>
+					<div>
+						<a href="#" class="goBtn">확인</a>
+						<a href="#" class="arrowBtn">마이페이지</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+	<div>
+		<ul>
+			<li><a href="#">개인정보처리방침</a></li>
+			<li><a href="#">이용약관</a></li>
+		</ul>
+		<div><address>서울특별시 중구 을지로65 (을지로2가) SK T-타워 SK텔레콤(주)</address></div>
+		<p>&copy; OLKL Co.,Ltd.</p>
+	</div>
+	<div class="fooLogo"><img src="./../images/logo_foo.png" alt="OLKL로고"></div>
+</footer>
+	</div>
+</body>
+	<script src="../js/jquery.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/common.js"></script>
+
+
+<script type="text/javascript" src="../bundle/jquery.chunk.js"></script>
+<script type="text/javascript" src="../bundle/three.chunk.js"></script>
+<script type="text/javascript" src="../bundle/vendors.chunk.js"></script>
+<script type="text/javascript" src="../bundle/main.chunk.js"></script>
+	<script>
+		function confirm(){
+			$(".alertWin .goBtn").click(function(){
+				$(".alertWin").removeClass("on");
+			});
+		};
+		confirm();
+
+		// TOP 6 구매순위 slide
+		var mainslider = new Swiper('.rankSlide', {
+			slidesPerView : "auto",
+			scrollbar: {
+				el: ".swiper-scrollbar",
+				hide: false,
+        	},
+			speed : 1000,
+		});
+
+		/***통신사 selectbox****/
+		$('.select').append("<ul class=options style='display:none;'></ul>");
+
+
+		//변수 설정
+		var sel = $('.select');
+		var opts = $('.select > .options');
+		var btn = $('.select > .dropdown');
+		var real = $('#sel');
+		var real_opt = real.find('option');
+
+		$('.userInfo p').text(real_opt.eq(0).text());
+
+		//초기세팅
+		for(var i=0; i<real_opt.length; i++){
+			$('.select').find('> .options').append('<li><a href=javascript:;></a></li>');
+				if(i === 0){
+					sel.find(' > .def').text(real_opt.eq(i).text());
+				opts.find('li').eq(0).find('a').text(real_opt.eq(i).val());
+			} else if(i >= 1) {
+				opts.find('li').eq(i).find('a').text(real_opt.eq(i).val());
+			}
+		}
+
+
+		//내용출력칸, 버튼 을 클릭하면
+		sel.on('click','.def, .dropdown', function(e){
+			e.stopPropagation();
+			opts.slideToggle('fast').toggleClass('on');
+			if(opts.hasClass('on')) btn.text('▲');
+		});
+
+		//옵션리스트 중 하나를 클릭하면
+		opts.on('click','li', function(e){
+			e.stopPropagation();
+			var idx = $(this).index();
+			var t = $(this).text();
+			sel.find('.def').text(t);
+			opts.slideToggle('fast').removeClass('on');
+			btn.text('▼');
+			//실제 셀렉트 박스 변경
+			real_opt.eq(idx).attr('selected','selected').siblings().removeAttr('selected');
+		});
+
+		//window를 클릭하면
+		$(window).on('click', function(e){
+			if(opts.hasClass('on'))
+			opts.slideToggle('fast').removeClass('on');
+			btn.text('▼');
+		});
+
+		//핸드폰 번호 입력
+		$('.phone').keydown(function(event) {
+			var key = event.charCode || event.keyCode || 0;
+			$text = $(this);
+			if (key !== 8 && key !== 9) {
+				if ($text.val().length === 3) {
+					$text.val($text.val() + '-');
+				}
+				if ($text.val().length === 8) {
+					$text.val($text.val() + '-');
+				}
+			}
+
+			return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));          
+		});
+
+		// JavaScript for label effects only
+		$(function(){
+			$(".col-3 input").val("");
+			
+			$(".input-effect input").focusout(function(){
+				if($(this).val() != ""){
+					$(this).addClass("has-content");
+				}else{
+					$(this).removeClass("has-content");
+				}
+			});
+		});
+
+		//장바구니 이미지 등록
+		function userInfoShow(){
+			$(".userInfoWrap > .cartBtn").click(function(){
+				$(".userInfoWrap").addClass("on");
+			});
+		};
+		userInfoShow()
+
+		// 이미지등록 modal
+		function imageImport(){
+			$(".userInfo > .cartBtn").click(function(){
+				$(".imageFile").addClass("on")
+				$("body, html").css ({
+					"overflow-y":"hidden"
+				});
+			});
+			$(".imageFile .closeBtn").click(function(){
+				$("body, html").css ({
+					"overflow-y":"auto"
+				});
+				$(".imageFile").removeClass("on")
+			});
+			$(".imageFile .step01 .goBtn").click(function(){
+				$(".step01").removeClass("on");
+				$(".step02").addClass("on");
+			});
+			$(".step02 .btnWrap > a").click(function(){
+				$(".step02").removeClass("on");
+				$(".step03").addClass("on");
+			});
+		}
+		imageImport()
+	</script>
+</html>
