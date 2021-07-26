@@ -8,8 +8,8 @@
     - `npm i -D gh-pages`
 
 - package.json 설정 (하단예시)
-    - `"deploy": "gh-pages -d webapp/dist` 스크립트 항목에 추가
-    주의: webapp/dist 는 배포할 경로임!
+    - `"deploy": "gulp build && gh-pages -d webapp/dist` 스크립트 항목에 추가
+    주의: webapp/dist 는 배포할 경로임! 2개의 명령어 직렬로 실행!
     - `"homepage": "https://oww1220.github.io/test-build-action/"` 루트항목에 추가 
     주의: 배포대상이 되는 깃허브 페이지 uri 제일뒤에 / 붙여줌!
 

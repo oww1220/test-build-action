@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
-    "deploy": "gh-pages -d webapp/dist"
+    "deploy": "gulp build && gh-pages -d webapp/dist"
   },
   "homepage": "https://oww1220.github.io/test-build-action/",
   "keywords": [
