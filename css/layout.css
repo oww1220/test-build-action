@@ -181,11 +181,25 @@ header nav > div p span { font-weight: normal; }
 
 .quickMenu li.menuMad.on a { background-position: 10px center; }
 
+.quickMenu02 { width: 89.4%; height: 80px; position: fixed; bottom: 30px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; background-color: rgba(100, 20, 255, 0.4); border-radius: 25px; z-index: 10; }
+
+.quickMenu02 li { width: 110px; }
+
+.quickMenu02 li a { display: block; text-align: center; color: #ffffff; padding-top: 42px; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
+
+.quickMenu02 li.menuTicket a { background: url("../images/icon_ticket.png"); background-repeat: no-repeat; background-position: center 12px; }
+
+.quickMenu02 li.menuEvent a { background: url("../images/icon_cart.png"); background-repeat: no-repeat; background-position: center 12px; }
+
+.quickMenu02 li.menuMad a { background: url("../images/icon_mad.png"); background-repeat: no-repeat; background-position: center 12px; }
+
 .arrowBtn { display: block; margin: 0 auto; color: #ffffff; margin-top: 30px; width: 189px; height: 50px; line-height: 50px; background-color: #6414ff; border-radius: 30px; font-size: 16px; letter-spacing: -0.32px; font-family: 'Noto Sans KR black', sans-serif; padding-right: 20px; position: relative; }
 
 .arrowBtn:after { content: ""; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; position: absolute; top: 20px; right: 45px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
 .goBtn { display: block; margin: 0 auto; color: #ffffff; margin-top: 30px; width: 218px; height: 50px; line-height: 50px; background-color: #6414ff; border-radius: 30px; font-size: 16px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
+
+.goBtn02 { display: block; text-align: center; margin: 0 auto; color: #ffffff; margin-top: 30px; border-radius: 30px; font-family: 'Noto Sans KR bold'; width: 119px; background-color: #6414ff; font-size: 14px; line-height: 36px; height: 36px; letter-spacing: -0.28px; }
 
 .closeBtn { display: block; position: absolute; top: -58px; left: 50%; width: 40px; height: 40px; border-radius: 50%; background-color: #ffffff; -webkit-transform: translateX(-50%); transform: translateX(-50%); text-indent: -9999px; }
 
@@ -273,7 +287,7 @@ header nav > div p span { font-weight: normal; }
 
 .userInfo .userInfo-input div > a { display: block; height: 54px; line-height: 54px; padding-left: 20px; font-weight: bold; font-size: 14px; letter-spacing: -0.28px; border-radius: 10px; color: #c9c9c9; }
 
-.userInfo .userInfo-input div .reissuance { position: absolute; bottom: -40px; right: 5px; font-size: 12px; letter-spacing: -0.24px; padding-right: 12px; }
+.userInfo .userInfo-input div .reissuance { cursor: pointer; position: absolute; bottom: -40px; right: 5px; font-size: 12px; letter-spacing: -0.24px; padding-right: 12px; }
 
 .userInfo .userInfo-input div .reissuance::after { content: ""; position: absolute; top: 23px; right: 0; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
@@ -285,7 +299,7 @@ header nav > div p span { font-weight: normal; }
 
 .userInfo .userInfo-input .telecom .select > .options { width: 100.5%; position: absolute; top: 45px; left: -1px; text-align: center; border-radius: 3px; z-index: 10; }
 
-.userInfo .userInfo-input .telecom .select > .options > li { border: 1px solid #575757; border-top: 0; background: #0e1c30; height: 54px; line-height: 54px; }
+.userInfo .userInfo-input .telecom .select > .options > li { border: 1px solid #575757; border-top: 0; background: #000000; height: 54px; line-height: 54px; }
 
 .userInfo .userInfo-input .telecom .select > .options > li:first-child { border-top: 1px solid #575757; }
 
@@ -297,7 +311,13 @@ header nav > div p span { font-weight: normal; }
 
 .userInfo .numberIssuance { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-.userInfo .numberIssuance a { width: 119px; text-align: center; background-color: #0091ff; font-size: 14px; line-height: 36px; height: 36px; letter-spacing: -0.28px; }
+.userInfo .numberIssuance .goBtn { display: none; width: 119px; text-align: center; background-color: #0091ff; font-size: 14px; line-height: 36px; height: 36px; letter-spacing: -0.28px; }
+
+.userInfo .numberIssuance .goBtn.on { display: block; }
+
+.userInfo .numberIssuance .goBtn02 { display: none; }
+
+.userInfo .numberIssuance .goBtn02.on { display: block; }
 
 .userInfo > ul { margin-top: 30px; }
 
@@ -314,11 +334,11 @@ header nav > div p span { font-weight: normal; }
 /************** Main ***************/
 .mainVideo { padding: 0 8%; }
 
-.mainVideo div { width: 100%; height: 178px; overflow: hidden; background-color: #e5e5e5; }
+.mainVideo div { width: 100%; overflow: hidden; background-color: #e5e5e5; }
 
 .mainVideo div video { width: 100%; height: auto; }
 
-.mainTab { padding: 10px 8% 0 8%; margin-top: 20px; }
+.mainTab { padding: 10px 8% 0 8%; margin-top: 20px; margin-bottom: 160px; }
 
 .mainTab > ul { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; background: -webkit-gradient(linear, left top, right top, from(rgba(0, 204, 255, 0.329)), to(rgba(126, 20, 255, 0.329))); background: linear-gradient(to right, rgba(0, 204, 255, 0.329), rgba(126, 20, 255, 0.329)); width: 100%; border-radius: 14px; position: relative; -webkit-transition: .3s; transition: .3s; }
 
@@ -336,15 +356,9 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .leftTab > dl { text-align: center; }
 
-.mainTab .tabContent ul .leftTab > dl dt { font-size: 24px; line-height: 38px; letter-spacing: -0.48px; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; }
-
-.mainTab .tabContent ul .leftTab > dl dt span { display: inline-block; margin-top: 10px; font-size: 24px; line-height: 38px; letter-spacing: -0.48px; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; }
+.mainTab .tabContent ul .leftTab > dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 44px; line-height: 1.1; letter-spacing: -0.88px; background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; }
 
 .mainTab .tabContent ul .leftTab > dl dd { margin-top: 30px; font-family: 'Noto Sans KR bold', sans-serif; line-height: 1.6; letter-spacing: -0.32px; }
-
-.mainTab .tabContent ul .leftTab > dl dd span { display: inline-block; margin-top: 10px; }
-
-.mainTab .tabContent ul .leftTab h5 { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; margin-top: 30px; line-height: 1.6; letter-spacing: -0.32px; text-align: center; font-size: 16px; }
 
 .mainTab .tabContent ul .leftTab > div { margin-top: 80px; text-align: center; }
 
@@ -352,7 +366,9 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .leftTab > div dl dd { margin-top: 10px; }
 
-.mainTab .tabContent ul .leftTab ul { margin-top: 80px; }
+.mainTab .tabContent ul .leftTab h5 { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 44px; line-height: 1.1; letter-spacing: -0.88px; background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; text-align: center; margin-top: 77px; }
+
+.mainTab .tabContent ul .leftTab ul { margin-top: 28px; }
 
 .mainTab .tabContent ul .leftTab ul li { margin-top: 10px; width: 100%; border-radius: 20px; position: relative; }
 
@@ -372,126 +388,136 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .leftTab ul li a span { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 20px; text-indent: -9999px; }
 
+.mainTab .tabContent ul .leftTab > a { background: linear-gradient(100deg, #00cdff, #7d14ff); text-align: center; padding: 48px 0 11px 0; margin: 0 auto; color: #ffffff; margin-top: 30px; width: 237px; border-radius: 30px; font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; display: block; }
+
 .mainTab .tabContent ul .rightTab { display: none; text-align: center; }
 
-.mainTab .tabContent ul .rightTab div p { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 24px; line-height: 38px; letter-spacing: -0.48px; }
+.mainTab .tabContent ul .rightTab > dl { text-align: center; }
 
-.mainTab .tabContent ul .rightTab div p:first-child { margin-bottom: 30px; }
+.mainTab .tabContent ul .rightTab > dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 44px; line-height: 1.1; letter-spacing: -0.88px; background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; }
 
-.mainTab .tabContent ul .rightTab ul { margin-top: 40px; }
+.mainTab .tabContent ul .rightTab > dl dd { margin-top: 30px; font-family: 'Noto Sans KR bold', sans-serif; line-height: 1.6; letter-spacing: -0.32px; }
 
-.mainTab .tabContent ul .rightTab ul li { width: 100%; position: relative; margin-top: 10px; background: url("../images/mini.png") no-repeat 0 0; background-position: 90% center; }
+.mainTab .tabContent ul .rightTab > ul { margin-top: 40px; }
 
-.mainTab .tabContent ul .rightTab ul li:first-child { margin-top: 0; background: url("../images/all.png") no-repeat 0 0; background-position: 90% center; }
+.mainTab .tabContent ul .rightTab > ul li { width: 100%; position: relative; margin-top: 10px; background: url("../images/mini.png") no-repeat 0 0; background-position: 90% center; }
 
-.mainTab .tabContent ul .rightTab ul li a { padding: 20px; text-align: left; display: block; background-color: rgba(0, 0, 0, 0.1); border-radius: 30px; }
+.mainTab .tabContent ul .rightTab > ul li:first-child { margin-top: 0; background: url("../images/all.png") no-repeat 0 0; background-position: 90% center; }
 
-.mainTab .tabContent ul .rightTab ul li a span { display: inline-block; text-indent: -9999px; content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 30px; }
+.mainTab .tabContent ul .rightTab > ul li a { padding: 20px; text-align: left; display: block; background-color: rgba(0, 0, 0, 0.1); border-radius: 30px; }
 
-.mainTab .tabContent ul .rightTab ul li a dl { color: #ffffff; }
+.mainTab .tabContent ul .rightTab > ul li a span { display: inline-block; text-indent: -9999px; content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 30px; }
 
-.mainTab .tabContent ul .rightTab ul li a dl dt { font-size: 24px; letter-spacing: -0.48px; line-height: 1.6; font-family: 'Noto Sans KR bold'; }
+.mainTab .tabContent ul .rightTab > ul li a dl { color: #ffffff; }
 
-.mainTab .tabContent ul .rightTab ul li a dl dd { font-size: 12px; line-height: 17px; letter-spacing: -0.24px; color: rgba(255, 255, 255, 0.493); position: relative; }
+.mainTab .tabContent ul .rightTab > ul li a dl dt { font-size: 24px; letter-spacing: -0.48px; line-height: 1.6; font-family: 'Noto Sans KR bold'; }
 
-.mainTab .tabContent ul .rightTab ul li a dl dd.mini::before { content: ""; background-color: #87fa82; }
+.mainTab .tabContent ul .rightTab > ul li a dl dd { font-size: 12px; line-height: 17px; letter-spacing: -0.24px; color: rgba(255, 255, 255, 0.493); position: relative; }
 
-.mainTab .tabContent ul .rightTab ul li a dl dd.mini::after { content: ""; background-color: #87fa82; }
+.mainTab .tabContent ul .rightTab > ul li a dl dd.mini::before { content: ""; background-color: #87fa82; }
 
-.mainTab .tabContent ul .rightTab ul li a dl dd.mini strong { color: #87fa82; }
+.mainTab .tabContent ul .rightTab > ul li a dl dd.mini::after { content: ""; background-color: #87fa82; }
 
-.mainTab .tabContent ul .rightTab ul li a dl dd::before { content: ""; position: absolute; top: 11px; left: 58px; width: 8px; height: 1px; background-color: #0091ff; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+.mainTab .tabContent ul .rightTab > ul li a dl dd.mini strong { color: #87fa82; }
 
-.mainTab .tabContent ul .rightTab ul li a dl dd::after { content: ""; position: absolute; top: 9px; left: 0; width: 64px; height: 1px; background-color: #0091ff; }
+.mainTab .tabContent ul .rightTab > ul li a dl dd::before { content: ""; position: absolute; top: 11px; left: 58px; width: 8px; height: 1px; background-color: #0091ff; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
 
-.mainTab .tabContent ul .rightTab ul li a dl dd strong { font-size: 16px; color: #0091ff; line-height: 1.6; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
+.mainTab .tabContent ul .rightTab > ul li a dl dd::after { content: ""; position: absolute; top: 9px; left: 0; width: 64px; height: 1px; background-color: #0091ff; }
 
-.mainTab .tabContent ul .rightTab ul li a div { margin-top: 10px; line-height: 1.4; font-size: 14px; color: #ffffff; font-family: 'Noto Sans KR black'; position: relative; letter-spacing: -0.24px; }
+.mainTab .tabContent ul .rightTab > ul li a dl dd strong { font-size: 16px; color: #0091ff; line-height: 1.6; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
 
-.mainTab .tabContent ul .rightTab ul li a div::after { content: ""; position: absolute; top: 4px; left: 115px; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.mainTab .tabContent ul .rightTab > ul li a div { margin-top: 10px; line-height: 1.4; font-size: 14px; color: #ffffff; font-family: 'Noto Sans KR black'; position: relative; letter-spacing: -0.24px; }
 
-.mainPartner { margin-top: 94px; margin-bottom: 111px; text-align: center; }
+.mainTab .tabContent ul .rightTab > ul li a div::after { content: ""; position: absolute; top: 4px; left: 115px; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
-.mainPartner h5 { font-size: 24px; line-height: 38px; letter-spacing: -0.48px; font-family: 'Noto Sans KR bold', sans-serif; }
+.mainTab .tabContent ul .rightTab .mainPartner { margin-top: 94px; margin-bottom: 111px; text-align: center; position: relative; }
 
-.mainPartner .mainPlanet { margin-top: 30px; }
+.mainTab .tabContent ul .rightTab .mainPartner h5 { font-size: 24px; line-height: 38px; letter-spacing: -0.48px; font-family: 'Noto Sans KR bold', sans-serif; }
 
-.mainPartner .mainPlanet ul li { display: none; }
+.mainTab .tabContent ul .rightTab .mainPartner .mainPlanet { margin-top: 30px; }
 
-.mainPartner .mainPlanet ul li.on { display: block; }
+.mainTab .tabContent ul .rightTab .mainPartner .mainPlanet ul li { display: none; }
 
-.mainPartner .mainPlanet ul li.on div img { width: 100%; height: auto; }
+.mainTab .tabContent ul .rightTab .mainPartner .mainPlanet ul li.on { display: block; }
 
-.mainPartner .tabSlide { margin-top: 30px; width: 235px; padding: 6px; }
+.mainTab .tabContent ul .rightTab .mainPartner .mainPlanet ul li.on div img { width: 100%; height: auto; }
 
-.mainPartner .tabSlide > ul li { width: 24px; height: 36px; margin-right: 15px; }
+.mainTab .tabContent ul .rightTab .mainPartner .tabSlide { margin-top: 30px; width: 235px; padding: 6px; }
 
-.mainPartner .tabSlide > ul li.on > a span { display: inline-block; text-indent: -9999px; position: absolute; top: 0; left: -6px; width: 36px; height: 36px; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 50%; -webkit-animation: rotateOne 1s infinite; animation: rotateOne 1s infinite; }
+.mainTab .tabContent ul .rightTab .mainPartner .tabSlide > ul li { width: 24px; height: 36px; margin-right: 15px; }
 
-.mainPartner .tabSlide > ul li > a { display: block; position: relative; padding-top: 6px; }
+.mainTab .tabContent ul .rightTab .mainPartner .tabSlide > ul li.on > a span { display: inline-block; text-indent: -9999px; position: absolute; top: 0; left: -6px; width: 36px; height: 36px; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 50%; -webkit-animation: rotateOne 1s infinite; animation: rotateOne 1s infinite; }
 
-.mainPartner .tabSlide > ul li > a span { text-indent: -9999px; display: inline-block; }
+.mainTab .tabContent ul .rightTab .mainPartner .tabSlide > ul li > a { display: block; position: relative; padding-top: 6px; }
 
-.mainPartner .tabSlide > ul li > a img { width: 24px; height: 24px; }
+.mainTab .tabContent ul .rightTab .mainPartner .tabSlide > ul li > a span { text-indent: -9999px; display: inline-block; }
 
-.mainPartner .moreBenefit .arrowBtn { width: 206px; }
+.mainTab .tabContent ul .rightTab .mainPartner .tabSlide > ul li > a img { width: 24px; height: 24px; }
 
-.mainPartner .rocketAni { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #ffffff; z-index: 10; }
+.mainTab .tabContent ul .rightTab .mainPartner .sliderBtn .swiper-button-prev { position: absolute; top: 225px; left: 0; text-align: center; width: 30px; height: 30px; text-indent: -9999px; }
 
-.mainPartner .rocketAni.on { display: block; -webkit-animation: rocket 2s both; animation: rocket 2s both; }
+.mainTab .tabContent ul .rightTab .mainPartner .sliderBtn .swiper-button-prev::before { content: ""; width: 20px; height: 20px; border-top: 2px solid #ffffff; border-left: 2px solid #ffffff; position: absolute; top: 5px; left: 10px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
 
-.mainPartner .rocketAni:before { content: ""; position: absolute; top: -166px; left: 0; width: 100%; height: 166px; background: url("../images/cloud.png") no-repeat 0 0; background-size: 100% 166px; }
+.mainTab .tabContent ul .rightTab .mainPartner .sliderBtn .swiper-button-next { position: absolute; top: 225px; right: 0; text-align: center; width: 30px; height: 30px; text-indent: -9999px; }
 
-.mainPartner .rocketAni:after { content: ""; position: absolute; top: -220px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 31px; height: 94px; background: url("../images/spaceship.png") no-repeat 0 0; }
+.mainTab .tabContent ul .rightTab .mainPartner .sliderBtn .swiper-button-next::before { content: ""; width: 20px; height: 20px; border-top: 2px solid #ffffff; border-right: 2px solid #ffffff; position: absolute; top: 5px; right: 10px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
-.mainPartner .benefitCon { display: none; position: fixed; overflow-y: scroll; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 100; }
+.mainTab .tabContent ul .rightTab .mainPartner .moreBenefit .arrowBtn { width: 206px; }
 
-.mainPartner .benefitCon.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; -webkit-animation-delay: 1s; animation-delay: 1s; }
+.mainTab .tabContent ul .rightTab .mainPartner .rocketAni { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #ffffff; z-index: 10; }
 
-.mainPartner .benefitCon.on ul { position: relative; margin-top: 100px; width: 100%; height: 100%; background-color: #ffffff; border-top-left-radius: 30px; border-top-right-radius: 30px; }
+.mainTab .tabContent ul .rightTab .mainPartner .rocketAni.on { display: block; -webkit-animation: rocket 2s both; animation: rocket 2s both; }
 
-.mainPartner .benefitCon.on ul li { padding: 0 8%; display: none; }
+.mainTab .tabContent ul .rightTab .mainPartner .rocketAni:before { content: ""; position: absolute; top: -166px; left: 0; width: 100%; height: 166px; background: url("../images/cloud.png") no-repeat 0 0; background-size: 100% 166px; }
 
-.mainPartner .benefitCon.on ul li.on { display: block; }
+.mainTab .tabContent ul .rightTab .mainPartner .rocketAni:after { content: ""; position: absolute; top: -220px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 31px; height: 94px; background: url("../images/spaceship.png") no-repeat 0 0; }
 
-.mainPartner .benefitCon.on ul li > dl { border-bottom: 2px solid #c9c9c9; padding: 71px 0 8px 0; }
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon { display: none; position: fixed; overflow-y: scroll; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 100; }
 
-.mainPartner .benefitCon.on ul li > dl dt { padding-bottom: 23px; }
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.mainPartner .benefitCon.on ul li > dl dd { text-align: right; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; color: #575757; font-family: 'Noto Sans KR bold'; }
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul { position: relative; margin-top: 100px; width: 100%; height: 100%; background-color: #ffffff; border-top-left-radius: 30px; border-top-right-radius: 30px; }
 
-.mainPartner .benefitCon.on ul li div { margin-top: 20px; }
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li { padding: 0 8%; display: none; }
 
-.mainPartner .benefitCon.on ul li div dl { text-align: left; font-family: 'Noto Sans KR black'; line-height: 1.6; }
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li.on { display: block; }
 
-.mainPartner .benefitCon.on ul li div dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 24px; letter-spacing: -0.48px; }
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li > dl { border-bottom: 2px solid #c9c9c9; padding: 71px 0 8px 0; }
 
-.mainPartner .benefitCon.on ul li div dl dd { margin-top: 20px; font-size: 16px; color: #000000; letter-spacing: -0.32px; }
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li > dl dt { padding-bottom: 23px; }
 
-.mainPartner .benefitCon.on ul li div .arrowBtn { width: 249px; margin-left: 0; }
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li > dl dd { text-align: right; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; color: #575757; font-family: 'Noto Sans KR bold'; }
+
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li div { margin-top: 20px; }
+
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li div dl { text-align: left; font-family: 'Noto Sans KR black'; line-height: 1.6; }
+
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li div dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 24px; letter-spacing: -0.48px; }
+
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li div dl dd { margin-top: 20px; font-size: 16px; color: #000000; letter-spacing: -0.32px; }
+
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li div .arrowBtn { width: 249px; margin-left: 0; }
 
 .qrPc { display: none; }
 
 /************** ticket ***************/
+.ticket { margin-bottom: 100px; }
+
 .ticket .ticketOpen { text-align: center; }
 
 .ticket .ticketOpen .eventContent { margin-top: 40px; }
 
-.ticket .ticketOpen .eventContent p { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
+.ticket .ticketOpen .eventContent p { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; margin-top: 10px; }
 
-.ticket .ticketOpen .eventContent p:first-child { margin-bottom: 10px; }
+.ticket .ticketOpen .eventContent p span { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; }
 
-.ticket .ticketOpen .eventContent p span { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-family: 'Noto Sans KR bold'; }
-
-.ticket .ticketOpen .eventContent p.second { padding-top: 238px; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; position: relative; }
+.ticket .ticketOpen .eventContent p.second { padding-top: 238px; position: relative; }
 
 .ticket .ticketOpen .eventContent p.second::after { content: ""; width: 100%; height: 100%; position: absolute; top: -80px; left: 0; background: url("../images/Ticket_KV 1.png") no-repeat 0 0; background-size: 100% auto; background-position: center top; }
 
-.ticket .ticketOpen .eventContent p:last-child { margin-top: 36px; }
-
 .ticket .ticketOpen .arrowBtn { width: 218px; font-size: 16px; letter-spacing: -0.32px; }
 
-.ticket .ticketOpen .eventInfo { margin: 0 auto; margin-top: 50px; position: relative; background-color: rgba(0, 0, 0, 0.1); height: 248px; max-width: 315px; border-radius: 30px; }
+.ticket .ticketOpen .eventInfo { margin: 0 auto; margin-top: 80px; position: relative; background-color: rgba(0, 0, 0, 0.1); height: 248px; max-width: 315px; border-radius: 30px; }
 
 .ticket .ticketOpen .eventInfo span { border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 30px; width: 100%; height: 248px; display: inline-block; position: absolute; top: 0; left: 0; text-indent: -9999px; }
 
@@ -517,9 +543,9 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketRewards ul li a { display: block; padding: 19px 27px; }
 
-.ticket .ticketRewards ul li a dl dt { font-size: 16px; color: #ffffff; font-family: 'Noto Sans KR bold'; letter-spacing: -0.32px; line-height: 1.6; }
+.ticket .ticketRewards ul li a dl dt { font-size: 20px; line-height: 1.6; letter-spacing: -0.4px; font-family: 'Noto Sans KR bold'; color: #ffffff; }
 
-.ticket .ticketRewards ul li a dl dd { margin-top: 20px; line-height: 1.4; letter-spacing: -0.24px; font-size: 12px; color: #ffffff; opacity: 0.4; position: relative; }
+.ticket .ticketRewards ul li a dl dd { margin-top: 20px; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #ffffff; opacity: 0.4; position: relative; }
 
 .ticket .ticketRewards ul li a dl dd::after { content: ""; position: absolute; top: 3px; left: 58px; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); opacity: 0.4; }
 
@@ -609,6 +635,8 @@ header nav > div p span { font-weight: normal; }
 #content.ticketInfo .ticketAniWrap .ticketAni.on .winning .mms { font-size: 12px; font-family: 'Noto Sans KR black'; color: #000000; line-height: 1.4; letter-spacing: -0.24px; margin-top: 51px; }
 
 /************** delivery ***************/
+.delivery { margin-bottom: 100px; }
+
 .delivery .deliveryEvent { text-align: center; background: url("../images/delivery_KV 1.png") no-repeat 0 0; background-size: 100% auto; background-position: center 90px; }
 
 .delivery .deliveryEvent .deliverContent { padding-top: 188px; }
@@ -767,14 +795,14 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .storeRank .rankSlide ul li dl dd a::after { content: ""; width: 10px; height: 10px; border-top: 1px solid rgba(255, 255, 255, 0.4); border-right: 1px solid rgba(255, 255, 255, 0.4); -webkit-transform: rotate(45deg); transform: rotate(45deg); position: absolute; top: 3px; left: 55px; }
 
-.delivery .storeRank .rankSlide .swiper-scrollbar { width: 100%; height: 2px; margin-top: 30px; position: relative; background-color: #575757; }
+.delivery .storeRank .rankSlide .swiper-scrollbar { width: 100%; height: 2px; margin-top: 30px; position: relative; background-color: #575757; overflow: hidden; }
 
 .delivery .storeRank .rankSlide .swiper-scrollbar .swiper-scrollbar-drag { height: 2px; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); position: absolute; bottom: 0; left: 0; }
 
 /************** OLKL PASS ***************/
-.spacePass .passTab { padding: 207px 8% 0 8%; margin-top: 20px; }
+.spacePass .passTab { padding-top: 207px; margin-top: 20px; }
 
-.spacePass .passTab > ul { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; background: -webkit-gradient(linear, left top, right top, from(rgba(0, 204, 255, 0.329)), to(rgba(126, 20, 255, 0.329))); background: linear-gradient(to right, rgba(0, 204, 255, 0.329), rgba(126, 20, 255, 0.329)); width: 100%; border-radius: 14px; position: relative; -webkit-transition: .3s; transition: .3s; }
+.spacePass .passTab > ul { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; background: -webkit-gradient(linear, left top, right top, from(rgba(0, 204, 255, 0.329)), to(rgba(126, 20, 255, 0.329))); background: linear-gradient(to right, rgba(0, 204, 255, 0.329), rgba(126, 20, 255, 0.329)); width: 84%; margin-left: 8%; border-radius: 14px; position: relative; -webkit-transition: .3s; transition: .3s; }
 
 .spacePass .passTab > ul.moveLeft::before { content: ""; position: absolute; top: 0; left: 0; width: 50%; height: 100%; border-radius: 14px; background: linear-gradient(100deg, #00cdff, #7d14ff); -webkit-transition: .3s; transition: .3s; -webkit-transform: translateX(0); transform: translateX(0); }
 
@@ -788,25 +816,35 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent { margin-top: 60px; }
 
-.spacePass .passTab .tabContent ul .leftTab { padding-bottom: 121px; }
+.spacePass .passTab .tabContent ul .leftTab { padding-bottom: 221px; }
 
 .spacePass .passTab .tabContent ul .leftTab::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 375px; background: url("../images/pass_bg.png") no-repeat 0 0; background-size: cover; background-position: center; z-index: -1; }
 
-.spacePass .passTab .tabContent ul .leftTab .monthCost { position: relative; width: 142px; height: 47px; text-align: center; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; line-height: 1.6; letter-spacing: -0.32px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: 30px auto; }
+.spacePass .passTab .tabContent ul .leftTab .monthCost { position: relative; width: 134px; height: 36px; text-align: center; margin: 36px auto; }
 
-.spacePass .passTab .tabContent ul .leftTab .monthCost span { z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; background-image: linear-gradient(#000000, #000000), linear-gradient(100deg, #00cdff, #7d14ff); border-radius: 50%; display: inline-block; }
+.spacePass .passTab .tabContent ul .leftTab .monthCost em { position: absolute; top: -20px; left: 0; width: 100%; height: 100%; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; }
+
+.spacePass .passTab .tabContent ul .leftTab .monthCost em::before { content: ""; width: 70px; height: 1px; background: linear-gradient(100deg, #00cdff, #7d14ff); position: absolute; top: 8px; left: 40px; }
+
+.spacePass .passTab .tabContent ul .leftTab .monthCost em::after { content: ""; width: 8px; height: 1px; background-color: #7d14ff; position: absolute; top: 11px; left: 102px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+.spacePass .passTab .tabContent ul .leftTab .monthCost strong { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; line-height: 36px; position: absolute; top: 0; left: 0; z-index: 2; display: block; width: 100%; height: 100%; }
+
+.spacePass .passTab .tabContent ul .leftTab .monthCost span { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; background-image: linear-gradient(#000000, #000000), linear-gradient(100deg, #00cdff, #7d14ff); border-radius: 50%; display: inline-block; z-index: -2; text-indent: -9999px; }
 
 .spacePass .passTab .tabContent ul .leftTab > p { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; text-align: center; }
 
 .spacePass .passTab .tabContent ul .leftTab > p.second { margin-top: 10px; }
 
-.spacePass .passTab .tabContent ul .leftTab .arrowBtn { width: 90%; text-align: center; }
+.spacePass .passTab .tabContent ul .leftTab .arrowBtn { width: 70%; text-align: center; }
 
-.spacePass .passTab .tabContent ul .leftTab .passAllMerit { margin-top: 92px; }
+.spacePass .passTab .tabContent ul .leftTab .passAllMerit { padding: 0 8%; margin-top: 92px; }
 
 .spacePass .passTab .tabContent ul .leftTab .passAllMerit > dl { text-align: center; }
 
-.spacePass .passTab .tabContent ul .leftTab .passAllMerit > dl dt { font-size: 44px; letter-spacing: -0.8px; line-height: 1.2; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; }
+.spacePass .passTab .tabContent ul .leftTab .passAllMerit > dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 44px; line-height: 1.1; letter-spacing: -0.88px; background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; position: relative; display: inline-block; }
+
+.spacePass .passTab .tabContent ul .leftTab .passAllMerit > dl dt::after { content: ""; width: 17px; height: 22px; position: absolute; top: -5px; right: -20px; background: url("../images/stars_icon.png") no-repeat 0 0; }
 
 .spacePass .passTab .tabContent ul .leftTab .passAllMerit > dl dd { margin-top: 10px; font-size: 24px; letter-spacing: -0.48px; line-height: 1.6; font-family: 'Noto Sans KR bold'; }
 
@@ -842,9 +880,11 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent ul .leftTab .passAllMerit > div p strong { display: inline-block; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 24px; letter-spacing: -0.48px; line-height: 1.6; margin: 10px 0; }
 
-.spacePass .passTab .tabContent ul .leftTab .passAllMerit > div p:last-child { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; }
+.spacePass .passTab .tabContent ul .leftTab .passAllMerit > div p:last-child { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; margin-top: 80px; }
 
-.spacePass .passTab .tabContent ul .leftTab h5 { margin-top: 54px; margin-bottom: 30px; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; text-align: center; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; }
+.spacePass .passTab .tabContent ul .leftTab h5 { margin-top: 10px; margin-bottom: 30px; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; text-align: center; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; }
+
+.spacePass .passTab .tabContent ul .leftTab .partnersSlide { padding: 0 8%; }
 
 .spacePass .passTab .tabContent ul .leftTab .partnersSlide ul li { width: 148px; background-color: rgba(87, 87, 87, 0.411); padding: 0 12px 10px 12px; position: relative; border-radius: 10px; margin-left: 6px; }
 
@@ -864,7 +904,7 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent ul .leftTab .partnersSlide ul li a dl dd::after { content: ""; position: absolute; top: 3px; left: 55px; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
-.spacePass .passTab .tabContent ul .leftTab .partnersSlide .swiper-scrollbar { width: 100%; height: 2px; margin-top: 30px; position: relative; background-color: #575757; }
+.spacePass .passTab .tabContent ul .leftTab .partnersSlide .swiper-scrollbar { width: 100%; overflow: hidden; height: 2px; margin-top: 30px; position: relative; background-color: #575757; }
 
 .spacePass .passTab .tabContent ul .leftTab .partnersSlide .swiper-scrollbar .swiper-scrollbar-drag { height: 2px; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); position: absolute; bottom: 0; left: 0; }
 
@@ -872,21 +912,31 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent ul .rightTab::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 375px; background: url("../images/pass_mini.png") no-repeat 0 0; background-size: cover; background-position: center; z-index: -1; }
 
-.spacePass .passTab .tabContent ul .rightTab .monthCost { position: relative; width: 142px; height: 47px; text-align: center; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; line-height: 1.6; letter-spacing: -0.32px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: 30px auto; }
+.spacePass .passTab .tabContent ul .rightTab .monthCost { position: relative; width: 134px; height: 36px; text-align: center; margin: 36px auto; }
 
-.spacePass .passTab .tabContent ul .rightTab .monthCost span { z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; background-image: linear-gradient(#000000, #000000), linear-gradient(100deg, #00cdff, #7d14ff); border-radius: 50%; display: inline-block; }
+.spacePass .passTab .tabContent ul .rightTab .monthCost em { position: absolute; top: -20px; left: 0; width: 100%; height: 100%; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; }
+
+.spacePass .passTab .tabContent ul .rightTab .monthCost em::before { content: ""; width: 70px; height: 1px; background: linear-gradient(100deg, #00cdff, #7d14ff); position: absolute; top: 8px; left: 40px; }
+
+.spacePass .passTab .tabContent ul .rightTab .monthCost em::after { content: ""; width: 8px; height: 1px; background-color: #7d14ff; position: absolute; top: 11px; left: 102px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+.spacePass .passTab .tabContent ul .rightTab .monthCost strong { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; line-height: 36px; position: absolute; top: 0; left: 0; z-index: 2; display: block; width: 100%; height: 100%; }
+
+.spacePass .passTab .tabContent ul .rightTab .monthCost span { z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; background-image: linear-gradient(#000000, #000000), linear-gradient(100deg, #00cdff, #7d14ff); border-radius: 50%; display: inline-block; text-indent: -9999px; }
 
 .spacePass .passTab .tabContent ul .rightTab > p { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; text-align: center; }
 
 .spacePass .passTab .tabContent ul .rightTab > p.second { margin-top: 10px; }
 
-.spacePass .passTab .tabContent ul .rightTab .arrowBtn { width: 90%; text-align: center; }
+.spacePass .passTab .tabContent ul .rightTab .arrowBtn { width: 70%; text-align: center; }
 
-.spacePass .passTab .tabContent ul .rightTab .passAllMerit { margin-top: 92px; }
+.spacePass .passTab .tabContent ul .rightTab .passAllMerit { padding: 0 8%; margin-top: 92px; }
 
 .spacePass .passTab .tabContent ul .rightTab .passAllMerit > dl { text-align: center; }
 
-.spacePass .passTab .tabContent ul .rightTab .passAllMerit > dl dt { font-size: 44px; letter-spacing: -0.8px; line-height: 1.2; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; }
+.spacePass .passTab .tabContent ul .rightTab .passAllMerit > dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 44px; line-height: 1.1; letter-spacing: -0.88px; background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; position: relative; display: inline-block; }
+
+.spacePass .passTab .tabContent ul .rightTab .passAllMerit > dl dt::after { content: ""; width: 17px; height: 22px; position: absolute; top: -5px; right: -20px; background: url("../images/stars_icon.png") no-repeat 0 0; }
 
 .spacePass .passTab .tabContent ul .rightTab .passAllMerit > dl dd { margin-top: 10px; font-size: 24px; letter-spacing: -0.48px; line-height: 1.6; font-family: 'Noto Sans KR bold'; }
 
@@ -939,9 +989,11 @@ header nav > div p span { font-weight: normal; }
 .spacePass .passTab .tabContent ul .rightTab .passAllMerit > div ul li a dl dd::after { content: ""; position: absolute; top: 3px; left: 55px; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
 /************** mad ***************/
-.mad { padding: 0 8%; padding-bottom: 111px; }
+.mad { padding-bottom: 111px; }
 
-.mad .madVideo div { text-align: center; width: 100%; height: 178px; overflow: hidden; position: relative; }
+.mad .madVideo { padding: 0 8%; }
+
+.mad .madVideo div { text-align: center; width: 100%; overflow: hidden; position: relative; }
 
 .mad .madVideo div video { width: 100%; height: auto; }
 
@@ -957,15 +1009,19 @@ header nav > div p span { font-weight: normal; }
 
 .mad .madPass h5 { font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR bold'; text-align: center; margin-bottom: 30px; }
 
-.mad .madPass .madSlide ul li div { width: 100%; max-height: 250px; overflow: hidden; border-radius: 30px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.mad .madPass .madSlide { padding: 0 8%; }
 
-.mad .madPass .madSlide ul li div img { width: 100%; }
+.mad .madPass .madSlide ul li { overflow: hidden; }
+
+.mad .madPass .madSlide ul li div { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.mad .madPass .madSlide ul li div img { border-radius: 30px; width: 100%; -o-object-fit: cover; object-fit: cover; }
 
 .mad .madPass .madSlide .swiper-scrollbar { width: 100%; height: 2px; margin-top: 30px; position: relative; background-color: #575757; }
 
 .mad .madPass .madSlide .swiper-scrollbar .swiper-scrollbar-drag { height: 2px; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); position: absolute; bottom: 0; left: 0; }
 
-.mad .madPass > ul { margin-top: 60px; }
+.mad .madPass > ul { margin-top: 60px; padding: 0 8%; }
 
 .mad .madPass > ul li { margin-top: 10px; width: 100%; border-radius: 20px; position: relative; }
 
@@ -986,7 +1042,7 @@ header nav > div p span { font-weight: normal; }
 .mad .madPass > ul li a dl dd::after { content: ""; width: 10px; height: 10px; border-top: 1px solid #575757; border-right: 1px solid #575757; position: absolute; top: 5px; left: 98px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
 /************** partners ***************/
-.partners { padding: 0 8%; }
+.partners { padding: 0 8%; padding-bottom: 58px; }
 
 .partners .listPartners > dl { text-align: center; }
 
@@ -996,23 +1052,53 @@ header nav > div p span { font-weight: normal; }
 
 .partners .listPartners > div ul { margin-top: 60px; }
 
-.partners .listPartners > div ul li { width: 100%; background-color: rgba(87, 87, 87, 0.411); position: relative; border-radius: 10px; overflow: hidden; }
+.partners .listPartners > div ul li { width: 100%; background-color: rgba(87, 87, 87, 0.411); position: relative; border-radius: 10px; margin-top: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.partners .listPartners > div ul li:first-child { margin-top: 0; }
 
 .partners .listPartners > div ul li::before { content: ""; position: absolute; top: 0; left: 129px; width: 1px; height: 100%; border-right: 4px dotted #000000; }
 
-.partners .listPartners > div ul li > dl { float: left; padding: 20px 15px; width: 129px; text-align: center; }
+.partners .listPartners > div ul li > dl { padding: 20px 12px 15px 12px; text-align: center; }
 
-.partners .listPartners > div ul li > dl dt { height: 126px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.partners .listPartners > div ul li > dl dt { height: 100px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 105px; }
 
 .partners .listPartners > div ul li > dl dd { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
 
-.partners .listPartners > div ul li > div { float: left; }
+.partners .listPartners > div ul li > div { padding: 20px 25px 15px 25px; }
 
-.partners .listPartners > div ul li > div div { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
+.partners .listPartners > div ul li > div div { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; height: 100px; }
 
-.partners .listPartners > div ul li > div a { margin-top: 10px; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #ffffff; opacity: 0.4; position: relative; }
+.partners .listPartners > div ul li > div .moreBtn { margin-top: 10px; font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #ffffff; opacity: 0.4; position: relative; }
 
-.partners .listPartners > div ul li > div a::after { content: ""; position: absolute; top: 3px; left: 55px; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.partners .listPartners > div ul li > div .moreBtn::after { content: ""; position: absolute; top: 5px; left: 67px; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); width: 12px; height: 12px; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap { display: none; position: fixed; overflow-y: scroll; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 100; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on { display: block; -webkit-animation: opacity 1.5s both; animation: opacity 1.5s both; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on .benefitView { position: relative; margin-top: 100px; width: 100%; height: 100%; background-color: #ffffff; border-top-left-radius: 30px; border-top-right-radius: 30px; padding: 0 8%; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on .benefitView > dl { border-bottom: 2px solid #c9c9c9; height: 168px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on .benefitView > dl dt { text-align: center; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on .benefitView > dl dt img { width: 70%; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on .benefitView > dl dd { position: absolute; bottom: 8px; right: 0; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #575757; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on .benefitView div { margin-top: 20px; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on .benefitView div dl { text-align: left; font-family: 'Noto Sans KR black'; line-height: 1.6; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on .benefitView div dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 24px; letter-spacing: -0.48px; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on .benefitView div dl dd { margin-top: 20px; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; color: #000000; font-family: 'Noto Sans KR black'; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on .benefitView div dl dd p { margin-top: 10px; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on .benefitView div dl dd p:first-child { margin-top: 0; }
+
+.partners .listPartners > div ul li > div .benefitViewWrap.on .benefitView div .arrowBtn { width: 249px; margin-left: 0; text-align: center; }
 
 .partners .listPartners > ul { margin-top: 60px; }
 
@@ -1034,7 +1120,57 @@ header nav > div p span { font-weight: normal; }
 
 .partners .listPartners > ul li a dl dd::after { content: ""; width: 10px; height: 10px; border-top: 1px solid #575757; border-right: 1px solid #575757; position: absolute; top: 5px; left: 98px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
-footer { padding: 30px 8% 130px 8%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; background-color: #000; }
+/************** mypage ***************/
+.mypage .userpage { padding: 0 8%; padding-bottom: 100px; }
+
+.mypage .userpage > dl dt { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
+
+.mypage .userpage > dl dd { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; width: 189px; margin-top: 10px; }
+
+.mypage .userpage > div { margin-top: 40px; }
+
+.mypage .userpage > div h5 { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
+
+.mypage .userpage > div ul li { text-align: center; padding: 20px 20px 30px 20px; margin-top: 10px; width: 100%; height: 100%; position: relative; border-radius: 30px; background: linear-gradient(100deg, rgba(0, 204, 255, 0.247), rgba(126, 20, 255, 0.247)); }
+
+.mypage .userpage > div ul li span { text-indent: -9999px; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; }
+
+.mypage .userpage > div ul li.listTicket h4 { background: url("../images/Component 3.png") no-repeat 0 0; }
+
+.mypage .userpage > div ul li.listNone { padding: 81px 0; background: transparent; }
+
+.mypage .userpage > div ul li.listNone::before { content: ""; background-color: #000000; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; border: 1px solid transparent; background-origin: border-box; background-clip: content-box, border-box; border-radius: 30px; }
+
+.mypage .userpage > div ul li.listNone::after { content: ""; border: 2px dotted #000000; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -2; border-radius: 30px; }
+
+.mypage .userpage > div ul li.listNone strong { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; width: 100%; }
+
+.mypage .userpage > div ul li.listNone span { background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); z-index: -2; }
+
+.mypage .userpage > div ul li h4 { text-align: left; padding-left: 70px; background: url("../images/Component 2.png") no-repeat 0 0; color: #0091ff; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; line-height: 26px; }
+
+.mypage .userpage > div ul li div { margin: 10px 0; }
+
+.mypage .userpage > div ul li dl { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
+
+.mypage .userpage > div ul li dl dt { display: inline-block; }
+
+.mypage .userpage > div ul li dl dd { display: inline-block; }
+
+.mypage .userpage > div ul li p { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; margin-top: 2px; }
+
+.mypage .userpage > div ul li h5 { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
+
+/************** mypageInfo ***************/
+#content.mypageInfo { padding: 0 8%; padding-top: 20px; }
+
+#content.mypageInfo .userInfo .userInfo-input div .reissuance { bottom: -25px; }
+
+#content.mypageInfo .userInfo .userInfo-input div .reissuance::after { top: 6px; }
+
+#content.mypageInfo .userInfo > .goBtn { width: 138px; }
+
+footer { padding: 30px 8% 130px 8%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; background-color: #000; position: relative; }
 
 footer div ul { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
@@ -1046,13 +1182,13 @@ footer div ul li:first-child::after { content: ""; position: absolute; top: 6px;
 
 footer div ul li a { display: block; color: #ffffff; font-size: 14px; letter-spacing: -0.28px; line-height: 20px; font-weight: bold; }
 
-footer div div { margin-top: 5px; padding-right: 150px; }
+footer div div { margin-top: 5px; }
 
-footer div div address { font-size: 12px; letter-spacing: -0.24px; line-height: 17px; color: #c9c9c9; }
+footer div div address { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #c9c9c9; }
 
-footer div p { margin-top: 50px; font-weight: bold; font-size: 16px; letter-spacing: -0.32px; line-height: 25px; }
+footer div p { margin-top: 50px; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
 
-footer .fooLogo { margin-bottom: 10px; }
+footer .fooLogo { margin-bottom: 10px; position: absolute; bottom: 155px; right: 0; -webkit-transform: rotate(90deg); transform: rotate(90deg); }
 
 #webgl-universe { background: radial-gradient(circle farthest-corner at center top, #000, #000); position: fixed; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; z-index: -3; }
 
@@ -1062,9 +1198,9 @@ footer .fooLogo { margin-bottom: 10px; }
 
 header nav > div { background: none; }
 
-.drawer-cont { background: url("../images/base-overlay.png") center center no-repeat; background-size: cover; opacity: 0; pointer-events: none; -webkit-transition: opacity 0.1s; transition: opacity 0.1s; }
+.drawer-cont { background: url("../images/base-overlay.png") center center no-repeat; background-size: cover; opacity: 0; -webkit-transition: opacity 0.1s; transition: opacity 0.1s; }
 
-.drawer-cont.bg { opacity: 1; pointer-events: auto; }
+.drawer-cont.bg { opacity: 1; }
 
 .bg-overlay { background: url("../images/dumy-overlay.png") center center no-repeat; position: fixed; top: 0; left: 0; bottom: 0; right: 0; background-size: cover; -webkit-transform: scale(20); transform: scale(20); -webkit-transform-origin: 50% 48%; transform-origin: 50% 48%; pointer-events: none; -webkit-transition: -webkit-transform 0.7s; transition: -webkit-transform 0.7s; transition: transform 0.7s; transition: transform 0.7s, -webkit-transform 0.7s; z-index: -2; }
 
@@ -1076,7 +1212,7 @@ header nav > div { background: none; }
 
 body.overlay-hidden { overflow: hidden; }
 
-.layer-rocket { position: fixed; top: 0; left: 0; z-index: 55; opacity: 1; width: 100%; height: 100%; -webkit-transition: -webkit-transform 1s; transition: -webkit-transform 1s; transition: transform 1s; transition: transform 1s, -webkit-transform 1s; -webkit-transform: translateY(93%); transform: translateY(93%); }
+.layer-rocket { position: fixed; top: 0; left: 0; z-index: 55; opacity: 1; width: 100%; height: 100%; -webkit-transition: -webkit-transform 1s; transition: -webkit-transform 1s; transition: transform 1s; transition: transform 1s, -webkit-transform 1s; -webkit-transform: translateY(120%); transform: translateY(120%); }
 
 .layer-rocket .layer-top { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background: url("../images/bg-cloud.png") no-repeat center 15vw; background-size: cover; -webkit-transition: all 1s; transition: all 1s; margin-bottom: -5px; height: 28vw; }
 
@@ -1084,7 +1220,7 @@ body.overlay-hidden { overflow: hidden; }
 
 .layer-rocket .layer-cont { height: calc(100% - 26vw); background-color: #fff; overflow-x: hidden; overflow-y: auto; -webkit-transition: all 0.5s; transition: all 0.5s; }
 
-.layer-rocket .layer-cont .layer-cont-in { color: #000; padding: 20px; opacity: 0; }
+.layer-rocket .layer-cont .layer-cont-in { color: #000; padding-bottom: 30px; opacity: 0; }
 
 .layer-rocket .layer-cont.active { border-radius: 20px 20px 0 0; }
 
@@ -1103,6 +1239,30 @@ body.overlay-hidden { overflow: hidden; }
 .layer-rocket .btn-rocket-close.open { -webkit-animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.23, 1, 0.32, 1) both; animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.23, 1, 0.32, 1) both; }
 
 .layer-rocket .btn-rocket-close.close { opacity: 0; -webkit-animation: slide-out-blurred-bottom 0.45s cubic-bezier(0.755, 0.05, 0.855, 0.06) both; animation: slide-out-blurred-bottom 0.45s cubic-bezier(0.755, 0.05, 0.855, 0.06) both; }
+
+.layer-rocket .benefitView { position: relative; width: 100%; height: 100%; padding: 0 8%; }
+
+.layer-rocket .benefitView .benefitView-top { border-bottom: 2px solid #c9c9c9; height: 168px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; }
+
+.layer-rocket .benefitView .benefitView-top dt { text-align: center; }
+
+.layer-rocket .benefitView .benefitView-top dt img { width: 70%; }
+
+.layer-rocket .benefitView .benefitView-top dd { position: absolute; bottom: 8px; right: 0; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #575757; }
+
+.layer-rocket .benefitView .benefitView-cont { margin-top: 20px; }
+
+.layer-rocket .benefitView .benefitView-cont > dl { text-align: left; font-family: 'Noto Sans KR black'; line-height: 1.6; }
+
+.layer-rocket .benefitView .benefitView-cont > dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 24px; letter-spacing: -0.48px; }
+
+.layer-rocket .benefitView .benefitView-cont > dl dd { margin-top: 20px; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; color: #000000; }
+
+.layer-rocket .benefitView .benefitView-cont > dl dd p { margin-top: 10px; }
+
+.layer-rocket .benefitView .benefitView-cont > dl dd p:first-child { margin-top: 0; }
+
+.layer-rocket .benefitView .benefitView-cont .arrowBtn { width: 249px; margin-left: 0; text-align: center; }
 
 .layer-rocket.active { -webkit-transform: translateY(0); transform: translateY(0); }
 
