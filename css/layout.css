@@ -143,7 +143,7 @@ header nav > div > a::before { content: ""; width: 20px; height: 1px; background
 
 header nav > div > a::after { content: ""; width: 20px; height: 1px; background-color: #000; position: absolute; top: 17px; left: 8px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
-header nav > div ul { padding-top: 150px; }
+header nav > div ul { padding-top: 35%; }
 
 header nav > div ul li a { display: block; font-size: 32px; color: #ffffff; letter-spacing: -0.64px; line-height: 1.6; font-family: 'Noto Sans KR bold'; }
 
@@ -243,7 +243,7 @@ header nav > div p span { font-weight: normal; }
 
 .cartBtn { margin: 0 auto; margin-top: 20px; width: 230px; height: 79px; position: relative; border-radius: 30px; display: block; color: #ffffff; background: url("../images/upload.png") no-repeat 0 0; background-position: center 11px; padding: 48px 11px 11px; font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
 
-.cartBtn span { text-indent: -9999px; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; }
+.cartBtn span { text-indent: -9999px; border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; }
 
 .userInfo { padding-bottom: 63px; margin-bottom: 50px; position: relative; }
 
@@ -279,7 +279,7 @@ header nav > div p span { font-weight: normal; }
 
 .userInfo .userInfo-input div .effect-24 ~ .focus-bg:before { content: ""; position: absolute; left: 50%; top: 50%; width: 0; height: 0; -webkit-transition: 0.3s; transition: 0.3s; border-radius: 10px; background: linear-gradient(100deg, #00cdff, #7d14ff); opacity: 0.2; }
 
-.userInfo .userInfo-input div .effect-24:focus ~ .focus-bg:after, .userInfo .userInfo-input div .has-content.effect-24 ~ .focus-bg::after { width: 100%; -webkit-transition: 0.3s; transition: 0.3s; left: -2px; top: -2px; height: 51px; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; }
+.userInfo .userInfo-input div .effect-24:focus ~ .focus-bg:after, .userInfo .userInfo-input div .has-content.effect-24 ~ .focus-bg::after { width: 100%; -webkit-transition: 0.3s; transition: 0.3s; left: -2px; top: -2px; height: 51px; border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; }
 
 .userInfo .userInfo-input div .effect-24:focus ~ .focus-bg:before, .userInfo .userInfo-input div .has-content.effect-24 ~ .focus-bg:before { -webkit-transition: 0.3s; transition: 0.3s; width: 100%; left: 0; top: 0; height: 100%; }
 
@@ -388,7 +388,7 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .leftTab > dl dd { margin-top: 30px; font-family: 'Noto Sans KR bold', sans-serif; line-height: 1.6; letter-spacing: -0.32px; }
 
-.mainTab .tabContent ul .leftTab > div { margin-top: 80px; text-align: center; }
+.mainTab .tabContent ul .leftTab > div { margin-top: 50px; text-align: center; }
 
 .mainTab .tabContent ul .leftTab > div dl dt { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
 
@@ -406,7 +406,7 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .leftTab ul li:first-child a::after { content: ""; position: absolute; top: 30px; right: 40px; width: 96px; height: 88px; background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0; }
 
-.mainTab .tabContent ul .leftTab ul li a { padding: 20px; display: block; background-color: rgba(0, 0, 0, 0.1); border-radius: 20px; }
+.mainTab .tabContent ul .leftTab ul li a { padding: 20px; display: block; background-color: rgba(0, 0, 0, 0.1); border-radius: 30px; }
 
 .mainTab .tabContent ul .leftTab ul li a dl dt { color: #ffffff; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR bold'; }
 
@@ -414,7 +414,7 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .leftTab ul li a dl dd::after { content: ""; width: 10px; height: 10px; border-top: 1px solid #575757; border-right: 1px solid #575757; position: absolute; top: 5px; left: 98px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
-.mainTab .tabContent ul .leftTab ul li a span { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 20px; text-indent: -9999px; }
+.mainTab .tabContent ul .leftTab ul li a span { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 30px; text-indent: -9999px; }
 
 .mainTab .tabContent ul .leftTab > a { background: linear-gradient(100deg, #00cdff, #7d14ff); text-align: center; padding: 48px 0 11px 0; margin: 0 auto; color: #ffffff; margin-top: 30px; width: 237px; border-radius: 30px; font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; display: block; }
 
@@ -434,7 +434,7 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .rightTab > ul li a { padding: 20px; text-align: left; display: block; background-color: rgba(0, 0, 0, 0.1); border-radius: 30px; }
 
-.mainTab .tabContent ul .rightTab > ul li a span { display: inline-block; text-indent: -9999px; content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 30px; }
+.mainTab .tabContent ul .rightTab > ul li a span { display: inline-block; text-indent: -9999px; content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 30px; }
 
 .mainTab .tabContent ul .rightTab > ul li a dl { color: #ffffff; }
 
@@ -474,7 +474,7 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .rightTab .mainPartner .tabSlide > ul li { width: 24px; height: 36px; margin-right: 15px; }
 
-.mainTab .tabContent ul .rightTab .mainPartner .tabSlide > ul li.on > a span { display: inline-block; text-indent: -9999px; position: absolute; top: 0; left: -6px; width: 36px; height: 36px; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 50%; -webkit-animation: rotateOne 1s infinite; animation: rotateOne 1s infinite; }
+.mainTab .tabContent ul .rightTab .mainPartner .tabSlide > ul li.on > a span { display: inline-block; text-indent: -9999px; position: absolute; top: 0; left: -6px; width: 36px; height: 36px; border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 50%; -webkit-animation: rotateOne 1s infinite; animation: rotateOne 1s infinite; }
 
 .mainTab .tabContent ul .rightTab .mainPartner .tabSlide > ul li > a { display: block; position: relative; padding-top: 6px; }
 
@@ -541,13 +541,13 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketOpen .eventContent p.second { padding-top: 238px; position: relative; }
 
-.ticket .ticketOpen .eventContent p.second::after { content: ""; width: 100%; height: 100%; position: absolute; top: -80px; left: 0; background: url("../images/Ticket_KV 1.png") no-repeat 0 0; background-size: 100% auto; background-position: center top; }
+.ticket .ticketOpen .eventContent p.second::after { content: ""; width: 100%; height: 100%; position: absolute; top: -80px; left: 0; background: url("../images/Ticket_KV 1.png") no-repeat 0 0; background-position: center top; }
 
 .ticket .ticketOpen .arrowBtn { width: 218px; font-size: 16px; letter-spacing: -0.32px; }
 
 .ticket .ticketOpen .eventInfo { margin: 0 auto; margin-top: 80px; position: relative; background-color: rgba(0, 0, 0, 0.1); height: 248px; max-width: 315px; border-radius: 30px; }
 
-.ticket .ticketOpen .eventInfo span { border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 30px; width: 100%; height: 248px; display: inline-block; position: absolute; top: 0; left: 0; text-indent: -9999px; }
+.ticket .ticketOpen .eventInfo span { border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 30px; width: 100%; height: 248px; display: inline-block; position: absolute; top: 0; left: 0; text-indent: -9999px; }
 
 .ticket .ticketOpen .eventInfo dl { padding-top: 20px; }
 
@@ -581,11 +581,19 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketParticipate { padding: 0 8%; margin-top: 80px; text-align: center; }
 
-.ticket .ticketParticipate h4 { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 24px; font-weight: bold; letter-spacing: -0.48px; line-height: 1.6; }
+.ticket .ticketParticipate h4 { background: -webkit-gradient(linear, left top, right top, from(#2f87ff), to(#4c5bfe)); background: linear-gradient(to right, #2f87ff, #4c5bfe); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 24px; font-weight: bold; letter-spacing: -0.48px; line-height: 1.6; position: relative; display: inline-block; }
+
+.ticket .ticketParticipate h4::after { content: ""; width: 17px; height: 22px; position: absolute; top: -5px; right: -20px; background: url("../images/stars_icon.png") no-repeat 0 0; }
 
 .ticket .ticketParticipate ul { margin-top: 10px; }
 
-.ticket .ticketParticipate ul li { margin-top: 90px; }
+.ticket .ticketParticipate ul li { padding-bottom: 59px; margin-top: 50px; position: relative; }
+
+.ticket .ticketParticipate ul li::after { content: ""; width: 100%; height: 2px; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); position: absolute; bottom: 0; left: 0; }
+
+.ticket .ticketParticipate ul li:last-child { padding-bottom: 0; }
+
+.ticket .ticketParticipate ul li:last-child::after { width: 0; }
 
 .ticket .ticketParticipate ul li.step01 { margin-top: 0; }
 
@@ -597,9 +605,9 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketParticipate ul li dl { margin-top: 10px; }
 
-.ticket .ticketParticipate ul li dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-weight: 16px; line-height: 1.6; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
+.ticket .ticketParticipate ul li dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-weight: 16px; line-height: 1.6; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; display: inline-block; }
 
-.ticket .ticketParticipate ul li dl dd { font-family: 'Noto Sans KR bold'; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; }
+.ticket .ticketParticipate ul li dl dd { font-family: 'Noto Sans KR black'; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; }
 
 .ticket .ticketParticipate ul li > div p { font-size: 14px; line-height: 1.4; letter-spacing: -0.28px; font-family: 'Noto Sans KR bold'; }
 
@@ -614,6 +622,8 @@ header nav > div p span { font-weight: normal; }
 .ticket .ticketParticipate ul li > div div .arrowBtn:nth-child(2)::after { right: 70px; }
 
 .ticket .ticketParticipate ul li > div div.ticketBtn .arrowBtn { width: 218px; }
+
+.ticket .eventNotice { margin-top: 170px; }
 
 /************** ticket 01 ***************/
 #content.ticketInfo { padding: 0 8%; padding-top: 20px; }
@@ -665,7 +675,7 @@ header nav > div p span { font-weight: normal; }
 /************** delivery ***************/
 .delivery { margin-bottom: 100px; }
 
-.delivery .deliveryEvent { text-align: center; background: url("../images/delivery_KV 1.png") no-repeat 0 0; background-size: 100% auto; background-position: center 90px; }
+.delivery .deliveryEvent { text-align: center; background: url("../images/delivery_KV 1.png") no-repeat 0 0; background-position: center 90px; }
 
 .delivery .deliveryEvent .deliverContent { padding-top: 188px; }
 
@@ -681,7 +691,7 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryInfo { position: relative; width: 84%; border-radius: 30px; margin-left: 8%; margin-top: 80px; padding: 30px 0 20px 0; text-align: center; }
 
-.delivery .deliveryInfo > span { border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; border-radius: 30px; text-indent: -9999px; }
+.delivery .deliveryInfo > span { border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; border-radius: 30px; text-indent: -9999px; }
 
 .delivery .deliveryInfo > dl { margin-top: 20px; }
 
@@ -741,7 +751,7 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryStep > ul > li > dl.step04 { background: url("../images/img-shop-step4.png") no-repeat 0 0; background-position: center 120px; padding-bottom: 149px; }
 
-.delivery .deliveryStep > ul > li > dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 16px; line-height: 1.6; letter-spacing: -0.32px; }
+.delivery .deliveryStep > ul > li > dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 16px; line-height: 1.6; letter-spacing: -0.32px; display: inline-block; }
 
 .delivery .deliveryStep > ul > li > dl dd { font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR black'; }
 
@@ -763,11 +773,11 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn label { position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; padding-top: 44px; }
 
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 100; overflow-y: scroll; overflow-x: hidden; }
+.delivery .deliveryStep > ul > li .userInfoWrap .imageFile { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 110; overflow-y: scroll; overflow-x: hidden; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .imageFile.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; }
 
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div { margin-top: 100px; width: 100%; height: 100%; background-color: #ffffff; border-top-left-radius: 30px; border-top-right-radius: 30px; padding: 40px 8.3%; position: relative; }
+.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div { margin-top: 100px; width: 100%; background-color: #ffffff; border-top-left-radius: 30px; border-top-right-radius: 30px; padding: 40px 8.3% 200px 8.3%; position: relative; z-index: 115; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div { display: none; }
 
@@ -793,7 +803,7 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div.step02 .btnWrap label { cursor: pointer; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div.step03 { padding-top: 250px; background: url("../images/btn-check.png") no-repeat 0 0; background-position: center 130px; }
+.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div.step03 { padding-top: 50%; padding-bottom: 100px; background: url("../images/btn-check.png") no-repeat 0 0; background-position: center 20%; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div.step03 p { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; line-height: 1.2; letter-spacing: -0.8px; text-align: center; }
 
@@ -858,7 +868,7 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent ul .leftTab .monthCost strong { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; line-height: 36px; position: absolute; top: 0; left: 0; z-index: 2; display: block; width: 100%; height: 100%; }
 
-.spacePass .passTab .tabContent ul .leftTab .monthCost span { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; background-image: linear-gradient(#000000, #000000), linear-gradient(100deg, #00cdff, #7d14ff); border-radius: 50%; display: inline-block; z-index: -2; text-indent: -9999px; }
+.spacePass .passTab .tabContent ul .leftTab .monthCost span { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; background-image: linear-gradient(#000000, #000000), linear-gradient(100deg, #00cdff, #7d14ff); border-radius: 50%; display: inline-block; z-index: -2; text-indent: -9999px; }
 
 .spacePass .passTab .tabContent ul .leftTab > p { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; text-align: center; }
 
@@ -950,7 +960,7 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent ul .rightTab .monthCost strong { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; line-height: 36px; position: absolute; top: 0; left: 0; z-index: 2; display: block; width: 100%; height: 100%; }
 
-.spacePass .passTab .tabContent ul .rightTab .monthCost span { z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; background-image: linear-gradient(#000000, #000000), linear-gradient(100deg, #00cdff, #7d14ff); border-radius: 50%; display: inline-block; text-indent: -9999px; }
+.spacePass .passTab .tabContent ul .rightTab .monthCost span { z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; background-image: linear-gradient(#000000, #000000), linear-gradient(100deg, #00cdff, #7d14ff); border-radius: 50%; display: inline-block; text-indent: -9999px; }
 
 .spacePass .passTab .tabContent ul .rightTab > p { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; text-align: center; }
 
@@ -1061,7 +1071,7 @@ header nav > div p span { font-weight: normal; }
 
 .mad .madPass > ul li a { padding: 20px; display: block; background-color: rgba(0, 0, 0, 0.1); border-radius: 20px; }
 
-.mad .madPass > ul li a span { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 20px; text-indent: -9999px; }
+.mad .madPass > ul li a span { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 20px; text-indent: -9999px; }
 
 .mad .madPass > ul li a dl dt { color: #ffffff; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR bold'; }
 
@@ -1070,7 +1080,7 @@ header nav > div p span { font-weight: normal; }
 .mad .madPass > ul li a dl dd::after { content: ""; width: 10px; height: 10px; border-top: 1px solid #575757; border-right: 1px solid #575757; position: absolute; top: 5px; left: 98px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
 /************** partners ***************/
-.partners { padding: 0 8%; padding-bottom: 58px; }
+.partners { padding: 0 8%; padding-bottom: 158px; }
 
 .partners .listPartners > dl { text-align: center; }
 
@@ -1100,6 +1110,26 @@ header nav > div p span { font-weight: normal; }
 
 .partners .listPartners > div ul li > div .moreBtn::after { content: ""; position: absolute; top: 5px; left: 67px; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); width: 12px; height: 12px; }
 
+.partners .listPartners > ul { margin-top: 60px; }
+
+.partners .listPartners > ul li { margin-top: 10px; width: 100%; border-radius: 20px; position: relative; }
+
+.partners .listPartners > ul li a::after { content: ""; position: absolute; top: 27px; right: 25px; width: 129px; height: 93px; background: url("../images/img-shop-tmb.png") no-repeat 0 0; }
+
+.partners .listPartners > ul li:first-child { margin-top: 0; }
+
+.partners .listPartners > ul li:first-child a::after { content: ""; position: absolute; top: 30px; right: 40px; width: 96px; height: 88px; background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0; }
+
+.partners .listPartners > ul li a { padding: 20px; display: block; background-color: rgba(0, 0, 0, 0.1); border-radius: 20px; }
+
+.partners .listPartners > ul li a dl dt { color: #ffffff; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR bold'; }
+
+.partners .listPartners > ul li a dl dd { color: #575757; font-size: 14px; line-height: 20px; letter-spacing: -0.28px; margin-top: 50px; font-family: 'Noto Sans KR bold', sans-serif; position: relative; }
+
+.partners .listPartners > ul li a dl dd::after { content: ""; width: 10px; height: 10px; border-top: 1px solid #575757; border-right: 1px solid #575757; position: absolute; top: 5px; left: 98px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.partners .listPartners > ul li a span { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; border-radius: 20px; text-indent: -9999px; }
+
 /************** mypage ***************/
 .mypage .userpage { padding: 0 8%; padding-bottom: 100px; }
 
@@ -1113,7 +1143,7 @@ header nav > div p span { font-weight: normal; }
 
 .mypage .userpage > div ul li { text-align: center; padding: 20px 20px 30px 20px; margin-top: 10px; width: 100%; height: 100%; position: relative; border-radius: 30px; background: linear-gradient(100deg, rgba(0, 204, 255, 0.247), rgba(126, 20, 255, 0.247)); }
 
-.mypage .userpage > div ul li span { text-indent: -9999px; border: 1px solid transparent; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; }
+.mypage .userpage > div ul li span { text-indent: -9999px; border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; }
 
 .mypage .userpage > div ul li.listTicket h4 { background: url("../images/Component 3.png") no-repeat 0 0; }
 
@@ -1131,7 +1161,7 @@ header nav > div p span { font-weight: normal; }
 
 .mypage .userpage > div ul li div { margin: 10px 0; }
 
-.mypage .userpage > div ul li dl { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
+.mypage .userpage > div ul li dl { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; font-family: 'Noto Sans KR black'; }
 
 .mypage .userpage > div ul li dl dt { display: inline-block; }
 
@@ -1139,7 +1169,7 @@ header nav > div p span { font-weight: normal; }
 
 .mypage .userpage > div ul li p { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; margin-top: 2px; }
 
-.mypage .userpage > div ul li h5 { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
+.mypage .userpage > div ul li h5 { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; font-family: 'Noto Sans KR black'; }
 
 /************** mypageInfo ***************/
 #content.mypageInfo { padding: 0 8%; padding-top: 20px; }
