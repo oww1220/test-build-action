@@ -179,9 +179,19 @@ $darkGray: #c9c9c9
 	transform: translateX(-50%)
 	display: flex
 	justify-content: space-around
-	background-color: rgba(100, 20, 255, 0.4)
 	border-radius: 25px
 	z-index: 10
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(100, 20, 255, 0.4)
+		border-radius: 25px
+		z-index: -1
+		backdrop-filter: blur(10px)
 
 	li
 		width: 110px
@@ -673,6 +683,55 @@ $darkGray: #c9c9c9
 		background-color: $lightGray
 		&.on
 			background-color: $bgColor02
+
+.benefitView
+	position: relative
+	padding: 0 8%
+	& > dl
+		border-bottom: 2px solid $darkGray
+		height: 168px
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+		dt
+			text-align: center
+			img
+				width: 70%
+		dd
+			position: absolute
+			bottom: 8px
+			right: 0
+			+font12()
+			color: $lightGray
+	div
+		margin-top: 20px
+		dl
+			text-align: left
+			font-family: 'Noto Sans KR black'
+			line-height: 1.6
+			dt
+				+colorGradation()
+				font-size: 24px
+				letter-spacing: -0.48px
+			dd
+				margin-top: 20px
+				+font16()
+				color: $black
+				font-family: 'Noto Sans KR black'
+				p
+					margin-top: 10px
+					&:first-child
+						margin-top: 0
+		.arrowBtn
+			text-align: center
+			margin-left: 0
+			width: auto
+			padding: 0 40px
+			display: inline-block
+			&::after
+				content: ""
+				right: 30px
 
 /************** Main ***************/
 .mainVideo
@@ -1337,7 +1396,6 @@ $darkGray: #c9c9c9
 	padding: 0 8%
 	padding-top: 20px
 
-	
 	.ticketAniWrap
 		display: none
 		position: fixed
@@ -1430,7 +1488,7 @@ $darkGray: #c9c9c9
 
 					dl
 						text-align: center
-						padding: 0 100px
+						padding: 0 8%
 						margin-bottom: 50px
 						dt
 							+colorGradation()
@@ -2543,133 +2601,6 @@ $darkGray: #c9c9c9
 								+moreArrow()
 								width: 12px
 								height: 12px
-						.benefitViewWrap
-							display: none
-							position: fixed
-							overflow-y: scroll
-							top: 0
-							left: 0
-							width: 100%
-							height: 100%
-							background-color: $black
-							z-index: 100
-							&.on
-								display: block
-								animation: opacity 1.5s both
-								.benefitView
-									position: relative
-									margin-top: 100px
-									width: 100%
-									height: 100%
-									background-color: $white
-									border-top-left-radius: 30px
-									border-top-right-radius: 30px
-									padding: 0 8%
-									& > dl
-										border-bottom: 2px solid $darkGray
-										height: 168px
-										display: flex
-										justify-content: center
-										align-items: center
-										position: relative
-										dt
-											text-align: center
-											img
-												width: 70%
-										dd
-											position: absolute
-											bottom: 8px
-											right: 0
-											+font12()
-											color: $lightGray
-									div
-										margin-top: 20px
-										dl
-											text-align: left
-											font-family: 'Noto Sans KR black'
-											line-height: 1.6
-											dt
-												+colorGradation()
-												font-size: 24px
-												letter-spacing: -0.48px
-											dd
-												margin-top: 20px
-												+font16()
-												color: $black
-												font-family: 'Noto Sans KR black'
-												p
-													margin-top: 10px
-													&:first-child
-														margin-top: 0
-										.arrowBtn
-											width: 249px
-											margin-left: 0
-											text-align: center
-		& > ul
-				margin-top: 60px
-				li
-					margin-top: 10px
-					width: 100%
-					border-radius: 20px
-					position: relative
-					a
-						&::after
-							content: ""
-							position: absolute
-							top: 27px
-							right: 25px
-							width: 129px
-							height: 93px
-							background: url("../images/img-shop-tmb.png") no-repeat 0 0
-
-					&:first-child
-						margin-top: 0
-						a
-							&::after
-								content: ""
-								position: absolute
-								top: 30px
-								right: 40px
-								width: 96px
-								height: 88px
-								background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0
-					a
-						padding: 20px
-						display: block
-						background-color: rgba(0, 0, 0, 0.1)
-						border-radius: 20px
-						span
-							position: absolute
-							top: 0
-							left: 0
-							width: 100%
-							height: 100%
-							+borderGradient()
-							z-index: -1
-							border-radius: 20px
-							text-indent: -9999px
-						dl
-							dt
-								color: $white
-								+font24()
-							dd
-								color: $lightGray
-								font-size: 14px
-								line-height: 20px
-								letter-spacing: -0.28px
-								margin-top: 50px
-								font-family: 'Noto Sans KR bold', sans-serif
-								position: relative
-								&::after
-									content: ""
-									width: 10px
-									height: 10px
-									border-top: 1px solid $lightGray
-									border-right: 1px solid $lightGray
-									position: absolute
-									top: 5px
-									left: 98px
-									transform: rotate(45deg)
 
 /************** mypage ***************/			
 .mypage
