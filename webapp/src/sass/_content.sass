@@ -12,6 +12,7 @@ $bgColor02: #6414ff
 $bgColor03: #171718
 $bgColor04: #0e1c30
 $bgColor05: #0091ff
+$bgColor06: #1a1a1a
 $lightGray: #575757
 $wrongColor: #ff3eb5
 $point: #87fa82
@@ -30,7 +31,7 @@ $darkGray: #c9c9c9
 
 =borderGradient()
     border: 1px solid transparent
-    background-image: linear-gradient($bgColor, $bgColor), linear-gradient(100deg, $frontColor, $backColor)
+    background-image: linear-gradient($bgColor06, $bgColor06), linear-gradient(100deg, $frontColor, $backColor)
     background-origin: border-box
     background-clip: content-box, border-box
 
@@ -820,7 +821,7 @@ $darkGray: #c9c9c9
 						line-height: 1.6
 						letter-spacing: -0.32px
 				& > div
-					margin-top: 80px
+					margin-top: 50px
 					text-align: center
 					dl
 						dt
@@ -864,7 +865,7 @@ $darkGray: #c9c9c9
 							padding: 20px
 							display: block
 							background-color: rgba(0, 0, 0, 0.1)
-							border-radius: 20px
+							border-radius: 30px
 							dl
 								dt
 									color: $white
@@ -895,7 +896,7 @@ $darkGray: #c9c9c9
 								height: 100%
 								+borderGradient()
 								z-index: -1
-								border-radius: 20px
+								border-radius: 30px
 								text-indent: -9999px
 				& > a
 					background: linear-gradient(100deg, $frontColor, $backColor)
@@ -1222,7 +1223,6 @@ $darkGray: #c9c9c9
 						top: -80px
 						left: 0
 						background: url("../images/Ticket_KV 1.png") no-repeat 0 0
-						background-size: 100% auto
 						background-position: center top
 		.arrowBtn
 			width: 218px
@@ -1330,15 +1330,42 @@ $darkGray: #c9c9c9
 		margin-top: 80px
 		text-align: center
 		h4
-			+colorGradation()
+			background: linear-gradient(to right, #2f87ff, #4c5bfe)
+			color: transparent
+			-webkit-background-clip: text
+			font-family: 'Noto Sans KR black', sans-serif
 			font-size: 24px
 			font-weight: bold
 			letter-spacing: -0.48px
 			line-height: 1.6
+			position: relative
+			display: inline-block
+			&::after
+				content: ""
+				width: 17px
+				height: 22px
+				position: absolute
+				top: -5px
+				right: -20px
+				background: url("../images/stars_icon.png") no-repeat 0 0
 		ul
 			margin-top: 10px
 			li
-				margin-top: 90px
+				padding-bottom: 59px
+				margin-top: 50px
+				position: relative
+				&::after
+					content: ""
+					width: 100%
+					height: 2px
+					background: linear-gradient(to right, $frontColor, $backColor)
+					position: absolute
+					bottom: 0
+					left: 0
+				&:last-child
+					padding-bottom: 0
+					&::after
+						width: 0
 				&.step01
 					margin-top: 0
 					& > div
@@ -1363,8 +1390,9 @@ $darkGray: #c9c9c9
 						line-height: 1.6
 						letter-spacing: -0.32px
 						font-family: 'Noto Sans KR bold'
+						display: inline-block
 					dd
-						font-family: 'Noto Sans KR bold'
+						font-family: 'Noto Sans KR black'
 						font-size: 24px
 						line-height: 1.6
 						letter-spacing: -0.48px
@@ -1390,7 +1418,8 @@ $darkGray: #c9c9c9
 						&.ticketBtn
 							.arrowBtn
 								width: 218px
-			
+	.eventNotice
+		margin-top: 170px		
 /************** ticket 01 ***************/
 #content.ticketInfo
 	padding: 0 8%
@@ -1516,7 +1545,6 @@ $darkGray: #c9c9c9
 	.deliveryEvent
 		text-align: center
 		background: url("../images/delivery_KV 1.png") no-repeat 0 0
-		background-size: 100% auto
 		background-position: center 90px
 		.deliverContent
 			padding-top: 188px
@@ -1677,6 +1705,7 @@ $darkGray: #c9c9c9
 						font-size: 16px
 						line-height: 1.6
 						letter-spacing: -0.32px
+						display: inline-block
 					dd
 						font-size: 24px
 						line-height: 1.6
@@ -1724,7 +1753,7 @@ $darkGray: #c9c9c9
 						width: 100%
 						height: 100%
 						background-color: $black
-						z-index: 100
+						z-index: 110
 						overflow-y: scroll
 						overflow-x: hidden
 						
@@ -1734,12 +1763,13 @@ $darkGray: #c9c9c9
 						& > div
 							margin-top: 100px
 							width: 100%
-							height: 100%
 							background-color: $white
 							border-top-left-radius: 30px
 							border-top-right-radius: 30px
-							padding: 40px 8.3%
+							padding: 40px 8.3% 200px 8.3%
 							position: relative
+							z-index: 115
+
 							& > div
 								display: none
 								&.on
@@ -1793,9 +1823,10 @@ $darkGray: #c9c9c9
 											width: 100%
 											height: 100%
 								&.step03
-									padding-top: 250px
+									padding-top: 50%
+									padding-bottom: 100px
 									background: url("../images/btn-check.png") no-repeat 0 0
-									background-position: center 130px
+									background-position: center 20%
 									p
 										+colorGradation()
 										font-size: 40px
@@ -2541,7 +2572,7 @@ $darkGray: #c9c9c9
 /************** partners ***************/
 .partners
 	padding: 0 8%
-	padding-bottom: 58px
+	padding-bottom: 158px
 	.listPartners
 		& > dl
 			text-align: center
@@ -2601,6 +2632,71 @@ $darkGray: #c9c9c9
 								+moreArrow()
 								width: 12px
 								height: 12px
+		& > ul
+			margin-top: 60px
+			li
+				margin-top: 10px
+				width: 100%
+				border-radius: 20px
+				position: relative
+				a
+					&::after
+						content: ""
+						position: absolute
+						top: 27px
+						right: 25px
+						width: 129px
+						height: 93px
+						background: url("../images/img-shop-tmb.png") no-repeat 0 0
+
+				&:first-child
+					margin-top: 0
+					a
+						&::after
+							content: ""
+							position: absolute
+							top: 30px
+							right: 40px
+							width: 96px
+							height: 88px
+							background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0
+				a
+					padding: 20px
+					display: block
+					background-color: rgba(0, 0, 0, 0.1)
+					border-radius: 20px
+					dl
+						dt
+							color: $white
+							+font24()
+						dd
+							color: $lightGray
+							font-size: 14px
+							line-height: 20px
+							letter-spacing: -0.28px
+							margin-top: 50px
+							font-family: 'Noto Sans KR bold', sans-serif
+							position: relative
+							&::after
+								content: ""
+								width: 10px
+								height: 10px
+								border-top: 1px solid $lightGray
+								border-right: 1px solid $lightGray
+								position: absolute
+								top: 5px
+								left: 98px
+								transform: rotate(45deg)
+					span
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						+borderGradient()
+						z-index: -1
+						border-radius: 20px
+						text-indent: -9999px
 
 /************** mypage ***************/			
 .mypage
@@ -2687,6 +2783,7 @@ $darkGray: #c9c9c9
 						margin: 10px 0
 					dl
 						+font16()
+						font-family: 'Noto Sans KR black'
 						dt
 							display: inline-block
 						dd
@@ -2696,6 +2793,7 @@ $darkGray: #c9c9c9
 						margin-top: 2px
 					h5
 						+font16()
+						font-family: 'Noto Sans KR black'
 
 /************** mypageInfo ***************/	
 #content.mypageInfo
