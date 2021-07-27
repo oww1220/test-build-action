@@ -1071,12 +1071,13 @@ $darkGray: #c9c9c9
 					.sliderBtn
 						.swiper-button-prev
 							position: absolute
-							top: 225px
+							top: 50%
 							left: 0
 							text-align: center
 							width: 30px
 							height: 30px
 							text-indent: -9999px
+							transform: translateY(-50%)
 							&::before
 								content: ""
 								width: 20px
@@ -1089,12 +1090,13 @@ $darkGray: #c9c9c9
 								transform: rotate(-45deg)
 						.swiper-button-next
 							position: absolute
-							top: 225px
+							top: 50%
 							right: 0
 							text-align: center
 							width: 30px
 							height: 30px
 							text-indent: -9999px
+							transform: translateY(-50%)
 							&::before
 								content: ""
 								width: 20px
@@ -2781,6 +2783,9 @@ $darkGray: #c9c9c9
 						line-height: 26px
 					div
 						margin: 10px 0
+						img
+							width: 100%
+
 					dl
 						+font16()
 						font-family: 'Noto Sans KR black'
@@ -2794,6 +2799,9 @@ $darkGray: #c9c9c9
 					h5
 						+font16()
 						font-family: 'Noto Sans KR black'
+					a
+						margin-top: 10px
+						width: 100%
 
 /************** mypageInfo ***************/	
 #content.mypageInfo
