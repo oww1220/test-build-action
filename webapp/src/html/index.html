@@ -47,7 +47,7 @@
 			<!--tab--> 
 			<article class="mainTab">
 				<!-- tab title-->
-				<ul class="moveLeft">
+				<ul class="moveLeft aos-tab">
 					<li class="left on">
 						<a href="javascript:;">우주란?</a>
 					</li>
@@ -224,12 +224,29 @@
 	
 <script>
 	// Main tab slide
-	var swiper01 = new Swiper('.tabSlide', {
-		scrollbarHide: true,
-		slidesPerView: 'auto',
-		spaceBetween: 0,
-		speed : 1000,
-	});
+
+	function swiperPartner() {
+		var swiperPartnerIns = null;
+		if($('.tabSlide .swiper-slide').length >= 7) {
+			swiperPartnerIns = new Swiper('.tabSlide', {
+				// scrollbarHide: true,
+				// slidesPerView: 'auto',
+				// spaceBetween: 0,
+				// speed : 1000,
+
+				scrollbarHide: true,
+				slidesPerView: 6,
+				slidesPerGroup : 6,
+				loopFillGroupWithBlank : true,
+				spaceBetween: 14,
+			});
+		}
+		$('.mainTab .moveLeft .right').on('click', function(){
+			if(swiperPartnerIns) swiperPartnerIns.update();
+		});
+	}
+	swiperPartner();
+	
 
 	// Main tab slide image change
 	function thumbs () {
@@ -262,6 +279,13 @@
 			var currentIndex = $(".tabSlide ul .on").index();
 			$(".tabSlide ul li").eq(currentIndex - 1).addClass("on").siblings().removeClass("on");
 			$(".mainPlanet ul li").eq(currentIndex -1).addClass("on").siblings().removeClass("on")
+
+			var targetLayer = $(".tabSlide ul .on").data('layer');
+			var $target = $('.moreBenefit .arrowBtn');
+			var clickIndex = $(".tabSlide ul .on").index();
+
+			$target.removeData('layer');
+            $target.attr('data-layer', targetLayer);
 		});
 		$(".swiper-button-next").click(function(){
 			var currentIndex = $(".tabSlide ul .on").index();
@@ -269,12 +293,32 @@
 			
 			if(currentIndex >= listLength-1){
 				$(".tabSlide ul li").eq(0).addClass("on").siblings().removeClass("on");
-				$(".mainPlanet ul li").eq(0).addClass("on").siblings().removeClass("on")
+				$(".mainPlanet ul li").eq(0).addClass("on").siblings().removeClass("on");
+
 			}else{
 				$(".tabSlide ul li").eq(currentIndex + 1).addClass("on").siblings().removeClass("on");
 				$(".mainPlanet ul li").eq(currentIndex + 1).addClass("on").siblings().removeClass("on")
+
 			}
+			
+			var targetLayer = $(".tabSlide ul .on").data('layer');
+			var $target = $('.moreBenefit .arrowBtn');
+			var clickIndex = $(".tabSlide ul .on").index();
+
+			$target.removeData('layer');
+            $target.attr('data-layer', targetLayer);
 		});
+
+		
+		// 혜택 자세히보기 이벤트 핸들러
+		$(document).on('click', '.moreBenefit .arrowBtn', function(e) {
+            var layer = '.' + $(e.target).data('layer');
+            if (!CommonUI.LayerRocket.eventChkFlag) return;
+            CommonUI.LayerRocket.cashGenerator = CommonUI.LayerRocket.open(layer, function(layer) {
+                console.log(layer + ': layer open!');
+            })();
+            CommonUI.Async.generaterRun(CommonUI.LayerRocket.cashGenerator);
+        });
 		
 	}
 	slideBtn();

@@ -153,29 +153,5 @@
 		});
 	});
 
-	function ticketAni(){
-		$(".userInfo > .goBtn").click(function(){
-			$(".ticketAniWrap").addClass("on");
-			$(".ticketAni").addClass("on");
-			$(".ticketing").addClass("on");
-			$(".issuanceTicket").addClass("on");
-			setTimeout(function(){
-				$(".ticketing").removeClass("on")
-			},2000);
-		});
-		$(".ticketAni .closeBtn").click(function(){
-			$(this).parent().parent().removeClass("on");
-		});
-		$(".issuanceTicket > a").click(function(){
-			$(".issuanceTicket").removeClass("on");
-			$(".winning").addClass("on");
-			
-			$(".ticketAni .closeBtn").click(function(){
-				$(".winning").removeClass("on");
-			});
-		});
-	};
-	ticketAni();
-
 </script>
 </html>
