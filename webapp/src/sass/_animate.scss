@@ -282,8 +282,27 @@ body.fixed {
                 overflow: hidden;
             }
         }
-        .issuanceTicket {
-
+        .winning.add-svg {
+            height: 100%;
+            .svg-W {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                height: 100%;
+                transform: translate(-50%, -50%);
+                overflow:hidden;
+                > div {
+                    transform: scale(1.6);
+                    transform-origin: center;
+                }
+            }   
+            .svg-cont {
+                position: relative;
+            }
         }
 
         &.on {
@@ -298,13 +317,43 @@ body.fixed {
                 border-radius: 40px 40px 0 0;
             }
             .winning.on {
+                &::before {display: none;}
                 background-color: #fff;
                 border-radius: 40px 40px 0 0;
+                //overflow: hidden;
             }
         }
     }
     
     
+}
+
+/*add svg*/
+.ticket .ticketParticipate ul li.step01 {
+    .add-svg {
+        background-image: none;
+        padding-top: 0;
+        .svg-W {
+            padding: 0;
+            width: 116%;
+            margin-left: -8%;
+            transform: scale(1.4);
+        }
+    }
+}
+
+.ticket .ticketParticipate ul li.step03 {
+    .add-svg {
+        background-image: none;
+        padding-top: 0;
+        .svg-W {
+            margin: 70px 0;
+            padding: 0;
+            width: 116%;
+            margin-left: -8%;
+            transform: scale(1.7);
+        }
+    }
 }
 
 @keyframes slide-out-top {
