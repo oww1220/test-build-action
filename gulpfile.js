@@ -34,7 +34,7 @@ const dir = {
     js: dist + 'js/',
     images: dist + 'images/',
     library: dist + 'library/',
-    bundle: dist + 'bundle/'
+	bundle: dist + 'bundle/'
   }
 };
 
@@ -281,8 +281,8 @@ gulp.task('clean', () => {
         dir.dist.css,
         dir.dist.js,
         dir.dist.images,
-        dir.dist.library,
-        dir.dist.bundle
+		dir.dist.library,
+		dir.dist.bundle
       ],
       {
         force: true
@@ -318,10 +318,10 @@ gulp.task('fileMove', () => {
 
 gulp.task('bundleFileMove', ()=> {
   return gulp
-  .src(dir.src.bundle + '**/*.js')
-  .pipe(gulp.dest(dir.dist.bundle))
-});
-
+    .src(dir.src.bundle + '**/*')
+    .pipe(gulp.dest(dir.dist.bundle))
+  });
+  
 /**
  * =======================================================+
  * @task : watch
@@ -386,7 +386,7 @@ gulp.task(
     'imgMin',
     'library',
     // 'fileMove',
-    'bundleFileMove',
+	'bundleFileMove',
     'watch',
     'browserSync'
   )
@@ -403,6 +403,6 @@ gulp.task(
     'babelMin',
     'imgMin',
     'library',
-    'bundleFileMove'
+	'bundleFileMove'
   )
 );
