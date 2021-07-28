@@ -268,6 +268,45 @@ body.fixed {
     display: none;
 }
 
+/*티켓레이어 수정*/
+#content.ticketInfo .ticketAniWrap {
+    .ticketAni {
+        height: calc(100% - 80px);
+        .ticketing.add-svg {
+            padding-bottom: 0;
+            background: none;
+            .svg-W {
+                margin: 0 auto;
+                max-width: 500px;
+                height: 500px;
+                overflow: hidden;
+            }
+        }
+        .issuanceTicket {
+
+        }
+
+        &.on {
+            .ticketing.add-svg.on {
+                animation: none;
+                background-color: #fff;
+                border-radius: 40px 40px 0 0;
+            }
+            .issuanceTicket.on {
+                animation-delay: .3s;
+                background-color: #fff;
+                border-radius: 40px 40px 0 0;
+            }
+            .winning.on {
+                background-color: #fff;
+                border-radius: 40px 40px 0 0;
+            }
+        }
+    }
+    
+    
+}
+
 @keyframes slide-out-top {
     0% {
         transform: translateY(0);
