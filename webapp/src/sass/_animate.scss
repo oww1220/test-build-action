@@ -270,8 +270,18 @@ body.fixed {
 
 /*티켓레이어 수정*/
 #content.ticketInfo .ticketAniWrap {
+    display: block;
+    background-color: transparent;
+    overflow:hidden;
+    transform: translateY(120%);
+    transition: transform 1s;
+    &.on {
+        transform: translateY(0);
+    }
     .ticketAni {
-        height: calc(100% - 80px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: calc(100% - 70px);
         .ticketing.add-svg {
             padding-bottom: 0;
             background: none;
@@ -306,6 +316,7 @@ body.fixed {
         }
 
         &.on {
+            animation:none;
             .ticketing.add-svg.on {
                 animation: none;
                 background-color: #fff;
@@ -315,16 +326,20 @@ body.fixed {
                 animation-delay: .3s;
                 background-color: #fff;
                 border-radius: 40px 40px 0 0;
+                padding-bottom: 40px;
             }
             .winning.on {
                 &::before {display: none;}
                 background-color: #fff;
                 border-radius: 40px 40px 0 0;
+                padding-bottom: 40px;
                 //overflow: hidden;
             }
         }
     }
-    
+    .closeBtn {
+        top: 23px;
+    }
     
 }
 

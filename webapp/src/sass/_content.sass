@@ -351,6 +351,7 @@ $darkGray: #c9c9c9
 	height: 100%
 	background-color: rgba(0, 0, 0, 0.7)
 	display: none
+	z-index: 50
 	&.on
 		display: block
 	& > div
@@ -413,7 +414,7 @@ $darkGray: #c9c9c9
 		height: 100%
 		border-radius: 30px
 .userInfo
-	padding-bottom: 63px
+	padding: 0 8% 63px 0.8%
 	margin-bottom: 50px
 	position: relative
 	&::after
@@ -1428,7 +1429,6 @@ $darkGray: #c9c9c9
 		margin-top: 170px		
 /************** ticket 01 ***************/
 #content.ticketInfo
-	padding: 0 8%
 	padding-top: 20px
 
 	.ticketAniWrap
@@ -1737,7 +1737,7 @@ $darkGray: #c9c9c9
 					.userInfo
 						margin-top: 80px
 						display: none
-						padding-bottom: 0
+						padding: 0
 						margin-bottom: 0
 						&::after
 							display: none
@@ -1751,94 +1751,6 @@ $darkGray: #c9c9c9
 								height: 100%
 								cursor: pointer
 								padding-top: 44px
-					.imageFile
-						display: none
-						position: fixed
-						top: 0
-						left: 0
-						width: 100%
-						height: 100%
-						background-color: $black
-						z-index: 110
-						overflow-y: scroll
-						overflow-x: hidden
-						
-						&.on
-							display: block
-							animation: opacity 1s both
-						& > div
-							margin-top: 100px
-							width: 100%
-							background-color: $white
-							border-top-left-radius: 30px
-							border-top-right-radius: 30px
-							padding: 40px 8.3% 200px 8.3%
-							position: relative
-							z-index: 115
-
-							& > div
-								display: none
-								&.on
-									display: block
-									animation: opacity 1s both
-								dl
-									margin-bottom: 30px
-									dt
-										+colorGradation()
-										font-size: 14px
-										line-height: 1.4
-										letter-spacing: -0.28px
-									dd
-										margin-top: 10px
-										font-size: 24px
-										line-height: 1.6
-										letter-spacing: -0.48px
-										color: $black
-										font-family: 'Noto Sans KR black'
-								div
-									text-align: center
-									position: relative
-									img
-										width: 200px
-										height: auto
-								&.step01
-										label
-											cursor: pointer
-											position: absolute
-											top: 0
-											left: 0
-											width: 100%
-											height: 100%
-								&.step02
-									.btnWrap
-										margin-top: 31px
-										display: flex
-										.goBtn
-											text-align: center
-											maragin: 0
-											background-color: $lightGray
-											&:first-child
-												background-color: $bgColor02
-												width: 40%
-												margin-right: 4px
-										label
-											cursor: pointer
-											position: absolute
-											top: 0
-											left: 0
-											width: 100%
-											height: 100%
-								&.step03
-									padding-top: 50%
-									padding-bottom: 100px
-									background: url("../images/btn-check.png") no-repeat 0 0
-									background-position: center 20%
-									p
-										+colorGradation()
-										font-size: 40px
-										line-height: 1.2
-										letter-spacing: -0.8px
-										text-align: center
 										
 	.storeRank
 		margin-top: 80px
@@ -1912,6 +1824,94 @@ $darkGray: #c9c9c9
 					bottom: 0
 					left: 0
 
+.imageFile
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: $black
+	z-index: 110
+	overflow-y: scroll
+	overflow-x: hidden
+	
+	&.on
+		display: block
+		animation: opacity 1s both
+	& > div
+		margin-top: 100px
+		width: 100%
+		background-color: $white
+		border-top-left-radius: 30px
+		border-top-right-radius: 30px
+		padding: 40px 8.3% 200px 8.3%
+		position: relative
+		z-index: 115
+
+		& > div
+			display: none
+			&.on
+				display: block
+				animation: opacity 1s both
+			dl
+				margin-bottom: 30px
+				dt
+					+colorGradation()
+					font-size: 14px
+					line-height: 1.4
+					letter-spacing: -0.28px
+				dd
+					margin-top: 10px
+					font-size: 24px
+					line-height: 1.6
+					letter-spacing: -0.48px
+					color: $black
+					font-family: 'Noto Sans KR black'
+			div
+				text-align: center
+				position: relative
+				img
+					width: 200px
+					height: auto
+			&.step01
+					label
+						cursor: pointer
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+			&.step02
+				.btnWrap
+					margin-top: 31px
+					display: flex
+					.goBtn
+						text-align: center
+						maragin: 0
+						background-color: $lightGray
+						&:first-child
+							background-color: $bgColor02
+							width: 40%
+							margin-right: 4px
+					label
+						cursor: pointer
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+			&.step03
+				padding-top: 50%
+				padding-bottom: 100px
+				background: url("../images/btn-check.png") no-repeat 0 0
+				background-position: center 20%
+				p
+					+colorGradation()
+					font-size: 40px
+					line-height: 1.2
+					letter-spacing: -0.8px
+					text-align: center
 /************** OLKL PASS ***************/
 .spacePass
 	.passTab
@@ -2579,9 +2579,9 @@ $darkGray: #c9c9c9
 			
 /************** partners ***************/
 .partners
-	padding: 0 8%
 	padding-bottom: 158px
 	.listPartners
+		padding: 0 8%
 		& > dl
 			text-align: center
 			dt
@@ -2811,7 +2811,6 @@ $darkGray: #c9c9c9
 
 /************** mypageInfo ***************/	
 #content.mypageInfo
-	padding: 0 8%
 	padding-top: 20px
 	.userInfo 
 		.userInfo-input div 
