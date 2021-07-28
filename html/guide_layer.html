@@ -129,10 +129,10 @@
 	
 <script>
 $(function(){
-	
+
 	// 로켓레이어 오픈
 	$(document).on('click', '.test-open-rocket', function(e) {
-		var layer = '.' + $(e.target).data('layer');
+		var layer = '.' + $(e.currentTarget).data('layer');
 		if (!CommonUI.LayerRocket.eventChkFlag) return;
 		/**
 		 * CommonUI.LayerRocket.open(layer: string, callback?: (layer: string) => void): ()=>Generator;
@@ -149,7 +149,7 @@ $(function(){
 
 	// 로켓레이어 닫기
 	$(document).on('click', '.btn-test-close', function(e) {
-		var layer = '.' + $(e.target).data('layer');
+		var layer = '.' + $(e.currentTarget).data('layer');
 		if (!CommonUI.LayerRocket.eventChkFlag) return;
 		/**
 		 * CommonUI.LayerRocket.close(layer: string, callback?: (layer: string) => void): ()=>Generator;

@@ -1301,11 +1301,30 @@ body.fixed { overflow: hidden; position: fixed; }
 
 #content.ticketInfo .ticketAniWrap .ticketAni .ticketing.add-svg .svg-W { margin: 0 auto; max-width: 500px; height: 500px; overflow: hidden; }
 
+#content.ticketInfo .ticketAniWrap .ticketAni .winning.add-svg { height: 100%; }
+
+#content.ticketInfo .ticketAniWrap .ticketAni .winning.add-svg .svg-W { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: absolute; width: 100%; top: 50%; left: 50%; height: 100%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); overflow: hidden; }
+
+#content.ticketInfo .ticketAniWrap .ticketAni .winning.add-svg .svg-W > div { -webkit-transform: scale(1.6); transform: scale(1.6); -webkit-transform-origin: center; transform-origin: center; }
+
+#content.ticketInfo .ticketAniWrap .ticketAni .winning.add-svg .svg-cont { position: relative; }
+
 #content.ticketInfo .ticketAniWrap .ticketAni.on .ticketing.add-svg.on { -webkit-animation: none; animation: none; background-color: #fff; border-radius: 40px 40px 0 0; }
 
 #content.ticketInfo .ticketAniWrap .ticketAni.on .issuanceTicket.on { -webkit-animation-delay: .3s; animation-delay: .3s; background-color: #fff; border-radius: 40px 40px 0 0; }
 
 #content.ticketInfo .ticketAniWrap .ticketAni.on .winning.on { background-color: #fff; border-radius: 40px 40px 0 0; }
+
+#content.ticketInfo .ticketAniWrap .ticketAni.on .winning.on::before { display: none; }
+
+/*add svg*/
+.ticket .ticketParticipate ul li.step01 .add-svg { background-image: none; padding-top: 0; }
+
+.ticket .ticketParticipate ul li.step01 .add-svg .svg-W { padding: 0; width: 116%; margin-left: -8%; -webkit-transform: scale(1.4); transform: scale(1.4); }
+
+.ticket .ticketParticipate ul li.step03 .add-svg { background-image: none; padding-top: 0; }
+
+.ticket .ticketParticipate ul li.step03 .add-svg .svg-W { margin: 70px 0; padding: 0; width: 116%; margin-left: -8%; -webkit-transform: scale(1.7); transform: scale(1.7); }
 
 @-webkit-keyframes slide-out-top { 0% { -webkit-transform: translateY(0); transform: translateY(0);
   opacity: 1; }
