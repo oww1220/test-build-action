@@ -84,8 +84,11 @@
 			<article class="ticketAniWrap">
 				<div class="ticketAni">
 					<a href="javascript:;" class="closeBtn">닫기</a>
-					<div class="ticketing">
+					<div class="ticketing add-svg">
 						<h5>티켓을<br />발급중입니다.</h5>
+						<div class="svg-W">
+							<div id="lottie11"></div>
+						</div>
 					</div>
 					<div class="issuanceTicket">
 						<dl>
@@ -207,10 +210,10 @@
 			$(".ticketAniWrap").addClass("on");
 			$(".ticketAni").addClass("on");
 			$(".ticketing").addClass("on");
-			$(".issuanceTicket").addClass("on");
 			setTimeout(function(){
-				$(".ticketing").removeClass("on")
-			},3000);
+				$(".ticketing").removeClass("on");
+				$(".issuanceTicket").addClass("on");
+			},5000);
 		});
 		$(".ticketAni .closeBtn").click(function(){
 			$(this).parent().parent().removeClass("on");
