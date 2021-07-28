@@ -225,7 +225,7 @@ header nav > div p span { font-weight: normal; }
 
 .eventNotice ul li::before { content: ""; position: absolute; top: 6px; left: 0; width: 3px; height: 3px; border-radius: 50%; background-color: #575757; }
 
-.alertWin { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); display: none; }
+.alertWin { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); display: none; z-index: 50; }
 
 .alertWin.on { display: block; }
 
@@ -245,7 +245,7 @@ header nav > div p span { font-weight: normal; }
 
 .cartBtn span { text-indent: -9999px; border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; }
 
-.userInfo { padding-bottom: 63px; margin-bottom: 50px; position: relative; }
+.userInfo { padding: 0 8% 63px 0.8%; margin-bottom: 50px; position: relative; }
 
 .userInfo::after { content: ""; width: 100%; height: 2px; position: absolute; bottom: 0; left: 0; background: linear-gradient(100deg, #00cdff, #7d14ff); }
 
@@ -628,7 +628,7 @@ header nav > div p span { font-weight: normal; }
 .ticket .eventNotice { margin-top: 170px; }
 
 /************** ticket 01 ***************/
-#content.ticketInfo { padding: 0 8%; padding-top: 20px; }
+#content.ticketInfo { padding-top: 20px; }
 
 #content.ticketInfo .ticketAniWrap { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 5; overflow-y: scroll; }
 
@@ -767,47 +767,13 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .cartBtn { text-align: center; }
 
-.delivery .deliveryStep > ul > li .userInfoWrap .userInfo { margin-top: 80px; display: none; padding-bottom: 0; margin-bottom: 0; }
+.delivery .deliveryStep > ul > li .userInfoWrap .userInfo { margin-top: 80px; display: none; padding: 0; margin-bottom: 0; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .userInfo::after { display: none; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn { margin-top: 38px; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn label { position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; padding-top: 44px; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 110; overflow-y: scroll; overflow-x: hidden; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div { margin-top: 100px; width: 100%; background-color: #ffffff; border-top-left-radius: 30px; border-top-right-radius: 30px; padding: 40px 8.3% 200px 8.3%; position: relative; z-index: 115; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div { display: none; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div dl { margin-bottom: 30px; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 14px; line-height: 1.4; letter-spacing: -0.28px; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div dl dd { margin-top: 10px; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; color: #000000; font-family: 'Noto Sans KR black'; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div div { text-align: center; position: relative; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div div img { width: 200px; height: auto; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div.step01 label { cursor: pointer; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div.step02 .btnWrap { margin-top: 31px; display: -webkit-box; display: -ms-flexbox; display: flex; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div.step02 .btnWrap .goBtn { text-align: center; maragin: 0; background-color: #575757; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div.step02 .btnWrap .goBtn:first-child { background-color: #6414ff; width: 40%; margin-right: 4px; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div.step02 .btnWrap label { cursor: pointer; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div.step03 { padding-top: 50%; padding-bottom: 100px; background: url("../images/btn-check.png") no-repeat 0 0; background-position: center 20%; }
-
-.delivery .deliveryStep > ul > li .userInfoWrap .imageFile > div > div.step03 p { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; line-height: 1.2; letter-spacing: -0.8px; text-align: center; }
 
 .delivery .storeRank { margin-top: 80px; text-align: center; }
 
@@ -838,6 +804,40 @@ header nav > div p span { font-weight: normal; }
 .delivery .storeRank .rankSlide .swiper-scrollbar { width: 100%; height: 2px; margin-top: 30px; position: relative; background-color: #575757; overflow: hidden; }
 
 .delivery .storeRank .rankSlide .swiper-scrollbar .swiper-scrollbar-drag { height: 2px; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); position: absolute; bottom: 0; left: 0; }
+
+.imageFile { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 110; overflow-y: scroll; overflow-x: hidden; }
+
+.imageFile.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; }
+
+.imageFile > div { margin-top: 100px; width: 100%; background-color: #ffffff; border-top-left-radius: 30px; border-top-right-radius: 30px; padding: 40px 8.3% 200px 8.3%; position: relative; z-index: 115; }
+
+.imageFile > div > div { display: none; }
+
+.imageFile > div > div.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; }
+
+.imageFile > div > div dl { margin-bottom: 30px; }
+
+.imageFile > div > div dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 14px; line-height: 1.4; letter-spacing: -0.28px; }
+
+.imageFile > div > div dl dd { margin-top: 10px; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; color: #000000; font-family: 'Noto Sans KR black'; }
+
+.imageFile > div > div div { text-align: center; position: relative; }
+
+.imageFile > div > div div img { width: 200px; height: auto; }
+
+.imageFile > div > div.step01 label { cursor: pointer; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.imageFile > div > div.step02 .btnWrap { margin-top: 31px; display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.imageFile > div > div.step02 .btnWrap .goBtn { text-align: center; maragin: 0; background-color: #575757; }
+
+.imageFile > div > div.step02 .btnWrap .goBtn:first-child { background-color: #6414ff; width: 40%; margin-right: 4px; }
+
+.imageFile > div > div.step02 .btnWrap label { cursor: pointer; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.imageFile > div > div.step03 { padding-top: 50%; padding-bottom: 100px; background: url("../images/btn-check.png") no-repeat 0 0; background-position: center 20%; }
+
+.imageFile > div > div.step03 p { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; line-height: 1.2; letter-spacing: -0.8px; text-align: center; }
 
 /************** OLKL PASS ***************/
 .spacePass .passTab { padding-top: 207px; margin-top: 20px; }
@@ -1082,7 +1082,9 @@ header nav > div p span { font-weight: normal; }
 .mad .madPass > ul li a dl dd::after { content: ""; width: 10px; height: 10px; border-top: 1px solid #575757; border-right: 1px solid #575757; position: absolute; top: 5px; left: 98px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
 /************** partners ***************/
-.partners { padding: 0 8%; padding-bottom: 158px; }
+.partners { padding-bottom: 158px; }
+
+.partners .listPartners { padding: 0 8%; }
 
 .partners .listPartners > dl { text-align: center; }
 
@@ -1178,7 +1180,7 @@ header nav > div p span { font-weight: normal; }
 .mypage .userpage > div ul li a { margin-top: 10px; width: 100%; }
 
 /************** mypageInfo ***************/
-#content.mypageInfo { padding: 0 8%; padding-top: 20px; }
+#content.mypageInfo { padding-top: 20px; }
 
 #content.mypageInfo .userInfo .userInfo-input div .reissuance { bottom: -25px; }
 
@@ -1295,7 +1297,11 @@ body.fixed { overflow: hidden; position: fixed; }
 .modal-dimmed { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: #000; font: 0/0 a; opacity: 0.5; z-index: 60; display: none; }
 
 /*티켓레이어 수정*/
-#content.ticketInfo .ticketAniWrap .ticketAni { height: calc(100% - 80px); }
+#content.ticketInfo .ticketAniWrap { display: block; background-color: transparent; overflow: hidden; -webkit-transform: translateY(120%); transform: translateY(120%); -webkit-transition: -webkit-transform 1s; transition: -webkit-transform 1s; transition: transform 1s; transition: transform 1s, -webkit-transform 1s; }
+
+#content.ticketInfo .ticketAniWrap.on { -webkit-transform: translateY(0); transform: translateY(0); }
+
+#content.ticketInfo .ticketAniWrap .ticketAni { overflow-x: hidden; overflow-y: auto; height: calc(100% - 70px); }
 
 #content.ticketInfo .ticketAniWrap .ticketAni .ticketing.add-svg { padding-bottom: 0; background: none; }
 
@@ -1309,13 +1315,17 @@ body.fixed { overflow: hidden; position: fixed; }
 
 #content.ticketInfo .ticketAniWrap .ticketAni .winning.add-svg .svg-cont { position: relative; }
 
+#content.ticketInfo .ticketAniWrap .ticketAni.on { -webkit-animation: none; animation: none; }
+
 #content.ticketInfo .ticketAniWrap .ticketAni.on .ticketing.add-svg.on { -webkit-animation: none; animation: none; background-color: #fff; border-radius: 40px 40px 0 0; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .issuanceTicket.on { -webkit-animation-delay: .3s; animation-delay: .3s; background-color: #fff; border-radius: 40px 40px 0 0; }
+#content.ticketInfo .ticketAniWrap .ticketAni.on .issuanceTicket.on { -webkit-animation-delay: .3s; animation-delay: .3s; background-color: #fff; border-radius: 40px 40px 0 0; padding-bottom: 40px; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .winning.on { background-color: #fff; border-radius: 40px 40px 0 0; }
+#content.ticketInfo .ticketAniWrap .ticketAni.on .winning.on { background-color: #fff; border-radius: 40px 40px 0 0; padding-bottom: 40px; }
 
 #content.ticketInfo .ticketAniWrap .ticketAni.on .winning.on::before { display: none; }
+
+#content.ticketInfo .ticketAniWrap .closeBtn { top: 23px; }
 
 /*add svg*/
 .ticket .ticketParticipate ul li.step01 .add-svg { background-image: none; padding-top: 0; }

@@ -82,8 +82,8 @@
 				<a href="javascript:;" class="goBtn">티켓 발급하기</a>
 			</article>
 			<article class="ticketAniWrap">
+				<a href="javascript:void(0);" class="closeBtn">닫기</a>
 				<div class="ticketAni">
-					<a href="javascript:;" class="closeBtn">닫기</a>
 					<div class="ticketing add-svg">
 						<h5>티켓을<br />발급중입니다.</h5>
 						<div class="svg-W">
@@ -215,19 +215,25 @@
 			$(".ticketAniWrap").addClass("on");
 			$(".ticketAni").addClass("on");
 			$(".ticketing").addClass("on");
+			$("html, body").css({
+				"overflow":"hidden"
+			})
 			setTimeout(function(){
 				$(".ticketing").removeClass("on");
 				$(".issuanceTicket").addClass("on");
 			},5000);
 		});
-		$(".ticketAni .closeBtn").click(function(){
-			$(this).parent().parent().removeClass("on");
+		$(".ticketAniWrap .closeBtn").click(function(){
+			$(this).parent().removeClass("on");
+			$("html, body").css({
+				"overflow":"auto"
+			})
 		});
 		$(".issuanceTicket > a").click(function(){
 			$(".issuanceTicket").removeClass("on");
 			$(".winning").addClass("on");
 			
-			$(".ticketAni .closeBtn").click(function(){
+			$(".ticketAniWrap .closeBtn").click(function(){
 				$(".winning").removeClass("on");
 			});
 		});

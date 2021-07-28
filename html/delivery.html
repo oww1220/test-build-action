@@ -128,7 +128,7 @@
 						<span>최종 당첨자</span><strong>9월 15일 (수)</strong>
 					</dd>
 				</dl>
-				<a href="#" class="arrowBtn">우주패스 첫 달 1,000원에 구독하기</a>
+				<a href="#" class="arrowBtn" target="_blank">우주패스 첫 달 1,000원에 구독하기</a>
 				<span>one</span>
 			</article>
 			<article class="deliveryStep">
@@ -200,8 +200,8 @@
 								</div>
 								<div class="numberIssuance">
 									<!--class="on"일때 display:block-->
-									<a href="javascript:;" class="goBtn">인증번호 발급</a>
-									<a href="javascript:;" class="goBtn02 on">본인 인증하기</a>
+									<a href="javascript:;" class="goBtn on">인증번호 발급</a>
+									<a href="javascript:;" class="goBtn02">본인 인증하기</a>
 								</div>
 								<ul>
 									<li>
@@ -227,42 +227,42 @@
 									장바구니 이미지 등록하기
 								</a>
 							</div>
-							<div class="imageFile">
-								<div>
-									<a href="javascript:;" class="closeBtn">닫기</a>
-									<div class="step01 on">
-										<dl>
-											<dt>STEP 1</dt>
-											<dd>아래와 같이 장바구니를<br />캡쳐하여 등록해주세요.</dd>
-										</dl>	
-										<div><img src="../images/img-examples-1.png" alt="장바구니 캡쳐예시"></div>
-										<div class="goBtn">
-											<label for="imageImport01">이미지 불러오기</label>
-											<input type="file" id="imageImport01" class="blind">
-										</div>
-									</div>
-									<div class="step02">
-										<dl>
-											<dt>STEP 2</dt>
-											<dd>이미지를<br />등록하시겠습니까?</dd>
-										</dl>
-										<div><img src="../images/img-examples-1.png" alt="장바구니 캡쳐예시"></div>
-										<div class="btnWrap">
-											<a href="javascript:;" class="goBtn">등록하기</a>
-											<div class="goBtn">
-												<label for="imageImport02">이미지 다시 불러오기</label>
-												<input type="file" id="imageImport02" class="blind">
-											</div>
-										</div>
-									</div>
-									<div class="step03">
-										<p>등록이 모두<br />완료되었습니다.</p>
-									</div>
-								</div>
-							</div>
 						</div>
 					</li>
 				</ul>
+				<div class="imageFile">
+					<div>
+						<a href="javascript:;" class="closeBtn">닫기</a>
+						<div class="step01 on">
+							<dl>
+								<dt>STEP 1</dt>
+								<dd>아래와 같이 장바구니를<br />캡쳐하여 등록해주세요.</dd>
+							</dl>	
+							<div><img src="../images/img-examples-1.png" alt="장바구니 캡쳐예시"></div>
+							<div class="goBtn">
+								<label for="imageImport01">이미지 불러오기</label>
+								<input type="file" id="imageImport01" class="blind">
+							</div>
+						</div>
+						<div class="step02">
+							<dl>
+								<dt>STEP 2</dt>
+								<dd>이미지를<br />등록하시겠습니까?</dd>
+							</dl>
+							<div><img src="../images/img-examples-1.png" alt="장바구니 캡쳐예시"></div>
+							<div class="btnWrap">
+								<a href="javascript:;" class="goBtn">등록하기</a>
+								<div class="goBtn">
+									<label for="imageImport02">이미지 다시 불러오기</label>
+									<input type="file" id="imageImport02" class="blind">
+								</div>
+							</div>
+						</div>
+						<div class="step03">
+							<p>등록이 모두<br />완료되었습니다.</p>
+						</div>
+					</div>
+				</div>
 			</article>
 			<article class="storeRank">
 				<dl>
@@ -341,8 +341,8 @@
 					<li>당첨 안내 후 7일 이내에 연락이 닿지 않을 시, 당첨에서 제외될 수 있습니다.</li>
 				</ul>
 			</article>
-			<!--event alret-->
-			<div class="alertWin on">
+			<!--event alret class="on" 추가시 활성화-->
+			<div class="alertWin">
 				<div>
 					<dl>
 						<dt>이미 이벤트에 참여<br />하셨습니다.</dt>
