@@ -213,6 +213,8 @@
 		$(".issuanceTicket > a").click(function(){
 			$(".issuanceTicket").removeClass("on");
 			$(".winning").addClass("on");
+
+			aniObj.play(); 
 			
 			$(".ticketAniWrap .closeBtn").click(function(){
 				$(".winning").removeClass("on");
@@ -220,6 +222,18 @@
 		});
 	};
 	ticketAni();
+
+
+	/*로티*/
+	// aniObj.play(); 메소드 호출로 로티 플레이!
+	if (document.getElementById('lottie15')) {
+        var aniObj = CommonUI.Lottie.init({
+            elem: document.getElementById('lottie15'),
+            loopFlag: false,
+            autoplayFlag: false,
+            pathString: '../bundle/json/15_data.json',
+        });
+    }
 
 </script>
 </html>

@@ -93,9 +93,12 @@
 				<h5 data-aos="fade-up">참여방법</h5>
 				<ul>
 					<li data-aos="fade-up">
-						<dl class="step01">
+						<dl class="step01 add-svg">
 							<dt>STEP 1</dt>
 							<dd>우주패스 구독하기</dd>
+							<div class="svg-W">
+								<div id="lottie01"></div>
+							</div>
 						</dl>
 					</li>
 					<li data-aos="fade-up">
@@ -106,15 +109,21 @@
 						<a href="#" class="arrowBtn">장바구니 담으러가기</a>
 					</li>
 					<li data-aos="fade-up">
-						<dl class="step03">
+						<dl class="step03 add-svg">
 							<dt>STEP 3</dt>
 							<dd>원하는 제품 장바구니에<br />담은 후 캡쳐하기</dd>
+							<div class="svg-W">
+								<div id="lottie05"></div>
+							</div>
 						</dl>
 					</li>
 					<li id="importImage" data-aos="fade-up">
-						<dl class="step04">
+						<dl class="step04 add-svg">
 							<dt>STEP 4</dt>
 							<dd>이벤트 페이지에<br />캡쳐 이미지 등록하기</dd>
+							<div class="svg-W">
+								<div id="lottie06"></div>
+							</div>
 						</dl>
 						<div class="userInfoWrap">
 							<a href="javascript:;" class="cartBtn">장바구니 이미지 등록하고 응모하기<span>one</span></a>
@@ -180,7 +189,7 @@
 										<span>본인은 상기 내용을 숙지하였으며 이에 동의합니다.</span>
 									</li>
 								</ul>
-								<a href="javascript:;" class="cartBtn">
+								<a href="javascript:;" class="cartBtn basket-open-rocket" data-layer="rocket-obj-basket">
 									<span>one</span>
 									장바구니 이미지 등록하기
 								</a>
@@ -314,6 +323,61 @@
 			</div>
 		</div>
 		@@include('./include/footer.html')
+		<!-- 이미지등록 레이어 -->
+		<div class="layer-rocket rocket-obj-basket">
+			<div class="layer-top">
+				<div class="btn-rocket-open">
+					<img src="../images/bg-rocket.png" alt="rocket"/>
+				</div>
+				<button type="button" class="btn-rocket-close" data-layer="rocket-obj-basket">
+					close rocket layer
+				</button>
+			</div>
+			<div class="layer-cont">
+				<div class="layer-cont-in">
+
+					<!---->
+					<div class="imageFileView">
+						<div class="step01 on">
+							<dl>
+								<dt>STEP 1</dt>
+								<dd>아래와 같이 장바구니를<br>캡쳐하여 등록해주세요.</dd>
+							</dl>	
+							<div><img src="../images/img-examples-1.png" alt="장바구니 캡쳐예시"></div>
+							<div class="goBtn">
+								<label for="imageImport01">이미지 불러오기</label>
+								<input type="file" id="imageImport01" class="blind">
+							</div>
+						</div>
+						<div class="step02">
+							<dl>
+								<dt>STEP 2</dt>
+								<dd>이미지를<br>등록하시겠습니까?</dd>
+							</dl>
+							<div><img src="../images/img-examples-1.png" alt="장바구니 캡쳐예시"></div>
+							<div class="btnWrap">
+								<a href="javascript:;" class="goBtn">등록하기</a>
+								<div class="goBtn">
+									<label for="imageImport02">이미지 다시 불러오기</label>
+									<input type="file" id="imageImport02" class="blind">
+								</div>
+							</div>
+						</div>
+						<div class="step03">
+							<p>등록이 모두<br>완료되었습니다.</p>
+						</div>
+
+
+					</div>
+
+					
+					<!--//-->
+
+				</div>
+			</div>
+		</div>
+
+
 	</div>
 </body>
 	@@include('./include/footer_js.html')
@@ -425,18 +489,18 @@
 
 		// 이미지등록 modal
 		function imageImport(){
-			$(".userInfo > .cartBtn").click(function(){
-				$(".imageFile").addClass("on")
-				$("body, html").css ({
-					"overflow-y":"hidden"
-				});
-			});
-			$(".imageFile .closeBtn").click(function(){
-				$("body, html").css ({
-					"overflow-y":"auto"
-				});
-				$(".imageFile").removeClass("on")
-			});
+			// $(".userInfo > .cartBtn").click(function(){
+			// 	$(".imageFile").addClass("on")
+			// 	$("body, html").css ({
+			// 		"overflow-y":"hidden"
+			// 	});
+			// });
+			// $(".imageFile .closeBtn").click(function(){
+			// 	$("body, html").css ({
+			// 		"overflow-y":"auto"
+			// 	});
+			// 	$(".imageFile").removeClass("on")
+			// });
 			$(".imageFile .step01 .goBtn").click(function(){
 				$(".step01").removeClass("on");
 				$(".step02").addClass("on");
@@ -446,6 +510,20 @@
 				$(".step03").addClass("on");
 			});
 		}
-		imageImport()
+		imageImport();
+
+
+		// 장바구니 이미지등록
+		$(document).on('click', '.basket-open-rocket', function(e) {
+			var layer = '.' + $(e.currentTarget).data('layer');
+			if (!CommonUI.LayerRocket.eventChkFlag) return;
+			CommonUI.LayerRocket.cashGenerator = CommonUI.LayerRocket.open(layer, function(layer) {
+				//레이어 오픈후 콜백함수 문맥
+				console.log(layer + ': rocket-layer open!');
+			})();
+			CommonUI.Async.generaterRun(CommonUI.LayerRocket.cashGenerator);
+		});
+
+
 	</script>
 </html>

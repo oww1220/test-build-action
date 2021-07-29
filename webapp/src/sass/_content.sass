@@ -85,7 +85,7 @@ $darkGray: #c9c9c9
 /************** Common ***************/
 #content
 	padding-top: 90px
-	max-width: 375px
+	max-width: 400px
 	margin: 0 auto
 .quickMenu
 	width: 89.4%
@@ -317,6 +317,7 @@ $darkGray: #c9c9c9
 		letter-spacing: -0.88px
 .eventNotice
 	margin-top: 80px
+	margin-bottom: 100px
 	padding: 30px 8% 80px 8%
 	background-color: $bgColor03
 	h5
@@ -414,7 +415,7 @@ $darkGray: #c9c9c9
 		height: 100%
 		border-radius: 30px
 .userInfo
-	padding: 0 8% 63px 0.8%
+	padding: 0 8% 63px 8%
 	margin-bottom: 50px
 	position: relative
 	&::after
@@ -749,15 +750,16 @@ $darkGray: #c9c9c9
 			width: 100%
 			height: auto
 .mainTab
-	padding: 10px 8% 0 8%
+	padding-top: 10px
 	margin-top: 20px
 	margin-bottom: 160px
 	// tab Title
 	& > ul
+		margin: 0 8%
 		display: flex
 		justify-content: space-around
 		background: linear-gradient(to right, rgba(0, 204, 255, 0.329), rgba(126, 20, 255, 0.329))
-		width: 100%
+		width: 84%
 		border-radius: 14px
 		position: relative
 		transition: .3s
@@ -814,6 +816,7 @@ $darkGray: #c9c9c9
 		margin-top: 60px
 		ul
 			.leftTab
+				padding: 0 8%
 				& > dl
 					text-align: center
 					dt
@@ -849,7 +852,7 @@ $darkGray: #c9c9c9
 								content: ""
 								position: absolute
 								top: 27px
-								right: 25px
+								right: 3%
 								width: 129px
 								height: 93px
 								background: url("../images/img-shop-tmb.png") no-repeat 0 0
@@ -861,7 +864,7 @@ $darkGray: #c9c9c9
 									content: ""
 									position: absolute
 									top: 30px
-									right: 40px
+									right: 3%
 									width: 96px
 									height: 88px
 									background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0
@@ -871,6 +874,7 @@ $darkGray: #c9c9c9
 							background-color: rgba(0, 0, 0, 0.1)
 							border-radius: 30px
 							dl
+								padding-right: 101px
 								dt
 									color: $white
 									+font24()
@@ -928,6 +932,7 @@ $darkGray: #c9c9c9
 						line-height: 1.6
 						letter-spacing: -0.32px
 				& > ul
+					padding: 0 8%
 					margin-top: 40px
 					li
 						width: 100%
@@ -1830,7 +1835,7 @@ $darkGray: #c9c9c9
 	top: 0
 	left: 0
 	width: 100%
-	height: 100%
+	height: calc(100vh + 100px)
 	background-color: $black
 	z-index: 110
 	overflow-y: scroll
@@ -1902,10 +1907,11 @@ $darkGray: #c9c9c9
 						width: 100%
 						height: 100%
 			&.step03
+				height: 100vh
 				padding-top: 50%
 				padding-bottom: 100px
 				background: url("../images/btn-check.png") no-repeat 0 0
-				background-position: center 20%
+				background-position: center 10%
 				p
 					+colorGradation()
 					font-size: 40px
@@ -2206,6 +2212,8 @@ $darkGray: #c9c9c9
 									dl
 										padding-top: 36px
 										+font12()
+										dt
+											height: 32px
 										dd
 											margin-top: 10px
 											color: $white
@@ -2822,3 +2830,10 @@ $darkGray: #c9c9c9
 			width: 138px
 
 						
+
+
+/************** 미디어쿼리 ***************/
+@media only screen and (max-width: 370px)
+	.delivery .deliveryInfo .arrowBtn
+		+font12()
+		line-height: 50px
