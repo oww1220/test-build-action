@@ -153,7 +153,7 @@ header nav > div p span { font-weight: normal; }
 
 /* 컴파일되는 여러 줄 주석 */
 /************** Common ***************/
-#content { padding-top: 90px; max-width: 375px; margin: 0 auto; }
+#content { padding-top: 90px; max-width: 400px; margin: 0 auto; }
 
 .quickMenu { width: 89.4%; position: fixed; bottom: 30px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; background-color: rgba(100, 20, 255, 0.4); padding: 16px 21px; border-radius: 25px; z-index: 10; }
 
@@ -215,7 +215,7 @@ header nav > div p span { font-weight: normal; }
 
 .subTitle dd { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; margin-top: 10px; font-size: 44px; line-height: 1.1; letter-spacing: -0.88px; }
 
-.eventNotice { margin-top: 80px; padding: 30px 8% 80px 8%; background-color: #171718; }
+.eventNotice { margin-top: 80px; margin-bottom: 100px; padding: 30px 8% 80px 8%; background-color: #171718; }
 
 .eventNotice h5 { font-size: 12px; font-weight: bold; letter-spacing: -0.24px; line-height: 1.4; }
 
@@ -245,7 +245,7 @@ header nav > div p span { font-weight: normal; }
 
 .cartBtn span { text-indent: -9999px; border: 1px solid transparent; background-image: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(100deg, #00cdff, #7d14ff); background-origin: border-box; background-clip: content-box, border-box; z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; }
 
-.userInfo { padding: 0 8% 63px 0.8%; margin-bottom: 50px; position: relative; }
+.userInfo { padding: 0 8% 63px 8%; margin-bottom: 50px; position: relative; }
 
 .userInfo::after { content: ""; width: 100%; height: 2px; position: absolute; bottom: 0; left: 0; background: linear-gradient(100deg, #00cdff, #7d14ff); }
 
@@ -366,9 +366,9 @@ header nav > div p span { font-weight: normal; }
 
 .mainVideo div video { width: 100%; height: auto; }
 
-.mainTab { padding: 10px 8% 0 8%; margin-top: 20px; margin-bottom: 160px; }
+.mainTab { padding-top: 10px; margin-top: 20px; margin-bottom: 160px; }
 
-.mainTab > ul { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; background: -webkit-gradient(linear, left top, right top, from(rgba(0, 204, 255, 0.329)), to(rgba(126, 20, 255, 0.329))); background: linear-gradient(to right, rgba(0, 204, 255, 0.329), rgba(126, 20, 255, 0.329)); width: 100%; border-radius: 14px; position: relative; -webkit-transition: .3s; transition: .3s; }
+.mainTab > ul { margin: 0 8%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; background: -webkit-gradient(linear, left top, right top, from(rgba(0, 204, 255, 0.329)), to(rgba(126, 20, 255, 0.329))); background: linear-gradient(to right, rgba(0, 204, 255, 0.329), rgba(126, 20, 255, 0.329)); width: 84%; border-radius: 14px; position: relative; -webkit-transition: .3s; transition: .3s; }
 
 .mainTab > ul.moveLeft::before { content: ""; position: absolute; top: 0; left: 0; width: 50%; height: 100%; border-radius: 14px; background: linear-gradient(100deg, #00cdff, #7d14ff); -webkit-transition: .3s; transition: .3s; -webkit-transform: translateX(0); transform: translateX(0); }
 
@@ -381,6 +381,8 @@ header nav > div p span { font-weight: normal; }
 .mainTab > ul li.on a:after { content: ""; background: url("../images/icon_planet.png") no-repeat 0 0; position: absolute; top: -10px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 30px; height: 24px; -webkit-animation: opacity .3s both; animation: opacity .3s both; }
 
 .mainTab .tabContent { margin-top: 60px; }
+
+.mainTab .tabContent ul .leftTab { padding: 0 8%; }
 
 .mainTab .tabContent ul .leftTab > dl { text-align: center; }
 
@@ -400,13 +402,15 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .leftTab ul li { margin-top: 10px; width: 100%; border-radius: 20px; position: relative; }
 
-.mainTab .tabContent ul .leftTab ul li a::after { content: ""; position: absolute; top: 27px; right: 25px; width: 129px; height: 93px; background: url("../images/img-shop-tmb.png") no-repeat 0 0; }
+.mainTab .tabContent ul .leftTab ul li a::after { content: ""; position: absolute; top: 27px; right: 3%; width: 129px; height: 93px; background: url("../images/img-shop-tmb.png") no-repeat 0 0; }
 
 .mainTab .tabContent ul .leftTab ul li:first-child { margin-top: 0; }
 
-.mainTab .tabContent ul .leftTab ul li:first-child a::after { content: ""; position: absolute; top: 30px; right: 40px; width: 96px; height: 88px; background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0; }
+.mainTab .tabContent ul .leftTab ul li:first-child a::after { content: ""; position: absolute; top: 30px; right: 3%; width: 96px; height: 88px; background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0; }
 
 .mainTab .tabContent ul .leftTab ul li a { padding: 20px; display: block; background-color: rgba(0, 0, 0, 0.1); border-radius: 30px; }
+
+.mainTab .tabContent ul .leftTab ul li a dl { padding-right: 101px; }
 
 .mainTab .tabContent ul .leftTab ul li a dl dt { color: #ffffff; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR bold'; }
 
@@ -426,7 +430,7 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .rightTab > dl dd { margin-top: 30px; font-family: 'Noto Sans KR bold', sans-serif; line-height: 1.6; letter-spacing: -0.32px; }
 
-.mainTab .tabContent ul .rightTab > ul { margin-top: 40px; }
+.mainTab .tabContent ul .rightTab > ul { padding: 0 8%; margin-top: 40px; }
 
 .mainTab .tabContent ul .rightTab > ul li { width: 100%; position: relative; margin-top: 10px; }
 
@@ -805,7 +809,7 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .storeRank .rankSlide .swiper-scrollbar .swiper-scrollbar-drag { height: 2px; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); position: absolute; bottom: 0; left: 0; }
 
-.imageFile { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 110; overflow-y: scroll; overflow-x: hidden; }
+.imageFile { display: none; position: fixed; top: 0; left: 0; width: 100%; height: calc(100vh + 100px); background-color: #000000; z-index: 110; overflow-y: scroll; overflow-x: hidden; }
 
 .imageFile.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; }
 
@@ -835,7 +839,7 @@ header nav > div p span { font-weight: normal; }
 
 .imageFile > div > div.step02 .btnWrap label { cursor: pointer; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.imageFile > div > div.step03 { padding-top: 50%; padding-bottom: 100px; background: url("../images/btn-check.png") no-repeat 0 0; background-position: center 20%; }
+.imageFile > div > div.step03 { height: 100vh; padding-top: 50%; padding-bottom: 100px; background: url("../images/btn-check.png") no-repeat 0 0; background-position: center 10%; }
 
 .imageFile > div > div.step03 p { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; line-height: 1.2; letter-spacing: -0.8px; text-align: center; }
 
@@ -939,6 +943,8 @@ header nav > div p span { font-weight: normal; }
 .spacePass .passTab .tabContent ul .leftTab .partnersSlide ul li a span { position: absolute; top: 87px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; width: 100%; text-align: center; }
 
 .spacePass .passTab .tabContent ul .leftTab .partnersSlide ul li a dl { padding-top: 36px; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
+
+.spacePass .passTab .tabContent ul .leftTab .partnersSlide ul li a dl dt { height: 32px; }
 
 .spacePass .passTab .tabContent ul .leftTab .partnersSlide ul li a dl dd { margin-top: 10px; color: #ffffff; opacity: 0.4; position: relative; }
 
@@ -1188,6 +1194,9 @@ header nav > div p span { font-weight: normal; }
 
 #content.mypageInfo .userInfo > .goBtn { width: 138px; }
 
+/************** 미디어쿼리 ***************/
+@media only screen and (max-width: 370px) { .delivery .deliveryInfo .arrowBtn { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; line-height: 50px; } }
+
 footer { padding: 30px 8% 130px 8%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; background-color: #000; position: relative; }
 
 footer div ul { display: -webkit-box; display: -ms-flexbox; display: flex; }
@@ -1282,6 +1291,32 @@ body.overlay-hidden { overflow: hidden; }
 
 .layer-rocket .benefitView .benefitView-cont .arrowBtn { width: 249px; margin-left: 0; text-align: center; }
 
+.layer-rocket .imageFileView { padding: 40px 8%; }
+
+.layer-rocket .imageFileView > div { display: none; }
+
+.layer-rocket .imageFileView > div dl { margin-bottom: 30px; }
+
+.layer-rocket .imageFileView > div dl dt { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 14px; line-height: 1.4; letter-spacing: -0.28px; }
+
+.layer-rocket .imageFileView > div dl dd { margin-top: 10px; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; color: #000000; font-family: 'Noto Sans KR black'; }
+
+.layer-rocket .imageFileView > div div { text-align: center; position: relative; }
+
+.layer-rocket .imageFileView > div div img { width: 200px; height: auto; }
+
+.layer-rocket .imageFileView > div.step02 .btnWrap { display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 31px; }
+
+.layer-rocket .imageFileView > div.step02 .btnWrap .goBtn { background-color: #575757; text-align: center; }
+
+.layer-rocket .imageFileView > div.step02 .btnWrap .goBtn:first-child { background-color: #6414ff; width: 40%; margin-right: 4px; }
+
+.layer-rocket .imageFileView > div.step03 { padding-top: 50%; padding-bottom: 100px; background: url("../images/btn-check.png") no-repeat 0 0; background-position: center 20%; }
+
+.layer-rocket .imageFileView > div.step03 p { background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); color: transparent; -webkit-background-clip: text; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; line-height: 1.2; letter-spacing: -0.8px; text-align: center; }
+
+.layer-rocket .imageFileView .on { display: block; }
+
 .layer-rocket.active { -webkit-transform: translateY(0); transform: translateY(0); }
 
 .layer-rocket.low-zIndex { z-index: 45; }
@@ -1328,13 +1363,25 @@ body.fixed { overflow: hidden; position: fixed; }
 #content.ticketInfo .ticketAniWrap .closeBtn { top: 23px; }
 
 /*add svg*/
-.ticket .ticketParticipate ul li.step01 .add-svg { background-image: none; padding-top: 0; }
+.ticket .ticketParticipate ul li.step01 .add-svg { background-image: none; padding: 0; }
 
-.ticket .ticketParticipate ul li.step01 .add-svg .svg-W { padding: 0; width: 116%; margin-left: -8%; -webkit-transform: scale(1.4); transform: scale(1.4); }
+.ticket .ticketParticipate ul li.step01 .add-svg .svg-W { padding: 0; width: 116%; margin: -15% 0 -15% -8%; }
 
-.ticket .ticketParticipate ul li.step03 .add-svg { background-image: none; padding-top: 0; }
+.ticket .ticketParticipate ul li.step03 .add-svg { background-image: none; padding: 0; }
 
-.ticket .ticketParticipate ul li.step03 .add-svg .svg-W { margin: 70px 0; padding: 0; width: 116%; margin-left: -8%; -webkit-transform: scale(1.7); transform: scale(1.7); }
+.ticket .ticketParticipate ul li.step03 .add-svg .svg-W { margin: 70px 0; padding: 0; width: 116%; margin: 5% 0 5% -8%; }
+
+.delivery .deliveryStep > ul > li > dl.step01.add-svg { background-image: none; padding: 0; }
+
+.delivery .deliveryStep > ul > li > dl.step01.add-svg .svg-W { padding: 0; width: 116%; margin: -15% 0 -15% -8%; }
+
+.delivery .deliveryStep > ul > li > dl.step03.add-svg { background-image: none; padding: 0; }
+
+.delivery .deliveryStep > ul > li > dl.step03.add-svg .svg-W { padding: 0; width: 116%; margin: -20% 0 -20% -8%; }
+
+.delivery .deliveryStep > ul > li > dl.step04.add-svg { background-image: none; padding: 0; }
+
+.delivery .deliveryStep > ul > li > dl.step04.add-svg .svg-W { padding: 0; width: 116%; margin: -20% 0 -30% -8%; }
 
 @-webkit-keyframes slide-out-top { 0% { -webkit-transform: translateY(0); transform: translateY(0);
   opacity: 1; }
