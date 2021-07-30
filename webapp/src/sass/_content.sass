@@ -87,92 +87,6 @@ $darkGray: #c9c9c9
 	padding-top: 90px
 	max-width: 400px
 	margin: 0 auto
-.quickMenu
-	width: 89.4%
-	position: fixed
-	bottom: 30px
-	left: 50%
-	transform: translateX(-50%)
-	display: flex
-	justify-content: space-around
-	background-color: rgba(100, 20, 255, 0.4)
-	padding: 16px 21px
-	border-radius: 25px
-	z-index: 10
-
-	li
-		position: relative
-		a
-			display: block
-			width: 30px
-			height: 48px
-			font-size: 12px
-			display: flex
-			align-items:  center
-			color: $white
-			font-family: 'Noto Sans KR bold'
-			letter-spacing: -0.24px
-			text-indent: -9999px
-			padding: 13px 0
-		&.on
-			
-			&:before 
-				content: ""
-				background: linear-gradient( 100deg, $frontColor, $backColor )
-				position: absolute
-				top: 0
-				left: 0
-				width: 110px
-				height: 48px
-				border-radius: 14px
-				z-index: -1
-				transition: .3s
-			a
-				text-align: center
-				text-indent: 0
-				width: 110px
-				height: 48px
-				border-radius: 14px
-				padding-left: 40px
-				line-height: 1.4
-
-		&.menuHome
-			a
-				background: url("../images/icon_home.png")
-				background-repeat: no-repeat
-				background-position: center
-			&.on
-				a
-					background-position: 15px center
-					padding-left: 52px
-
-		&.menuTicket
-			a
-				background: url("../images/icon_ticket.png")
-				background-repeat: no-repeat
-				background-position: center
-			&.on
-				a
-					background-position: 14px center
-					padding-left: 45px
-					padding-right: 10px
-		&.menuEvent
-			a
-				background: url("../images/icon_cart.png")
-				background-repeat: no-repeat
-				background-position: center
-			&.on
-				a
-					background-position: 11px center
-					
-		&.menuMad
-			a
-				background: url("../images/icon_mad.png")
-				background-repeat: no-repeat
-				background-position: center
-			&.on
-				a
-					background-position: 10px center
 .quickMenu02
 	width: 89.4%
 	height: 80px
@@ -244,7 +158,7 @@ $darkGray: #c9c9c9
 		border-right: 1px solid $white
 		position: absolute
 		top: 20px
-		right: 45px
+		right: 10%
 		transform: rotate(45deg)
 .goBtn
 	display: block
@@ -259,6 +173,7 @@ $darkGray: #c9c9c9
 	font-size: 16px
 	letter-spacing: -0.32px
 	font-family: 'Noto Sans KR bold'
+	cursor: pointer
 .goBtn02
 	display: block
 	text-align: center
@@ -468,8 +383,10 @@ $darkGray: #c9c9c9
 				.effect-24:focus ~ .focus-bg:after,
 				.has-content.effect-24 ~ .focus-bg::after,
 				.effect-24 ~ .focus-bg::after,	
-				.effect-24:focus ~ .focus-bg:before,
-				.has-content.effect-24 ~ .focus-bg:before
+				.effect-24:focus ~ .focus-bg::before,
+				.has-content.effect-24 ~ .focus-bg::before
+					display: none
+				.focus-bg
 					display: none
 				strong
 					display: block
@@ -501,7 +418,7 @@ $darkGray: #c9c9c9
 				padding: 7px 15px
 				position: relative
 				background: transparent
-			.effect-24 ~ .focus-bg::after
+			.effect-24 ~ .focus-bg::before
 				content: ""
 				position: absolute
 				left: 0px
@@ -513,7 +430,7 @@ $darkGray: #c9c9c9
 				height: 50px
 				border: 1px solid $lightGray
 				box-sizing: content-box
-			.effect-24 ~ .focus-bg:before
+			.effect-24 ~ .focus-bg::after
 				content: ""
 				position: absolute
 				left: 50%
@@ -521,24 +438,24 @@ $darkGray: #c9c9c9
 				width: 0
 				height: 0
 				transition: 0.3s
-				border-radius: 10px
-				background: linear-gradient(100deg, $frontColor, $backColor)
-				opacity: 0.2
-			.effect-24:focus ~ .focus-bg:after,
-			.has-content.effect-24 ~ .focus-bg::after
+			.effect-24:focus ~ .focus-bg:before,
+			.has-content.effect-24 ~ .focus-bg::before
 				width: 100%
 				transition: 0.3s
 				left: -2px
 				top: -2px
 				height: 51px
 				+borderGradient()
-			.effect-24:focus ~ .focus-bg:before,
-			.has-content.effect-24 ~ .focus-bg:before
+			.effect-24:focus ~ .focus-bg:after,
+			.has-content.effect-24 ~ .focus-bg:after
 				transition: 0.3s
 				width: 100%
 				left: 0
 				top: 0
 				height: 100%
+				border-radius: 10px
+				background: linear-gradient(100deg, $frontColor, $backColor)
+				opacity: 0.2
 			.effect-24 ~ label
 				position: absolute
 				left: 14px
@@ -585,14 +502,61 @@ $darkGray: #c9c9c9
 
 		.telecom
 			.select
-				display: block
+				display: inline-block
 				width: 100%
 				height: 54px
 				line-height: 54px
 				position: relative
 				font-size: 14px
-				border: 1px solid $lightGray
 				border-radius: 10px
+				&::before
+					content: ""
+					position: absolute
+					left: 0px
+					top: -1px
+					border-radius: 10px
+					transition: 0.3s
+					padding: 1px
+					width: 99%
+					height: 50px
+					border: 1px solid $lightGray
+					box-sizing: content-box
+				&::after
+					content: ""
+					position: absolute
+					left: 50%
+					top: 50%
+					width: 0
+					height: 0
+					transition: 0.3s
+				&.on
+					&::before
+						width: 100%
+						transition: 0.3s
+						left: -2px
+						top: -2px
+						height: 51px
+						+borderGradient()
+						border-bottom-left-radius: 0
+						border-bottom-right-radius: 0
+					&::after
+						transition: 0.3s
+						width: 100%
+						left: 0
+						top: 0
+						height: 100%
+						border-radius: 10px
+						background: linear-gradient(100deg, $frontColor, $backColor)
+						border-bottom-left-radius: 0
+						border-bottom-right-radius: 0
+						opacity: 0.2
+				&.radius
+					&::before
+						border-bottom-left-radius: 10px 
+						border-bottom-right-radius: 10px
+					&::after
+						border-bottom-left-radius: 10px 
+						border-bottom-right-radius: 10px 
 
 				& > .def
 					width: 100%
@@ -605,6 +569,7 @@ $darkGray: #c9c9c9
 					padding-left: 20px
 					color: $darkGray
 					font-size: 14px
+					z-index: 1
 
 				& > .dropdown
 					height: 54px
@@ -617,10 +582,10 @@ $darkGray: #c9c9c9
 					font-size: 10px
 			
 				& > .options
-					width: 100.5%
+					width: 101.5%
 					position: absolute
-					top: 45px
-					left: -1px
+					top: 52px
+					left: -2px
 					text-align: center
 					border-radius: 3px
 					z-index: 10
@@ -874,8 +839,8 @@ $darkGray: #c9c9c9
 							background-color: rgba(0, 0, 0, 0.1)
 							border-radius: 30px
 							dl
-								padding-right: 101px
 								dt
+									padding-right: 101px
 									color: $white
 									+font24()
 								dd
@@ -1384,16 +1349,19 @@ $darkGray: #c9c9c9
 						padding-top: 219px
 						background: url("../images/img-ticket-step1.png") no-repeat 0 0
 						background-position: center 14px
+						background-size: 100%
 				&.step02
 					& > div
 						padding-top: 214px
 						background: url("../images/img-ticket-step2.png") no-repeat 0 0
 						background-position: center 30px
+						background-size: 100%
 				&.step03
 					& > div
 						padding-top: 251px
 						background: url("../images/img-ticket-step3.png") no-repeat 0 0
 						background-position: center 30px
+						background-size: 100%
 				dl
 					margin-top: 10px
 					dt
@@ -1557,6 +1525,7 @@ $darkGray: #c9c9c9
 		text-align: center
 		background: url("../images/delivery_KV 1.png") no-repeat 0 0
 		background-position: center 90px
+		padding: 0 8%
 		.deliverContent
 			padding-top: 188px
 			p
@@ -1571,7 +1540,7 @@ $darkGray: #c9c9c9
 			letter-spacing: -0.48px
 			line-height: 1.6
 		.arrowBtn
-			width: 256px
+			width: 100%
 			background: $bgColor02 url("../images/11.png") no-repeat 0 0
 			background-position: 28px center
 			padding-left: 60px
@@ -1908,7 +1877,7 @@ $darkGray: #c9c9c9
 						height: 100%
 			&.step03
 				height: 100vh
-				padding-top: 50%
+				padding-top: 60%
 				padding-bottom: 100px
 				background: url("../images/btn-check.png") no-repeat 0 0
 				background-position: center 10%
@@ -2474,7 +2443,8 @@ $darkGray: #c9c9c9
 				left: 50%
 				transform: translateX(-50%)
 				+font12()
-
+			img
+				width: 100%
 	.madPass
 		& > dl
 			text-align: center
@@ -2531,7 +2501,7 @@ $darkGray: #c9c9c9
 						content: ""
 						position: absolute
 						top: 27px
-						right: 25px
+						right: 5%
 						width: 129px
 						height: 93px
 						background: url("../images/img-shop-tmb.png") no-repeat 0 0
@@ -2543,7 +2513,7 @@ $darkGray: #c9c9c9
 							content: ""
 							position: absolute
 							top: 30px
-							right: 40px
+							right: 5%
 							width: 96px
 							height: 88px
 							background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0
@@ -2566,6 +2536,7 @@ $darkGray: #c9c9c9
 						dt
 							color: $white
 							+font24()
+							padding-right: 106px
 						dd
 							color: $lightGray
 							font-size: 14px
@@ -2660,7 +2631,7 @@ $darkGray: #c9c9c9
 						content: ""
 						position: absolute
 						top: 27px
-						right: 25px
+						right: 3%
 						width: 129px
 						height: 93px
 						background: url("../images/img-shop-tmb.png") no-repeat 0 0
@@ -2672,7 +2643,6 @@ $darkGray: #c9c9c9
 							content: ""
 							position: absolute
 							top: 30px
-							right: 40px
 							width: 96px
 							height: 88px
 							background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0
@@ -2684,6 +2654,7 @@ $darkGray: #c9c9c9
 					dl
 						dt
 							color: $white
+							padding-right: 101px
 							+font24()
 						dd
 							color: $lightGray
@@ -2837,3 +2808,29 @@ $darkGray: #c9c9c9
 	.delivery .deliveryInfo .arrowBtn
 		+font12()
 		line-height: 50px
+@media only screen and (max-width: 320px)
+	.partners .listPartners > div ul li > div div
+		+font12()
+	.partners .listPartners > div ul li > div .moreBtn
+		+font12()
+	.partners .listPartners > div ul li > div .moreBtn::after
+		width: 10px
+		height: 10px
+		top: 6px
+		left: 100%
+	.partners .listPartners > div ul li > dl dd
+		+font12()
+	.delivery .deliveryStep > ul > li .arrowBtn
+		+font14()
+		line-height: 50px
+		width: 100%		
+	.delivery .deliveryEvent .arrowBtn
+		+font14()
+		line-height: 50px
+		width: 100%		
+	.delivery .deliveryInfo .arrowBtn::after
+		right: 5%
+	.delivery .deliveryStep > ul > li > dl.step02
+		background: url("../images/img-shop-step2.png") no-repeat 0 0
+		background-position: center 175px
+		padding-bottom: 190px
