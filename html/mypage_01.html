@@ -141,7 +141,18 @@
 		if(opts.hasClass('on'))
 		opts.slideToggle('fast').removeClass('on');
 		btn.text('▼');
+		$(".select").addClass("radius");
 	});
+
+	
+	$(".select a").click(function(){
+		if($(".options").hasClass("on")){
+			$(".select").addClass("radius");
+		}else{
+			$(".select").addClass("on");
+			$(".select").removeClass("radius");
+		}
+	})
 
 	//핸드폰 번호 입력
 	$('.phone').keydown(function(event) {
