@@ -230,7 +230,7 @@ body.overlay-hidden {
             dl {
                 margin-bottom: 30px;
                 dt {
-                    background: linear-gradient(to right, #00cdff, #7d14ff);
+                    background: #3617ce;
                     color: transparent;
                     -webkit-background-clip: text;
                     font-family: 'Noto Sans KR black', sans-serif;
@@ -255,6 +255,12 @@ body.overlay-hidden {
                     height: auto;
                 }
             }
+			&.step01 {
+				.goBtn{
+					width: 185px
+				}
+			}
+				
             &.step02 {
                 .btnWrap {
                     display: flex;
@@ -269,6 +275,11 @@ body.overlay-hidden {
                         }
                     }
                 }
+				& > div {
+					img {
+						border: 2px solid #6414ff;
+					}
+				}
             }
             &.step03 {
                 padding-top: 60%;
@@ -276,7 +287,7 @@ body.overlay-hidden {
                 background: url('../images/btn-check.png') no-repeat 0 0;
                 background-position: center 20%;
                 p {
-                    background: linear-gradient(to right, #00cdff, #7d14ff);
+                    background: #3617ce;
                     color: transparent;
                     -webkit-background-clip: text;
                     font-family: 'Noto Sans KR black', sans-serif;
