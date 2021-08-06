@@ -101,7 +101,7 @@ $oneColor: #8674e2
 	padding-top: 90px
 	max-width: 400px
 	margin: 0 auto
-.quickMenu02
+#wrap .quickMenu02
 	width: 89.4%
 	height: 80px
 	position: fixed
@@ -132,7 +132,6 @@ $oneColor: #8674e2
 			color: $white
 			padding-top: 42px
 			+font12()
-			opacity: 0.4
 		&.on
 			background-color: $mainColor
 			border-radius: 27px
@@ -1210,13 +1209,16 @@ $oneColor: #8674e2
 /************** ticket ***************/
 .ticket
 	margin-bottom: 100px
+	.quickMenu02
+		li
+			a
+				opacity: 0.4
 	.ticketOpen
 		text-align: center
 		.eventContent
 			margin-top: 40px
 			p
 				+font16()
-				margin-top: 10px
 				span
 					+colorGradation()
 					color: $point
@@ -1425,7 +1427,6 @@ $oneColor: #8674e2
 /************** ticket 01 ***************/
 #content.ticketInfo
 	padding-top: 20px
-
 	.ticketAniWrap
 		display: none
 		position: fixed
@@ -1546,6 +1547,10 @@ $oneColor: #8674e2
 /************** delivery ***************/
 .delivery
 	margin-bottom: 100px
+	.quickMenu02
+		li
+			a
+				opacity: 0.4
 	.deliveryEvent
 		text-align: center
 		background: url("../images/delivery_KV 1.png") no-repeat 0 0
@@ -1557,11 +1562,9 @@ $oneColor: #8674e2
 				+font16()
 		& > p
 			margin-top: 20px
-			+colorGradation()
-			font-size: 24px
-			letter-spacing: -0.48px
-			line-height: 1.6
+			+font16()
 			color: $point
+			font-family: 'Noto Sans KR black'
 		.arrowBtn
 			width: 256px
 			background: $bgColor02 url("../images/11.png") no-repeat 0 0
@@ -1610,7 +1613,7 @@ $oneColor: #8674e2
 						width: 80px
 					span
 						display: inline-block
-						width: 70px
+						width: 100px
 						text-align: right
 						margin-right: 20px
 		& > div
@@ -1696,8 +1699,8 @@ $oneColor: #8674e2
 				&::after
 					content: ""
 					width: 100%
-					height: 2px
-					background: linear-gradient(to right, $frontColor, $backColor)
+					height: 1px
+					background: $white
 					position: absolute
 					bottom: 0
 					left: 0
@@ -2470,6 +2473,10 @@ $oneColor: #8674e2
 /************** mad ***************/
 .mad
 	padding-bottom: 111px
+	.quickMenu02
+		li
+			a
+				opacity: 0.4
 	.madVideo
 		padding: 0 8%
 		div
@@ -2496,9 +2503,7 @@ $oneColor: #8674e2
 				+font24Gradation()
 			dd
 				+font16()
-				span
-					display: block
-					margin-top: 10px
+				margin-top: 12px
 		h5
 			+font24()
 			text-align: center
