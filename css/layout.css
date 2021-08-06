@@ -125,9 +125,11 @@ body { font-family: 'Noto Sans KR',"맑은고딕",sans-serif; font-weight: 300; 
 @keyframes ticketing { 0% { -webkit-transform: translateY(100%); transform: translateY(100%); }
  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
 
-header { position: fixed; top: 0; left: 0; padding: 20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 100%; z-index: 50; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+header { position: fixed; top: 0; left: 0; padding: 20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 100%; z-index: 50; }
 
-header h1 a { height: 30px; display: block; }
+header::before { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 76px; z-index: -1; }
+
+header h1 a { height: 30px; display: block; padding: 3px 0; }
 
 header h1 a img { width: 80px; height: 30px; }
 
@@ -197,15 +199,15 @@ header nav > div p span { font-weight: normal; }
 
 .subTitle dd { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; margin-top: 10px; font-size: 44px; line-height: 1.1; letter-spacing: -0.88px; }
 
-.eventNotice { margin-top: 80px; padding: 30px 8% 80px 8%; background-color: #171718; }
+.eventNotice { margin-top: 80px; padding: 19px 8%; background-color: #171718; }
 
 .eventNotice h5 { font-size: 12px; font-weight: bold; letter-spacing: -0.24px; line-height: 1.4; }
 
 .eventNotice ul { margin-top: 10px; }
 
-.eventNotice ul li { font-size: 12px; letter-spacing: -0.24px; color: #575757; line-height: 1.4; position: relative; padding-left: 10px; font-family: 'Noto Sans KR bold'; }
+.eventNotice ul li { font-size: 12px; letter-spacing: -0.24px; color: rgba(255, 255, 255, 0.4); line-height: 1.4; position: relative; padding-left: 10px; font-family: 'Noto Sans KR bold'; }
 
-.eventNotice ul li::before { content: ""; position: absolute; top: 6px; left: 0; width: 3px; height: 3px; border-radius: 50%; background-color: #575757; }
+.eventNotice ul li::before { content: ""; position: absolute; top: 6px; left: 0; width: 3px; height: 3px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.4); }
 
 .alertWin { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); display: none; z-index: 50; }
 
@@ -221,17 +223,17 @@ header nav > div p span { font-weight: normal; }
 
 .alertWin > div div .goBtn { width: 110px; }
 
-.alertWin > div div .arrowBtn { background-color: #575757; margin-left: 4px; }
+.alertWin > div div .arrowBtn { background-color: rgba(255, 255, 255, 0.4); margin-left: 4px; }
 
 .alertWin > div div .arrowBtn::after { right: 20%; }
 
-.cartBtn { margin: 0 auto; margin-top: 20px; width: 230px; height: 79px; position: relative; border-radius: 30px; display: block; color: #ffffff; background: url("../images/upload.png") no-repeat 0 0; background-position: center 11px; padding: 48px 11px 11px; font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
+.cartBtn { margin: 0 auto; margin-top: 20px; width: 257px; height: 79px; position: relative; border-radius: 30px; display: block; color: #ffffff; background: url("../images/upload.png") no-repeat 0 0; background-position: center 11px; padding: 48px 11px 11px; font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
 
-.cartBtn span { text-indent: -9999px; background-color: rgba(54, 23, 206, 0.24); border: 1px solid #3617ce; z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; }
+.cartBtn span { text-indent: -9999px; background-color: rgba(54, 23, 206, 0.24); border: 1px solid #3617ce; z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; background-color: #3617ce; }
 
 .userInfo { padding: 0 8% 63px 8%; margin-bottom: 50px; position: relative; text-align: left; }
 
-.userInfo::after { content: ""; width: 100%; height: 2px; position: absolute; bottom: 0; left: 0; background: #3617ce; }
+.userInfo::after { content: ""; width: 84%; margin-left: 8%; height: 2px; position: absolute; bottom: 0; left: 0; background: #3617ce; }
 
 .userInfo .olklPass div { text-align: center; font-size: 14px; line-height: 1.4; letter-spacing: -0.28px; font-family: 'Noto Sans KR bold'; }
 
@@ -263,7 +265,7 @@ header nav > div p span { font-weight: normal; }
 
 .userInfo .userInfo-input div .effect-24 { border: 0; padding: 7px 15px; position: relative; background: transparent; }
 
-.userInfo .userInfo-input div .effect-24 ~ .focus-bg::before { content: ""; position: absolute; left: 0px; top: -1px; border-radius: 10px; -webkit-transition: 0.3s; transition: 0.3s; padding: 1px; width: 99%; height: 50px; border: 1px solid #575757; -webkit-box-sizing: content-box; box-sizing: content-box; }
+.userInfo .userInfo-input div .effect-24 ~ .focus-bg::before { content: ""; position: absolute; left: 0px; top: -1px; border-radius: 10px; -webkit-transition: 0.3s; transition: 0.3s; padding: 1px; width: 99%; height: 50px; border: 1px solid rgba(255, 255, 255, 0.4); -webkit-box-sizing: content-box; box-sizing: content-box; }
 
 .userInfo .userInfo-input div .effect-24 ~ .focus-bg::after { content: ""; position: absolute; left: 50%; top: 50%; width: 0; height: 0; -webkit-transition: 0.3s; transition: 0.3s; }
 
@@ -273,7 +275,7 @@ header nav > div p span { font-weight: normal; }
 
 .userInfo .userInfo-input div .effect-24 ~ label { position: absolute; left: 14px; width: 100%; top: 15px; color: transparent; -webkit-transition: 0.3s; transition: 0.3s; z-index: -2; font-weight: bold; letter-spacing: -0.28px; font-size: 14px; }
 
-.userInfo .userInfo-input div .effect-24:focus ~ label, .userInfo .userInfo-input div .has-content.effect-24 ~ label { top: 2px; left: 15px; font-size: 12px; color: #575757; -webkit-transition: 0.3s; transition: 0.3s; z-index: 10; }
+.userInfo .userInfo-input div .effect-24:focus ~ label, .userInfo .userInfo-input div .has-content.effect-24 ~ label { top: 2px; left: 15px; font-size: 12px; color: rgba(255, 255, 255, 0.4); -webkit-transition: 0.3s; transition: 0.3s; z-index: 10; }
 
 .userInfo .userInfo-input div > a { display: block; height: 54px; line-height: 54px; padding-left: 20px; font-weight: bold; font-size: 14px; letter-spacing: -0.28px; border-radius: 10px; color: #c9c9c9; }
 
@@ -283,7 +285,7 @@ header nav > div p span { font-weight: normal; }
 
 .userInfo .userInfo-input .telecom .select { display: inline-block; width: 100%; height: 54px; line-height: 54px; position: relative; font-size: 14px; border-radius: 10px; }
 
-.userInfo .userInfo-input .telecom .select::before { content: ""; position: absolute; left: 0px; top: -1px; border-radius: 10px; -webkit-transition: 0.3s; transition: 0.3s; padding: 1px; width: 99%; height: 50px; border: 1px solid #575757; -webkit-box-sizing: content-box; box-sizing: content-box; }
+.userInfo .userInfo-input .telecom .select::before { content: ""; position: absolute; left: 0px; top: -1px; border-radius: 10px; -webkit-transition: 0.3s; transition: 0.3s; padding: 1px; width: 99%; height: 50px; border: 1px solid rgba(255, 255, 255, 0.4); -webkit-box-sizing: content-box; box-sizing: content-box; }
 
 .userInfo .userInfo-input .telecom .select::after { content: ""; position: absolute; left: 50%; top: 50%; width: 0; height: 0; -webkit-transition: 0.3s; transition: 0.3s; }
 
@@ -301,9 +303,9 @@ header nav > div p span { font-weight: normal; }
 
 .userInfo .userInfo-input .telecom .select > .options { width: 101.5%; position: absolute; top: 52px; left: -2px; text-align: center; border-radius: 3px; z-index: 10; }
 
-.userInfo .userInfo-input .telecom .select > .options > li { border: 1px solid #575757; border-top: 0; background: #000000; height: 54px; line-height: 54px; }
+.userInfo .userInfo-input .telecom .select > .options > li { border: 1px solid rgba(255, 255, 255, 0.4); border-top: 0; background: #000000; height: 54px; line-height: 54px; }
 
-.userInfo .userInfo-input .telecom .select > .options > li:first-child { border-top: 1px solid #575757; }
+.userInfo .userInfo-input .telecom .select > .options > li:first-child { border-top: 1px solid rgba(255, 255, 255, 0.4); }
 
 .userInfo .userInfo-input .telecom .select > .options > li:last-child { border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
 
@@ -339,15 +341,13 @@ header nav > div p span { font-weight: normal; }
 
 .benefitView > dl dt { text-align: center; }
 
-.benefitView > dl dt img { width: 70%; }
-
 .benefitView > dl dd { position: absolute; bottom: 8px; right: 0; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #575757; }
 
 .benefitView div { margin-top: 20px; }
 
 .benefitView div dl { text-align: left; font-family: 'Noto Sans KR black'; line-height: 1.6; }
 
-.benefitView div dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 24px; letter-spacing: -0.48px; }
+.benefitView div dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 24px; letter-spacing: -0.48px; color: #3617ce; }
 
 .benefitView div dl dd { margin-top: 20px; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; color: #000000; font-family: 'Noto Sans KR black'; }
 
@@ -355,9 +355,9 @@ header nav > div p span { font-weight: normal; }
 
 .benefitView div dl dd p:first-child { margin-top: 0; }
 
-.benefitView div .arrowBtn { text-align: center; margin-left: 0; width: auto; padding: 0 40px; display: inline-block; }
+.benefitView div .arrowBtn { width: 249px; text-align: center; }
 
-.benefitView div .arrowBtn::after { content: ""; right: 30px; }
+.benefitView div .arrowBtn::after { right: 15%; }
 
 /************** Main ***************/
 .mainVideo { padding: 0 8%; }
@@ -366,7 +366,7 @@ header nav > div p span { font-weight: normal; }
 
 .mainVideo div video { width: 100%; height: auto; }
 
-.mainTab { padding-top: 10px; margin-top: 20px; margin-bottom: 270px; }
+.mainTab { padding-top: 10px; margin-top: 20px; }
 
 .mainTab > ul { margin: 0 8%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; background-color: rgba(54, 23, 206, 0.445); width: 84%; border-radius: 14px; position: relative; -webkit-transition: .3s; transition: .3s; }
 
@@ -396,15 +396,17 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .leftTab > div dl dd { margin-top: 10px; }
 
+.mainTab .tabContent ul .leftTab > div .arrowBtn { background-color: #ff404e; }
+
 .mainTab .tabContent ul .leftTab > div .arrowBtn::after { right: 21%; }
 
 .mainTab .tabContent ul .leftTab h5 { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 44px; line-height: 1.1; letter-spacing: -0.88px; color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; text-align: center; margin-top: 100px; }
 
-.mainTab .tabContent ul .leftTab ul { margin-top: 28px; }
+.mainTab .tabContent ul .leftTab ul { margin-top: 28px; margin-bottom: 110px; }
 
 .mainTab .tabContent ul .leftTab ul li { margin-top: 10px; width: 100%; border-radius: 20px; position: relative; }
 
-.mainTab .tabContent ul .leftTab ul li a::after { content: ""; position: absolute; top: 27px; right: 7%; width: 129px; height: 93px; background: url("../images/img-shop-tmb.png") no-repeat 0 0; }
+.mainTab .tabContent ul .leftTab ul li a .svg-W { position: absolute; top: -10px; right: 0; width: 180px; }
 
 .mainTab .tabContent ul .leftTab ul li:first-child { margin-top: 0; }
 
@@ -414,9 +416,9 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .leftTab ul li a dl dt { padding-right: 101px; color: #ffffff; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR bold'; }
 
-.mainTab .tabContent ul .leftTab ul li a dl dd { color: #575757; font-size: 14px; line-height: 20px; letter-spacing: -0.28px; margin-top: 50px; font-family: 'Noto Sans KR bold', sans-serif; position: relative; }
+.mainTab .tabContent ul .leftTab ul li a dl dd { color: rgba(255, 255, 255, 0.4); font-size: 14px; line-height: 20px; letter-spacing: -0.28px; margin-top: 50px; font-family: 'Noto Sans KR bold', sans-serif; position: relative; }
 
-.mainTab .tabContent ul .leftTab ul li a dl dd::after { content: ""; width: 10px; height: 10px; border-top: 1px solid #575757; border-right: 1px solid #575757; position: absolute; top: 5px; left: 98px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.mainTab .tabContent ul .leftTab ul li a dl dd::after { content: ""; width: 10px; height: 10px; border-top: 1px solid rgba(255, 255, 255, 0.4); border-right: 1px solid rgba(255, 255, 255, 0.4); position: absolute; top: 5px; left: 98px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
 .mainTab .tabContent ul .leftTab ul li a span { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(54, 23, 206, 0.24); border: 1px solid #3617ce; z-index: -1; border-radius: 30px; text-indent: -9999px; }
 
@@ -430,7 +432,7 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .rightTab > dl dd { margin-top: 30px; font-family: 'Noto Sans KR bold', sans-serif; line-height: 1.6; letter-spacing: -0.32px; }
 
-.mainTab .tabContent ul .rightTab > ul { padding: 0 8%; margin-top: 100px; }
+.mainTab .tabContent ul .rightTab > ul { padding: 0 8%; margin-top: 60px; }
 
 .mainTab .tabContent ul .rightTab > ul li { width: 100%; position: relative; margin-top: 10px; }
 
@@ -474,8 +476,6 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .rightTab .mainPartner .mainPlanet ul li.on { display: block; }
 
-.mainTab .tabContent ul .rightTab .mainPartner .mainPlanet ul li.on div img { width: 100%; height: auto; }
-
 .mainTab .tabContent ul .rightTab .mainPartner .tabSlide { margin-top: 30px; width: 235px; padding: 6px; }
 
 .mainTab .tabContent ul .rightTab .mainPartner .tabSlide > ul li { width: 24px; height: 36px; margin-right: 15px; }
@@ -488,11 +488,11 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .rightTab .mainPartner .tabSlide > ul li > a img { width: 24px; height: 24px; }
 
-.mainTab .tabContent ul .rightTab .mainPartner .sliderBtn .swiper-button-prev { position: absolute; top: 50%; left: 0; text-align: center; width: 30px; height: 30px; text-indent: -9999px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.mainTab .tabContent ul .rightTab .mainPartner .sliderBtn .swiper-button-prev { position: absolute; top: 45%; left: 8%; text-align: center; width: 30px; height: 30px; text-indent: -9999px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
 .mainTab .tabContent ul .rightTab .mainPartner .sliderBtn .swiper-button-prev::before { content: ""; width: 20px; height: 20px; border-top: 2px solid #ffffff; border-left: 2px solid #ffffff; position: absolute; top: 5px; left: 10px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
 
-.mainTab .tabContent ul .rightTab .mainPartner .sliderBtn .swiper-button-next { position: absolute; top: 50%; right: 0; text-align: center; width: 30px; height: 30px; text-indent: -9999px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.mainTab .tabContent ul .rightTab .mainPartner .sliderBtn .swiper-button-next { position: absolute; top: 45%; right: 8%; text-align: center; width: 30px; height: 30px; text-indent: -9999px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
 .mainTab .tabContent ul .rightTab .mainPartner .sliderBtn .swiper-button-next::before { content: ""; width: 20px; height: 20px; border-top: 2px solid #ffffff; border-right: 2px solid #ffffff; position: absolute; top: 5px; right: 10px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
@@ -522,7 +522,7 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li > dl dt { padding-bottom: 23px; }
 
-.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li > dl dd { text-align: right; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; color: #575757; font-family: 'Noto Sans KR bold'; }
+.mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li > dl dd { text-align: right; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; color: rgba(255, 255, 255, 0.4); font-family: 'Noto Sans KR bold'; }
 
 .mainTab .tabContent ul .rightTab .mainPartner .benefitCon.on ul li div { margin-top: 20px; }
 
@@ -547,11 +547,13 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketOpen .eventContent p { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
 
-.ticket .ticketOpen .eventContent p span { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; color: #ff404e; }
+.ticket .ticketOpen .eventContent p span { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; color: #5e45d8; }
 
 .ticket .ticketOpen .eventContent p.second { padding-top: 238px; position: relative; }
 
 .ticket .ticketOpen .eventContent p.second::after { content: ""; width: 100%; height: 100%; position: absolute; top: -80px; left: 0; background: url("../images/Ticket_KV 1.png") no-repeat 0 0; background-position: center top; }
+
+.ticket .ticketOpen .eventContent .goBtn { background-color: #ff404e; }
 
 .ticket .ticketOpen .arrowBtn { width: 218px; font-size: 16px; letter-spacing: -0.32px; }
 
@@ -575,21 +577,25 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketRewards ul li::before { content: ""; position: absolute; top: 24px; right: 13px; width: 119px; height: 89px; background: url("../images/img-tmb-lucky-1.png") no-repeat 0 0; }
 
-.ticket .ticketRewards ul li:first-child { margin-top: 0; background: linear-gradient(100deg, rgba(0, 204, 255, 0.24), rgba(126, 20, 255, 0.267)); }
+.ticket .ticketRewards ul li:first-child { margin-top: 0; background: rgba(100, 20, 255, 0.4); }
 
-.ticket .ticketRewards ul li:first-child::before { content: ""; position: absolute; top: 10px; right: 20px; width: 100px; height: 95px; background: url("../images/img-tmb-global.png") no-repeat 0 0; }
+.ticket .ticketRewards ul li:first-child::before { content: ""; position: absolute; top: 65px; right: 20px; width: 117px; height: 110px; background: url("../images/img-tmb-global.png") no-repeat 0 0; }
+
+.ticket .ticketRewards ul li:first-child a dl dd { margin-top: 90px; }
 
 .ticket .ticketRewards ul li a { display: block; padding: 19px 27px; }
 
 .ticket .ticketRewards ul li a dl dt { font-size: 20px; line-height: 1.6; letter-spacing: -0.4px; font-family: 'Noto Sans KR bold'; color: #ffffff; }
 
-.ticket .ticketRewards ul li a dl dd { margin-top: 20px; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #ffffff; opacity: 0.4; position: relative; }
+.ticket .ticketRewards ul li a dl dt span { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; display: block; }
 
-.ticket .ticketRewards ul li a dl dd::after { content: ""; position: absolute; top: 3px; left: 58px; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); opacity: 0.4; }
+.ticket .ticketRewards ul li a dl dd { margin-top: 40px; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #ffffff; opacity: 0.4; position: relative; }
+
+.ticket .ticketRewards ul li a dl dd::after { content: ""; position: absolute; top: 3px; left: 58px; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
 .ticket .ticketRewards div { margin-top: 10px; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; text-align: center; }
 
-.ticket .ticketParticipate { padding: 0 8%; margin-top: 80px; text-align: center; }
+.ticket .ticketParticipate { margin-top: 80px; text-align: center; }
 
 .ticket .ticketParticipate h4 { font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR bold'; position: relative; display: inline-block; }
 
@@ -599,7 +605,7 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketParticipate ul li { padding-bottom: 59px; margin-top: 50px; position: relative; }
 
-.ticket .ticketParticipate ul li::after { content: ""; width: 100%; height: 1px; background: #ffffff; position: absolute; bottom: 0; left: 0; }
+.ticket .ticketParticipate ul li::after { content: ""; margin-left: 8%; width: 84%; height: 1px; background: #ffffff; position: absolute; bottom: 0; left: 0; }
 
 .ticket .ticketParticipate ul li:last-child { padding-bottom: 0; }
 
@@ -610,6 +616,8 @@ header nav > div p span { font-weight: normal; }
 .ticket .ticketParticipate ul li.step01 > div { padding-top: 219px; background: url("../images/img-ticket-step1.png") no-repeat 0 0; background-position: center 14px; background-size: 100%; }
 
 .ticket .ticketParticipate ul li.step02 > div { padding-top: 214px; background: url("../images/img-ticket-step2.png") no-repeat 0 0; background-position: center 30px; background-size: 100%; }
+
+.ticket .ticketParticipate ul li.step02 > div .goBtn { background-color: #ff404e; }
 
 .ticket .ticketParticipate ul li.step03 > div { padding-top: 251px; background: url("../images/img-ticket-step3.png") no-repeat 0 0; background-position: center 30px; background-size: 100%; }
 
@@ -625,7 +633,7 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketParticipate ul li > div div { padding: 0 5.9%; }
 
-.ticket .ticketParticipate ul li > div div .arrowBtn { width: 100%; font-size: 16px; letter-spacing: -0.32px; display: inline-block; }
+.ticket .ticketParticipate ul li > div div .arrowBtn { width: 270px; font-size: 16px; letter-spacing: -0.32px; display: inline-block; }
 
 .ticket .ticketParticipate ul li > div div .arrowBtn::after { right: 15%; }
 
@@ -689,19 +697,19 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .quickMenu02 li a { opacity: 0.4; }
 
-.delivery .deliveryEvent { text-align: center; background: url("../images/delivery_KV 1.png") no-repeat 0 0; background-position: center 90px; padding: 0 8%; }
+.delivery .deliveryEvent { text-align: center; background: url("../images/delivery_KV 1.png") no-repeat 0 0; background-position: center 75px; padding: 0 8%; }
 
-.delivery .deliveryEvent .deliverContent { padding-top: 188px; }
+.delivery .deliveryEvent .deliverContent { padding-top: 210px; }
 
 .delivery .deliveryEvent .deliverContent p { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
 
-.delivery .deliveryEvent > p { margin-top: 20px; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; color: #ff404e; font-family: 'Noto Sans KR black'; }
+.delivery .deliveryEvent > p { margin-top: 20px; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; color: #5e45d8; font-family: 'Noto Sans KR black'; }
 
-.delivery .deliveryEvent .arrowBtn { width: 256px; background: #6414ff url("../images/11.png") no-repeat 0 0; background-position: 28px center; padding-left: 60px; }
+.delivery .deliveryEvent .arrowBtn { width: 256px; background: #ff404e url("../images/11.png") no-repeat 0 0; background-position: 28px center; padding-left: 60px; }
 
 .delivery .deliveryEvent .arrowBtn::after { right: 25px; }
 
-.delivery .deliveryInfo { position: relative; width: 84%; border-radius: 30px; margin-left: 8%; margin-top: 80px; padding: 30px 0 20px 0; text-align: center; }
+.delivery .deliveryInfo { position: relative; width: 84%; border-radius: 30px; margin-left: 8%; margin-top: 80px; padding: 30px 0 36px 0; text-align: center; }
 
 .delivery .deliveryInfo > span { background-color: rgba(54, 23, 206, 0.24); border: 1px solid #3617ce; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; border-radius: 30px; text-indent: -9999px; }
 
@@ -713,9 +721,11 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryInfo > dl dd { margin-top: 10px; font-size: 14px; line-height: 1.4; letter-spacing: -0.28px; font-family: 'Noto Sans KR bold'; }
 
-.delivery .deliveryInfo > dl dd.winner strong { text-align: left; display: inline-block; width: 80px; }
+.delivery .deliveryInfo > dl dd.winner { text-align: center; }
 
-.delivery .deliveryInfo > dl dd.winner span { display: inline-block; width: 100px; text-align: right; margin-right: 20px; }
+.delivery .deliveryInfo > dl dd.winner strong { display: block; text-align: center; }
+
+.delivery .deliveryInfo > dl dd.winner span { display: block; text-align: center; }
 
 .delivery .deliveryInfo > div { margin-top: 20px; }
 
@@ -735,9 +745,9 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryInfo > div ul li div dl dt { font-size: 14px; line-height: 1.4; letter-spacing: -0.28px; font-family: 'Noto Sans KR bold'; }
 
-.delivery .deliveryInfo > div ul li div dl dd { color: #575757; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; }
+.delivery .deliveryInfo > div ul li div dl dd { color: rgba(255, 255, 255, 0.4); font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; }
 
-.delivery .deliveryInfo .arrowBtn { width: 84%; margin-left: 8%; font-size: 16px; font-family: 'Noto Sans KR bold'; }
+.delivery .deliveryInfo .arrowBtn { width: 281px; font-size: 16px; font-family: 'Noto Sans KR bold'; background-color: #3617ce; }
 
 .delivery .deliveryInfo .arrowBtn::after { right: 20px; }
 
@@ -815,7 +825,7 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .storeRank .rankSlide ul li dl dd a::after { content: ""; width: 10px; height: 10px; border-top: 1px solid rgba(255, 255, 255, 0.4); border-right: 1px solid rgba(255, 255, 255, 0.4); -webkit-transform: rotate(45deg); transform: rotate(45deg); position: absolute; top: 3px; left: 55px; }
 
-.delivery .storeRank .rankSlide .swiper-scrollbar { width: 100%; height: 2px; margin-top: 30px; position: relative; background-color: #575757; overflow: hidden; }
+.delivery .storeRank .rankSlide .swiper-scrollbar { width: 100%; height: 2px; margin-top: 30px; position: relative; background-color: rgba(255, 255, 255, 0.4); overflow: hidden; }
 
 .delivery .storeRank .rankSlide .swiper-scrollbar .swiper-scrollbar-drag { height: 2px; background: #3617ce; position: absolute; bottom: 0; left: 0; }
 
@@ -845,7 +855,7 @@ header nav > div p span { font-weight: normal; }
 
 .imageFile > div > div.step02 .btnWrap { margin-top: 31px; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-.imageFile > div > div.step02 .btnWrap .goBtn { text-align: center; maragin: 0; background-color: #575757; }
+.imageFile > div > div.step02 .btnWrap .goBtn { text-align: center; maragin: 0; background-color: rgba(255, 255, 255, 0.4); }
 
 .imageFile > div > div.step02 .btnWrap .goBtn:first-child { background-color: #6414ff; width: 40%; margin-right: 4px; }
 
@@ -872,7 +882,7 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent { margin-top: 60px; }
 
-.spacePass .passTab .tabContent ul .leftTab { padding-bottom: 221px; }
+.spacePass .passTab .tabContent ul .leftTab { padding-bottom: 110px; }
 
 .spacePass .passTab .tabContent ul .leftTab::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 375px; background: url("../images/pass_bg.png") no-repeat 0 0; background-size: cover; background-position: center; z-index: -1; }
 
@@ -962,9 +972,9 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent ul .leftTab .partnersSlide ul li a dl dd::after { content: ""; position: absolute; top: 3px; left: 55px; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
-.spacePass .passTab .tabContent ul .leftTab .partnersSlide .swiper-scrollbar { width: 100%; overflow: hidden; height: 2px; margin-top: 30px; position: relative; background-color: #575757; }
+.spacePass .passTab .tabContent ul .leftTab .partnersSlide .swiper-scrollbar { width: 100%; overflow: hidden; height: 2px; margin-top: 30px; position: relative; background-color: rgba(255, 255, 255, 0.4); }
 
-.spacePass .passTab .tabContent ul .leftTab .partnersSlide .swiper-scrollbar .swiper-scrollbar-drag { height: 2px; background: -webkit-gradient(linear, left top, right top, from(#00cdff), to(#7d14ff)); background: linear-gradient(to right, #00cdff, #7d14ff); position: absolute; bottom: 0; left: 0; }
+.spacePass .passTab .tabContent ul .leftTab .partnersSlide .swiper-scrollbar .swiper-scrollbar-drag { height: 2px; background: #3617ce; position: absolute; bottom: 0; left: 0; }
 
 .spacePass .passTab .tabContent ul .rightTab { display: none; text-align: center; padding-bottom: 180px; }
 
@@ -1034,7 +1044,7 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent ul .rightTab .passAllMerit > div ul li a { display: block; color: #ffffff; }
 
-.spacePass .passTab .tabContent ul .rightTab .passAllMerit > div ul li a div { height: 76px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.spacePass .passTab .tabContent ul .rightTab .passAllMerit > div ul li a div { height: 85px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .spacePass .passTab .tabContent ul .rightTab .passAllMerit > div ul li a span { position: absolute; top: 76px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; width: 100%; }
 
@@ -1077,7 +1087,7 @@ header nav > div p span { font-weight: normal; }
 
 .mad .madPass .madSlide ul li div img { border-radius: 30px; width: 100%; -o-object-fit: cover; object-fit: cover; }
 
-.mad .madPass .madSlide .swiper-scrollbar { width: 100%; height: 2px; margin-top: 30px; position: relative; background-color: #575757; }
+.mad .madPass .madSlide .swiper-scrollbar { width: 100%; height: 2px; margin-top: 30px; position: relative; background-color: rgba(255, 255, 255, 0.4); }
 
 .mad .madPass .madSlide .swiper-scrollbar .swiper-scrollbar-drag { height: 2px; background: #3617ce; position: absolute; bottom: 0; left: 0; }
 
@@ -1097,9 +1107,9 @@ header nav > div p span { font-weight: normal; }
 
 .mad .madPass > ul li a dl dt { color: #ffffff; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR bold'; padding-right: 106px; }
 
-.mad .madPass > ul li a dl dd { color: #575757; font-size: 14px; line-height: 20px; letter-spacing: -0.28px; margin-top: 50px; font-family: 'Noto Sans KR bold', sans-serif; position: relative; }
+.mad .madPass > ul li a dl dd { color: rgba(255, 255, 255, 0.4); font-size: 14px; line-height: 20px; letter-spacing: -0.28px; margin-top: 50px; font-family: 'Noto Sans KR bold', sans-serif; position: relative; }
 
-.mad .madPass > ul li a dl dd::after { content: ""; width: 10px; height: 10px; border-top: 1px solid #575757; border-right: 1px solid #575757; position: absolute; top: 5px; left: 98px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.mad .madPass > ul li a dl dd::after { content: ""; width: 10px; height: 10px; border-top: 1px solid rgba(255, 255, 255, 0.4); border-right: 1px solid rgba(255, 255, 255, 0.4); position: absolute; top: 5px; left: 98px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
 /************** partners ***************/
 .partners { padding-bottom: 158px; }
@@ -1148,9 +1158,9 @@ header nav > div p span { font-weight: normal; }
 
 .partners .listPartners > ul li a dl dt { color: #ffffff; padding-right: 101px; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR bold'; }
 
-.partners .listPartners > ul li a dl dd { color: #575757; font-size: 14px; line-height: 20px; letter-spacing: -0.28px; margin-top: 50px; font-family: 'Noto Sans KR bold', sans-serif; position: relative; }
+.partners .listPartners > ul li a dl dd { color: rgba(255, 255, 255, 0.4); font-size: 14px; line-height: 20px; letter-spacing: -0.28px; margin-top: 50px; font-family: 'Noto Sans KR bold', sans-serif; position: relative; }
 
-.partners .listPartners > ul li a dl dd::after { content: ""; width: 10px; height: 10px; border-top: 1px solid #575757; border-right: 1px solid #575757; position: absolute; top: 5px; left: 98px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.partners .listPartners > ul li a dl dd::after { content: ""; width: 10px; height: 10px; border-top: 1px solid rgba(255, 255, 255, 0.4); border-right: 1px solid rgba(255, 255, 255, 0.4); position: absolute; top: 5px; left: 98px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
 .partners .listPartners > ul li a span { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(54, 23, 206, 0.24); border: 1px solid #3617ce; z-index: -1; border-radius: 20px; text-indent: -9999px; }
 
@@ -1165,27 +1175,19 @@ header nav > div p span { font-weight: normal; }
 
 .mypage .userpage > div h5 { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
 
-.mypage .userpage > div ul li { text-align: center; padding: 20px 20px 30px 20px; margin-top: 10px; width: 100%; height: 100%; position: relative; border-radius: 30px; background: linear-gradient(100deg, rgba(0, 204, 255, 0.247), rgba(126, 20, 255, 0.247)); }
+.mypage .userpage > div ul li { text-align: center; padding: 20px 20px 30px 20px; margin-top: 10px; width: 100%; height: 100%; position: relative; border-radius: 30px; }
 
-.mypage .userpage > div ul li span { text-indent: -9999px; background-color: rgba(54, 23, 206, 0.24); border: 1px solid #3617ce; background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; }
+.mypage .userpage > div ul li span { text-indent: -9999px; background-color: rgba(54, 23, 206, 0.24); border: 1px solid #3617ce; z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; }
 
 .mypage .userpage > div ul li.listTicket h4 { background: url("../images/Component 3.png") no-repeat 0 0; }
 
-.mypage .userpage > div ul li.listNone { padding: 81px 0; background: transparent; }
-
-.mypage .userpage > div ul li.listNone::before { content: ""; background-color: #000000; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; border: 1px solid transparent; background-origin: border-box; background-clip: content-box, border-box; border-radius: 30px; }
-
-.mypage .userpage > div ul li.listNone::after { content: ""; border: 2px dotted #000000; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -2; border-radius: 30px; }
+.mypage .userpage > div ul li.listNone { padding: 81px 0; }
 
 .mypage .userpage > div ul li.listNone strong { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; width: 100%; }
-
-.mypage .userpage > div ul li.listNone span { background-image: linear-gradient(#0d1c2f, #0d1c2f), linear-gradient(100deg, #00cdff, #7d14ff); z-index: -2; }
 
 .mypage .userpage > div ul li h4 { text-align: left; padding-left: 70px; background: url("../images/Component 2.png") no-repeat 0 0; color: #5e45d8; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; line-height: 26px; }
 
 .mypage .userpage > div ul li div { margin: 10px 0; }
-
-.mypage .userpage > div ul li div img { width: 100%; }
 
 .mypage .userpage > div ul li dl { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; font-family: 'Noto Sans KR black'; }
 
@@ -1198,6 +1200,8 @@ header nav > div p span { font-weight: normal; }
 .mypage .userpage > div ul li h5 { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; font-family: 'Noto Sans KR black'; }
 
 .mypage .userpage > div ul li a { margin-top: 10px; width: 100%; }
+
+.mypage .userpage > div ul li .goBtn { background-color: #ff404e; }
 
 /************** mypageInfo ***************/
 #content.mypageInfo { padding-top: 20px; }
@@ -1272,7 +1276,7 @@ body.overlay-hidden { overflow: hidden; }
 
 .layer-rocket .layer-cont .layer-cont-in { color: #000; padding-bottom: 30px; opacity: 0; }
 
-.layer-rocket .layer-cont.active { border-radius: 20px 20px 0 0; }
+.layer-rocket .layer-cont.active { border-radius: 37px 37px 0 0; }
 
 .layer-rocket .layer-cont.active .layer-cont-in { opacity: 1; }
 
@@ -1426,7 +1430,7 @@ body.fixed { overflow: hidden; position: fixed; }
 
 .ticket .ticketRewards ul li:first-child.add-svg::before { display: none; }
 
-.ticket .ticketRewards ul li:first-child.add-svg .svg-W { position: absolute; top: -50px; right: -30px; width: 200px; }
+.ticket .ticketRewards ul li:first-child.add-svg .svg-W { position: absolute; top: 10px; right: -30px; width: 200px; }
 
 .ticket .ticketRewards ul li:last-child.add-svg { overflow: hidden; }
 
