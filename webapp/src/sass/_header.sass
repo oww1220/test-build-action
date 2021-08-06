@@ -16,12 +16,21 @@ header
 	justify-content: space-between
 	width: 100%
 	z-index: 50
-	backdrop-filter: blur(10px)
+	&::before
+		backdrop-filter: blur(10px)
+		content: ""
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 76px
+		z-index: -1
 
 	h1
 		a
 			height: 30px
 			display: block
+			padding: 3px 0
 			img
 				width: 80px
 				height: 30px

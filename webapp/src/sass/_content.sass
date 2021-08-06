@@ -13,7 +13,7 @@ $bgColor03: #171718
 $bgColor04: #0e1c30
 $bgColor05: #5e45d8
 $bgColor06: #1a1a1a
-$lightGray: #575757
+$lightGray: rgba(255, 255, 255, 0.4)
 $wrongColor: #ff404e
 $point: #ff404e
 $darkGray: #c9c9c9
@@ -251,7 +251,7 @@ $oneColor: #8674e2
 		letter-spacing: -0.88px
 .eventNotice
 	margin-top: 80px
-	padding: 30px 8% 80px 8%
+	padding: 19px 8%
 	background-color: $bgColor03
 	h5
 		font-size: 12px
@@ -326,7 +326,7 @@ $oneColor: #8674e2
 .cartBtn
 	margin: 0 auto
 	margin-top: 20px
-	width: 230px
+	width: 257px
 	height: 79px
 	position: relative
 	border-radius: 30px
@@ -350,6 +350,7 @@ $oneColor: #8674e2
 		width: 100%
 		height: 100%
 		border-radius: 30px
+		background-color: $mainColor
 .userInfo
 	padding: 0 8% 63px 8%
 	margin-bottom: 50px
@@ -357,7 +358,8 @@ $oneColor: #8674e2
 	text-align: left
 	&::after
 		content: ""
-		width: 100%
+		width: 84%
+		margin-left: 8%
 		height: 2px
 		position: absolute
 		bottom: 0
@@ -677,7 +679,7 @@ $oneColor: #8674e2
 		display: block
 		width: 171px
 		text-align: center
-		background-color: $lightGray
+		background-color: #575757
 		&.on
 			background-color: $bgColor02
 
@@ -693,14 +695,12 @@ $oneColor: #8674e2
 		position: relative
 		dt
 			text-align: center
-			img
-				width: 70%
 		dd
 			position: absolute
 			bottom: 8px
 			right: 0
 			+font12()
-			color: $lightGray
+			color: #575757
 	div
 		margin-top: 20px
 		dl
@@ -711,6 +711,7 @@ $oneColor: #8674e2
 				+colorGradation()
 				font-size: 24px
 				letter-spacing: -0.48px
+				color: $mainColor
 			dd
 				margin-top: 20px
 				+font16()
@@ -721,14 +722,10 @@ $oneColor: #8674e2
 					&:first-child
 						margin-top: 0
 		.arrowBtn
+			width: 249px
 			text-align: center
-			margin-left: 0
-			width: auto
-			padding: 0 40px
-			display: inline-block
 			&::after
-				content: ""
-				right: 30px
+				right: 15%
 
 /************** Main ***************/
 .mainVideo
@@ -743,7 +740,6 @@ $oneColor: #8674e2
 .mainTab
 	padding-top: 10px
 	margin-top: 20px
-	margin-bottom: 270px
 	// tab Title
 	& > ul
 		margin: 0 8%
@@ -826,6 +822,7 @@ $oneColor: #8674e2
 						dd
 							margin-top: 10px
 					.arrowBtn
+						background-color: $point
 						&::after
 							right: 21%
 				h5
@@ -835,20 +832,18 @@ $oneColor: #8674e2
 					margin-top: 100px
 				ul
 					margin-top: 28px
+					margin-bottom: 110px
 					li
 						margin-top: 10px
 						width: 100%
 						border-radius: 20px
 						position: relative
 						a
-							&::after
-								content: ""
+							.svg-W
 								position: absolute
-								top: 27px
-								right: 7%
-								width: 129px
-								height: 93px
-								background: url("../images/img-shop-tmb.png") no-repeat 0 0
+								top: -10px
+								right: 0
+								width: 180px
 
 						&:first-child
 							margin-top: 0
@@ -926,7 +921,7 @@ $oneColor: #8674e2
 						letter-spacing: -0.32px
 				& > ul
 					padding: 0 8%
-					margin-top: 100px
+					margin-top: 60px
 					li
 						width: 100%
 						position: relative
@@ -1033,10 +1028,6 @@ $oneColor: #8674e2
 								display: none
 								&.on
 									display: block
-									div
-										img
-											width: 100%
-											height: auto
 					//tab slide
 					.tabSlide
 						margin-top: 30px
@@ -1073,8 +1064,8 @@ $oneColor: #8674e2
 					.sliderBtn
 						.swiper-button-prev
 							position: absolute
-							top: 50%
-							left: 0
+							top: 45%
+							left: 8%
 							text-align: center
 							width: 30px
 							height: 30px
@@ -1092,8 +1083,8 @@ $oneColor: #8674e2
 								transform: rotate(-45deg)
 						.swiper-button-next
 							position: absolute
-							top: 50%
-							right: 0
+							top: 45%
+							right: 8%
 							text-align: center
 							width: 30px
 							height: 30px
@@ -1221,7 +1212,7 @@ $oneColor: #8674e2
 				+font16()
 				span
 					+colorGradation()
-					color: $point
+					color: #5e45d8
 				&.second
 					padding-top: 238px
 					position: relative
@@ -1234,6 +1225,8 @@ $oneColor: #8674e2
 						left: 0
 						background: url("../images/Ticket_KV 1.png") no-repeat 0 0
 						background-position: center top
+			.goBtn
+				background-color: $point
 		.arrowBtn
 			width: 218px
 			font-size: 16px
@@ -1298,15 +1291,20 @@ $oneColor: #8674e2
 					
 				&:first-child
 					margin-top: 0
-					background: linear-gradient(100deg, rgba(0, 204, 255, 0.24), rgba(126, 20, 255, 0.267))
+					background: rgba(100, 20, 255, 0.4)
 					&::before
 						content: ""
 						position: absolute
-						top: 10px
+						top: 65px
 						right: 20px
-						width: 100px
-						height: 95px
+						width: 117px
+						height: 110px
 						background: url("../images/img-tmb-global.png") no-repeat 0 0
+					a
+						dl
+							dd
+								margin-top: 90px
+
 				a
 					display: block
 					padding: 19px 27px
@@ -1314,8 +1312,11 @@ $oneColor: #8674e2
 						dt
 							+font20()
 							color: $white
+							span
+								+font14()
+								display: block
 						dd
-							margin-top: 20px
+							margin-top: 40px
 							+font12()
 							color: $white
 							opacity: 0.4
@@ -1326,7 +1327,6 @@ $oneColor: #8674e2
 								top: 3px
 								left: 58px
 								+moreArrow()
-								opacity: 0.4
 		div
 			margin-top: 10px
 			font-size: 12px
@@ -1334,7 +1334,6 @@ $oneColor: #8674e2
 			line-height: 1.4
 			text-align: center
 	.ticketParticipate
-		padding: 0 8%
 		margin-top: 80px
 		text-align: center
 		h4
@@ -1357,7 +1356,8 @@ $oneColor: #8674e2
 				position: relative
 				&::after
 					content: ""
-					width: 100%
+					margin-left: 8%
+					width: 84%
 					height: 1px
 					background: $white
 					position: absolute
@@ -1380,6 +1380,8 @@ $oneColor: #8674e2
 						background: url("../images/img-ticket-step2.png") no-repeat 0 0
 						background-position: center 30px
 						background-size: 100%
+						.goBtn
+							background-color: $point
 				&.step03
 					& > div
 						padding-top: 251px
@@ -1409,7 +1411,7 @@ $oneColor: #8674e2
 					div
 						padding: 0 5.9%
 						.arrowBtn
-							width: 100%
+							width: 270px
 							font-size: 16px
 							letter-spacing: -0.32px
 							display: inline-block
@@ -1554,20 +1556,20 @@ $oneColor: #8674e2
 	.deliveryEvent
 		text-align: center
 		background: url("../images/delivery_KV 1.png") no-repeat 0 0
-		background-position: center 90px
+		background-position: center 75px
 		padding: 0 8%
 		.deliverContent
-			padding-top: 188px
+			padding-top: 210px
 			p
 				+font16()
 		& > p
 			margin-top: 20px
 			+font16()
-			color: $point
+			color: $bgColor05
 			font-family: 'Noto Sans KR black'
 		.arrowBtn
 			width: 256px
-			background: $bgColor02 url("../images/11.png") no-repeat 0 0
+			background: $point url("../images/11.png") no-repeat 0 0
 			background-position: 28px center
 			padding-left: 60px
 			&::after
@@ -1578,7 +1580,7 @@ $oneColor: #8674e2
 		border-radius: 30px
 		margin-left: 8%
 		margin-top: 80px
-		padding: 30px 0 20px 0
+		padding: 30px 0 36px 0
 		text-align: center
 		& > span
 			+borderGradient()
@@ -1607,15 +1609,13 @@ $oneColor: #8674e2
 				letter-spacing: -0.28px
 				font-family: 'Noto Sans KR bold'
 				&.winner
+					text-align: center
 					strong
-						text-align: left
-						display: inline-block
-						width: 80px
+						display: block
+						text-align: center
 					span
-						display: inline-block
-						width: 100px
-						text-align: right
-						margin-right: 20px
+						display: block
+						text-align: center
 		& > div
 			margin-top: 20px
 			h4
@@ -1662,10 +1662,10 @@ $oneColor: #8674e2
 								letter-spacing: -0.24px
 								line-height: 1.4
 		.arrowBtn
-			width: 84%
-			margin-left: 8%
+			width: 281px
 			font-size: 16px
 			font-family: 'Noto Sans KR bold'
+			background-color: $mainColor
 			&::after
 				right: 20px
 	.deliveryStep
@@ -1796,6 +1796,7 @@ $oneColor: #8674e2
 					padding: 28px 17px
 					background-color: rgba(255, 255, 255, 0.1)
 					margin-left: 8px
+
 					&:first-child
 						margin-left: 0
 					& > div
@@ -2004,7 +2005,7 @@ $oneColor: #8674e2
 			margin-top: 60px
 			ul
 				.leftTab
-					padding-bottom: 221px
+					padding-bottom: 110px
 					&::before
 						content: ""
 						position: absolute
@@ -2249,7 +2250,7 @@ $oneColor: #8674e2
 							background-color: $lightGray
 							.swiper-scrollbar-drag
 								height: 2px
-								background: linear-gradient(to right, $frontColor, $backColor)
+								background: $mainColor
 								position: absolute
 								bottom: 0
 								left: 0				
@@ -2441,7 +2442,7 @@ $oneColor: #8674e2
 										display: block
 										color: $white
 										div
-											height: 76px
+											height: 85px
 											display: flex
 											justify-content: center
 											align-items: center
@@ -2758,11 +2759,9 @@ $oneColor: #8674e2
 					height: 100%
 					position: relative
 					border-radius: 30px
-					background: linear-gradient(100deg, rgba(0, 204, 255, 0.247), rgba(126, 20, 255, 0.247))
 					span
 						text-indent: -9999px
 						+borderGradient()
-						background-image: linear-gradient($bgColor, $bgColor), linear-gradient(100deg, $frontColor, $backColor)
 						z-index: -1
 						position: absolute
 						top: 0
@@ -2775,38 +2774,9 @@ $oneColor: #8674e2
 							background: url("../images/Component 3.png") no-repeat 0 0
 					&.listNone
 						padding: 81px 0
-						background: transparent
-						&::before
-							content: ""
-							background-color: $black
-							width: 100%
-							height: 100%
-							position: absolute
-							top: 0
-							left: 0
-							z-index: -1
-							border: 1px solid transparent
-							background-origin: border-box
-							background-clip: content-box, border-box
-							border-radius: 30px
-						&::after
-							content: ""
-							border: 2px dotted $black
-							width: 100%
-							height: 100%
-							position: absolute
-							top: 0
-							left: 0
-							z-index: -2
-							border-radius: 30px
 						strong
 							+font16Gradation()
 							width: 100%
-							
-						span
-							background-image: linear-gradient($bgColor, $bgColor), linear-gradient(100deg, $frontColor, $backColor)
-							z-index: -2
-
 					h4
 						text-align: left
 						padding-left: 70px
@@ -2816,8 +2786,6 @@ $oneColor: #8674e2
 						line-height: 26px
 					div
 						margin: 10px 0
-						img
-							width: 100%
 
 					dl
 						+font16()
@@ -2835,6 +2803,8 @@ $oneColor: #8674e2
 					a
 						margin-top: 10px
 						width: 100%
+					.goBtn
+						background-color: $point
 
 /************** mypageInfo ***************/	
 #content.mypageInfo
