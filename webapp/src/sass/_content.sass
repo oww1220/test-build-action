@@ -68,7 +68,7 @@ $oneColor: #8674e2
 	font-size: 24px
 	line-height: 1.6
 	letter-spacing: -0.48px
-	font-family: 'Noto Sans KR bold'
+	font-family: 'Noto Sans KR black'
 =font28()
 	font-size: 28px
 	line-height: 1.6
@@ -142,18 +142,21 @@ $oneColor: #8674e2
 			a
 				background: url("../images/icon_ticket.png")
 				background-repeat: no-repeat
-				background-position: center 12px
+				background-position: center 0
+				background-size: 48px
 		&.menuEvent
 			a
 				background: url("../images/icon_cart.png")
 				background-repeat: no-repeat
-				background-position: center 12px
+				background-position: center 0
+				background-size: 48px
 					
 		&.menuMad
 			a
 				background: url("../images/icon_mad.png")
 				background-repeat: no-repeat
-				background-position: center 12px
+				background-position: center 0
+				background-size: 48px
 .arrowBtn
 	display: block
 	margin: 0 auto
@@ -312,14 +315,14 @@ $oneColor: #8674e2
 				font-size: 14px
 				letter-spacing: -0.28px
 				color: $black
-				font-family: 'Noto Sans KR bold'
+				font-family: 'Noto Sans KR black'
 		div
 			display: flex
 			padding: 0 15px
 			.goBtn
 				width: 110px
 			.arrowBtn
-				background-color: $lightGray
+				background-color: #575757
 				margin-left: 4px
 				&::after
 					right: 20%
@@ -334,6 +337,7 @@ $oneColor: #8674e2
 	color: $white
 	background: url("../images/upload.png") no-repeat 0 0
 	background-position: center 11px
+	background-size: 32px 31px
 	padding: 48px 11px 11px
 	font-size: 14px
 	letter-spacing: -0.28px
@@ -695,6 +699,8 @@ $oneColor: #8674e2
 		position: relative
 		dt
 			text-align: center
+			img
+				width: 50%
 		dd
 			position: absolute
 			bottom: 8px
@@ -790,6 +796,7 @@ $oneColor: #8674e2
 					&:after
 						content: ""
 						background: url("../images/icon_planet.png") no-repeat 0 0
+						background-size: 100%
 						position: absolute
 						top: -10px
 						left: 50%
@@ -821,6 +828,9 @@ $oneColor: #8674e2
 							+font16()
 						dd
 							margin-top: 10px
+							img
+								width: 180px
+								height: 58px
 					.arrowBtn
 						background-color: $point
 						&::after
@@ -931,6 +941,7 @@ $oneColor: #8674e2
 							a
 								background: url("../images/all.png") no-repeat 0 0
 								background-position: 90% center
+								background-size: 131px 84px
 								
 						a
 							padding: 20px
@@ -939,6 +950,7 @@ $oneColor: #8674e2
 							background: url("../images/mini.png") no-repeat 0 0
 							background-position: 90% center
 							border-radius: 30px
+							background-size: 123px 76px
 							span
 								display: inline-block
 								text-indent: -9999px
@@ -958,7 +970,7 @@ $oneColor: #8674e2
 									font-size: 24px
 									letter-spacing: -0.48px
 									line-height: 1.6
-									font-family: 'Noto Sans KR bold'
+									font-family: 'Noto Sans KR black'
 								dd
 									font-size: 12px
 									line-height: 17px
@@ -996,7 +1008,7 @@ $oneColor: #8674e2
 										color: $bgColor05
 										line-height: 1.6
 										letter-spacing: -0.32px
-										font-family: 'Noto Sans KR bold'
+										font-family: 'Noto Sans KR black'
 							div
 								margin-top: 10px
 								line-height: 1.4
@@ -1020,7 +1032,7 @@ $oneColor: #8674e2
 						font-size: 24px
 						line-height: 38px
 						letter-spacing: -0.48px
-						font-family: 'Noto Sans KR bold', sans-serif
+						font-family: 'Noto Sans KR black', sans-serif
 					.mainPlanet
 						margin-top: 30px
 						ul
@@ -1028,6 +1040,9 @@ $oneColor: #8674e2
 								display: none
 								&.on
 									display: block
+								div
+									img
+										width: 140px
 					//tab slide
 					.tabSlide
 						margin-top: 30px
@@ -1225,6 +1240,7 @@ $oneColor: #8674e2
 						left: 0
 						background: url("../images/Ticket_KV 1.png") no-repeat 0 0
 						background-position: center top
+						background-size: 100%
 			.goBtn
 				background-color: $point
 		.arrowBtn
@@ -1378,7 +1394,7 @@ $oneColor: #8674e2
 					& > div
 						padding-top: 214px
 						background: url("../images/img-ticket-step2.png") no-repeat 0 0
-						background-position: center 30px
+						background-position: center -35px
 						background-size: 100%
 						.goBtn
 							background-color: $point
@@ -1794,8 +1810,9 @@ $oneColor: #8674e2
 				li
 					width: 144px
 					padding: 28px 17px
-					background-color: rgba(255, 255, 255, 0.1)
+					background-color: #1a1a1a
 					margin-left: 8px
+					border-radius: 5px
 
 					&:first-child
 						margin-left: 0
@@ -1993,6 +2010,7 @@ $oneColor: #8674e2
 						&:after
 							content: ""
 							background: url("../images/icon_planet.png") no-repeat 0 0
+							background-size: 100%
 							position: absolute
 							top: -10px
 							left: 50%
@@ -2060,6 +2078,22 @@ $oneColor: #8674e2
 							display: block
 							width: 100%
 							height: 100%
+							&::before
+								content: ""
+								width: 17px
+								height: 16px
+								position: absolute
+								top: -10px
+								right: 0
+								background: url("../images/illust_all.png") no-repeat 0 0
+							&::after
+								content: ""
+								width: 17px
+								height: 16px
+								position: absolute
+								top: -16px
+								right: -13px
+								background: url("../images/illust_all_small.png") no-repeat 0 0
 						span
 							position: absolute
 							top: 0
@@ -2121,6 +2155,7 @@ $oneColor: #8674e2
 										width: 87px
 										height: 27px
 										background: url("../images/logo_amazon.png") no-repeat 0 0
+										background-size: 100%
 								&.list11
 									background: linear-gradient(100deg, rgba(255, 255, 255, 0.336), rgba(244, 49, 65, 0.363))
 									&::before
@@ -2131,6 +2166,7 @@ $oneColor: #8674e2
 										width: 67px
 										height: 26px
 										background: url("../images/logo_11.png") no-repeat 0 0
+										background-size: 100%
 								&.listGoogle
 									background: linear-gradient(100deg, rgba(114, 228, 215, 0.329), rgba(0, 123, 139, 0.336))
 									&::before
@@ -2138,9 +2174,10 @@ $oneColor: #8674e2
 										position: absolute
 										bottom: 14px
 										right: 18px
-										width: 28px
+										width: 26px
 										height: 53px
 										background: url("../images/google_logo.png") no-repeat 0 0
+										background-size: 100%
 								a
 									display: block
 									color: $white
@@ -2217,6 +2254,9 @@ $oneColor: #8674e2
 										display: flex
 										justify-content: center
 										align-items: center
+										img
+											width: 60px
+											height: 60px
 									span
 										position: absolute
 										top: 87px
@@ -2229,7 +2269,7 @@ $oneColor: #8674e2
 										padding-top: 36px
 										+font12()
 										dt
-											height: 32px
+											height: 50px
 										dd
 											margin-top: 10px
 											color: $white
@@ -2288,7 +2328,7 @@ $oneColor: #8674e2
 								content: ""
 								width: 70px
 								height: 2px
-								background: $point
+								background: $bgColor05
 								position: absolute
 								top: 8px
 								left: 40px
@@ -2296,7 +2336,7 @@ $oneColor: #8674e2
 								content: ""
 								width: 8px
 								height: 2px
-								background-color: $point
+								background-color: $bgColor05
 								position: absolute
 								top: 11px
 								left: 102px
@@ -2311,6 +2351,22 @@ $oneColor: #8674e2
 							display: block
 							width: 100%
 							height: 100%
+							&::before
+								content: ""
+								width: 17px
+								height: 16px
+								position: absolute
+								top: -10px
+								right: 0
+								background: url("../images/illust_all.png") no-repeat 0 0
+							&::after
+								content: ""
+								width: 17px
+								height: 16px
+								position: absolute
+								top: -16px
+								right: -13px
+								background: url("../images/illust_all_small.png") no-repeat 0 0
 							
 						span
 							z-index: -1
@@ -2319,7 +2375,7 @@ $oneColor: #8674e2
 							left: 0
 							width: 100%
 							height: 100%
-							border: 2px solid $point
+							border: 2px solid $bgColor05
 							border-radius: 50%
 							display: inline-block
 							text-indent: -9999px
@@ -2372,6 +2428,7 @@ $oneColor: #8674e2
 										width: 87px
 										height: 27px
 										background: url("../images/logo_amazon.png") no-repeat 0 0
+										background-size: 100%
 								&.list11
 									background: linear-gradient(100deg, rgba(255, 255, 255, 0.336), rgba(244, 49, 65, 0.363))
 									&::before
@@ -2381,7 +2438,8 @@ $oneColor: #8674e2
 										right: 18px
 										width: 67px
 										height: 26px
-										background: url("../images/logo_11.png") no-repeat 0 0							
+										background: url("../images/logo_11.png") no-repeat 0 0	
+										background-size: 100%						
 								a
 									display: block
 									color: $white
@@ -2433,7 +2491,7 @@ $oneColor: #8674e2
 									&::before
 										content: ""
 										position: absolute
-										top: 100px
+										top: 105px
 										left: 0
 										width: 100%
 										height: 1px
@@ -2446,9 +2504,12 @@ $oneColor: #8674e2
 											display: flex
 											justify-content: center
 											align-items: center
+											img
+												width: 60px
+												height: 60px
 										span
 											position: absolute
-											top: 76px
+											top: 80px
 											left: 50%
 											transform: translateX(-50%)
 											+font12()
@@ -2646,6 +2707,9 @@ $oneColor: #8674e2
 							justify-content: center
 							align-items: center
 							width: 105px
+							img
+								width: 80px
+								height: 80px
 								
 						dd
 							+font14()
@@ -2808,7 +2872,7 @@ $oneColor: #8674e2
 
 /************** mypageInfo ***************/	
 #content.mypageInfo
-	padding-top: 20px
+	padding-top: 90px
 	.userInfo 
 		.userInfo-input div 
 			.reissuance
