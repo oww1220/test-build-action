@@ -1370,7 +1370,7 @@ body.overlay-hidden { overflow: hidden; }
 
 .layer-rocket .imageFileView .on { display: block; }
 
-.layer-rocket.active { -webkit-transform: translateY(0); transform: translateY(0); display: block; }
+.layer-rocket.active { display: block; -webkit-transform: translateY(0); transform: translateY(0); }
 
 .layer-rocket.low-zIndex { z-index: 45; }
 
