@@ -30,7 +30,7 @@
 					<p class="second" data-aos="fade-up">새로운 구독 세계 우주로 출발합니다.<br /><br />
 					</p>
 					<p data-aos="fade-up">지금 바로 티켓을 발급받고,<br />
-						OLKL831편에 탑승하세요.<br /><br />
+						UNV831편에 탑승하세요.<br /><br />
 					</p>
 					<p data-aos="fade-up">아마존, 구글, 스타벅스 등<br />
 						우주에서 만날 수 있는 글로벌 파트너들을 찾아<br />
@@ -40,7 +40,7 @@
 						바로 당첨을 확인할 수 있는<br />
 						<span>우주 럭키박스도 놓치지 마세요!</span>
 					</p>
-					<a href="ticket_01.html" target="_blank" class="goBtn" data-aos="fade-up">티켓 발급 &amp; 응모하기</a>
+					<a href="#step02" class="goBtn" data-aos="fade-up">티켓 발급 &amp; 응모하기</a>
 				</div>
 				<div class="eventInfo" data-aos="fade-up">
 					<span>one</span>
@@ -100,35 +100,128 @@
 							<div class="svg-W">
 								<div id="lottie01"></div>
 							</div>
-							
-
 							<p>우주여행을 즐기기 위해서는<br />
 								우주패스가 필요해요.
 							</p>
-							<p class="second">첫 달은 100원에 구독할 수 있으니<br />
+							<p class="second">첫 달은 1,000원에 구독할 수 있으니<br />
 								부담없이 즐겨보세요!
 							</p>
 							<div>
-								<a href="#" class="arrowBtn">첫 달 100원 구독하러 가기</a>
+								<a href="#" class="arrowBtn">첫 달 1,000원 구독하러 가기</a>
 								<a href="#" class="arrowBtn">우주패스 알아보기</a>
 							</div>
 						</div>
 					</li>
-					<li class="step02">
+					<li class="step02" id="step02">
 						<dl>
 							<dt data-aos="fade-up">STEP 2</dt>
 							<dd data-aos="fade-up">티켓 발급하기</dd>
 						</dl>
-						<div data-aos="fade-up">
+						<div data-aos="fade-up" class="stepCon">
 							<p>우주패스를 구독했다면<br />
-								OLKL809편에 탑승하는 티켓을 발급받으세요.
+								UNV831편에 탑승하는 티켓을 발급받으세요.
 							</p>
 							<p class="second">추첨을 통해 글로벌 우주 파트너스<br /> 
 								투어 기회를 드려요!<br />
 								좌석번호를 잊지마세요.
 							</p>
 							<div>
-								<a href="ticket_01.html" class="goBtn" target="_blank">티켓 발급 &amp; 응모하기</a>
+								<a href="javascript:;" class="goBtn">티켓 발급 &amp; 응모하기</a>
+							</div>
+						</div>
+						<div class="userInfo">
+							<h4>연락처 정보를 알려주세요.</h4>
+							<div class="userInfo-input">
+								<!-- 값 오류시 class="wrongValue"추가-->
+								<div class="col-3 input-effect">
+									<input class="effect-24" type="text" placeholder="이름">
+									<label>이름</label>
+									<span class="focus-bg"></span>
+									<strong>이름을 입력해주세요.</strong>
+								</div>
+								<div class="telecom">
+									<span class="select">
+										<a href="#;" class="def"></a>
+										<a href="#;" class="dropdown">▼</a>
+									</span>
+									<select name="" id="sel">
+										<option value="통신사">통신사</option>
+										<option value="SKT">SKT</option>
+										<option value="KT">KT</option>
+										<option value="LG U+">LG U+</option>
+									</select>
+									<strong>통신사를 선택해주세요.</strong>
+								</div>
+								<div class="col-3 input-effect">
+									<input class="effect-24 phone" type="text" placeholder="휴대폰번호" name="phone" maxlength="13" autocomplete="off" >
+									<label>휴대폰번호</label>
+									<span class="focus-bg"></span>
+									<strong>휴대폰번호를 입력해주세요.</strong>
+								</div>
+								<div class="col-3 input-effect wrongValue">
+									<input class="effect-24" type="text" placeholder="인증번호">
+									<label>인증번호</label>
+									<span class="focus-bg"></span>
+									<a href="javascript:;" class="reissuance">인증번호 재발급</a>
+									<strong>인증번호 발급을 해주세요.</strong>
+									<em>2:32</em>
+								</div>
+							</div>
+							<div class="numberIssuance">
+								<a href="javascript:;" class="goBtn">인증번호 발급</a>
+							</div>
+							<ul>
+								<li>
+									<input type="checkbox" id="agree01">
+									<label for="agree01">체크</label>
+									<label for="agree01">개인정보처리방침 및 이용약관 동의</label>
+									<a href="#" target="_blank">자세히보기</a>
+								</li>
+								<li>
+									<input type="checkbox" id="agree02">
+									<label for="agree02">체크</label>
+									<label for="agree02">제 3자 정보제공 및 마케팅 수신</label>
+									<a href="#" target="_blank">자세히보기</a>
+								</li>
+								<li>
+									<input type="checkbox" id="agree03">
+									<label for="agree03">체크</label>
+									<label for="agree03">본인은 상기 내용을 숙지하였으며 이에 동의합니다.</label>
+								</li>
+							</ul>
+							<a href="javascript:;" class="goBtn">티켓 발급하기</a>
+						</div>
+						<div class="ticketAniWrap">
+							<a href="javascript:void(0);" class="closeBtn">닫기</a>
+							<div class="ticketAni">
+								<div class="ticketing add-svg">
+									<h5>티켓을<br />발급중입니다.</h5>
+									<div class="svg-W">
+										<div id="lottie11"></div>
+									</div>
+								</div>
+								<div class="issuanceTicket">
+									<dl>
+										<dt>티켓 발급이<br />완료되었습니다.</dt>
+										<dd>이제 우주 럭키박스를 열고<br />
+											우주 파트너들이 준비한 추가 혜택도<br />
+											받아보세요.</dd>
+									</dl>
+									<a href="javascript:;" class="goBtn">우주 럭키박스 열기</a>
+								</div>
+								<div class="winning add-svg">
+									<div class="svg-W">
+										<div id="lottie15"></div>
+									</div>
+									<div class="svg-cont">
+										<dl>
+											<dt>축하합니다!</dt>
+											<dd>스타벅스 아메리카노 Tall교환권을 획득하셨습니다.</dd>
+										</dl>
+										<div><img src="../images/img-gift-star.png" alt="스타벅스교환권"></div>
+										<div class="mms">해당 리워드는 9월 15일 MMS로<br />일괄 전송 예정입니다.</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -151,7 +244,7 @@
 					</li>
 				</ul>
 			</article>
-			<article class="eventNotice" data-aos="fade-up">
+			<article class="eventNotice">
 				<h5>*유의사항</h5>
 				<ul>
 					<li>해당 이벤트는 만 14세 이상부터 참여가 가능합니다.</li>
@@ -225,5 +318,150 @@
 			})();
 			CommonUI.Async.generaterRun(CommonUI.LayerRocket.cashGenerator);
 		});
+
+
+		//티켓발급 유저정보 입력창 오픈
+		function userOpen (){
+			$(".stepCon .goBtn").click(function(){
+				$(".step02 .userInfo").addClass("on");
+			});
+		}
+		userOpen()
+		
+		
+		/***통신사 selectbox****/
+		$('.select').append("<ul class=options style='display:none;'></ul>");
+
+
+		//변수 설정
+		var sel = $('.select');
+		var opts = $('.select > .options');
+		var btn = $('.select > .dropdown');
+		var real = $('#sel');
+		var real_opt = real.find('option');
+
+		$('.userInfo p').text(real_opt.eq(0).text());
+
+		//초기세팅
+		for(var i=0; i<real_opt.length; i++){
+			$('.select').find('> .options').append('<li><a href=javascript:;></a></li>');
+				if(i === 0){
+					sel.find(' > .def').text(real_opt.eq(i).text());
+				opts.find('li').eq(0).find('a').text(real_opt.eq(i).val());
+			} else if(i >= 1) {
+				opts.find('li').eq(i).find('a').text(real_opt.eq(i).val());
+			}
+		}
+
+
+		//내용출력칸, 버튼 을 클릭하면
+		sel.on('click','.def, .dropdown', function(e){
+			e.stopPropagation();
+			opts.slideToggle('fast').toggleClass('on');
+			if(opts.hasClass('on')) btn.text('▲');
+		});
+
+		//옵션리스트 중 하나를 클릭하면
+		opts.on('click','li', function(e){
+			e.stopPropagation();
+			var idx = $(this).index();
+			var t = $(this).text();
+			sel.find('.def').text(t);
+			opts.slideToggle('fast').removeClass('on');
+			btn.text('▼');
+			//실제 셀렉트 박스 변경
+			real_opt.eq(idx).attr('selected','selected').siblings().removeAttr('selected');
+		});
+
+		//window를 클릭하면
+		$(window).on('click', function(e){
+			if(opts.hasClass('on'))
+			opts.slideToggle('fast').removeClass('on');
+			btn.text('▼');
+			$(".select").addClass("radius");
+		});
+
+		$(".select a").click(function(){
+			if($(".options").hasClass("on")){
+				$(".select").addClass("radius");
+			}else{
+				$(".select").addClass("on");
+				$(".select").removeClass("radius");
+			}
+		})
+
+		//핸드폰 번호 입력
+		$('.phone').keydown(function(event) {
+			var key = event.charCode || event.keyCode || 0;
+			$text = $(this);
+			if (key !== 8 && key !== 9) {
+				if ($text.val().length === 3) {
+					$text.val($text.val() + '-');
+				}
+				if ($text.val().length === 8) {
+					$text.val($text.val() + '-');
+				}
+			}
+
+			return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));          
+		});
+
+		// JavaScript for label effects only
+		$(function(){
+			$(".col-3 input").val("");
+			
+			$(".input-effect input").focusout(function(){
+				if($(this).val() != ""){
+					$(this).addClass("has-content");
+				}else{
+					$(this).removeClass("has-content");
+				}
+			});
+		});
+
+		function ticketAni(){
+			$(".userInfo > .goBtn").click(function(){
+				$(".ticketAniWrap").addClass("on");
+				$(".ticketAni").addClass("on");
+				$(".ticketing").addClass("on");
+				$("html, body").css({
+					"overflow":"hidden"
+				})
+				setTimeout(function(){
+					$(".ticketing").removeClass("on");
+					$(".issuanceTicket").addClass("on");
+				},5000);
+			});
+			$(".ticketAniWrap .closeBtn").click(function(){
+				$(this).parent().removeClass("on");
+				$("html, body").css({
+					"overflow":"auto"
+				})
+			});
+			$(".issuanceTicket > a").click(function(){
+				$(".issuanceTicket").removeClass("on");
+				$(".winning").addClass("on");
+
+				aniObj.play(); 
+				
+				$(".ticketAniWrap .closeBtn").click(function(){
+					$(".winning").removeClass("on");
+				});
+			});
+		};
+		ticketAni();
+
+
+		/*로티*/
+		// aniObj.play(); 메소드 호출로 로티 플레이!
+		if (document.getElementById('lottie15')) {
+			var aniObj = CommonUI.Lottie.init({
+				elem: document.getElementById('lottie15'),
+				loopFlag: false,
+				autoplayFlag: false,
+				pathString: '../bundle/json/15_data.json',
+			});
+		}
+
 	</script>
 </html>

@@ -351,7 +351,8 @@ body.fixed {
 }
 
 /*티켓레이어 수정*/
-#content.ticketInfo .ticketAniWrap {
+.ticketAniWrap {
+	z-index: 100;
     display: block;
     background-color: transparent;
     overflow:hidden;
