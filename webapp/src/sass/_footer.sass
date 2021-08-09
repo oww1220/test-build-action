@@ -1,44 +1,36 @@
 footer
 	padding: 20px 8% 130px 8%
-	display: flex
-	flex-direction: column-reverse
 	background-color: #000
-	position: relative
-	div
+	& > div
+		width: 100%
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+		& > div
+			div
+				img
+					width: 127px
+					height: 41px
+			p
+				margin-top: 16px
+				+font12()
+				color: #ffffff
 		ul
 			display: flex
+			margin-top: 56px
 			li
-				position: relative
 				&:first-child
-					margin-right: 10px
+					position: relative
 					padding-right: 10px
-					&::after
+					margin-right: 10px
+					&:after
 						content: ""
 						position: absolute
-						top: 6px
+						top: 1px
 						right: 0
 						width: 2px
 						height: 14px
 						background-color: #ffffff
 				a
-					display: block
+					+font12()
 					color: #ffffff
-					font-size: 14px
-					letter-spacing: -0.28px
-					line-height: 20px
-					font-weight: bold
-		div
-			margin-top: 5px
-			address
-				+font12()
-				color: #c9c9c9
-		p
-			margin-top: 50px
-			+font12()
-	.fooLogo
-		position: absolute
-		top: 20px
-		right: 8%
-		img
-			width: 72px
-			height: 26px

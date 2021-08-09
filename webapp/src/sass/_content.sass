@@ -142,8 +142,8 @@ $oneColor: #8674e2
 			a
 				background: url("../images/icon_ticket.png")
 				background-repeat: no-repeat
-				background-position: center 0
-				background-size: 48px
+				background-position: center 12px
+				background-size: 26px 25px
 		&.menuEvent
 			a
 				background: url("../images/icon_cart.png")
@@ -981,12 +981,12 @@ $oneColor: #8674e2
 									&.mini
 										&::before
 											content: ""
-											background-color: $point
+											background-color: $white
 										&::after
 											content: ""
-											background-color: $point
+											background-color: $white
 										strong
-											color: $point
+											color: $white
 									&::before
 										content: ""
 										position: absolute
@@ -1244,6 +1244,17 @@ $oneColor: #8674e2
 						background-size: 100%
 			.goBtn
 				background-color: $point
+			
+			.userInfo
+				display: none
+				margin-bottom: 0
+				margin-top: 50px
+				padding: 0 8%
+				&.on
+					display: block
+				&:after
+					content: ""
+					display: none
 		.arrowBtn
 			width: 218px
 			font-size: 16px
@@ -1406,19 +1417,21 @@ $oneColor: #8674e2
 						display: none
 						margin-bottom: 0
 						margin-top: 50px
-						padding-bottom: 0
+						padding: 0
 						&.on
 							display: block
 						&:after
 							content: ""
 							display: none
+						& > ul
+							padding: 0 8%
 				&.step03
 					& > div
 						padding-top: 251px
 						background: url("../images/img-ticket-step3.png") no-repeat 0 0
 						background-position: center 30px
 						background-size: 100%
-				dl
+				& > dl
 					margin-top: 10px
 					dt
 						+font16()
@@ -1439,7 +1452,7 @@ $oneColor: #8674e2
 						&.second
 							margin-top: 10px
 					& > div
-						padding: 0 5.9%
+						padding: 0 8%
 						.arrowBtn
 							width: 270px
 							font-size: 16px
@@ -1505,9 +1518,9 @@ $oneColor: #8674e2
 					animation-delay: 3s
 				dl
 					text-align: center
-					padding-bottom: 195px
+					padding-bottom: 220px
 					background: url("../images/img-ticket-thumb.png") no-repeat 0 0
-					background-position: center 220px
+					background-position: center 210px
 					background-size: 100%
 					dt
 						+colorGradation()
@@ -1527,7 +1540,6 @@ $oneColor: #8674e2
 					width: 203px
 			.winning
 				display: none
-				padding-top: 122px
 				position: relative
 				&.on
 					display: block
@@ -1551,6 +1563,7 @@ $oneColor: #8674e2
 					text-align: center
 					padding: 0 8%
 					margin-bottom: 50px
+					padding-top: 122px
 					dt
 						+colorGradation()
 						font-size: 40px
@@ -1593,6 +1606,31 @@ $oneColor: #8674e2
 			+font16()
 			color: $bgColor05
 			font-family: 'Noto Sans KR black'
+		.userInfoWrap
+			&.on
+				& > .cartBtn
+					display: none
+				.userInfo
+					display: block
+			.cartBtn
+				text-align: center
+			.userInfo
+				margin-top: 80px
+				display: none
+				padding: 0
+				margin-bottom: 0
+				&::after
+					display: none
+				.cartBtn
+					margin-top: 38px
+					label
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						cursor: pointer
+						padding-top: 44px
 		.arrowBtn
 			width: 256px
 			background: $point url("../images/11.png") no-repeat 0 0
@@ -1735,22 +1773,6 @@ $oneColor: #8674e2
 						width: 0
 				& > dl	
 					text-align: center
-					&.step01
-						background: url("../images/img-shop-step1.png") no-repeat 0 0
-						background-position: center 84px
-						padding-bottom: 215px
-					&.step02
-						background: url("../images/img-shop-step2.png") no-repeat 0 0
-						background-position: center 126px
-						padding-bottom: 157px
-					&.step03
-						background: url("../images/img-shop-step3.png") no-repeat 0 0
-						background-position: center 110px
-						padding-bottom: 153px
-					&.step04
-						background: url("../images/img-shop-step4.png") no-repeat 0 0
-						background-position: center 120px
-						padding-bottom: 149px
 					dt
 						+colorGradation()
 						font-size: 16px
