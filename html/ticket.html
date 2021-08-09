@@ -6,7 +6,7 @@
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="stylesheet" href="../css/layout.css">
 	<link rel="stylesheet" href="../css/swiper.min.css">
-	<title>OLKL</title>
+	<title>T우주</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 		<header>
 	<!--logo-->
 	<h1>
-		<a href="index.html"><img src="./../images/logo_main.png" alt="OLKL 로고"></a>
+		<a href="/main.html"><img src="./../images/logo_main.png" alt="T우주 로고"></a>
 	</h1>
 	<!-- siteMap -->
 	<nav>
@@ -24,25 +24,25 @@
 			<a href="javascript:void(0)" class="btn-drawer-close">닫기</a>
 			<ul>
 				<li>
-					<a href="index.html">HOME</a>
+					<a href="/main.html">HOME</a>
 				</li>
 				<li>
-					<a href="pass.html">우주패스 소개</a>
+					<a href="/pass.html">우주패스 소개</a>
 				</li>
 				<li>
-					<a href="ticket.html">우주 티켓부스 이벤트</a>
+					<a href="/ticket.html">우주 티켓부스 이벤트</a>
 				</li>
 				<li>
-					<a href="delivery.html">우주 택배 이벤트</a>
+					<a href="/delivery.html">우주 택배 이벤트</a>
 				</li>
 				<li>
-					<a href="mad.html">우주X매드몬스터</a>
+					<a href="/mad.html">T우주X매드몬스터</a>
 				</li>
 				<li>
-					<a href="partners.html">우주 파트너스 전체보기</a>
+					<a href="/partners.html">우주 파트너스 전체보기</a>
 				</li>
 				<li>
-					<a href="mypage_01.html">마이페이지</a>
+					<a href="/mypage_01.html">마이페이지</a>
 				</li>
 			</ul>
 			<a href="javascript:;" class="logoutBtn">로그아웃</a>
@@ -57,13 +57,13 @@
 			<!-- 하단 고정메뉴 -->
 			<ul class="quickMenu02">
 				<li class="menuTicket on">
-					<a href="ticket.html">우주 티켓부스<br/>이벤트 참여하기</a>
+					<a href="/ticket.html">티켓팅<br/>이벤트 참여하기</a>
 				</li>
 				<li class="menuEvent">
-					<a href="delivery.html">우주 택배<br />이벤트 참여하기</a>
+					<a href="/delivery.html">장바구니<br />이벤트 참여하기</a>
 				</li>
 				<li class="menuMad">
-					<a href="mad.html">우주X<br />매드몬스터</a>
+					<a href="/mad.html">T우주X<br />매드몬스터</a>
 				</li>
 			</ul>
 			<article class="ticketOpen">
@@ -72,20 +72,82 @@
 					<dd data-aos="fade-up">우주 티켓부스</dd>
 				</dl>
 				<div class="eventContent">
-					<p class="second" data-aos="fade-up">새로운 구독 세계 우주로 출발합니다.<br /><br />
+					<p class="second" data-aos="fade-up">새로운 구독 세계 T우주로 출발합니다.<br /><br />
 					</p>
 					<p data-aos="fade-up">지금 바로 티켓을 발급받고,<br />
 						UNV831편에 탑승하세요.<br /><br />
 					</p>
 					<p data-aos="fade-up">아마존, 구글, 스타벅스 등<br />
-						우주에서 만날 수 있는 글로벌 파트너들을 찾아<br />
+						T우주에서 만날 수 있는 글로벌 파트너들을 찾아<br />
 						직접 미국으로 내가 원할 때 떠나는 기회!<br /><br />
 					</p>
 					<p data-aos="fade-up">
 						바로 당첨을 확인할 수 있는<br />
 						<span>우주 럭키박스도 놓치지 마세요!</span>
 					</p>
-					<a href="#step02" class="goBtn" data-aos="fade-up">티켓 발급 &amp; 응모하기</a>
+					<a href="javascript:;" class="goBtn ticketBtn" data-aos="fade-up">티켓 발급 &amp; 응모하기</a>
+					<div class="userInfo">
+						<h4>연락처 정보를 알려주세요.</h4>
+						<div class="userInfo-input">
+							<!-- 값 오류시 class="wrongValue"추가-->
+							<div class="col-3 input-effect">
+								<input class="effect-24" type="text" placeholder="이름">
+								<label>이름</label>
+								<span class="focus-bg"></span>
+								<strong>이름을 입력해주세요.</strong>
+							</div>
+							<div class="telecom">
+								<span class="select">
+									<a href="#;" class="def"></a>
+									<a href="#;" class="dropdown">▼</a>
+								</span>
+								<select name="" id="sel">
+									<option value="통신사">통신사</option>
+									<option value="SKT">SKT</option>
+									<option value="KT">KT</option>
+									<option value="LG U+">LG U+</option>
+								</select>
+								<strong>통신사를 선택해주세요.</strong>
+							</div>
+							<div class="col-3 input-effect">
+								<input class="effect-24 phone" type="text" placeholder="휴대폰번호" name="phone" maxlength="13" autocomplete="off" >
+								<label>휴대폰번호</label>
+								<span class="focus-bg"></span>
+								<strong>휴대폰번호를 입력해주세요.</strong>
+							</div>
+							<div class="col-3 input-effect wrongValue">
+								<input class="effect-24" type="text" placeholder="인증번호">
+								<label>인증번호</label>
+								<span class="focus-bg"></span>
+								<a href="javascript:;" class="reissuance">인증번호 재발급</a>
+								<strong>인증번호 발급을 해주세요.</strong>
+								<em>2:32</em>
+							</div>
+						</div>
+						<div class="numberIssuance">
+							<a href="javascript:;" class="goBtn">인증번호 발급</a>
+						</div>
+						<ul>
+							<li>
+								<input type="checkbox" id="agree01">
+								<label for="agree01">체크</label>
+								<label for="agree01">개인정보처리방침 및 이용약관 동의</label>
+								<a href="#" target="_blank">자세히보기</a>
+							</li>
+							<li>
+								<input type="checkbox" id="agree02">
+								<label for="agree02">체크</label>
+								<label for="agree02">제 3자 정보제공 및 마케팅 수신</label>
+								<a href="#" target="_blank">자세히보기</a>
+							</li>
+							<li>
+								<input type="checkbox" id="agree03">
+								<label for="agree03">체크</label>
+								<label for="agree03">본인은 상기 내용을 숙지하였으며 이에 동의합니다.</label>
+							</li>
+						</ul>
+						<a href="javascript:;" class="goBtn">티켓 발급하기</a>
+					</div>
 				</div>
 				<div class="eventInfo" data-aos="fade-up">
 					<span>one</span>
@@ -131,7 +193,7 @@
 						</a>
 					</li>
 				</ul>
-				<div data-aos="fade-up">각 상품 클릭 시, 상세 내용을 확인하실 수 있습니다.</div>
+				<div data-aos="fade-up">버튼 클릭 시, 상세 내용을 확인하실 수 있습니다.</div>
 			</article>
 			<article class="ticketParticipate">
 				<h4 data-aos="fade-up">참여방법</h4>
@@ -171,7 +233,7 @@
 								좌석번호를 잊지마세요.
 							</p>
 							<div>
-								<a href="javascript:;" class="goBtn">티켓 발급 &amp; 응모하기</a>
+								<a href="javascript:;" class="goBtn ticketBtn">티켓 발급 &amp; 응모하기</a>
 							</div>
 						</div>
 						<div class="userInfo">
@@ -350,22 +412,20 @@
 </div>
 		<footer>
 	<div>
+		<div>
+			<div class="fooLogo"><img src="./../images/logo_foo.png" alt="T우주 로고"></div>
+			<p>&copy; T우주 Co.,Ltd.</p>
+		</div>
 		<ul>
 			<li><a href="#">개인정보처리방침</a></li>
 			<li><a href="#">이용약관</a></li>
 		</ul>
-		<div><address>서울특별시 중구 을지로65 (을지로2가)<br />SK T-타워 SK텔레콤(주)</address></div>
-		<p>&copy; T우주 Co.,Ltd.</p>
+		<!-- <div><address>서울특별시 중구 을지로65 (을지로2가) SK T-타워 SK텔레콤(주)</address></div> -->
 	</div>
-	<div class="fooLogo"><img src="./../images/logo_foo.png" alt="OLKL로고"></div>
 </footer>
 	</div>
 </body>
-	<!-- <script src="../js/jquery.min.js"></script>
-<script src="../js/swiper.min.js"></script>
-<script src="../js/common.js"></script> -->
-
-
+	
 <script type="text/javascript" src="../bundle/jquery.chunk.js"></script>
 <script type="text/javascript" src="../bundle/three.chunk.js"></script>
 <script type="text/javascript" src="../bundle/vendors.chunk.js"></script>
@@ -419,8 +479,11 @@
 
 		//티켓발급 유저정보 입력창 오픈
 		function userOpen (){
-			$(".stepCon .goBtn").click(function(){
+			$(".stepCon .ticketBtn").click(function(){
 				$(".step02 .userInfo").addClass("on");
+			});
+			$(".eventContent .ticketBtn").click(function(){
+				$(".eventContent .userInfo").addClass("on");
 			});
 		}
 		userOpen()

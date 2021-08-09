@@ -6,7 +6,7 @@
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="stylesheet" href="../css/layout.css">
 	<link rel="stylesheet" href="../css/swiper.min.css">
-	<title>OLKL</title>
+	<title>T우주</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 		<header>
 	<!--logo-->
 	<h1>
-		<a href="index.html"><img src="./../images/logo_main.png" alt="OLKL 로고"></a>
+		<a href="/main.html"><img src="./../images/logo_main.png" alt="T우주 로고"></a>
 	</h1>
 	<!-- siteMap -->
 	<nav>
@@ -24,25 +24,25 @@
 			<a href="javascript:void(0)" class="btn-drawer-close">닫기</a>
 			<ul>
 				<li>
-					<a href="index.html">HOME</a>
+					<a href="/main.html">HOME</a>
 				</li>
 				<li>
-					<a href="pass.html">우주패스 소개</a>
+					<a href="/pass.html">우주패스 소개</a>
 				</li>
 				<li>
-					<a href="ticket.html">우주 티켓부스 이벤트</a>
+					<a href="/ticket.html">우주 티켓부스 이벤트</a>
 				</li>
 				<li>
-					<a href="delivery.html">우주 택배 이벤트</a>
+					<a href="/delivery.html">우주 택배 이벤트</a>
 				</li>
 				<li>
-					<a href="mad.html">우주X매드몬스터</a>
+					<a href="/mad.html">T우주X매드몬스터</a>
 				</li>
 				<li>
-					<a href="partners.html">우주 파트너스 전체보기</a>
+					<a href="/partners.html">우주 파트너스 전체보기</a>
 				</li>
 				<li>
-					<a href="mypage_01.html">마이페이지</a>
+					<a href="/mypage_01.html">마이페이지</a>
 				</li>
 			</ul>
 			<a href="javascript:;" class="logoutBtn">로그아웃</a>
@@ -57,13 +57,13 @@
 			<!-- 하단 고정메뉴 -->
 			<ul class="quickMenu02">
 				<li class="menuTicket">
-					<a href="ticket.html">우주 티켓부스<br/>이벤트 참여하기</a>
+					<a href="/ticket.html">티켓팅<br/>이벤트 참여하기</a>
 				</li>
 				<li class="menuEvent on">
-					<a href="delivery.html">우주 택배<br />이벤트 참여하기</a>
+					<a href="/delivery.html">장바구니<br />이벤트 참여하기</a>
 				</li>
 				<li class="menuMad">
-					<a href="mad.html">우주X<br />매드몬스터</a>
+					<a href="/mad.html">T우주X<br />매드몬스터</a>
 				</li>
 			</ul>
 			<article class="deliveryEvent" data-aos="fade-up">
@@ -85,7 +85,76 @@
 					우주가 여러분에게 배송해 드립니다.<br />
 				</p>
 				<a href="#" target="_blank" class="arrowBtn">장바구니 담으러가기</a>
-				<a href="#importImage" class="cartBtn">장바구니 이미지 등록하고 응모하기<span>one</span></a>
+				<div class="userInfoWrap">
+					<a href="javascript:;" class="cartBtn">장바구니 이미지 등록하고 응모하기<span>one</span></a>
+					<div class="userInfo">
+						<h4>연락처 정보를 알려주세요.</h4>
+						<div class="userInfo-input">
+							<!-- 값 오류시 class="wrongValue"추가-->
+							<div class="col-3 input-effect">
+								<input class="effect-24" type="text" placeholder="이름">
+								<label>이름</label>
+								<span class="focus-bg"></span>
+								<strong>이름을 입력해주세요.</strong>
+							</div>
+							<div class="telecom">
+								<span class="select">
+									<a href="#;" class="def"></a>
+									<a href="#;" class="dropdown">▼</a>
+								</span>
+								<select name="" id="sel">
+									<option value="통신사">통신사</option>
+									<option value="SKT">SKT</option>
+									<option value="KT">KT</option>
+									<option value="LG U+">LG U+</option>
+								</select>
+								<strong>통신사를 선택해주세요.</strong>
+							</div>
+							<div class="col-3 input-effect">
+								<input class="effect-24 phone" type="text" placeholder="휴대폰번호" name="phone" maxlength="13" autocomplete="off" >
+								<label>휴대폰번호</label>
+								<span class="focus-bg"></span>
+								<strong>휴대폰번호를 입력해주세요.</strong>
+							</div>
+							<div class="col-3 input-effect wrongValue">
+								<input class="effect-24" type="text" placeholder="인증번호">
+								<label>인증번호</label>
+								<span class="focus-bg"></span>
+								<a href="javascript:;" class="reissuance">인증번호 재발급</a>
+								<strong>인증번호 발급을 해주세요.</strong>
+								<em>2:32</em>
+							</div>
+						</div>
+						<div class="numberIssuance">
+							<!--class="on"일때 display:block-->
+							<a href="javascript:;" class="goBtn on">인증번호 발급</a>
+							<a href="javascript:;" class="goBtn02">본인 인증하기</a>
+						</div>
+						<ul>
+							<li>
+								<input type="checkbox" id="agree01">
+								<label for="agree01">체크</label>
+								<label for="agree01">개인정보처리방침 및 이용약관 동의</label>
+								<a href="#" target="_blank">자세히보기</a>
+							</li>
+							<li>
+								<input type="checkbox" id="agree02">
+								<label for="agree02">체크</label>
+								<label for="agree02">제 3자 정보제공 및 마케팅 수신</label>
+								<a href="#" target="_blank">자세히보기</a>
+							</li>
+							<li>
+								<input type="checkbox" id="agree03">
+								<label for="agree03">체크</label>
+								<label for="agree03">본인은 상기 내용을 숙지하였으며 이에 동의합니다.</label>
+							</li>
+						</ul>
+						<a href="javascript:;" class="cartBtn basket-open-rocket" data-layer="rocket-obj-basket">
+							<span>one</span>
+							장바구니 이미지 등록하기
+						</a>
+					</div>
+				</div>
 			</article>
 			<article class="deliveryInfo" data-aos="fade-up">
 				<dl>
@@ -128,7 +197,7 @@
 						<span>최종 당첨자</span><strong>10월 5일 (화)</strong>
 					</dd>
 				</dl>
-				<a href="#" class="arrowBtn" target="_blank">우주패스 첫 달 1,000원에 구독하기</a>
+				<a href="#" class="arrowBtn" target="_blank">첫 달 1,000원에 구독하기</a>
 				<span>one</span>
 			</article>
 			<article class="deliveryStep">
@@ -143,33 +212,33 @@
 							</div>
 						</dl>
 					</li>
-					<li data-aos="fade-up">
-						<dl class="step02 add-svg">
+					<li data-aos="fade-up" class="add-svg">
+						<dl class="step02">
 							<dt>STEP 2</dt>
 							<dd>11번가에서 아마존 스토어<br />접속하기</dd>
-							<div class="svg-W">
-								<div id="lottie04"></div>
-							</div>
 						</dl>
+						<div class="svg-W">
+							<div id="lottie04"></div>
+						</div>
 						<a href="#" class="arrowBtn">장바구니 담으러가기</a>
 					</li>
-					<li data-aos="fade-up">
-						<dl class="step03 add-svg">
+					<li data-aos="fade-up" class="add-svg">
+						<dl class="step03">
 							<dt>STEP 3</dt>
 							<dd>원하는 제품 장바구니에<br />담은 후 캡쳐하기</dd>
-							<div class="svg-W">
-								<div id="lottie05"></div>
-							</div>
 						</dl>
+						<div class="svg-W">
+							<div id="lottie05"></div>
+						</div>
 					</li>
-					<li id="importImage" data-aos="fade-up">
-						<dl class="step04 add-svg">
+					<li id="importImage" data-aos="fade-up" class="add-svg">
+						<dl class="step04">
 							<dt>STEP 4</dt>
 							<dd>이벤트 페이지에<br />캡쳐 이미지 등록하기</dd>
-							<div class="svg-W">
-								<div id="lottie06"></div>
-							</div>
 						</dl>
+						<div class="svg-W">
+							<div id="lottie06"></div>
+						</div>
 						<div class="userInfoWrap">
 							<a href="javascript:;" class="cartBtn">장바구니 이미지 등록하고 응모하기<span>one</span></a>
 							<div class="userInfo">
@@ -371,14 +440,16 @@
 		</div>
 		<footer>
 	<div>
+		<div>
+			<div class="fooLogo"><img src="./../images/logo_foo.png" alt="T우주 로고"></div>
+			<p>&copy; T우주 Co.,Ltd.</p>
+		</div>
 		<ul>
 			<li><a href="#">개인정보처리방침</a></li>
 			<li><a href="#">이용약관</a></li>
 		</ul>
-		<div><address>서울특별시 중구 을지로65 (을지로2가)<br />SK T-타워 SK텔레콤(주)</address></div>
-		<p>&copy; T우주 Co.,Ltd.</p>
+		<!-- <div><address>서울특별시 중구 을지로65 (을지로2가) SK T-타워 SK텔레콤(주)</address></div> -->
 	</div>
-	<div class="fooLogo"><img src="./../images/logo_foo.png" alt="OLKL로고"></div>
 </footer>
 		<!-- 이미지등록 레이어 -->
 		<div class="layer-rocket rocket-obj-basket">
@@ -437,11 +508,7 @@
 
 	</div>
 </body>
-	<!-- <script src="../js/jquery.min.js"></script>
-<script src="../js/swiper.min.js"></script>
-<script src="../js/common.js"></script> -->
-
-
+	
 <script type="text/javascript" src="../bundle/jquery.chunk.js"></script>
 <script type="text/javascript" src="../bundle/three.chunk.js"></script>
 <script type="text/javascript" src="../bundle/vendors.chunk.js"></script>
@@ -559,8 +626,11 @@
 
 		//장바구니 이미지 등록
 		function userInfoShow(){
-			$(".userInfoWrap > .cartBtn").click(function(){
-				$(".userInfoWrap").addClass("on");
+			$(".deliveryEvent .userInfoWrap > .cartBtn").click(function(){
+				$(".deliveryEvent .userInfoWrap").addClass("on");
+			});
+			$(".deliveryStep .userInfoWrap > .cartBtn").click(function(){
+				$(".deliveryStep .userInfoWrap").addClass("on");
 			});
 		};
 		userInfoShow()
