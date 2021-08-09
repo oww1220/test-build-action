@@ -325,7 +325,7 @@ header nav > div p span { font-weight: normal; }
 
 .userInfo > ul { margin-top: 30px; text-align: left; }
 
-.userInfo > ul li span { font-size: 12px; line-height: 27px; letter-spacing: -0.24px; color: #ffffff; margin-left: 5px; }
+.userInfo > ul li label { font-size: 12px; line-height: 27px; letter-spacing: -0.24px; color: #ffffff; margin-left: 5px; cursor: pointer; }
 
 .userInfo > ul li a { font-size: 12px; color: #ffffff; opacity: 0.4; letter-spacing: -0.24px; line-height: 27px; position: relative; padding-right: 10px; }
 
@@ -442,7 +442,7 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .rightTab > ul li:first-child { margin-top: 0; }
 
-.mainTab .tabContent ul .rightTab > ul li:first-child a { background: url("../images/all.png") no-repeat 0 0; background-position: 90% center; background-size: 131px 84px; }
+.mainTab .tabContent ul .rightTab > ul li:first-child a { background: url("../images/all.png") no-repeat 0 0; background-position: 90% center; background-size: 123px 76px; }
 
 .mainTab .tabContent ul .rightTab > ul li a { padding: 20px; text-align: left; display: block; background: url("../images/mini.png") no-repeat 0 0; background-position: 90% center; border-radius: 30px; background-size: 123px 76px; }
 
@@ -587,13 +587,15 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketRewards ul li:first-child::before { content: ""; position: absolute; top: 65px; right: 20px; width: 117px; height: 110px; background: url("../images/img-tmb-global.png") no-repeat 0 0; }
 
+.ticket .ticketRewards ul li:first-child a dl dt { font-size: 20px; line-height: 1.6; letter-spacing: -0.4px; font-family: 'Noto Sans KR bold'; color: #ffffff; }
+
+.ticket .ticketRewards ul li:first-child a dl dt span { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; display: block; }
+
 .ticket .ticketRewards ul li:first-child a dl dd { margin-top: 90px; }
 
 .ticket .ticketRewards ul li a { display: block; padding: 19px 27px; }
 
-.ticket .ticketRewards ul li a dl dt { font-size: 20px; line-height: 1.6; letter-spacing: -0.4px; font-family: 'Noto Sans KR bold'; color: #ffffff; }
-
-.ticket .ticketRewards ul li a dl dt span { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; display: block; }
+.ticket .ticketRewards ul li a dl dt { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; color: #ffffff; }
 
 .ticket .ticketRewards ul li a dl dd { margin-top: 40px; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #ffffff; opacity: 0.4; position: relative; }
 
@@ -603,100 +605,102 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketParticipate { margin-top: 80px; text-align: center; }
 
-.ticket .ticketParticipate h4 { font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR black'; position: relative; display: inline-block; }
+.ticket .ticketParticipate > h4 { font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR black'; position: relative; display: inline-block; }
 
-.ticket .ticketParticipate h4::after { content: ""; width: 17px; height: 22px; position: absolute; top: -5px; right: -20px; background: url("../images/stars_icon.png") no-repeat 0 0; }
+.ticket .ticketParticipate > h4::after { content: ""; width: 17px; height: 22px; position: absolute; top: -5px; right: -20px; background: url("../images/stars_icon.png") no-repeat 0 0; }
 
-.ticket .ticketParticipate ul { margin-top: 10px; }
+.ticket .ticketParticipate > ul { margin-top: 10px; }
 
-.ticket .ticketParticipate ul li { padding-bottom: 59px; margin-top: 50px; position: relative; }
+.ticket .ticketParticipate > ul > li { padding-bottom: 59px; margin-top: 50px; position: relative; }
 
-.ticket .ticketParticipate ul li::after { content: ""; margin-left: 8%; width: 84%; height: 1px; background: #ffffff; position: absolute; bottom: 0; left: 0; }
+.ticket .ticketParticipate > ul > li::after { content: ""; margin-left: 8%; width: 84%; height: 1px; background: #ffffff; position: absolute; bottom: 0; left: 0; }
 
-.ticket .ticketParticipate ul li:last-child { padding-bottom: 0; }
+.ticket .ticketParticipate > ul > li:last-child { padding-bottom: 0; }
 
-.ticket .ticketParticipate ul li:last-child::after { width: 0; }
+.ticket .ticketParticipate > ul > li:last-child::after { width: 0; }
 
-.ticket .ticketParticipate ul li.step01 { margin-top: 0; }
+.ticket .ticketParticipate > ul > li.step01 { margin-top: 0; }
 
-.ticket .ticketParticipate ul li.step01 > div { padding-top: 219px; background: url("../images/img-ticket-step1.png") no-repeat 0 0; background-position: center 14px; background-size: 100%; }
+.ticket .ticketParticipate > ul > li.step01 > div { padding-top: 219px; background: url("../images/img-ticket-step1.png") no-repeat 0 0; background-position: center 14px; background-size: 100%; }
 
-.ticket .ticketParticipate ul li.step02 > div { padding-top: 214px; background: url("../images/img-ticket-step2.png") no-repeat 0 0; background-position: center -35px; background-size: 100%; }
+.ticket .ticketParticipate > ul > li.step02 .stepCon { padding-top: 214px; background: url("../images/img-ticket-step2.png") no-repeat 0 0; background-position: center -35px; background-size: 100%; }
 
-.ticket .ticketParticipate ul li.step02 > div .goBtn { background-color: #ff404e; }
+.ticket .ticketParticipate > ul > li.step02 .stepCon .goBtn { background-color: #ff404e; }
 
-.ticket .ticketParticipate ul li.step03 > div { padding-top: 251px; background: url("../images/img-ticket-step3.png") no-repeat 0 0; background-position: center 30px; background-size: 100%; }
+.ticket .ticketParticipate > ul > li.step02 .userInfo { display: none; margin-bottom: 0; margin-top: 50px; padding-bottom: 0; }
 
-.ticket .ticketParticipate ul li dl { margin-top: 10px; }
+.ticket .ticketParticipate > ul > li.step02 .userInfo.on { display: block; }
 
-.ticket .ticketParticipate ul li dl dt { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; font-family: 'Noto Sans KR black'; display: inline-block; color: #ff404e; }
+.ticket .ticketParticipate > ul > li.step02 .userInfo:after { content: ""; display: none; }
 
-.ticket .ticketParticipate ul li dl dd { font-family: 'Noto Sans KR black'; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; }
+.ticket .ticketParticipate > ul > li.step03 > div { padding-top: 251px; background: url("../images/img-ticket-step3.png") no-repeat 0 0; background-position: center 30px; background-size: 100%; }
 
-.ticket .ticketParticipate ul li > div p { font-size: 14px; line-height: 1.4; letter-spacing: -0.28px; font-family: 'Noto Sans KR bold'; }
+.ticket .ticketParticipate > ul > li dl { margin-top: 10px; }
 
-.ticket .ticketParticipate ul li > div p.second { margin-top: 10px; }
+.ticket .ticketParticipate > ul > li dl dt { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; font-family: 'Noto Sans KR black'; display: inline-block; color: #ff404e; }
 
-.ticket .ticketParticipate ul li > div div { padding: 0 5.9%; }
+.ticket .ticketParticipate > ul > li dl dd { font-family: 'Noto Sans KR black'; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; }
 
-.ticket .ticketParticipate ul li > div div .arrowBtn { width: 270px; font-size: 16px; letter-spacing: -0.32px; display: inline-block; }
+.ticket .ticketParticipate > ul > li > div > p { font-size: 14px; line-height: 1.4; letter-spacing: -0.28px; font-family: 'Noto Sans KR bold'; }
 
-.ticket .ticketParticipate ul li > div div .arrowBtn::after { right: 15%; }
+.ticket .ticketParticipate > ul > li > div > p.second { margin-top: 10px; }
 
-.ticket .ticketParticipate ul li > div div .arrowBtn:nth-child(2) { background-color: #ff404e; }
+.ticket .ticketParticipate > ul > li > div > div { padding: 0 5.9%; }
 
-.ticket .ticketParticipate ul li > div div .arrowBtn:nth-child(2)::after { right: 70px; }
+.ticket .ticketParticipate > ul > li > div > div .arrowBtn { width: 270px; font-size: 16px; letter-spacing: -0.32px; display: inline-block; }
 
-.ticket .ticketParticipate ul li > div div.ticketBtn .arrowBtn { width: 218px; }
+.ticket .ticketParticipate > ul > li > div > div .arrowBtn::after { right: 13%; }
+
+.ticket .ticketParticipate > ul > li > div > div .arrowBtn:nth-child(2) { background-color: #5e45d8; }
+
+.ticket .ticketParticipate > ul > li > div > div .arrowBtn:nth-child(2)::after { right: 70px; }
+
+.ticket .ticketParticipate > ul > li > div > div.ticketBtn .arrowBtn { width: 218px; }
 
 .ticket .eventNotice { margin-top: 170px; }
 
 /************** ticket 01 ***************/
-#content.ticketInfo { padding-top: 20px; }
+.ticketAniWrap { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 20; overflow-y: scroll; }
 
-#content.ticketInfo .ticketAniWrap { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 5; overflow-y: scroll; }
+.ticketAniWrap .ticketAni { display: none; position: relative; margin-top: 90px; width: 100%; height: 100%; background-color: #ffffff; border-top-left-radius: 40px; border-top-right-radius: 40px; }
 
-#content.ticketInfo .ticketAniWrap.on { display: block; }
+.ticketAniWrap .ticketAni.on { display: block; -webkit-animation: ticketing 2s both; animation: ticketing 2s both; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni { display: none; position: relative; margin-top: 90px; width: 100%; height: 100%; background-color: #ffffff; border-top-left-radius: 40px; border-top-right-radius: 40px; }
+.ticketAniWrap .ticketAni.on .ticketing { padding-top: 122px; padding-bottom: 613px; display: none; background: url("../images/img-loading-1.png") no-repeat 0 0; background-position: center 100px; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on { display: block; -webkit-animation: ticketing 2s both; animation: ticketing 2s both; }
+.ticketAniWrap .ticketAni.on .ticketing.on { display: block; -webkit-animation: antiOpacity 2s both; animation: antiOpacity 2s both; -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .ticketing { padding-top: 122px; padding-bottom: 613px; display: none; background: url("../images/img-loading-1.png") no-repeat 0 0; background-position: center 100px; }
+.ticketAniWrap .ticketAni.on .ticketing h5 { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; text-align: center; color: #3617ce; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .ticketing.on { display: block; -webkit-animation: antiOpacity 2s both; animation: antiOpacity 2s both; -webkit-animation-delay: 2s; animation-delay: 2s; }
+.ticketAniWrap .ticketAni.on .issuanceTicket { display: none; padding-top: 122px; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .ticketing h5 { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; text-align: center; color: #3617ce; }
+.ticketAniWrap .ticketAni.on .issuanceTicket.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .issuanceTicket { display: none; padding-top: 122px; }
+.ticketAniWrap .ticketAni.on .issuanceTicket dl { text-align: center; padding-bottom: 195px; background: url("../images/img-ticket-thumb.png") no-repeat 0 0; background-position: center 220px; background-size: 100%; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .issuanceTicket.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; -webkit-animation-delay: 3s; animation-delay: 3s; }
+.ticketAniWrap .ticketAni.on .issuanceTicket dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; letter-spacing: -0.8px; line-height: 48px; color: #3617ce; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .issuanceTicket dl { text-align: center; padding-bottom: 195px; background: url("../images/img-ticket-thumb.png") no-repeat 0 0; background-position: center 220px; }
+.ticketAniWrap .ticketAni.on .issuanceTicket dl dd { font-size: 16px; margin-top: 10px; font-family: 'Noto Sans KR black'; color: #000000; line-height: 1.6; letter-spacing: -0.32px; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .issuanceTicket dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; letter-spacing: -0.8px; line-height: 48px; color: #3617ce; }
+.ticketAniWrap .ticketAni.on .issuanceTicket a { text-align: center; width: 203px; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .issuanceTicket dl dd { font-size: 16px; margin-top: 10px; font-family: 'Noto Sans KR black'; color: #000000; line-height: 1.6; letter-spacing: -0.32px; }
+.ticketAniWrap .ticketAni.on .winning { display: none; padding-top: 122px; position: relative; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .issuanceTicket a { text-align: center; width: 203px; }
+.ticketAniWrap .ticketAni.on .winning.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .winning { display: none; padding-top: 122px; position: relative; }
+.ticketAniWrap .ticketAni.on .winning.on::before { display: block; -webkit-animation: opacity 3s infinite; animation: opacity 3s infinite; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .winning.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; }
+.ticketAniWrap .ticketAni.on .winning::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 160px; background: url("../images/img-particle.png") no-repeat 0 0; background-size: 92% auto; background-position: center 20px; display: none; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .winning.on::before { display: block; -webkit-animation: opacity 3s infinite; animation: opacity 3s infinite; }
+.ticketAniWrap .ticketAni.on .winning dl { text-align: center; padding: 0 8%; margin-bottom: 50px; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .winning::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 160px; background: url("../images/img-particle.png") no-repeat 0 0; background-size: 92% auto; background-position: center 20px; display: none; }
+.ticketAniWrap .ticketAni.on .winning dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; color: #3617ce; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .winning dl { text-align: center; padding: 0 8%; margin-bottom: 50px; }
+.ticketAniWrap .ticketAni.on .winning dl dd { font-size: 16px; margin-top: 10px; font-family: 'Noto Sans KR black'; color: #000000; line-height: 1.6; letter-spacing: -0.32px; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .winning dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; color: #3617ce; }
+.ticketAniWrap .ticketAni.on .winning div { text-align: center; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .winning dl dd { font-size: 16px; margin-top: 10px; font-family: 'Noto Sans KR black'; color: #000000; line-height: 1.6; letter-spacing: -0.32px; }
-
-#content.ticketInfo .ticketAniWrap .ticketAni.on .winning div { text-align: center; }
-
-#content.ticketInfo .ticketAniWrap .ticketAni.on .winning .mms { font-size: 12px; font-family: 'Noto Sans KR black'; color: #000000; line-height: 1.4; letter-spacing: -0.24px; margin-top: 51px; }
+.ticketAniWrap .ticketAni.on .winning .mms { font-size: 12px; font-family: 'Noto Sans KR black'; color: #000000; line-height: 1.4; letter-spacing: -0.24px; margin-top: 51px; }
 
 /************** delivery ***************/
 .delivery { margin-bottom: 100px; }
@@ -787,7 +791,7 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryStep > ul > li > dl dd { font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR black'; }
 
-.delivery .deliveryStep > ul > li .arrowBtn { text-align: center; margin-top: 0; width: 256px; background: #6414ff url("../images/11.png") no-repeat 0 0; background-position: 28px center; padding-left: 60px; }
+.delivery .deliveryStep > ul > li .arrowBtn { text-align: center; margin-top: 0; width: 256px; background: #ff404e url("../images/11.png") no-repeat 0 0; background-position: 28px center; padding-left: 60px; }
 
 .delivery .deliveryStep > ul > li .arrowBtn::after { right: 25px; }
 
@@ -835,7 +839,7 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .storeRank .rankSlide .swiper-scrollbar .swiper-scrollbar-drag { height: 2px; background: #3617ce; position: absolute; bottom: 0; left: 0; }
 
-.delivery .eventNotice { margin-top: 180px; }
+.delivery .eventNotice { margin-top: 94px; }
 
 .imageFile { display: none; position: fixed; top: 0; left: 0; width: 100%; height: calc(100vh + 100px); background-color: #000000; z-index: 110; overflow-y: scroll; overflow-x: hidden; }
 
@@ -1085,7 +1089,7 @@ header nav > div p span { font-weight: normal; }
 
 .mad .madVideo div video { width: 100%; height: auto; }
 
-.mad .madVideo div span { position: absolute; bottom: 31px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
+.mad .madVideo div span { position: absolute; bottom: 20px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
 
 .mad .madVideo div img { width: 100%; }
 
@@ -1101,7 +1105,7 @@ header nav > div p span { font-weight: normal; }
 
 .mad .madPass .madSlide ul li { overflow: hidden; }
 
-.mad .madPass .madSlide ul li div { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.mad .madPass .madSlide ul li div { max-height: 250px; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 .mad .madPass .madSlide ul li div img { border-radius: 30px; width: 100%; -o-object-fit: cover; object-fit: cover; }
 
@@ -1199,8 +1203,6 @@ header nav > div p span { font-weight: normal; }
 
 .mypage .userpage > div ul li span { text-indent: -9999px; background-color: rgba(54, 23, 206, 0.24); border: 1px solid #3617ce; z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; }
 
-.mypage .userpage > div ul li.listTicket h4 { background: url("../images/Component 3.png") no-repeat 0 0; }
-
 .mypage .userpage > div ul li.listNone { padding: 81px 0; }
 
 .mypage .userpage > div ul li.listNone strong { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; width: 100%; }
@@ -1208,6 +1210,8 @@ header nav > div p span { font-weight: normal; }
 .mypage .userpage > div ul li h4 { text-align: left; padding-left: 70px; background: url("../images/Component 2.png") no-repeat 0 0; color: #5e45d8; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; line-height: 26px; }
 
 .mypage .userpage > div ul li div { margin: 10px 0; }
+
+.mypage .userpage > div ul li div img { width: 100%; }
 
 .mypage .userpage > div ul li dl { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; font-family: 'Noto Sans KR black'; }
 
@@ -1233,7 +1237,7 @@ header nav > div p span { font-weight: normal; }
 #content.mypageInfo .userInfo > .goBtn { width: 138px; }
 
 /************** 미디어쿼리 ***************/
-@media only screen and (max-width: 370px) { .delivery .deliveryInfo .arrowBtn { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; line-height: 50px; } }
+@media only screen and (max-width: 370px) { .delivery .deliveryInfo .arrowBtn { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; width: 240px; line-height: 50px; } }
 
 @media only screen and (max-width: 320px) { .partners .listPartners > div ul li > div div { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
  .partners .listPartners > div ul li > div .moreBtn { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
@@ -1385,35 +1389,35 @@ body.fixed { overflow: hidden; position: fixed; }
 .modal-dimmed { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: #000; font: 0/0 a; opacity: 0.5; z-index: 60; display: none; }
 
 /*티켓레이어 수정*/
-#content.ticketInfo .ticketAniWrap { display: block; background-color: transparent; overflow: hidden; -webkit-transform: translateY(120%); transform: translateY(120%); -webkit-transition: -webkit-transform 1s; transition: -webkit-transform 1s; transition: transform 1s; transition: transform 1s, -webkit-transform 1s; }
+.ticketAniWrap { z-index: 100; display: block; background-color: transparent; overflow: hidden; -webkit-transform: translateY(120%); transform: translateY(120%); -webkit-transition: -webkit-transform 1s; transition: -webkit-transform 1s; transition: transform 1s; transition: transform 1s, -webkit-transform 1s; }
 
-#content.ticketInfo .ticketAniWrap.on { -webkit-transform: translateY(0); transform: translateY(0); }
+.ticketAniWrap.on { -webkit-transform: translateY(0); transform: translateY(0); }
 
-#content.ticketInfo .ticketAniWrap .ticketAni { overflow-x: hidden; overflow-y: auto; height: calc(100% - 70px); }
+.ticketAniWrap .ticketAni { overflow-x: hidden; overflow-y: auto; height: calc(100% - 70px); }
 
-#content.ticketInfo .ticketAniWrap .ticketAni .ticketing.add-svg { padding-bottom: 0; background: none; }
+.ticketAniWrap .ticketAni .ticketing.add-svg { padding-bottom: 0; background: none; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni .ticketing.add-svg .svg-W { margin: 0 auto; max-width: 500px; height: 500px; overflow: hidden; }
+.ticketAniWrap .ticketAni .ticketing.add-svg .svg-W { margin: 0 auto; max-width: 500px; height: 500px; overflow: hidden; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni .winning.add-svg { height: 100%; }
+.ticketAniWrap .ticketAni .winning.add-svg { height: 100%; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni .winning.add-svg .svg-W { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: absolute; width: 100%; top: 50%; left: 50%; height: 100%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); overflow: hidden; }
+.ticketAniWrap .ticketAni .winning.add-svg .svg-W { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: absolute; width: 100%; top: 50%; left: 50%; height: 100%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); overflow: hidden; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni .winning.add-svg .svg-W > div { -webkit-transform: scale(1.6); transform: scale(1.6); -webkit-transform-origin: center; transform-origin: center; }
+.ticketAniWrap .ticketAni .winning.add-svg .svg-W > div { -webkit-transform: scale(1.6); transform: scale(1.6); -webkit-transform-origin: center; transform-origin: center; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni .winning.add-svg .svg-cont { position: relative; }
+.ticketAniWrap .ticketAni .winning.add-svg .svg-cont { position: relative; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on { -webkit-animation: none; animation: none; }
+.ticketAniWrap .ticketAni.on { -webkit-animation: none; animation: none; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .ticketing.add-svg.on { -webkit-animation: none; animation: none; background-color: #fff; border-radius: 40px 40px 0 0; }
+.ticketAniWrap .ticketAni.on .ticketing.add-svg.on { -webkit-animation: none; animation: none; background-color: #fff; border-radius: 40px 40px 0 0; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .issuanceTicket.on { -webkit-animation-delay: .3s; animation-delay: .3s; background-color: #fff; border-radius: 40px 40px 0 0; padding-bottom: 40px; }
+.ticketAniWrap .ticketAni.on .issuanceTicket.on { -webkit-animation-delay: .3s; animation-delay: .3s; background-color: #fff; border-radius: 40px 40px 0 0; padding-bottom: 40px; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .winning.on { background-color: #fff; border-radius: 40px 40px 0 0; padding-bottom: 40px; }
+.ticketAniWrap .ticketAni.on .winning.on { background-color: #fff; border-radius: 40px 40px 0 0; padding-bottom: 40px; }
 
-#content.ticketInfo .ticketAniWrap .ticketAni.on .winning.on::before { display: none; }
+.ticketAniWrap .ticketAni.on .winning.on::before { display: none; }
 
-#content.ticketInfo .ticketAniWrap .closeBtn { top: 23px; }
+.ticketAniWrap .closeBtn { top: 23px; }
 
 /*add svg*/
 .ticket .ticketParticipate ul li.step01 .add-svg { background-image: none; padding: 0; }
