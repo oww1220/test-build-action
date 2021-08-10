@@ -280,6 +280,10 @@ $oneColor: #8674e2
 				height: 3px
 				border-radius: 50%
 				background-color: $lightGray
+			span
+				color: $white
+			a
+				color: $lightGray
 .alertWin
 	position: fixed
 	top: 0
@@ -702,6 +706,7 @@ $oneColor: #8674e2
 			text-align: center
 			img
 				width: 50%
+
 		dd
 			position: absolute
 			bottom: 8px
@@ -719,6 +724,10 @@ $oneColor: #8674e2
 				font-size: 24px
 				letter-spacing: -0.48px
 				color: $mainColor
+				span
+					+font16()
+					font-family: 'Noto Sans KR black'
+					display: block
 			dd
 				margin-top: 20px
 				+font16()
@@ -942,7 +951,7 @@ $oneColor: #8674e2
 							a
 								background: url("../images/all.png") no-repeat 0 0
 								background-position: 90% center
-								background-size: 123px 76px
+								background-size: 123px auto
 								
 						a
 							padding: 20px
@@ -951,7 +960,7 @@ $oneColor: #8674e2
 							background: url("../images/mini.png") no-repeat 0 0
 							background-position: 90% center
 							border-radius: 30px
-							background-size: 123px 76px
+							background-size: 123px auto
 							span
 								display: inline-block
 								text-indent: -9999px
@@ -1519,7 +1528,7 @@ $oneColor: #8674e2
 				dl
 					text-align: center
 					padding-bottom: 220px
-					background: url("../images/img-ticket-thumb.png") no-repeat 0 0
+					background: url("../images/all.png") no-repeat 0 0
 					background-position: center 210px
 					background-size: 100%
 					dt
@@ -1785,6 +1794,10 @@ $oneColor: #8674e2
 						line-height: 1.6
 						letter-spacing: -0.48px
 						font-family: 'Noto Sans KR black'
+						span
+							+font14()
+							display: block
+							margin-top: 10px
 				.arrowBtn
 					text-align: center
 					margin-top: 0
@@ -1803,7 +1816,6 @@ $oneColor: #8674e2
 					.cartBtn
 						text-align: center
 					.userInfo
-						margin-top: 80px
 						display: none
 						padding: 0
 						margin-bottom: 0
@@ -2879,6 +2891,9 @@ $oneColor: #8674e2
 						line-height: 26px
 					div
 						margin: 10px 0
+						&.captureImg
+							img
+								width: 100px
 						img
 							width: 100%
 
