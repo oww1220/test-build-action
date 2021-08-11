@@ -690,7 +690,7 @@ header nav > div p span { font-weight: normal; }
 
 .ticketAniWrap .ticketAni.on .issuanceTicket.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-.ticketAniWrap .ticketAni.on .issuanceTicket dl { text-align: center; padding-bottom: 220px; background: url("../images/all.png") no-repeat 0 0; background-position: center 210px; background-size: 100%; }
+.ticketAniWrap .ticketAni.on .issuanceTicket dl { text-align: center; padding-bottom: 160px; background: url("../images/all.png") no-repeat 0 0; background-position: center 210px; background-size: 247px auto; }
 
 .ticketAniWrap .ticketAni.on .issuanceTicket dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; letter-spacing: -0.8px; line-height: 48px; color: #3617ce; }
 
@@ -900,7 +900,7 @@ header nav > div p span { font-weight: normal; }
 /************** OLKL PASS ***************/
 .spacePass .passTab { padding-top: 207px; margin-top: 20px; }
 
-.spacePass .passTab > ul { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; background-color: rgba(54, 23, 206, 0.445); width: 84%; margin-left: 8%; border-radius: 14px; position: relative; -webkit-transition: .3s; transition: .3s; }
+.spacePass .passTab > ul { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; background-color: rgba(54, 23, 206, 0.445); width: 84%; margin-left: 8%; border-radius: 14px; position: relative; -webkit-transition: .3s; transition: .3s; z-index: 2; }
 
 .spacePass .passTab > ul.moveLeft::before { content: ""; position: absolute; top: 0; left: 0; width: 50%; height: 100%; border-radius: 14px; background-color: #3617ce; -webkit-transition: .3s; transition: .3s; -webkit-transform: translateX(0); transform: translateX(0); }
 
@@ -916,7 +916,7 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent ul .leftTab { padding-bottom: 110px; }
 
-.spacePass .passTab .tabContent ul .leftTab::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 375px; background: url("../images/pass_bg.png") no-repeat 0 0; background-size: cover; background-position: center; z-index: -1; }
+.spacePass .passTab .tabContent ul .leftTab::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 375px; background: url("../images/pass_bg.png") no-repeat 0 0; background-size: cover; background-position: center; z-index: 0; }
 
 .spacePass .passTab .tabContent ul .leftTab .monthCost { position: relative; width: 134px; height: 60px; text-align: center; margin: 36px auto; }
 
@@ -1016,7 +1016,7 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent ul .rightTab { display: none; text-align: center; padding-bottom: 180px; }
 
-.spacePass .passTab .tabContent ul .rightTab::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 375px; background: url("../images/pass_mini.png") no-repeat 0 0; background-size: cover; background-position: center; z-index: -1; }
+.spacePass .passTab .tabContent ul .rightTab::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 375px; background: url("../images/pass_mini.png") no-repeat 0 0; background-size: cover; background-position: center; z-index: 0; }
 
 .spacePass .passTab .tabContent ul .rightTab .monthCost { position: relative; width: 134px; height: 60px; text-align: center; margin: 36px auto; }
 
@@ -1221,9 +1221,7 @@ header nav > div p span { font-weight: normal; }
 
 .mypage .userpage > div h5 { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
 
-.mypage .userpage > div ul li { text-align: center; padding: 20px 20px 30px 20px; margin-top: 10px; width: 100%; height: 100%; position: relative; border-radius: 30px; }
-
-.mypage .userpage > div ul li span { text-indent: -9999px; background-color: rgba(54, 23, 206, 0.24); border: 1px solid #3617ce; z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; }
+.mypage .userpage > div ul li { text-align: center; padding: 20px 20px 30px 20px; margin-top: 10px; width: 100%; height: 100%; position: relative; border: 1px solid #3617ce; border-radius: 30px; background-color: rgba(54, 23, 206, 0.24); }
 
 .mypage .userpage > div ul li.listNone { padding: 81px 0; }
 
@@ -1276,11 +1274,11 @@ footer { padding: 20px 8% 130px 8%; background-color: #000; }
 
 footer > div { width: 100%; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
-footer > div > div div img { width: 127px; height: 41px; }
+footer > div > div div img { width: 90px; height: 32px; }
 
 footer > div > div p { margin-top: 16px; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #ffffff; }
 
-footer > div ul { display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 56px; }
+footer > div ul { display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 47px; }
 
 footer > div ul li:first-child { position: relative; padding-right: 10px; margin-right: 10px; }
 
