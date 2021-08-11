@@ -1527,10 +1527,10 @@ $oneColor: #8674e2
 					animation-delay: 3s
 				dl
 					text-align: center
-					padding-bottom: 220px
+					padding-bottom: 160px
 					background: url("../images/all.png") no-repeat 0 0
 					background-position: center 210px
-					background-size: 100%
+					background-size: 247px auto
 					dt
 						+colorGradation()
 						font-size: 40px
@@ -2013,6 +2013,7 @@ $oneColor: #8674e2
 			border-radius: 14px
 			position: relative
 			transition: .3s
+			z-index: 2
 			&.moveLeft
 				&::before
 					content: ""
@@ -2078,7 +2079,7 @@ $oneColor: #8674e2
 						background: url("../images/pass_bg.png") no-repeat 0 0
 						background-size: cover
 						background-position: center
-						z-index: -1
+						z-index: 0
 					.monthCost
 						position: relative
 						width: 134px
@@ -2352,7 +2353,7 @@ $oneColor: #8674e2
 						background: url("../images/pass_mini.png") no-repeat 0 0
 						background-size: cover
 						background-position: center
-						z-index: -1
+						z-index: 0
 					.monthCost
 						position: relative
 						width: 134px
@@ -2866,17 +2867,9 @@ $oneColor: #8674e2
 					width: 100%
 					height: 100%
 					position: relative
+					border: 1px solid $mainColor
 					border-radius: 30px
-					span
-						text-indent: -9999px
-						+borderGradient()
-						z-index: -1
-						position: absolute
-						top: 0
-						left: 0
-						width: 100%
-						height: 100%
-						border-radius: 30px
+					background-color: rgba(54, 23, 206, 0.24)
 					&.listNone
 						padding: 81px 0
 						strong
