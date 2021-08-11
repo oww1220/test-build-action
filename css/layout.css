@@ -139,7 +139,7 @@ header nav > div { overflow-y: scroll; display: none; position: fixed; top: 0; l
 
 header nav > div.on { display: block; }
 
-header nav > div::before { content: ""; background: url("../images/logo_main.png") no-repeat 0 0; background-size: 80px 30px; position: absolute; top: 20px; left: 5.3%; width: 80px; height: 30px; }
+header nav > div::before { content: ""; background: url("../images/logo_main.png") no-repeat 0 0; background-size: 80px 30px; position: absolute; top: 23px; left: 20px; width: 80px; height: 30px; }
 
 header nav > div .btn-drawer-close { position: absolute; top: 20px; right: 5.3%; width: 36px; height: 36px; background-color: #ffffff; border-radius: 50%; text-indent: -9999px; }
 
