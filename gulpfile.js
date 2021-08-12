@@ -15,6 +15,14 @@ const gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   cssnano = require('gulp-cssnano');
 
+  /*타입스크립트*/
+const ts = require('gulp-typescript');
+const path = require('path');
+
+/*webpack*/
+const webpack = require('webpack-stream');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 // Folder
 const root = './webapp/',
   src = root + 'src/',
@@ -25,6 +33,7 @@ const dir = {
     html: src + 'html/',
     sass: src + 'sass/',
     js: src + 'js/',
+    ts: src + 'ts/',
     images: src + 'images/',
     bundle: src + 'bundle/'
   },
@@ -34,7 +43,8 @@ const dir = {
     js: dist + 'js/',
     images: dist + 'images/',
     library: dist + 'library/',
-	bundle: dist + 'bundle/'
+	  bundle: dist + 'bundle/',
+    build: dist + 'build/',
   }
 };
 
@@ -240,6 +250,117 @@ gulp.task('babelMin', () => {
   });
 });
 
+
+/**
+ * =======================================================+
+ * @task : ts & webpack
+ * =======================================================+
+ */
+gulp.task('ts', ()=> {
+  const tsProject = ts.createProject('tsconfig.json');
+  return gulp
+    .src(dir.src.ts + '**/*.ts'
+        , {allowEmpty: true}
+    )
+    .pipe(tsProject())
+    .pipe(gulp.dest(dir.dist.build))
+});
+
+gulp.task('webpack', ()=>
+    gulp
+    .src(dir.dist.build + '**/*.js', {allowEmpty: true})
+    .pipe(webpack({
+        mode: 'production',
+        // 파일 다중으로 내보내기 가능
+        /*
+        entry: {
+            //CommonUI: [`${TASK_BASE_URL}/scripts/build/dist/CommonUI.js`, `${TASK_BASE_URL}/scripts/build/dist/browser.js`],
+            //UI: `${TASK_BASE_URL}/scripts/build/dist/UI/Datepicker.js`,
+        },
+        output: {filename: '[name].bundle.js'},
+        */
+        output: {
+            filename: '[name].chunk.js',
+            //chunkFilename: '[name].chunk.[chunkhash].js',
+        },
+        resolve: {
+            //별칭으로 절대경로 설정
+            alias: {
+                [`@src`]: path.resolve(__dirname, dir.dist.build)
+            },
+            /*
+            //모듈 절대경로 설정: 배열 첫번째 항목은 로컬(사용자)모듈, 두번째 항목은 node모듈
+            modules: [
+                path.join(__dirname, 'wwwroot/pc/assets/scripts/build'),
+                'node_modules'
+            ],*/
+
+            //웹팩이 모듈을 찾을때 확장자가 없을시 해당 배열에 있는 확장자를 붙여서 찾게하는기능!
+            extensions: ['.js']
+        },
+        optimization: {
+            splitChunks: {
+                chunks: 'all',
+                maxInitialRequests: Infinity,
+                minSize: 0,
+                cacheGroups: {
+                  vendors: {
+                      test: /[\\/]node_modules[\\/]/,
+                      name: 'vendors',
+                      priority: 1,
+                      reuseExistingChunk: true,
+                  },
+                  jquery: {
+                      test: /[\\/]node_modules[\\/](jquery)[\\/]/,
+                      name: 'jquery',
+                      priority: 2,
+                      reuseExistingChunk: true,
+                  },
+                  three: {
+                      test: /[\\/]node_modules[\\/](three)[\\/]/,
+                      name: 'three',
+                      priority: 2,
+                      reuseExistingChunk: true,
+                  },
+              }
+            }
+        },
+        //devtool: 'source-map',
+        module: {   
+            rules: [
+                {
+                    test: /\.(js)$/,
+                    exclude: /node_modules\/(?!bullets-js)/,
+                    use: ['babel-loader'],
+                }
+            ]
+        },
+        plugins: [
+            // new BundleAnalyzerPlugin({
+            //     analyzerMode: 'static',               // 분석결과를 파일로 저장
+            //     reportFilename: 'docs/size_dev.html', // 분설결과 파일을 저장할 경로와 파일명 지정
+            //     defaultSizes: 'parsed',
+            //     openAnalyzer: false,                   // 웹팩 빌드 후 보고서파일을 자동으로 열지 여부
+            //     generateStatsFile: true,              // 웹팩 stats.json 파일 자동생성
+            //     statsFilename: 'docs/stats_dev.json', // stats.json 파일명 rename
+            // })
+        ]
+    }))
+    .pipe(gulp.dest(dir.dist.bundle))
+    .pipe(
+      browsersync.reload({
+        // 실시간 reload
+        stream: true
+      })
+    )
+);
+
+gulp.task(
+  'tsBundle',
+  gulp.series('ts', 'webpack')
+);
+
+
 /**
  * =======================================================+
  * @task : image min
@@ -281,8 +402,9 @@ gulp.task('clean', () => {
         dir.dist.css,
         dir.dist.js,
         dir.dist.images,
-		dir.dist.library,
-		dir.dist.bundle
+        dir.dist.library,
+        dir.dist.bundle,
+        dir.dist.build,
       ],
       {
         force: true
@@ -320,7 +442,7 @@ gulp.task('bundleFileMove', ()=> {
   return gulp
     .src(dir.src.bundle + '**/*')
     .pipe(gulp.dest(dir.dist.bundle))
-  });
+});
   
 /**
  * =======================================================+
@@ -334,6 +456,13 @@ gulp.task('watch', () => {
 		dir.src.sass + '**/*.sass',
 		dir.src.sass + '**/*.scss'
 	], gulp.series(['sass', 'sassMin']));
+
+    // watch ts
+    gulp.watch(
+        dir.src.ts + '**/*.ts',
+        gulp.series('tsBundle')
+    );
+
     gulp.watch(dir.src.js + '**/*.js', gulp.series(['babel', 'babelMin']));
     gulp.watch(dir.src.images, gulp.series('imgMin'));
     gulp.watch(src + 'index.html', gulp.series('fileMove'));
@@ -367,6 +496,10 @@ gulp.task('library', () => {
       .pipe((gulp.dest(dist + 'font/')));
 
     gulp
+      .src(src + 'json/**/*.*')
+      .pipe((gulp.dest(dir.dist.bundle + 'json/')));
+
+    gulp
       .src(src + 'lib/**/*.js')
       .pipe((gulp.dest(dir.dist.js)));
     
@@ -384,9 +517,10 @@ gulp.task(
     'babel',
     'babelMin',
     'imgMin',
+    //'fileMove',
+	  //'bundleFileMove',
+    'tsBundle',
     'library',
-    // 'fileMove',
-	'bundleFileMove',
     'watch',
     'browserSync'
   )
@@ -402,7 +536,8 @@ gulp.task(
     'babel',
     'babelMin',
     'imgMin',
+    'tsBundle',
     'library',
-	'bundleFileMove'
+	//'bundleFileMove'
   )
 );
