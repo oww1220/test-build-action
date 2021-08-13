@@ -2860,8 +2860,8 @@ $oneColor: #8674e2
 			margin-top: 40px
 			h5
 				+font16()
-			ul
-				li
+			> ul
+				> li
 					text-align: center
 					padding: 20px 20px 30px 20px
 					margin-top: 10px
@@ -2912,6 +2912,33 @@ $oneColor: #8674e2
 						width: 100%
 					.goBtn
 						background-color: $point
+				.infos
+					margin: 30px 0 0 
+					.info-col 
+						& + .info-col 
+							margin: 30px 0 0
+						strong
+							display: block
+							text-align: left
+							+font16()
+					.info-cont
+						margin: 18px 0 0
+						text-align: left
+						&.noMargin
+							margin: 0px 0 0
+						+font12()
+						p
+							margin: 0px 0 0
+							line-height: 16.8px
+						a 
+							+font12()
+							color: #fff
+						ul li
+							text-indent: -14px
+							padding-left: 15px
+    						
+
+
 
 /************** mypageInfo ***************/	
 #content.mypageInfo
