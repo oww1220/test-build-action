@@ -1223,6 +1223,8 @@ header nav > div p span { font-weight: normal; }
 
 .mypage .userpage > div ul li { text-align: center; padding: 20px 20px 30px 20px; margin-top: 10px; width: 100%; height: 100%; position: relative; border: 1px solid #3617ce; border-radius: 30px; background-color: rgba(54, 23, 206, 0.24); }
 
+.mypage .userpage > div ul li + li { margin-top: 25px; }
+
 .mypage .userpage > div ul li.listNone { padding: 81px 0; }
 
 .mypage .userpage > div ul li.listNone strong { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; width: 100%; }
@@ -1234,6 +1236,8 @@ header nav > div p span { font-weight: normal; }
 .mypage .userpage > div ul li div.captureImg img { width: 100px; }
 
 .mypage .userpage > div ul li div img { width: 100%; }
+
+.mypage .userpage > div ul li div.btns-W { margin: 10px 0 0; }
 
 .mypage .userpage > div ul li dl { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; font-family: 'Noto Sans KR black'; }
 
@@ -1503,7 +1507,7 @@ body.fixed { overflow: hidden; position: fixed; }
 
 .ticketAniWrap .ticketAni .winning.add-svg .svg-cont { position: relative; }
 
-.ticketAniWrap .ticketAni .winning.add-svg .winning-lists li { display: none; }
+.ticketAniWrap .ticketAni .winning.add-svg .winning-lists li { display: none; padding-bottom: 50px; }
 
 .ticketAniWrap .ticketAni .winning.add-svg .winning-lists .cover { width: 252px; margin: 0 auto; }
 
