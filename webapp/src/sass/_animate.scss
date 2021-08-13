@@ -1,3 +1,119 @@
+/* 컴파일되는
+	* 여러 줄
+	* 주석 */
+// variable
+$frontColor: #00cdff;
+$backColor: #7d14ff;
+$black: #000000;
+$white: #ffffff;
+$bgColor: #0d1c2f;
+$bgColor02: #6414ff;
+$bgColor03: #171718;
+$bgColor04: #0e1c30;
+$bgColor05: #5e45d8;
+$bgColor06: #1a1a1a;
+$lightGray: rgba(255, 255, 255, 0.4);
+$wrongColor: #ff404e;
+$point: #ff404e;
+$darkGray: #c9c9c9;
+$mainColor: #3617ce;
+$oneColor: #8674e2;
+
+
+//mixin
+@mixin NotoSans () {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+@mixin colorGradation() {
+	color: $white;
+	font-family: 'Noto Sans KR black', sans-serif;
+}
+@mixin borderGradient() {
+	background-color: rgba(54, 23, 206, 0.24);
+	border: 1px solid $mainColor;
+}
+@mixin font12() {
+	font-size: 12px;
+	letter-spacing: -0.24px;
+	line-height: 1.4;
+	font-family: 'Noto Sans KR bold';
+}
+@mixin font14() {
+	font-size: 14px;
+	letter-spacing: -0.28px;
+	line-height: 1.4;
+	font-family: 'Noto Sans KR bold';
+}
+@mixin font16Gradation() {
+	@include colorGradation();
+	font-size: 16px;
+	line-height: 25px;
+	letter-spacing: -0.32px;
+}
+@mixin font16() {
+	font-size: 16px;
+	line-height: 25px;
+	letter-spacing: -0.32px;
+	font-family: 'Noto Sans KR bold';
+}
+@mixin font20() {
+	font-size: 20px;
+	line-height: 1.6;
+	letter-spacing: -0.4px;
+	font-family: 'Noto Sans KR bold';
+}
+@mixin font24Gradation() {
+	@include colorGradation();
+	font-size: 24px;
+	line-height: 1.6;
+	letter-spacing: -0.48px;
+}
+@mixin font24() {
+	font-size: 24px;
+	line-height: 1.6;
+	letter-spacing: -0.48px;
+	font-family: 'Noto Sans KR black';
+}
+@mixin font28() {
+	font-size: 28px;
+	line-height: 1.6;
+	letter-spacing: -0.56px;
+	font-family: 'Noto Sans KR bold';
+}
+@mixin font40() {
+	@include colorGradation();
+	font-size: 40px;
+	line-height: 1.2;
+	letter-spacing: -0.8px;
+}
+@mixin font44() {
+	@include colorGradation();
+	font-size: 44px;
+	line-height: 1.1;
+	letter-spacing: -0.88px;
+}
+@mixin font80() {
+	@include colorGradation();
+	font-size: 80px;
+	line-height: 1.3;
+	letter-spacing: -1.6px;
+}
+@mixin moreArrow() {
+	width: 10px;
+	height: 10px;
+	border-top: 1px solid $white;
+	border-right: 1px solid $white;
+	transform: rotate(45deg);
+}
+
+@mixin BreakWord {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+
+
 #webgl-universe {
     background: radial-gradient(circle farthest-corner at center top, #000, #000);
     position: fixed;
@@ -98,6 +214,75 @@ header nav > div {
     &.hide {
         opacity: 0;
     } 
+}
+
+/* 파트너스 투어 */
+.tour {
+    padding-bottom: 52px;
+    .tourTop {
+        .subTitle {
+            dt {
+                line-height: 1.6;
+            }
+            dd {
+                line-height: 1.2;
+            }
+        }
+        .tourTop-info {
+            margin-top: 27px;
+            P {
+                @include font14();
+                text-align: center;
+                + p {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .tourCont {
+        padding: 101px 8% 0;
+        .tit {
+            @include font24;
+            text-align: center;
+            color: #ff404e;
+        }
+    }
+    .tourCont-list {
+        > li {
+            margin-top: 20px;
+        }
+        .tourCont-in {
+            position: relative;
+            border: 1px solid #3617ce;
+            border-radius: 30px;
+            background-color: rgba(54, 23, 206, 0.24);
+            padding: 25px;
+            > strong {
+                display: block;
+                text-align: center;
+                @include font20;
+            }
+            .cover {
+                width: 204px;
+                margin: 20px auto 0;
+                img {
+                    width: 100%;
+                }
+            }
+            .infos {
+                margin-top: 20px;
+                p {
+                    text-align: center;
+                    @include font14;
+                    color: #7f7d8f;
+                    + p{
+                        margin-top:8px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -223,8 +408,6 @@ body.overlay-hidden {
                 color: #575757;
             }
         }
-
-
         .benefitView-cont {
             margin-top: 20px;
             > dl {
@@ -260,7 +443,6 @@ body.overlay-hidden {
                 text-align: center;
             }
         }
-    
     }
 
     .imageFileView {
@@ -344,6 +526,98 @@ body.overlay-hidden {
 
     }
 
+    .luckyView {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .luckyView-top {
+            background: url('../images/luckyView-particle.png') no-repeat center 5vw;
+            background-size: contain;
+            margin-top: 47px;
+            .sub-tit {
+                @include font16;
+                color: #000;
+                text-align: center;
+            }
+            h4 {
+                @include font40;
+                text-align: center;
+                color: #3617ce;
+                margin-top: 10px;
+            }
+            .cover {
+                padding: 0 8%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 80%;
+                    max-width:400px;
+                }
+            }
+            ul {
+                margin-top:20px;
+                li {
+                    @include font14;
+                    text-align: center;
+                    + li {
+                        margin-top:10px;
+                    }
+                }
+            }
+        }
+
+        .luckyView-list {
+            padding: 0 8%;
+            .list-tit {
+
+            }
+            .list-conts {
+                > ul {
+                    flex-wrap: wrap;
+                    display: flex;
+                    li {
+                        width: calc(50% - 7.5px);
+                        box-sizing: border-box;
+                        background: url('../images/luckyView-bg-stars.png') no-repeat center center;
+                        background-size: cover;
+                        border-radius: 30px;
+                        overflow: hidden;
+                        margin-top: 15px;
+                        &:nth-child(odd) {
+                            margin-right: 7.5px;
+                        }
+                        &:nth-child(even) {
+                            margin-left: 7.5px;
+                        }
+                    }
+                }
+                .cont-in {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-flow: column;
+                    padding: 30px 0;
+                    .cover {
+                        padding: 0 25px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .infos {
+                        padding: 0 5px;
+                        margin-top: 15px;
+                        text-align: center;
+                        @include font12;
+                        @include BreakWord;
+                        color:#fff;
+                        line-height: 1.4;
+                    }
+                }
+            }
+        }
+    }
+
     &.active {
         display: block;
         transform: translateY(0);
@@ -415,6 +689,14 @@ body.fixed {
                 overflow: hidden;
             }
         }
+        .issuanceTicket {
+            span {
+                display: block;
+                @include font12;
+                text-align: center;
+                color: #ff404e;
+            }
+        }
         .winning.add-svg {
             height: 100%;
             .svg-W {
@@ -435,6 +717,33 @@ body.fixed {
             }   
             .svg-cont {
                 position: relative;
+            }
+            .winning-lists {
+                li {
+                    display: none;
+                }
+                .cover {
+                    width: 252px;
+                    margin: 0 auto;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .infos {
+                    margin-top: 30px;
+                    .num {
+                        @include font14;
+                        color:#000;
+                    }
+                    .guide {
+                        @include font12;
+                        color: #ff404e;
+                        margin-top: 4px;
+                    }
+                }
+                .btns-W {
+                    margin-top: 30px;
+                }
             }
         }
 
@@ -464,6 +773,32 @@ body.fixed {
         top: 23px;
     }
     
+}
+
+.btns-W {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    .btn-normal {
+        width: 275px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 40px;
+        border-radius: 30px;
+        color: #fff;
+        @include font16;
+        &.red {
+            background-color: #ff404e;
+        }
+        &.blue {
+            background-color: #3617ce;
+        }
+    }
+    button + button {
+        margin-top: 10px;
+    }
 }
 
 /*add svg*/
