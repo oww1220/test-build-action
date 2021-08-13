@@ -2871,6 +2871,8 @@ $oneColor: #8674e2
 					border: 1px solid $mainColor
 					border-radius: 30px
 					background-color: rgba(54, 23, 206, 0.24)
+					& + li 
+						margin-top: 25px
 					&.listNone
 						padding: 81px 0
 						strong
@@ -2890,7 +2892,8 @@ $oneColor: #8674e2
 								width: 100px
 						img
 							width: 100%
-
+						&.btns-W 
+							margin: 10px 0 0
 					dl
 						+font16()
 						font-family: 'Noto Sans KR black'
