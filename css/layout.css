@@ -690,11 +690,11 @@ header nav > div p span { font-weight: normal; }
 
 .ticketAniWrap .ticketAni.on .issuanceTicket.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-.ticketAniWrap .ticketAni.on .issuanceTicket dl { text-align: center; padding-bottom: 160px; background: url("../images/all.png") no-repeat 0 0; background-position: center 210px; background-size: 247px auto; }
+.ticketAniWrap .ticketAni.on .issuanceTicket dl { text-align: center; padding-bottom: 120px; background: url("../images/img-gift-ticket-bg.png") no-repeat 0 0; background-position: center 130px; background-size: 375px auto; }
 
 .ticketAniWrap .ticketAni.on .issuanceTicket dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; letter-spacing: -0.8px; line-height: 48px; color: #3617ce; }
 
-.ticketAniWrap .ticketAni.on .issuanceTicket dl dd { font-size: 16px; margin-top: 10px; font-family: 'Noto Sans KR black'; color: #000000; line-height: 1.6; letter-spacing: -0.32px; }
+.ticketAniWrap .ticketAni.on .issuanceTicket dl dd { font-size: 16px; margin-top: 10px; font-family: 'Noto Sans KR black'; color: #000000; line-height: 1.6; letter-spacing: -0.28px; color: #3617ce; }
 
 .ticketAniWrap .ticketAni.on .issuanceTicket a { text-align: center; width: 203px; }
 
@@ -706,7 +706,7 @@ header nav > div p span { font-weight: normal; }
 
 .ticketAniWrap .ticketAni.on .winning::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 160px; background: url("../images/img-particle.png") no-repeat 0 0; background-size: 92% auto; background-position: center 20px; display: none; }
 
-.ticketAniWrap .ticketAni.on .winning dl { text-align: center; padding: 0 8%; margin-bottom: 50px; padding-top: 122px; }
+.ticketAniWrap .ticketAni.on .winning dl { text-align: center; padding: 0 8%; margin-bottom: 30px; padding-top: 122px; }
 
 .ticketAniWrap .ticketAni.on .winning dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; color: #3617ce; }
 
@@ -714,7 +714,7 @@ header nav > div p span { font-weight: normal; }
 
 .ticketAniWrap .ticketAni.on .winning div { text-align: center; }
 
-.ticketAniWrap .ticketAni.on .winning .mms { font-size: 12px; font-family: 'Noto Sans KR black'; color: #000000; line-height: 1.4; letter-spacing: -0.24px; margin-top: 51px; }
+.ticketAniWrap .ticketAni.on .winning .mms { font-size: 12px; font-family: 'Noto Sans KR black'; color: #000000; line-height: 1.4; letter-spacing: -0.24px; margin-top: 20px; }
 
 /************** delivery ***************/
 .delivery { margin-bottom: 100px; }
@@ -966,7 +966,7 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent ul .leftTab .passAllMerit ul li.listGoogle { background: linear-gradient(100deg, rgba(114, 228, 215, 0.329), rgba(0, 123, 139, 0.336)); }
 
-.spacePass .passTab .tabContent ul .leftTab .passAllMerit ul li.listGoogle::before { content: ""; position: absolute; bottom: 14px; right: 18px; width: 26px; height: 53px; background: url("../images/google_logo.png") no-repeat 0 0; background-size: 100%; }
+.spacePass .passTab .tabContent ul .leftTab .passAllMerit ul li.listGoogle::before { content: ""; position: absolute; bottom: 14px; right: 18px; width: 67px; height: 39.4px; background: url("../images/svg/google_logo.svg") no-repeat 0 0; background-size: 100%; }
 
 .spacePass .passTab .tabContent ul .leftTab .passAllMerit ul li a { display: block; color: #ffffff; padding: 19px 27px; }
 
@@ -1286,6 +1286,7 @@ footer > div ul li:first-child:after { content: ""; position: absolute; top: 1px
 
 footer > div ul li a { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #ffffff; }
 
+/* 컴파일되는 여러 줄 주석 */
 #webgl-universe { background: radial-gradient(circle farthest-corner at center top, #000, #000); position: fixed; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; z-index: -3; }
 
 #webgl-planet { width: 100% !important; background-color: transparent; }
@@ -1313,6 +1314,39 @@ header nav > div { background: none; }
 #content { -webkit-transition: opacity .5s; transition: opacity .5s; }
 
 #content.hide { opacity: 0; }
+
+/* 파트너스 투어 */
+.tour { padding-bottom: 52px; }
+
+.tour .tourTop .subTitle dt { line-height: 1.6; }
+
+.tour .tourTop .subTitle dd { line-height: 1.2; }
+
+.tour .tourTop .tourTop-info { margin-top: 27px; }
+
+.tour .tourTop .tourTop-info P { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; text-align: center; }
+
+.tour .tourTop .tourTop-info P + p { margin-top: 10px; }
+
+.tour .tourCont { padding: 101px 8% 0; }
+
+.tour .tourCont .tit { font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; font-family: 'Noto Sans KR black'; text-align: center; color: #ff404e; }
+
+.tour .tourCont-list > li { margin-top: 20px; }
+
+.tour .tourCont-list .tourCont-in { position: relative; border: 1px solid #3617ce; border-radius: 30px; background-color: rgba(54, 23, 206, 0.24); padding: 25px; }
+
+.tour .tourCont-list .tourCont-in > strong { display: block; text-align: center; font-size: 20px; line-height: 1.6; letter-spacing: -0.4px; font-family: 'Noto Sans KR bold'; }
+
+.tour .tourCont-list .tourCont-in .cover { width: 204px; margin: 20px auto 0; }
+
+.tour .tourCont-list .tourCont-in .cover img { width: 100%; }
+
+.tour .tourCont-list .tourCont-in .infos { margin-top: 20px; }
+
+.tour .tourCont-list .tourCont-in .infos p { text-align: center; font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #7f7d8f; }
+
+.tour .tourCont-list .tourCont-in .infos p + p { margin-top: 8px; }
 
 body.overlay-hidden { overflow: hidden; }
 
@@ -1398,6 +1432,42 @@ body.overlay-hidden { overflow: hidden; }
 
 .layer-rocket .imageFileView .on { display: block; }
 
+.layer-rocket .luckyView { position: relative; width: 100%; height: 100%; }
+
+.layer-rocket .luckyView .luckyView-top { background: url("../images/luckyView-particle.png") no-repeat center 5vw; background-size: contain; margin-top: 47px; }
+
+.layer-rocket .luckyView .luckyView-top .sub-tit { font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; color: #000; text-align: center; }
+
+.layer-rocket .luckyView .luckyView-top h4 { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; line-height: 1.2; letter-spacing: -0.8px; text-align: center; color: #3617ce; margin-top: 10px; }
+
+.layer-rocket .luckyView .luckyView-top .cover { padding: 0 8%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.layer-rocket .luckyView .luckyView-top .cover img { width: 80%; max-width: 400px; }
+
+.layer-rocket .luckyView .luckyView-top ul { margin-top: 20px; }
+
+.layer-rocket .luckyView .luckyView-top ul li { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; text-align: center; }
+
+.layer-rocket .luckyView .luckyView-top ul li + li { margin-top: 10px; }
+
+.layer-rocket .luckyView .luckyView-list { padding: 0 8%; }
+
+.layer-rocket .luckyView .luckyView-list .list-conts > ul { -ms-flex-wrap: wrap; flex-wrap: wrap; display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.layer-rocket .luckyView .luckyView-list .list-conts > ul li { width: calc(50% - 7.5px); -webkit-box-sizing: border-box; box-sizing: border-box; background: url("../images/luckyView-bg-stars.png") no-repeat center center; background-size: cover; border-radius: 30px; overflow: hidden; margin-top: 15px; }
+
+.layer-rocket .luckyView .luckyView-list .list-conts > ul li:nth-child(odd) { margin-right: 7.5px; }
+
+.layer-rocket .luckyView .luckyView-list .list-conts > ul li:nth-child(even) { margin-left: 7.5px; }
+
+.layer-rocket .luckyView .luckyView-list .list-conts .cont-in { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; padding: 30px 0; }
+
+.layer-rocket .luckyView .luckyView-list .list-conts .cont-in .cover { padding: 0 25px; }
+
+.layer-rocket .luckyView .luckyView-list .list-conts .cont-in .cover img { width: 100%; }
+
+.layer-rocket .luckyView .luckyView-list .list-conts .cont-in .infos { padding: 0 5px; margin-top: 15px; text-align: center; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; word-break: break-all; word-wrap: break-word; color: #fff; line-height: 1.4; }
+
 .layer-rocket.active { display: block; -webkit-transform: translateY(0); transform: translateY(0); }
 
 .layer-rocket.low-zIndex { z-index: 45; }
@@ -1423,6 +1493,8 @@ body.fixed { overflow: hidden; position: fixed; }
 
 .ticketAniWrap .ticketAni .ticketing.add-svg .svg-W { margin: 0 auto; max-width: 500px; height: 500px; overflow: hidden; }
 
+.ticketAniWrap .ticketAni .issuanceTicket span { display: block; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; text-align: center; color: #ff404e; }
+
 .ticketAniWrap .ticketAni .winning.add-svg { height: 100%; }
 
 .ticketAniWrap .ticketAni .winning.add-svg .svg-W { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: absolute; width: 100%; top: 50%; left: 50%; height: 100%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); overflow: hidden; }
@@ -1430,6 +1502,20 @@ body.fixed { overflow: hidden; position: fixed; }
 .ticketAniWrap .ticketAni .winning.add-svg .svg-W > div { -webkit-transform: scale(1.7); transform: scale(1.7); -webkit-transform-origin: 60% 60%; transform-origin: 60% 60%; }
 
 .ticketAniWrap .ticketAni .winning.add-svg .svg-cont { position: relative; }
+
+.ticketAniWrap .ticketAni .winning.add-svg .winning-lists li { display: none; }
+
+.ticketAniWrap .ticketAni .winning.add-svg .winning-lists .cover { width: 252px; margin: 0 auto; }
+
+.ticketAniWrap .ticketAni .winning.add-svg .winning-lists .cover img { width: 100%; }
+
+.ticketAniWrap .ticketAni .winning.add-svg .winning-lists .infos { margin-top: 30px; }
+
+.ticketAniWrap .ticketAni .winning.add-svg .winning-lists .infos .num { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #000; }
+
+.ticketAniWrap .ticketAni .winning.add-svg .winning-lists .infos .guide { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #ff404e; margin-top: 4px; }
+
+.ticketAniWrap .ticketAni .winning.add-svg .winning-lists .btns-W { margin-top: 30px; }
 
 .ticketAniWrap .ticketAni.on { -webkit-animation: none; animation: none; }
 
@@ -1442,6 +1528,16 @@ body.fixed { overflow: hidden; position: fixed; }
 .ticketAniWrap .ticketAni.on .winning.on::before { display: none; }
 
 .ticketAniWrap .closeBtn { top: 23px; }
+
+.btns-W { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; }
+
+.btns-W .btn-normal { width: 275px; height: 50px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 12px 40px; border-radius: 30px; color: #fff; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; }
+
+.btns-W .btn-normal.red { background-color: #ff404e; }
+
+.btns-W .btn-normal.blue { background-color: #3617ce; }
+
+.btns-W button + button { margin-top: 10px; }
 
 /*add svg*/
 .ticket .ticketParticipate ul li.step01 .add-svg { background-image: none; padding: 0; }
