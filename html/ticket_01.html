@@ -105,13 +105,13 @@
 						<input type="checkbox" id="agree01">
 						<label for="agree01">체크</label>
 						<label for="agree01">개인정보처리방침 및 이용약관 동의</label>
-						<a href="#" target="_blank">자세히보기</a>
+						<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-agree">자세히보기</a>
 					</li>
 					<li>
 						<input type="checkbox" id="agree02">
 						<label for="agree02">체크</label>
 						<label for="agree02">제 3자 정보제공 및 마케팅 수신</label>
-						<a href="#" target="_blank">자세히보기</a>
+						<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-receive">자세히보기</a>
 					</li>
 					<li>
 						<input type="checkbox" id="agree03">
@@ -125,6 +125,45 @@
 		</div>
 	</div>
 </body>
+	<div class="layer-rocket rocket-obj-agree">
+	<div class="layer-top">
+		<div class="btn-rocket-open">
+			<img src="../images/bg-rocket.png" alt="rocket"/>
+		</div>
+		<button type="button" class="btn-rocket-close" data-layer="rocket-obj-agree">
+			close rocket layer
+		</button>
+	</div>
+	<div class="layer-cont">
+		<div class="layer-cont-in">
+
+			<div class="agreeView">
+				
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="layer-rocket rocket-obj-receive">
+	<div class="layer-top">
+		<div class="btn-rocket-open">
+			<img src="../images/bg-rocket.png" alt="rocket"/>
+		</div>
+		<button type="button" class="btn-rocket-close" data-layer="rocket-obj-receive">
+			close rocket layer
+		</button>
+	</div>
+	<div class="layer-cont">
+		<div class="layer-cont-in">
+
+			<div class="agreeView">
+				
+			</div>
+
+		</div>
+	</div>
+</div>
 	
 <script type="text/javascript" src="../bundle/jquery.chunk.js"></script>
 <script type="text/javascript" src="../bundle/three.chunk.js"></script>
