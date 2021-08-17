@@ -39,3 +39,5 @@ jobs:
       run: gulp build
     - name: build complete
       run: echo "build complete"
+    - name: deploy
+      run: gh-pages -d webapp/dist
