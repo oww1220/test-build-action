@@ -563,7 +563,7 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketOpen .eventContent p.second { padding-top: 238px; position: relative; }
 
-.ticket .ticketOpen .eventContent p.second::after { content: ""; width: 100%; height: 100%; position: absolute; top: -80px; left: 0; background: url("../images/Ticket_KV 1.png") no-repeat 0 0; background-position: center top; background-size: 100%; }
+.ticket .ticketOpen .eventContent p.second::after { content: ""; width: 100%; height: 100%; position: absolute; top: -80px; left: 0; background: url("../images/Ticket_KV_1.png") no-repeat 0 0; background-position: center top; background-size: 100%; }
 
 .ticket .ticketOpen .eventContent .goBtn { background-color: #ff404e; }
 
@@ -1507,6 +1507,20 @@ body.overlay-hidden { overflow: hidden; }
 .layer-rocket .luckyView .luckyView-list .list-conts .cont-in .cover img { width: 100%; }
 
 .layer-rocket .luckyView .luckyView-list .list-conts .cont-in .infos { padding: 0 5px; margin-top: 15px; text-align: center; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; word-break: break-all; word-wrap: break-word; color: #fff; line-height: 1.4; }
+
+.layer-rocket .agreeView { position: relative; width: 100%; height: 100%; padding: 50px 8% 0; }
+
+.layer-rocket .agreeView .agree-col + .agree-col { margin-top: 30px; }
+
+.layer-rocket .agreeView .agree-col .tit { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; margin-bottom: 10px; }
+
+.layer-rocket .agreeView .agree-col .cont { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; margin-bottom: 20px; }
+
+.layer-rocket .agreeView .agree-col table { width: 100%; border-collapse: collapse; border-spacing: 0; border: 0 none; word-break: keep-all; }
+
+.layer-rocket .agreeView .agree-col table th { word-break: break-all; word-wrap: break-word; border: 1px solid #000; white-space: normal; padding: 11px 5px; text-align: center; }
+
+.layer-rocket .agreeView .agree-col table td { word-break: break-all; word-wrap: break-word; border: 1px solid #000; white-space: normal; padding: 11px 5px; text-align: center; }
 
 .layer-rocket.active { display: block; -webkit-transform: translateY(0); transform: translateY(0); }
 
