@@ -28,4 +28,6 @@ jobs:
     - name: Install Dependencies    # 의존 파일 설치
       run: npm i
     - name: Generate build
-      run: npm run build
+      run: gulp build
+    - name: build complete
+      run: echo "build complete"
