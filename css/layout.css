@@ -1382,7 +1382,7 @@ header nav > div { background: none; }
 
 .tour .tourCont-list .tourCont-in .infos p { text-align: center; font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #7f7d8f; }
 
-.tour .tourCont-list .tourCont-in .infos p + p { margin-top: 8px; }
+.tour .tourCont-list .tourCont-in .infos p + p { margin-top: 20px; }
 
 body.overlay-hidden { overflow: hidden; }
 
