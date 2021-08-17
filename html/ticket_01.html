@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="../images/svg/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../images/svg/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<title>T우주</title>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- Header -->
+		<header>
+	<!--logo-->
+	<h1>
+		<a href="/main"><img src="./../images/logo_main.png" alt="T우주 로고"></a>
+	</h1>
+	<!-- siteMap -->
+	<nav>
+		<a href="javascript:void(0)" class="btn-drawer-open">네비게이션</a>
+		<div class="drawer-cont">
+			<a href="javascript:void(0)" class="btn-drawer-close">닫기</a>
+			<ul>
+				<li>
+					<a href="/main">HOME</a>
+				</li>
+				<li>
+					<a href="/pass">우주패스 소개</a>
+				</li>
+				<li>
+					<a href="/ticketbooth">우주 티켓부스 이벤트</a>
+				</li>
+				<li>
+					<a href="/delivery">우주 택배 이벤트</a>
+				</li>
+				<li>
+					<a href="/madmonster">T우주X매드몬스터</a>
+				</li>
+				<li>
+					<a href="/partner">우주 파트너스 전체보기</a>
+				</li>
+				<li>
+					<a href="/mypage">마이페이지</a>
+				</li>
+			</ul>
+			<a href="javascript:;" class="logoutBtn">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<div class="bg-overlay"></div>
+		<!-- // Header -->
+		<canvas id="webgl-universe"></canvas>
+		<div id="content" class="ticketInfo">
+			<article class="userInfo">
+				<div class="olklPass">
+					<div>우주패스를 구독했다면<br />UNV831편에 탑승하는 티켓을 발급받으세요.
+					</div>
+					<div>여러분의 좌석번호로 추첨을 통해<br />글로벌 우주 파트너스 투어 기회를 드립니다.
+					</div>
+				</div>
+				<h4>연락처 정보를 알려주세요.</h4>
+				<div class="userInfo-input">
+					<!-- 값 오류시 class="wrongValue"추가-->
+					<div class="col-3 input-effect">
+						<input class="effect-24" type="text" placeholder="이름">
+						<label>이름</label>
+						<span class="focus-bg"></span>
+						<strong>이름을 입력해주세요.</strong>
+					</div>
+					<div class="telecom">
+						<span class="select">
+							<a href="#;" class="def"></a>
+							<a href="#;" class="dropdown">▼</a>
+						</span>
+						<select name="" id="sel">
+							<option value="통신사">통신사</option>
+							<option value="SKT">SKT</option>
+							<option value="KT">KT</option>
+							<option value="LG U+">LG U+</option>
+						</select>
+						<strong>통신사를 선택해주세요.</strong>
+					</div>
+					<div class="col-3 input-effect">
+						<input class="effect-24 phone" type="text" placeholder="휴대폰번호" name="phone" maxlength="13" autocomplete="off" >
+						<label>휴대폰번호</label>
+						<span class="focus-bg"></span>
+						<strong>휴대폰번호를 입력해주세요.</strong>
+					</div>
+					<div class="col-3 input-effect wrongValue">
+						<input class="effect-24" type="text" placeholder="인증번호">
+						<label>인증번호</label>
+						<span class="focus-bg"></span>
+						<a href="javascript:;" class="reissuance">인증번호 재발급</a>
+						<strong>인증번호 발급을 해주세요.</strong>
+						<em>2:32</em>
+					</div>
+				</div>
+				<div class="numberIssuance">
+					<a href="javascript:;" class="goBtn">인증번호 발급</a>
+				</div>
+				<ul>
+					<li>
+						<input type="checkbox" id="agree01">
+						<label for="agree01">체크</label>
+						<label for="agree01">개인정보처리방침 및 이용약관 동의</label>
+						<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-agree">자세히보기</a>
+					</li>
+					<!-- <li>
+						<input type="checkbox" id="agree02">
+						<label for="agree02">체크</label>
+						<label for="agree02">제 3자 정보제공 및 마케팅 수신</label>
+						<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-receive">자세히보기</a>
+					</li> -->
+					<li>
+						<input type="checkbox" id="agree03">
+						<label for="agree03">체크</label>
+						<label for="agree03">본인은 상기 내용을 숙지하였으며 이에 동의합니다.</label>
+					</li>
+				</ul>
+				<a href="javascript:;" class="goBtn">티켓 발급하기</a>
+			</article>
+			
+		</div>
+	</div>
+</body>
+	<div class="layer-rocket rocket-obj-agree">
+	<div class="layer-top">
+		<div class="btn-rocket-open">
+			<img src="../images/bg-rocket.png" alt="rocket"/>
+		</div>
+		<button type="button" class="btn-rocket-close" data-layer="rocket-obj-agree">
+			close rocket layer
+		</button>
+	</div>
+	<div class="layer-cont">
+		<div class="layer-cont-in">
+
+			<div class="agreeView">
+
+				<div class="agree-col">
+					<div class="tit">개인정보 수집 · 이용  동의</div>
+					<div class="cont">
+						개인정보의 수집 · 이용 목적 / 기간 / 수집 거부의 권리
+					</div>
+					<div class="cont">
+						SK텔레콤(주)는 소비자의 개인정보보호를 소중하게 생각하고 이를 보호하기 위하여 항상 최선을 다해 노력하고 있습니다. 아래는 ‘우주 티켓부스 이벤트 / 우주 택배 이벤트’ (이하 “이벤트”)의 이벤트 진행 및 이벤트 관련 안내를 위한 연락 등을 목적으로 사용되는 개인정보에 대한 수집 및 이용 동의 확인 절차입니다
+					</div>
+					<div class="cont">
+						<table>
+							<colgroup>
+								<col style="width:33%">
+								<col style="width:33%">
+								<col style="width:34%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>수집/이용 목적</th>
+									<th>수집 항목</th>
+									<th>보유 기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										이벤트 진행, 고객 응대, 당첨자 확인 및 안내
+									</td>
+									<td>
+										이름, 휴대전화 번호, 통신사
+									</td>
+									<td>
+										이벤트 종료 후 
+										이벤트 당첨자 확인 및
+										응대를 위해 당첨자 발표 후 60일간 보관 후 파기
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="cont">
+						※ 당첨 고객에게는 경품 발송 및 제세 처리를 위한 개인정보(주소, 신분증 사본 등)를 추가 수집 및 이용에 대한 동의를 요구할 수 있습니다.
+					</div>
+					<div class="cont">
+						※ 본 동의는 이벤트 신청을 위한 개인정보 수집/이용에 대한 동의로서, 동의를 거부 할 권리가 있으나, 동의하지 않으실 경우 이벤트에 신청하실 수 없습니다.
+					</div>
+					<div class="cont">
+						※ 법령에 따른 개인정보의 수집/이용, 계약의 이행/편의증진을 위한 개인정보 처리위탁 및 개인정보처리와 관련된 일반사항은 서비스의 개인정보처리방침에 따릅니다. 
+					</div>
+				</div>
+
+				<div class="agree-col">
+					<div class="tit">개인정보 처리 위탁에 대한 동의 안내</div>
+					<div class="cont">
+						개인정보의 수집 · 이용 목적 / 기간 / 수집 거부의 권리
+					</div>
+					<div class="cont">
+						개인정보 처리의 위탁<br/>
+						SK텔레콤(주)는 ‘우주 티켓부스 이벤트’ (이하 “이벤트”) 진행을 위해 참가자의 개인 정보를 외부에 위탁하여 처리하고 있으며, 관계법령에 따라 위탁 계약 시, 개인정보가 안전하게 관리될 수 있도록 규정하고 있습니다. 동 이벤트의 개인정보취급 수탁자와 그 업무의 내용은 아래와 같습니다.
+					</div>
+					<div class="cont">
+						<table>
+							<colgroup>
+								<col style="width:50%">
+								<col style="width:50%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>수탁자</th>
+									<th>목적</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										(주)에스엠컬처앤콘텐츠 광고사업부문
+									</td>
+									<td>
+										총괄 대행
+									</td>
+								</tr>
+								<tr>
+									<td>
+										(주)디플렛폼
+									</td>
+									<td>
+										이벤트 시스템 운영, 당첨자 추첨, 본인확인, 고객 상담 및 경품 배송
+									</td>
+								</tr>
+								<tr>
+									<td>
+										NICE평가정보(주)
+									</td>
+									<td>
+										본인 확인
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="cont">
+						※ 본 동의는 이벤트 신청을 위한 개인정보 처리위탁에 대한 동의로서, 동의를 거부 할 권리가 있으나, 동의하지 않으실 경우 이벤트에 신청하실 수 없습니다.
+					</div>
+					<div class="cont">
+						※ SK텔레콤(주)의 상세한 개인정보처리방침은 <a href="https://www.sktelecom.com/view/footer/privacy.do" target="_blank">https://www.sktelecom.com/view/footer/privacy.do</a> 에서 확인하실 수 있습니다.
+					</div>
+
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!--
+<div class="layer-rocket rocket-obj-receive">
+	<div class="layer-top">
+		<div class="btn-rocket-open">
+			<img src="../images/bg-rocket.png" alt="rocket"/>
+		</div>
+		<button type="button" class="btn-rocket-close" data-layer="rocket-obj-receive">
+			close rocket layer
+		</button>
+	</div>
+	<div class="layer-cont">
+		<div class="layer-cont-in">
+
+			<div class="agreeView">
+
+				<div class="agree-col">
+					<div class="tit">정보제공및 마케팅 수신동의</div>
+					<div class="cont">
+						정보제공및 마케팅 수신동의
+					</div>
+					<div class="cont">
+						SK텔레콤(주)는 소비자의 개인정보보호를 소중하게 생각하고 이를 보호하기 위하여 항상 최선을 다해 노력하고 있습니다. 아래는 ‘우주 티켓부스 이벤트 / 우주 택배 이벤트’ (이하 “이벤트”)의 이벤트 진행 및 이벤트 관련 안내를 위한 연락 등을 목적으로 사용되는 개인정보에 대한 수집 및 이용 동의 확인 절차입니다
+					</div>
+					
+				</div>
+
+				
+				
+			</div>
+
+		</div>
+	</div>
+</div>-->
+	
+<script type="text/javascript" src="../bundle/jquery.chunk.js"></script>
+<script type="text/javascript" src="../bundle/three.chunk.js"></script>
+<script type="text/javascript" src="../bundle/vendors.chunk.js"></script>
+<script type="text/javascript" src="../bundle/main.chunk.js"></script>
+<!-- <script src="../js/jquery.min.js"></script> -->
+<script src="../js/swiper.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+	/***통신사 selectbox****/
+	$('.select').append("<ul class=options style='display:none;'></ul>");
+
+
+	//변수 설정
+	var sel = $('.select');
+	var opts = $('.select > .options');
+	var btn = $('.select > .dropdown');
+	var real = $('#sel');
+	var real_opt = real.find('option');
+
+	$('.userInfo p').text(real_opt.eq(0).text());
+
+	//초기세팅
+	for(var i=0; i<real_opt.length; i++){
+		$('.select').find('> .options').append('<li><a href=javascript:;></a></li>');
+			if(i === 0){
+				sel.find(' > .def').text(real_opt.eq(i).text());
+			opts.find('li').eq(0).find('a').text(real_opt.eq(i).val());
+		} else if(i >= 1) {
+			opts.find('li').eq(i).find('a').text(real_opt.eq(i).val());
+		}
+	}
+
+
+	//내용출력칸, 버튼 을 클릭하면
+	sel.on('click','.def, .dropdown', function(e){
+		e.stopPropagation();
+		opts.slideToggle('fast').toggleClass('on');
+		if(opts.hasClass('on')) btn.text('▲');
+	});
+
+	//옵션리스트 중 하나를 클릭하면
+	opts.on('click','li', function(e){
+		e.stopPropagation();
+		var idx = $(this).index();
+		var t = $(this).text();
+		sel.find('.def').text(t);
+		opts.slideToggle('fast').removeClass('on');
+		btn.text('▼');
+		//실제 셀렉트 박스 변경
+		real_opt.eq(idx).attr('selected','selected').siblings().removeAttr('selected');
+	});
+
+	//window를 클릭하면
+	$(window).on('click', function(e){
+		if(opts.hasClass('on'))
+		opts.slideToggle('fast').removeClass('on');
+		btn.text('▼');
+		$(".select").addClass("radius");
+	});
+	
+	$(".select a").click(function(){
+		if($(".options").hasClass("on")){
+			$(".select").addClass("radius");
+		}else{
+			$(".select").addClass("on");
+			$(".select").removeClass("radius");
+		}
+	})
+
+	//핸드폰 번호 입력
+	$('.phone').keydown(function(event) {
+		var key = event.charCode || event.keyCode || 0;
+		$text = $(this);
+		if (key !== 8 && key !== 9) {
+			if ($text.val().length === 3) {
+				$text.val($text.val() + '-');
+			}
+			if ($text.val().length === 8) {
+				$text.val($text.val() + '-');
+			}
+		}
+ 
+    	return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));          
+	});
+
+	// JavaScript for label effects only
+	$(function(){
+		$(".col-3 input").val("");
+		
+		$(".input-effect input").focusout(function(){
+			if($(this).val() != ""){
+				$(this).addClass("has-content");
+			}else{
+				$(this).removeClass("has-content");
+			}
+		});
+	});
+
+
+
+	/*로티*/
+	// aniObj.play(); 메소드 호출로 로티 플레이!
+	// if (document.getElementById('lottie15')) {
+    //     var aniObj = CommonUI.Lottie.init({
+    //         elem: document.getElementById('lottie15'),
+    //         loopFlag: false,
+    //         autoplayFlag: false,
+    //         pathString: '../bundle/json/15_data.json',
+    //     });
+	// 	console.log(aniObj);
+    // }
+
+
+
+</script>
+</html>

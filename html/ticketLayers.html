@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="../images/svg/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../images/svg/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<title>T우주</title>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- Header -->
+		<header>
+	<!--logo-->
+	<h1>
+		<a href="/main"><img src="./../images/logo_main.png" alt="T우주 로고"></a>
+	</h1>
+	<!-- siteMap -->
+	<nav>
+		<a href="javascript:void(0)" class="btn-drawer-open">네비게이션</a>
+		<div class="drawer-cont">
+			<a href="javascript:void(0)" class="btn-drawer-close">닫기</a>
+			<ul>
+				<li>
+					<a href="/main">HOME</a>
+				</li>
+				<li>
+					<a href="/pass">우주패스 소개</a>
+				</li>
+				<li>
+					<a href="/ticketbooth">우주 티켓부스 이벤트</a>
+				</li>
+				<li>
+					<a href="/delivery">우주 택배 이벤트</a>
+				</li>
+				<li>
+					<a href="/madmonster">T우주X매드몬스터</a>
+				</li>
+				<li>
+					<a href="/partner">우주 파트너스 전체보기</a>
+				</li>
+				<li>
+					<a href="/mypage">마이페이지</a>
+				</li>
+			</ul>
+			<a href="javascript:;" class="logoutBtn">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<div class="bg-overlay"></div>
+		<!-- // Header -->
+		<canvas id="webgl-universe"></canvas>
+		<div id="content" class="ticketInfo">
+			<article class="userInfo">
+				
+				<a href="javascript:;" class="goBtn" data-celebration="1">(우주패스all)티켓 발급</a>
+				<a href="javascript:;" class="goBtn" data-celebration="2">(우주패스mini)티켓 발급</a>
+				<a href="javascript:;" class="goBtn" data-celebration="3">(꾸까)티켓 발급</a>
+				<a href="javascript:;" class="goBtn" data-celebration="4">(톤28)티켓 발급</a>
+				<a href="javascript:;" class="goBtn" data-celebration="5">(어바웃펫)티켓 발급</a>
+				<a href="javascript:;" class="goBtn" data-celebration="6">(모두의셔틀)티켓 발급</a>
+				<a href="javascript:;" class="goBtn" data-celebration="7">(사운드짐)티켓 발급</a>
+				<a href="javascript:;" class="goBtn" data-celebration="8">(보틀웍스)티켓 발급</a>
+				<a href="javascript:;" class="goBtn" data-celebration="9">(T모빌리티)티켓 발급</a>
+
+			</article>
+			
+		</div>
+	</div>
+</body>
+
+	<article class="ticketAniWrap">
+	<a href="javascript:void(0);" class="closeBtn">닫기</a>
+	<div class="ticketAni">
+
+		<!-- 1. 티켓 발급중 -->
+		<div class="ticketing add-svg">
+			<h5>티켓을<br />발급중입니다.</h5>
+			<div class="svg-W">
+				<div id="lottie11"></div>
+			</div>
+		</div>
+		<!--// 1. 티켓 발급중 -->
+
+		<!-- 2. 티켓 발급완료 -->
+		<div class="issuanceTicket">
+			<dl>
+				<dt>티켓 발급이<br />완료되었습니다.</dt>
+				<dd>우주 럭키박스를 열고 추가 혜택도 받아보세요!</dd>
+			</dl>
+			<span>*좌석번호는 마이페이지에서 확인가능합니다.</span>
+			<a href="javascript:;" class="goBtn">우주 럭키박스 열기</a>
+		</div>
+		<!-- // 2. 티켓 발급완료 -->
+
+		<!-- 3. 선물지급! -->
+		<div class="winning add-svg">
+			<div class="svg-W">
+				<div id="lottie15"></div>
+			</div>
+			<div class="svg-cont">
+
+				<ul class="winning-lists">
+					<!-- all -->
+					<li>
+						<dl>
+							<dt>축하합니다!</dt>
+							<dd>
+								우주패스 all 무료 구독권 1개월을<br/>
+								획득하셨습니다.
+							</dd>
+						</dl>
+						<div class="cover">
+							<img src="../images/winning-passAll.png" alt="ticket">
+						</div>
+						<div class="mms">해당 리워드는 9월 15일 MMS로<br />일괄 전송 예정입니다.</div>
+					</li>
+
+					<!-- mini -->
+					<li>
+						<dl>
+							<dt>축하합니다!</dt>
+							<dd>
+								우주패스 mini 무료 구독권 1개월을<br/>
+								획득하셨습니다.
+							</dd>
+						</dl>
+						<div class="cover">
+							<img src="../images/winning-passMini.png" alt="ticket">
+						</div>
+						<div class="mms">해당 리워드는 9월 15일 MMS로<br />일괄 전송 예정입니다.</div>
+					</li>
+
+					<!-- 꾸까 -->
+					<li>
+						<dl>
+							<dt>축하합니다!</dt>
+							<dd>
+								꾸까 10% 할인 쿠폰 (최대 5천원)을<br/>
+								획득하셨습니다.
+							</dd>
+						</dl>
+						<div class="cover">
+							<img src="../images/winning-kukka.png" alt="ticket">
+						</div>
+
+						<div class="infos">
+							<div class="num">
+								쿠폰 번호 : W54Y8LG5AIHX
+							</div>
+							<div class="guide">
+								*쿠폰 번호는 마이페이지에서 확인가능합니다.
+							</div>
+						</div>
+						<div class="btns-W">
+							<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+							<button type="button" class="btn-normal blue">쿠폰 사용하기</button>
+						</div>
+					</li>
+
+					<!-- 톤28 -->
+					<li>
+						<dl>
+							<dt>축하합니다!</dt>
+							<dd>
+								톤28 생애 첫 맞춤 구독 1+1 쿠폰을<br/>
+								획득하셨습니다.
+							</dd>
+						</dl>
+						<div class="cover">
+							<img src="../images/winning-toun28.png" alt="ticket">
+						</div>
+
+						<div class="infos">
+							<div class="num">
+								쿠폰 번호 : TOUN283000M40IS
+							</div>
+							<div class="guide">
+								*쿠폰 번호는 마이페이지에서 확인가능합니다.
+							</div>
+						</div>
+						<div class="btns-W">
+							<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+							<button type="button" class="btn-normal blue">쿠폰 사용하기</button>
+						</div>
+					</li>
+
+					<!-- 어바웃펫 -->
+					<li>
+						<dl>
+							<dt>축하합니다!</dt>
+							<dd>
+								어바웃펫 3천원 할인 쿠폰을<br/>
+								획득하셨습니다.
+							</dd>
+						</dl>
+						<div class="cover">
+							<img src="../images/winning-aboutpet.png" alt="ticket">
+						</div>
+
+						<div class="infos">
+							<div class="num">
+								쿠폰 번호 : 영문숫자 16자리
+							</div>
+							<div class="guide">
+								*쿠폰 번호는 마이페이지에서 확인가능합니다.
+							</div>
+						</div>
+						<div class="btns-W">
+							<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+							<button type="button" class="btn-normal blue">쿠폰 사용하기</button>
+						</div>
+					</li>
+
+					<!-- 모두의셔틀 -->
+					<li>
+						<dl>
+							<dt>축하합니다!</dt>
+							<dd>
+								모두의셔틀 1만원 할인을<br/>
+								획득하셨습니다.
+							</dd>
+						</dl>
+						<div class="cover">
+							<img src="../images/winning-moddushuttle.png" alt="ticket">
+						</div>
+
+						<div class="infos">
+							<div class="num">
+								쿠폰 번호 : 20c99297
+							</div>
+							<div class="guide">
+								*쿠폰 번호는 마이페이지에서 확인가능합니다.
+							</div>
+						</div>
+						<div class="btns-W">
+							<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+							<button type="button" class="btn-normal blue">쿠폰 사용하기</button>
+						</div>
+					</li>
+
+					<!-- 사운드짐 -->
+					<li>
+						<dl>
+							<dt>축하합니다!</dt>
+							<dd>
+								사운드짐 1개월 이용권을<br/>
+								획득하셨습니다.
+							</dd>
+						</dl>
+						<div class="cover">
+							<img src="../images/winning-soundgym.png" alt="ticket">
+						</div>
+
+						<div class="infos">
+							<div class="num">
+								쿠폰 번호 : 영문숫자 8자리
+							</div>
+							<div class="guide">
+								*쿠폰 번호는 마이페이지에서 확인가능합니다.
+							</div>
+						</div>
+						<div class="btns-W">
+							<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+							<button type="button" class="btn-normal blue">쿠폰 사용하기</button>
+						</div>
+					</li>
+
+					<!-- 보틀웍스 -->
+					<li>
+						<dl>
+							<dt>축하합니다!</dt>
+							<dd>
+								보틀웍스 3천원 할인을<br/>
+								획득하셨습니다.
+							</dd>
+						</dl>
+						<div class="cover">
+							<img src="../images/winning-bottleworks.png" alt="ticket">
+						</div>
+
+						<div class="infos">
+							<div class="num">
+								쿠폰 번호 : 알파벳 대문자+숫자8~12자리
+							</div>
+							<div class="guide">
+								*쿠폰 번호는 마이페이지에서 확인가능합니다.
+							</div>
+						</div>
+						<div class="btns-W">
+							<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+							<button type="button" class="btn-normal blue">쿠폰 사용하기</button>
+						</div>
+					</li>
+
+					<!-- T모빌리티 -->
+					<li>
+						<dl>
+							<dt>축하합니다!</dt>
+							<dd>
+								T모빌리티 T맵 셀럽 1회 이용권을<br/>
+								획득하셨습니다.
+							</dd>
+						</dl>
+						<div class="cover">
+							<img src="../images/winning-tmap.png" alt="ticket">
+						</div>
+
+						<div class="infos">
+							<div class="num">
+								쿠폰 번호 : 알파벳 대문자+숫자8~12자리
+							</div>
+							<div class="guide">
+								*쿠폰 번호는 마이페이지에서 확인가능합니다.
+							</div>
+						</div>
+						<div class="btns-W">
+							<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+							<button type="button" class="btn-normal blue">쿠폰 사용하기</button>
+						</div>
+					</li>
+
+
+				</ul>
+
+				
+			</div>
+		</div>
+		<!--// 3. 선물지급! -->
+
+	</div>
+</article>
+	
+<script type="text/javascript" src="../bundle/jquery.chunk.js"></script>
+<script type="text/javascript" src="../bundle/three.chunk.js"></script>
+<script type="text/javascript" src="../bundle/vendors.chunk.js"></script>
+<script type="text/javascript" src="../bundle/main.chunk.js"></script>
+<!-- <script src="../js/jquery.min.js"></script> -->
+<script src="../js/swiper.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+
+	//celebration.init().play(); 메소드 호출로 로티 플레이!
+	//celebration.reset(); 으로 reset
+	var celebration = {
+		aniObj: null,
+		init: function() {
+			return this.aniObj = CommonUI.Lottie.init({
+				elem: document.getElementById('lottie15'),
+				loopFlag: false,
+				autoplayFlag: false,
+				pathString: '../bundle/json/15_data.json',
+			})
+		},
+		reset: function() {
+			if(this.aniObj) this.aniObj.destroy();
+		}
+	}
+	
+	function ticketAni(){
+		$('.userInfo > .goBtn').click(function(){
+
+			var targetIdx = $(this).data('celebration')-1;
+			var $targetList = $('.winning-lists li');
+			$targetList.hide();
+			$targetList.eq(targetIdx).show();
+
+			$('.ticketAniWrap').addClass('on');
+			$('.ticketAni').addClass('on');
+			$('.ticketing').addClass('on');
+			$('html, body').css({
+				'overflow':'hidden'
+			})
+			setTimeout(function(){
+				$('.ticketing').removeClass('on');
+				$('.issuanceTicket').addClass('on');
+			},2000);
+		});
+		$('.ticketAniWrap .closeBtn').click(function(){
+			$(this).parent().removeClass('on');
+			$('.issuanceTicket').removeClass('on');
+			celebration.reset();
+			$('html, body').css({
+				'overflow':'auto'
+			})
+		});
+		$('.issuanceTicket > a').click(function(){
+			$('.issuanceTicket').removeClass('on');
+			$('.winning').addClass('on');
+
+			celebration.init().play(); 
+			
+			$('.ticketAniWrap .closeBtn').click(function(){
+				$('.winning').removeClass('on');
+			});
+		});
+	};
+	ticketAni();
+
+
+
+
+
+</script>
+</html>
