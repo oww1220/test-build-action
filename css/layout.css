@@ -394,7 +394,7 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .leftTab > dl { text-align: center; }
 
-.mainTab .tabContent ul .leftTab > dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 44px; line-height: 1.1; letter-spacing: -0.88px; color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; }
+.mainTab .tabContent ul .leftTab > dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 44px; line-height: 1.1; letter-spacing: -0.88px; color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; line-height: 1.4; }
 
 .mainTab .tabContent ul .leftTab > dl dd { margin-top: 30px; font-family: 'Noto Sans KR bold', sans-serif; line-height: 1.6; letter-spacing: -0.32px; }
 
@@ -438,7 +438,7 @@ header nav > div p span { font-weight: normal; }
 
 .mainTab .tabContent ul .rightTab > dl { text-align: center; }
 
-.mainTab .tabContent ul .rightTab > dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 44px; line-height: 1.1; letter-spacing: -0.88px; color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; }
+.mainTab .tabContent ul .rightTab > dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 44px; line-height: 1.1; letter-spacing: -0.88px; color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; line-height: 1.4; }
 
 .mainTab .tabContent ul .rightTab > dl dd { margin-top: 30px; font-family: 'Noto Sans KR bold', sans-serif; line-height: 1.6; letter-spacing: -0.32px; }
 
