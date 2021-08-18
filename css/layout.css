@@ -815,21 +815,21 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryStep > ul > li > dl dd span { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; display: block; margin-top: 10px; }
 
-.delivery .deliveryStep > ul > li .arrowBtn { text-align: center; margin-top: 0; width: 256px; background: #ff404e url("../images/11.png") no-repeat 0 0; background-position: 28px center; padding-left: 60px; }
+.delivery .deliveryStep > ul > li .arrowBtn { width: 299px; background: #ff404e url("../images/11.png") no-repeat 0 0; background-position: 28px center; padding-left: 84px; height: 76px; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: left; line-height: 1.2; }
 
-.delivery .deliveryStep > ul > li .arrowBtn::after { right: 25px; }
+.delivery .deliveryStep > ul > li .arrowBtn::after { right: 25px; top: 50%; margin-top: -5px; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap.on > .cartBtn { display: none; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap.on .userInfo { display: block; }
 
-.delivery .deliveryStep > ul > li .userInfoWrap .cartBtn { text-align: center; }
+.delivery .deliveryStep > ul > li .userInfoWrap .cartBtn { width: 299px; text-align: center; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .userInfo { display: none; padding: 0; margin-bottom: 0; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .userInfo::after { display: none; }
 
-.delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn { margin-top: 38px; }
+.delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn { margin-top: 38px; width: 299px; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn label { position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; padding-top: 44px; }
 
@@ -1290,6 +1290,8 @@ header nav > div p span { font-weight: normal; }
  .delivery .deliveryStep > ul > li .arrowBtn { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; line-height: 50px; width: 100%; }
  .delivery .deliveryEvent .arrowBtn { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; width: 100%; }
  .delivery .deliveryEvent .userInfoWrap .cartBtn { width: 100%; }
+ .delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn { width: 100%; }
+ .delivery .deliveryStep > ul > li .userInfoWrap .cartBtn { width: 100%; }
  .delivery .deliveryInfo .arrowBtn::after { right: 5%; }
  .delivery .deliveryStep > ul > li > dl.step02 { background: url("../images/img-shop-step2.png") no-repeat 0 0; background-position: center 175px; padding-bottom: 190px; } }
 
@@ -1451,11 +1453,13 @@ body.overlay-hidden { overflow: hidden; }
 
 .layer-rocket .imageFileView > div dl dd { margin-top: 10px; font-size: 24px; line-height: 1.6; letter-spacing: -0.48px; color: #000000; font-family: 'Noto Sans KR black'; }
 
+.layer-rocket .imageFileView > div dl dd span { display: block; font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; color: #ff404e; margin-top: 10px; }
+
 .layer-rocket .imageFileView > div div { text-align: center; position: relative; }
 
 .layer-rocket .imageFileView > div div img { width: 200px; height: auto; }
 
-.layer-rocket .imageFileView > div.step01 .goBtn { width: 185px; }
+.layer-rocket .imageFileView > div.step01 .goBtn { width: 185px; background-color: #ff404e; }
 
 .layer-rocket .imageFileView > div.step02 .btnWrap { display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 31px; }
 
