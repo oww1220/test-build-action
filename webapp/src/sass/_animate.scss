@@ -533,6 +533,12 @@ body.overlay-hidden {
                     letter-spacing: -0.48px;
                     color: #000000;
                     font-family: 'Noto Sans KR black';
+                    span {
+                        display: block;
+                        @include font14;
+                        color: #ff404e;
+                        margin-top: 10px;
+                    }
                 }
             }
             div {
@@ -545,7 +551,8 @@ body.overlay-hidden {
             }
 			&.step01 {
 				.goBtn{
-					width: 185px
+					width: 185px;
+                    background-color: #ff404e;
 				}
 			}
 				

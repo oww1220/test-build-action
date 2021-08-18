@@ -1816,14 +1816,21 @@ $oneColor: #8674e2
 							display: block
 							margin-top: 10px
 				.arrowBtn
-					text-align: center
-					margin-top: 0
-					width: 256px
+					width: 299px
 					background: $point url("../images/11.png") no-repeat 0 0
 					background-position: 28px center
-					padding-left: 60px
+					padding-left: 84px
+					height: 76px
+					+font16()
+					display: flex
+					align-items: center
+					text-align: left
+					line-height: 1.2
+					
 					&::after
 						right: 25px
+						top: 50%
+						margin-top: -5px
 				.userInfoWrap
 					&.on
 						& > .cartBtn
@@ -1831,6 +1838,7 @@ $oneColor: #8674e2
 						.userInfo
 							display: block
 					.cartBtn
+						width: 299px
 						text-align: center
 					.userInfo
 						display: none
@@ -1840,6 +1848,7 @@ $oneColor: #8674e2
 							display: none
 						.cartBtn
 							margin-top: 38px
+							width: 299px
 							label
 								position: absolute
 								top: 0
@@ -2998,6 +3007,10 @@ $oneColor: #8674e2
 		//line-height: 50px
 		width: 100%		
 	.delivery .deliveryEvent .userInfoWrap .cartBtn
+		width: 100%
+	.delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn
+		width: 100%
+	.delivery .deliveryStep > ul > li .userInfoWrap .cartBtn
 		width: 100%
 	.delivery .deliveryInfo .arrowBtn::after
 		right: 5%
