@@ -692,7 +692,7 @@ header nav > div p span { font-weight: normal; }
 
 .ticketAniWrap .ticketAni.on .issuanceTicket.on { display: block; -webkit-animation: opacity 1s both; animation: opacity 1s both; -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-.ticketAniWrap .ticketAni.on .issuanceTicket dl { text-align: center; padding-bottom: 120px; background: url("../images/img-gift-ticket-bg.png") no-repeat 0 0; background-position: center 130px; background-size: 375px auto; }
+.ticketAniWrap .ticketAni.on .issuanceTicket dl { text-align: center; padding-bottom: 120px; background: url("../images/img-gift-ticket-bg.png") no-repeat 0 0; background-position: center 150px; background-size: 375px auto; }
 
 .ticketAniWrap .ticketAni.on .issuanceTicket dl dt { color: #ffffff; font-family: 'Noto Sans KR black', sans-serif; font-size: 40px; letter-spacing: -0.8px; line-height: 48px; color: #3617ce; }
 
@@ -735,7 +735,7 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryEvent .userInfoWrap.on .userInfo { display: block; }
 
-.delivery .deliveryEvent .userInfoWrap .cartBtn { text-align: center; }
+.delivery .deliveryEvent .userInfoWrap .cartBtn { width: 299px; text-align: center; }
 
 .delivery .deliveryEvent .userInfoWrap .userInfo { margin-top: 80px; display: none; padding: 0; margin-bottom: 0; }
 
@@ -745,9 +745,9 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryEvent .userInfoWrap .userInfo .cartBtn label { position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; padding-top: 44px; }
 
-.delivery .deliveryEvent .arrowBtn { width: 256px; background: #ff404e url("../images/11.png") no-repeat 0 0; background-position: 28px center; padding-left: 60px; }
+.delivery .deliveryEvent .arrowBtn { width: 299px; background: #ff404e url("../images/11.png") no-repeat 0 0; background-position: 28px center; padding-left: 84px; height: 76px; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: left; line-height: 1.2; }
 
-.delivery .deliveryEvent .arrowBtn::after { right: 25px; }
+.delivery .deliveryEvent .arrowBtn::after { right: 25px; top: 50%; margin-top: -5px; }
 
 .delivery .deliveryInfo { position: relative; width: 84%; border-radius: 30px; margin-left: 8%; margin-top: 80px; padding: 30px 0 36px 0; text-align: center; }
 
@@ -1288,7 +1288,8 @@ header nav > div p span { font-weight: normal; }
  .partners .listPartners > div ul li > div .moreBtn::after { width: 10px; height: 10px; top: 6px; left: 100%; }
  .partners .listPartners > div ul li > dl dd { font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
  .delivery .deliveryStep > ul > li .arrowBtn { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; line-height: 50px; width: 100%; }
- .delivery .deliveryEvent .arrowBtn { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; line-height: 50px; width: 100%; }
+ .delivery .deliveryEvent .arrowBtn { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; width: 100%; }
+ .delivery .deliveryEvent .userInfoWrap .cartBtn { width: 100%; }
  .delivery .deliveryInfo .arrowBtn::after { right: 5%; }
  .delivery .deliveryStep > ul > li > dl.step02 { background: url("../images/img-shop-step2.png") no-repeat 0 0; background-position: center 175px; padding-bottom: 190px; } }
 
