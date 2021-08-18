@@ -23,23 +23,29 @@
 			</ul>
 			<article class="deliveryEvent" data-aos="fade-up">
 				<dl class="subTitle">
-					<dt>최대 천 만원의 해외직구 쇼핑이 무료!</dt>
+					<dt>최대 1천만 원까지 해외 직구 쇼핑이 무료!</dt>
 					<dd>우주 택배</dd>
 				</dl>
 				<div class="deliverContent">
-					<p>우주에서는 아마존 해외직구 제품이<br />
-						무제한 무료 배송!<br /><br />
-						이번 만큼은 배송비 뿐만 아니라<br />
-						여러분의 해외직구 비용까지 우주가 책임집니다!<br /><br />
-						우주패스를 구독하고 가지고 싶은 제품을 골라
-						여러분의 장바구니에 담고<br />
-						캡쳐해서 등록해 주세요.
+					<p>
+						T우주에서는 아마존 해외 직구 제품이<br />
+						무료 배송!<br />
+						<br />
+						이번만큼은 배송비뿐만 아니라<br />
+						해외 직구 비용까지 T우주가 책임집니다!<br />
+						<br />
+						우주패스를 구독한 다음 원하는 상품을<br />
+						장바구니에 담고 캡처해서 등록해 주세요.
 					</p>
 				</div>
-				<p>최대 1,000만원 까지 무료로!<br />
-					우주가 여러분에게 배송해 드립니다.<br />
+				<p>
+					T우주가 최대 1천만 원까지 무료로<br />
+					선물해 드립니다.<br />
 				</p>
-				<a href="#" target="_blank" class="arrowBtn">장바구니 담으러가기</a>
+				<a href="#" target="_blank" class="arrowBtn">
+					11번가 아마존 스토어에서<br/>
+					장바구니 담으러가기
+				</a>
 				<div class="userInfoWrap">
 					<a href="javascript:;" class="cartBtn">장바구니 이미지 등록하고 응모하기<span>one</span></a>
 					<div class="userInfo">
@@ -112,14 +118,16 @@
 				</dl>
 				<dl>
 					<dt>이벤트 대상</dt>
-					<dd>우주패스(mini / all)에 가입 후<br />
-						장바구니 이미지 업로드를 모두 마친 분</dd>
+					<dd>
+						우주패스 mini/all 가입하고장바구니 이미지 등록을<br />
+						모두 마치신 고객님
+					</dd>
 				</dl>
 				<div>
 					<h4>당첨자 선발 안내</h4>
 					<ul>
 						<li>
-							<h5>총 4주에 걸쳐 다음의 인원 선발</h5>
+							<h5>매주 화요일 총 4번 추첨</h5>
 							<div>
 								<dl>
 									<dt>500만원</dt>
@@ -131,22 +139,23 @@
 								</dl>
 							</div>
 						</li>
-						<li>전체 기간 동안 참여한 분들 중 추첨을 통해<br />
-							총 1,000만원 (1명) 당첨자 선발
+						<li>
+							전체 기간 동안 참여한 고객님 중<br />
+							총 1,000만 원(1명) 추첨
 						</li>
 					</ul>
 				</div>
 				<dl>
 					<dt>당첨자 발표</dt>
 					<dd class="winner">
-						<span>1주차(8/31-9/9)</span><strong>9월 14일 (화)</strong><br />
-						<span>2주차(9/10-16)</span><strong>9월 21일 (화)</strong><br />
-						<span>3주차(9/17-23)</span><strong>9월 28일 (화)</strong><br />
-						<span>4주차(9/24-30)</span><strong>10월 5일 (화)</strong><br />
+						<span>1주차(8월 31일 - 9월 9일)</span><strong>9월 14일 (화)</strong><br />
+						<span>2주차(9월 10일 - 16일)</span><strong>9월 21일 (화)</strong><br />
+						<span>3주차(9월 17일 - 23일)</span><strong>9월 28일 (화)</strong><br />
+						<span>4주차(9월 24일 - 30일)</span><strong>10월 5일 (화)</strong><br />
 						<span>최종 당첨자</span><strong>10월 5일 (화)</strong>
 					</dd>
 				</dl>
-				<a href="#" class="arrowBtn" target="_blank">첫 달 1,000원에 구독하기</a>
+				<a href="#" class="arrowBtn" target="_blank"> 첫 달 1,000원 우주패스 구독하기</a>
 				<span>one</span>
 			</article>
 			<article class="deliveryStep">
@@ -207,7 +216,7 @@
 											<a href="#;" class="def"></a>
 											<a href="#;" class="dropdown">▼</a>
 										</span>
-										<select name="" id="sel">
+										<select name="" id="sel2">
 											<option value="통신사">통신사</option>
 											<option value="SKT">SKT</option>
 											<option value="KT">KT</option>
@@ -467,6 +476,61 @@
 		});
 
 		/***통신사 selectbox****/
+		$('.select').each(function(idx, item){
+			//console.log(idx, item);
+			var num = idx === 0 ? '': idx+1 
+			var sel = $(item);
+			sel.append("<ul class=options style='display:none;'></ul>");
+			var opts = sel.find('.options');
+			var btn = sel.find('.dropdown');
+			var real = $('#sel' + num);
+			var real_opt = real.find('option');
+
+			//console.log(opts, real, real_opt.length, real_opt);
+			
+			//초기세팅
+			for(var i=0; i<real_opt.length; i++){
+				sel.find('> .options').append('<li><a href=javascript:;></a></li>');
+				if(i === 0){
+					sel.find(' > .def').text(real_opt.eq(i).text());
+					opts.find('li').eq(0).find('a').text(real_opt.eq(i).val());
+				} else if(i >= 1) {
+					opts.find('li').eq(i).find('a').text(real_opt.eq(i).val());
+				}
+			}
+
+			//내용출력칸, 버튼 을 클릭하면
+			sel.on('click','.def, .dropdown', function(e){
+				e.stopPropagation();
+				opts.slideToggle('fast').toggleClass('on');
+				if(opts.hasClass('on')) btn.text('▲');
+				if(sel.hasClass('on radius')) btn.text('▼');
+			});
+
+			//옵션리스트 중 하나를 클릭하면
+			opts.on('click','li', function(e){
+				e.stopPropagation();
+				var idx = $(this).index();
+				var t = $(this).text();
+				sel.find('.def').text(t);
+				opts.slideToggle('fast').removeClass('on');
+				btn.text('▼');
+				//실제 셀렉트 박스 변경
+				real_opt.eq(idx).attr('selected','selected').siblings().removeAttr('selected');
+			});
+
+			//window를 클릭하면
+			$(window).on('click', function(e){
+				if(opts.hasClass('on'))
+				opts.slideToggle('fast').removeClass('on');
+				btn.text('▼');
+				$(".select").addClass("radius");
+			});
+			
+
+		});
+
+		/*
 		$('.select').append("<ul class=options style='display:none;'></ul>");
 
 
@@ -496,6 +560,7 @@
 			e.stopPropagation();
 			opts.slideToggle('fast').toggleClass('on');
 			if(opts.hasClass('on')) btn.text('▲');
+			if(sel.hasClass('on radius')) btn.text('▼');
 		});
 
 		//옵션리스트 중 하나를 클릭하면
@@ -517,7 +582,8 @@
 			btn.text('▼');
 			$(".select").addClass("radius");
 		});
-		
+		*/
+
 		$(".select a").click(function(){
 			if($(".options").hasClass("on")){
 				$(".select").addClass("radius");

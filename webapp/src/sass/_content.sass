@@ -1535,7 +1535,7 @@ $oneColor: #8674e2
 					text-align: center
 					padding-bottom: 120px
 					background: url("../images/img-gift-ticket-bg.png") no-repeat 0 0
-					background-position: center 130px
+					background-position: center 150px
 					background-size: 375px auto
 					dt
 						+colorGradation()
@@ -1629,6 +1629,7 @@ $oneColor: #8674e2
 				.userInfo
 					display: block
 			.cartBtn
+				width: 299px
 				text-align: center
 			.userInfo
 				margin-top: 80px
@@ -1648,12 +1649,21 @@ $oneColor: #8674e2
 						cursor: pointer
 						padding-top: 44px
 		.arrowBtn
-			width: 256px
+			width: 299px
 			background: $point url("../images/11.png") no-repeat 0 0
 			background-position: 28px center
-			padding-left: 60px
+			padding-left: 84px
+			height: 76px
+			+font16()
+			display: flex
+			align-items: center
+			text-align: left
+			line-height: 1.2
+			
 			&::after
 				right: 25px
+				top: 50%
+				margin-top: -5px
 	.deliveryInfo
 		position: relative
 		width: 84%
@@ -2985,8 +2995,10 @@ $oneColor: #8674e2
 		width: 100%		
 	.delivery .deliveryEvent .arrowBtn
 		+font14()
-		line-height: 50px
+		//line-height: 50px
 		width: 100%		
+	.delivery .deliveryEvent .userInfoWrap .cartBtn
+		width: 100%
 	.delivery .deliveryInfo .arrowBtn::after
 		right: 5%
 	.delivery .deliveryStep > ul > li > dl.step02
