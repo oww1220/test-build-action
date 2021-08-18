@@ -1,8 +1,6 @@
 # OLKL
 [SKT] OLKL
 
-test!
-
 ## gh-pages (서버배포 및 빌드파일 브런치 생성)
 - 원격저장소 세팅에서 GitHub Pages 열어줌
 
