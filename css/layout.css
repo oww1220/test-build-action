@@ -665,7 +665,7 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketParticipate > ul > li > div > div .arrowBtn { width: 270px; font-size: 16px; letter-spacing: -0.32px; display: inline-block; }
 
-.ticket .ticketParticipate > ul > li > div > div .arrowBtn::after { right: 13%; }
+.ticket .ticketParticipate > ul > li > div > div .arrowBtn::after { right: 7%; }
 
 .ticket .ticketParticipate > ul > li > div > div .arrowBtn:nth-child(2) { background-color: #5e45d8; }
 
