@@ -267,13 +267,21 @@ header nav > div p span { font-weight: normal; }
 
 .userInfo .userInfo-input div input { background-color: transparent; line-height: 54px; height: 54px; width: 100%; border-radius: 10px; padding-left: 20px; font-weight: bold; font-size: 14px; letter-spacing: -0.28px; color: #c9c9c9; position: relative; border: 0; z-index: 2; }
 
+.userInfo .userInfo-input div input:focus::-webkit-input-placeholder { color: transparent; }
+
+.userInfo .userInfo-input div input:focus::-moz-placeholder { color: transparent; }
+
+.userInfo .userInfo-input div input:focus:-ms-input-placeholder { color: transparent; }
+
+.userInfo .userInfo-input div input:focus::-ms-input-placeholder { color: transparent; }
+
 .userInfo .userInfo-input div .effect-24 { border: 0; padding: 7px 15px; position: relative; background: transparent; }
 
 .userInfo .userInfo-input div .effect-24 ~ .focus-bg::before { content: ""; position: absolute; left: 0px; top: -1px; border-radius: 10px; -webkit-transition: 0.3s; transition: 0.3s; padding: 1px; width: 99%; height: 50px; border: 1px solid rgba(255, 255, 255, 0.4); -webkit-box-sizing: content-box; box-sizing: content-box; }
 
 .userInfo .userInfo-input div .effect-24 ~ .focus-bg::after { content: ""; position: absolute; left: 50%; top: 50%; width: 0; height: 0; -webkit-transition: 0.3s; transition: 0.3s; }
 
-.userInfo .userInfo-input div .effect-24:focus ~ .focus-bg:before, .userInfo .userInfo-input div .has-content.effect-24 ~ .focus-bg::before { width: 100%; -webkit-transition: 0.3s; transition: 0.3s; left: -2px; top: -2px; height: 51px; background-color: rgba(54, 23, 206, 0.24); border: 1px solid #3617ce; }
+.userInfo .userInfo-input div .effect-24:focus ~ .focus-bg:before, .userInfo .userInfo-input div .has-content.effect-24 ~ .focus-bg::before { -webkit-transition: 0.3s; transition: 0.3s; background-color: rgba(54, 23, 206, 0.24); border: 1px solid #3617ce; }
 
 .userInfo .userInfo-input div .effect-24:focus ~ .focus-bg:after, .userInfo .userInfo-input div .has-content.effect-24 ~ .focus-bg:after { -webkit-transition: 0.3s; transition: 0.3s; width: 100%; left: 0; top: 0; height: 100%; border-radius: 10px; background: rgba(54, 23, 206, 0.15); opacity: 0.2; }
 
@@ -282,6 +290,34 @@ header nav > div p span { font-weight: normal; }
 .userInfo .userInfo-input div .effect-24:focus ~ label, .userInfo .userInfo-input div .has-content.effect-24 ~ label { top: 2px; left: 15px; font-size: 12px; color: rgba(255, 255, 255, 0.4); -webkit-transition: 0.3s; transition: 0.3s; z-index: 10; }
 
 .userInfo .userInfo-input div > a { display: block; height: 54px; line-height: 54px; padding-left: 20px; font-weight: bold; font-size: 14px; letter-spacing: -0.28px; border-radius: 10px; color: #c9c9c9; }
+
+.userInfo .userInfo-input div.input-birth { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.userInfo .userInfo-input div.input-birth > div { margin-top: 0; width: 47%; }
+
+.userInfo .userInfo-input div.input-birth > div.input-line { width: 6%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.userInfo .userInfo-input div.input-birth > div.wrongValue strong { width: 150%; }
+
+.userInfo .userInfo-input div.input-birth > div.input-security { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.userInfo .userInfo-input div.input-birth > div.input-security .input-effect { width: 32%; }
+
+.userInfo .userInfo-input div.input-birth > div.input-security .input-effect input { text-align: center; padding: 0; }
+
+.userInfo .userInfo-input div.input-birth > div.input-security .input-effect input::-webkit-input-placeholder { font-size: 8px; }
+
+.userInfo .userInfo-input div.input-birth > div.input-security .input-effect input::-moz-placeholder { font-size: 8px; }
+
+.userInfo .userInfo-input div.input-birth > div.input-security .input-effect input:-ms-input-placeholder { font-size: 8px; }
+
+.userInfo .userInfo-input div.input-birth > div.input-security .input-effect input::-ms-input-placeholder { font-size: 8px; }
+
+.userInfo .userInfo-input div.input-birth > div.input-security .input-effect .focus-bg::before { width: 95%; }
+
+.userInfo .userInfo-input div.input-birth > div.input-security > ul { width: 61%; margin-left: 7%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.userInfo .userInfo-input div.input-birth > div.input-security > ul li { font-size: 8px; }
 
 .userInfo .userInfo-input div .reissuance { cursor: pointer; position: absolute; bottom: -40px; right: 5px; font-size: 12px; letter-spacing: -0.24px; padding-right: 12px; }
 
