@@ -2,7 +2,7 @@
 <html lang="ko">
 	<head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="shortcut icon" href="../../images/svg/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../../images/svg/favicon.ico" type="image/x-icon">
@@ -21,25 +21,37 @@
 	</h1>
 	<!-- siteMap -->
 	<nav>
-		<ul>
-			<li>
-				<a href="/main">HOME</a>
-			</li>
-			<li>
-				<a href="/pass">우주패스 소개</a>
-			</li>
-			<li>
-				<a href="/ticketbooth">우주 티켓 부스 이벤트</a>
-			</li>
-			<li>
-				<a href="/delivery">우주 택배 이벤트</a>
-			</li>
-			<li>
-				<a href="/madmonster">T우주X매드몬스터</a>
-			</li>
-		</ul>
+		<a href="javascript:void(0)" class="btn-drawer-open">네비게이션</a>
+		<div class="drawer-cont">
+			<a href="javascript:void(0)" class="btn-drawer-close">닫기</a>
+			<ul>
+				<li>
+					<a href="/main">HOME</a>
+				</li>
+				<li>
+					<a href="/pass">우주패스 소개</a>
+				</li>
+				<li>
+					<a href="/ticketbooth">우주 티켓 부스 이벤트</a>
+				</li>
+				<li>
+					<a href="/delivery">우주 택배 이벤트</a>
+				</li>
+				<li>
+					<a href="/madmonster">T우주X매드몬스터</a>
+				</li>
+				<li>
+					<a href="/partner">우주 파트너스 전체 보기</a>
+				</li>
+				<li>
+					<a href="/mypage">마이페이지</a>
+				</li>
+			</ul>
+			<a href="javascript:;" class="logoutBtn">로그아웃</a>
+		</div>
 	</nav>
 </header>
+<div class="bg-overlay"></div>
 		<!-- // Header -->
 
 		<!-- intro -->
@@ -53,6 +65,17 @@
 		<canvas id="webgl-universe"></canvas>
 
 		<div id="content">
+			<ul class="quickMenu02">
+				<li class="menuTicket">
+					<a href="/ticketbooth">티켓팅<br/>이벤트 참여하기</a>
+				</li>
+				<li class="menuEvent">
+					<a href="/delivery">장바구니<br />이벤트 참여하기</a>
+				</li>
+				<li class="menuMad">
+					<a href="/madmonster">T우주X<br />매드몬스터</a>
+				</li>
+			</ul>
 			<!--main video-->
 			<article class="mainVideo">
 				<div>
@@ -79,48 +102,37 @@
 						<!--left tab-->
 						<li class="leftTab">
 							<dl>
-								<dt>
-									<div class="cover" data-aos="fade-up">
-										세상의 모든 구독, <br />
-										우주에서 만나다
-										<!-- <img src="../../images/svg/main-tit-01.svg" width="495px" alt="세상의 모든 구독 우주에서 만나다"/> -->
-									</div>
+								<dt data-aos="fade-up">
+									세상의 모든 구독,<br />
+									우주에서 만나다
+									<!-- <div class="cover">
+										<img src="./../images/svg/main-tit-01.svg" alt="세상의 모든 구독 우주에서 만나다"/>
+									</div> -->
 								</dt>
-								<dd>
-									<div data-aos="fade-up">
-										이곳에선 부담 없이 좋아하는<br />
-										커피와 빵을 고르고,<br />
-										선곡 고민 없이 취향에 맞는<br />
-										음악을 들을 수 있어요.<br />
-										<br />
-									</div>
-									<div data-aos="fade-up">
-										배송비 없이 해외 직구를 마음껏 즐기고,<br />
-										용량 걱정 없이 일상을<br />
-										클라우드에 남길 수도 있죠.<br />
-										<br />
-									</div>
-									<div data-aos="fade-up">
-										지루할 틈 없이 최애 드라마를 정주행하면서<br />
-										좋아하는 메뉴를 배달로 즐기는 주말은 어때요?<br />
-										<br />
-									</div>
-									<div data-aos="fade-up">
-										아주 좋아하는 것, 자주 필요한 것을<br />
-										더 가볍게 누리는 새로운 스케일의 구독 생활,<br />
-										이곳은 우주입니다.<br />
-										통신사 상관없이 T월드에서<br />
-										당신의 우주를 만나 보세요.<br />
-										<br />
-									</div>
+								<dd data-aos="fade-up">
+									이곳에선 부담 없이 좋아하는<br />커피와 빵을 고르고,<br />
+									선곡 고민 없이 취향에 맞는<br />음악을 들을 수 있어요.<br />
+									<br />
+									배송비 없이 해외 직구를 마음껏 즐기고,<br />
+									용량 걱정 없이 일상을<br />클라우드에 남길 수도 있죠.<br />
+									<br />
+									지루할 틈 없이 최애 드라마를 정주행하면서<br />
+									좋아하는 메뉴를 배달로 즐기는 주말은 어때요?<br />
+									<br />
+									아주 좋아하는 것, 자주 필요한 것을<br />
+									더 가볍게 누리는 새로운 스케일의 구독 생활,<br />
+									이곳은 우주입니다.<br />
+									<br />
+									통신사 상관없이 T월드에서<br />
+									당신의 우주를 만나 보세요.
 								</dd>
 							</dl>
-							<div class="universe">
+							<div>
 								<dl>
 									<dt data-aos="fade-up">모두의 구독 유니버스</dt>
-									<dd data-aos="fade-up"><img src="../../images/bi.png" alt="OLKL"></dd>
+									<dd data-aos="fade-up"><img src="../../images/bi.png" alt="T우주"></dd>
 								</dl>
-								<a href="#" class="arrowBtn" data-aos="fade-up">구독하러 가기</a>	
+								<a href="#" class="arrowBtn" data-aos="fade-up">구독하러  가기</a>	
 							</div>
 							<h5 data-aos="fade-up">EVENT</h5>
 							<ul>
@@ -130,6 +142,7 @@
 											<dt>우주 티켓 부스</dt>
 											<dd>이벤트 참여하기</dd>
 										</dl>
+										<em>2021. 8. 31.(화) – 9. 30.(목)</em>
 										<span>line</span>
 										<div class="svg-W">
 											<div id="lottie10"></div>
@@ -142,6 +155,7 @@
 											<dt>우주 택배</dt>
 											<dd>이벤트 참여하기</dd>
 										</dl>
+										<em>2021. 8. 31.(화) – 9. 26.(일)</em>
 										<span>line</span>
 										<div class="svg-W">
 											<div id="lottie09"></div>
@@ -149,36 +163,16 @@
 									</a>
 								</li>
 							</ul>
-							<div class="pcQr" data-aos="fade-up">
-								<div>
-									<div><img src="../../images/qr_img.png" alt="QR코드"></div>
-									<p>이벤트 참여는 모바일로만 가능합니다.<br />모바일로 접속해 참여해주세요!</p>
-								</div>
-								<a href="#" class="goBtn">공유하기</a>
-							</div>
 						</li>
 						<!--right tab
 						<li class="rightTab">
 							<dl>
-								<dt>
-									<div class="cover">
-										첫 달은 부담 없이 <br/>
-										구독해 보세요
-										
-									</div>
+								<dt data-aos="fade-up">
+									첫 달은 부담 없이<br />
+									구독해 보세요
 								</dt>
-								<dd>
-									<div data-aos="fade-up">
-										여러분의 생활 패턴에 맞게 두 가지로<br /> 
-										준비된 구독 혜택, 우주패스를 사용해 보세요.<br />
-										<br />
-									</div>
-									<div data-aos="fade-up">
-										첫 달은 훨씬 합리적인 가격으로<br />
-										T월드에서 만날 수 있어요!<br />
-										<br />
-									</div>
-								
+								<dd data-aos="fade-up">
+									여러분의 생활 패턴에 맞게 두 가지로<br />준비된 구독 혜택, 우주패스를 사용해 보세요.<br /><br />첫 달은 훨씬 저렴한 가격으로<br />T월드에서 만날 수 있어요!
 								</dd>
 							</dl>
 							<ul>
@@ -208,13 +202,13 @@
 								</li>
 							</ul>
 							<div class="mainPartner">
-								<h5 data-aos="fade-up">T우주 파트너들이 궁금하신가요?</h5>
+								<h5 data-aos="fade-up">T우주의 파트너들이<br />궁금하신가요?</h5>
 								<div class="mainPlanet" data-aos="fade-up">
 									<ul>
 										<li data-layer="rocket-obj-19" class="on"><div><img src="../../images/logo_one_amazon_l.png" alt="아마존"></div></li>
-										<li data-layer="rocket-obj-08"><div><img src="../../images/planet_starbucks.png" alt="스타벅스"></div></li>
+										<li data-layer="rocket-obj-08"><div><img src="../../images/img-planet-tmb-star.png" alt="스타벅스"></div></li>
 										<li data-layer="rocket-obj-03"><div><img src="../../images/logo_one_google_l.png" alt="구글원"></div></li>
-										<li data-layer="rocket-obj-09"><div><img src="../../images/img-planet-tmb-emart_l.png" alt="이마트"></div></li>
+										<li data-layer="rocket-obj-09"><div><img src="../../images/img-planet-tmb-emart-l.png" alt="이마트"></div></li>
 										<li data-layer="rocket-obj-05"><div><img src="../../images/logo_one_bm_l.png" alt="배달의민족"></div></li>
 										<li data-layer="rocket-obj-06"><div><img src="../../images/planet_paris.png" alt="파리바게트"></div></li>
 									</ul>
@@ -290,7 +284,7 @@
 				</dl>
 				<div>
 					<dl>
-						<dt>해외 직구 무료 배송 + 1만 원 할인</dt>
+						<dt>해외 직구 무료 배송 +<br /> 1만 원 할인</dt>
 						<dd>
 							해외 직구로 합리적인 가격에 상품을 구입하고 <br /> 
 							싶어도 비싸고 부담스러운 해외 배송비.<br /> 
@@ -458,7 +452,7 @@
 							T우주에서는 배달 음식비가 <br />
 							매달 8천 원만큼 가벼워집니다.<br />
 							<br />
-							매달 8천원 할인 (배달의민족  5천원 쿠폰 
+							매달 8천원 할인 (배달의민족  5천원 쿠폰 <br />
 							& 배민1 3천원 쿠폰) 으로  <br />
 							맛있는 음식을 부담 없이 즐겨 보세요. 
 						</dd>
@@ -523,14 +517,9 @@
 </footer>
 	</div>
 </body>
-	<!-- <script src="../js/jquery.min.js"></script>
-<script src="../js/swiper.min.js"></script>
-<script src="../js/common.js"></script> -->
-
-
+	
 <script type="text/javascript" src="../../bundle/jquery.chunk.js"></script>
-<!-- <script type="text/javascript" src="../../bundle/three.chunk.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js" integrity="sha512-jeYvJdyAYkpQCY/omvCYQo89qA5YxDW4JBT7COPsHT2sOAanwxkZRFeP9gc69b5reSDpZIoyCqZQZcWZkbB5Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="../../bundle/three.chunk.js"></script>
 <script type="text/javascript" src="../../bundle/vendors.chunk.js"></script>
 <script type="text/javascript" src="../../bundle/main.chunk.js"></script>
 <!-- <script src="../js/jquery.min.js"></script> -->

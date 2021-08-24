@@ -2,7 +2,7 @@
 <html lang="ko">
 	<head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="shortcut icon" href="../../images/svg/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../../images/svg/favicon.ico" type="image/x-icon">
@@ -21,30 +21,53 @@
 	</h1>
 	<!-- siteMap -->
 	<nav>
-		<ul>
-			<li>
-				<a href="/main">HOME</a>
-			</li>
-			<li>
-				<a href="/pass">우주패스 소개</a>
-			</li>
-			<li>
-				<a href="/ticketbooth">우주 티켓 부스 이벤트</a>
-			</li>
-			<li>
-				<a href="/delivery">우주 택배 이벤트</a>
-			</li>
-			<li>
-				<a href="/madmonster">T우주X매드몬스터</a>
-			</li>
-		</ul>
+		<a href="javascript:void(0)" class="btn-drawer-open">네비게이션</a>
+		<div class="drawer-cont">
+			<a href="javascript:void(0)" class="btn-drawer-close">닫기</a>
+			<ul>
+				<li>
+					<a href="/main">HOME</a>
+				</li>
+				<li>
+					<a href="/pass">우주패스 소개</a>
+				</li>
+				<li>
+					<a href="/ticketbooth">우주 티켓 부스 이벤트</a>
+				</li>
+				<li>
+					<a href="/delivery">우주 택배 이벤트</a>
+				</li>
+				<li>
+					<a href="/madmonster">T우주X매드몬스터</a>
+				</li>
+				<li>
+					<a href="/partner">우주 파트너스 전체 보기</a>
+				</li>
+				<li>
+					<a href="/mypage">마이페이지</a>
+				</li>
+			</ul>
+			<a href="javascript:;" class="logoutBtn">로그아웃</a>
+		</div>
 	</nav>
 </header>
+<div class="bg-overlay"></div>
 		<!-- // Header -->
-
 		<canvas id="webgl-universe"></canvas>
 
 		<div id="content" class="spacePass">
+			<!-- 하단 고정메뉴 -->
+			<ul class="quickMenu02">
+				<li class="menuTicket">
+					<a href="/ticketbooth">티켓팅<br/>이벤트 참여하기</a>
+				</li>
+				<li class="menuEvent">
+					<a href="/delivery">장바구니<br />이벤트 참여하기</a>
+				</li>
+				<li class="menuMad">
+					<a href="/madmonster">T우주X<br />매드몬스터</a>
+				</li>
+			</ul>
 			<!--tab--> 
 			<article class="passTab">
 				<!-- tab title-->
@@ -62,7 +85,7 @@
 						<!--left tab-->
 						<li class="leftTab">
 							<dl class="subTitle">
-								<dt data-aos="fade-up">프리미엄 우주 라이프를 꿈꾸는 당신을 위해</dt>
+								<dt data-aos="fade-up">프리미엄 우주 라이프를<br />꿈꾸는 당신을 위해</dt>
 								<dd data-aos="fade-up">우주패스 all</dd>
 							</dl>
 							<div class="monthCost" data-aos="fade-up">
@@ -71,13 +94,14 @@
 								<strong>첫 달 1,000원</strong>
 							</div>
 							<p data-aos="fade-up">
-								어디에서도 볼 수 없던 온라인 쇼핑 할인과 무료 클라우드,<br />
-								취향에 맞춰 고르는 구독 혜택까지<br />
-								<br />
-								우주패스 all과 함께 시작되는 우주 라이프를<br />
+								어디에서도 볼 수 없던<br />
+								온라인 쇼핑 할인과 스토리지 멤버십,<br />
+								당신의 취향에 맞춰 고르는 구독 혜택까지<br /><br />
+							</p>
+							<p data-aos="fade-up">우주패스 all과 함께 시작되는 우주 라이프를<br />
 								지금 바로 확인해 보세요.
 							</p>
-							<a href="#" class="arrowBtn" data-aos="fade-up" target="_blank">첫달 1,000원에 구독하기</a>
+							<a href="#" class="arrowBtn" data-aos="fade-up" target="_blank">첫 달 1,000원에 구독하기</a>
 							<div class="passAllMerit">
 								<dl>
 									<dt data-aos="fade-up">우주패스 all</dt>
@@ -88,7 +112,7 @@
 										<a href="javascript:;" class="rocket-layer-open" data-layer="rocket-obj-02">
 											<dl>
 												<dt>아마존</dt>
-												<dd>해외 직구 무료 배송 + 1만원 할인</dd>
+												<dd>해외 직구 무료배송 + 1만원 할인</dd>
 											</dl>
 											<div>자세히보기</div>
 										</a>
@@ -97,9 +121,7 @@
 										<a href="javascript:;" class="rocket-layer-open" data-layer="rocket-obj-01">
 											<dl>
 												<dt>11번가</dt>
-												<dd>
-													SK pay 3000포인트
-												</dd>
+												<dd>SK pay 3000포인트</dd>
 											</dl>
 											<div>자세히보기</div>
 										</a>
@@ -108,8 +130,11 @@
 										<a href="javascript:;" class="rocket-layer-open" data-layer="rocket-obj-03">
 											<dl>
 												<dt>Google One</dt>
-												<dd>100GB 용량 12개월 제공<br />
-													(9/14 부터 이용 가능)</dd>
+												<dd>
+													100GB 용량 12개월 제공
+													<!-- <br />
+													(9/14부터 이용 가능) -->
+												</dd>
 											</dl>
 											<div>자세히보기</div>
 										</a>
@@ -124,23 +149,23 @@
 								</div>
 							</div>
 							<h5 data-aos="fade-up">T우주와 함께하는 파트너들의<br />구독 혜택 알아보기</h5>
-							<div class="partnersSlide">
-								<ul>
+							<!-- swiper -->
+							<div class="swiper-container partnersSlide" data-aos="fade-up">
+								<ul class="swiper-wrapper">
 									<!--
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-01">
-											<div><img src="../../images/logo_11_m.png" alt="11번가"></div>
+											<div><img src="../../images/logo_one_11.png" alt="11번가"></div>
 											<span>11번가</span>
 											<dl>
-												<dt>매달 3,000 포인트 
-													제공</dt>
+												<dt>매달 3,000 포인트 제공</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-02">
-											<div><img src="../../images/logo_one_amazon.png" alt="아마존 해외직구"></div>
+											<div><img src="../../images/logo_one_amazon.png" alt="아마존"></div>
 											<span>아마존 해외직구</span>
 											<dl>
 												<dt>해외직구 무료 배송 + 1만원 할인</dt>
@@ -148,9 +173,9 @@
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-03">
-											<div><img src="../../images/logo_one_google.png" alt="Google One"></div>
+											<div><img src="../../images/logo_one_google.png" alt="구글원"></div>
 											<span>Google One</span>
 											<dl>
 												<dt>멤버십 100GB</dt>
@@ -158,9 +183,9 @@
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-04">
-											<div><img src="../../images/logo_wavve_m.png" alt="wavve Lite"></div>
+											<div><img src="../../images/logo_one_wavve.png" alt="웨이브 라이트"></div>
 											<span>wavve Lite</span>
 											<dl>
 												<dt>우주패스 mini 전용</dt>
@@ -168,36 +193,32 @@
 											</dl>
 										</a>
 									</li>-->
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-05">
-											<div><img src="../../images/logo_bm.png" alt="배달의민족"></div>
-											<span>배달의민족</span>
+											<div><img src="../../images/logo_one_bm.png" alt="배달의 민족"></div>
+											<span>배달의 민족</span>
 											<dl>
-												<dt>
-													매달 쿠폰으로<br/>
-													좋은 음식을<br/>
-													먹고 싶은 곳에서
-												</dt>
+												<dt>매달 쿠폰으로 좋은 <br/>
+													음식을 <br/>
+													먹고 싶은 곳에서</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-06">
-											<div><img src="../../images/logo_paris.png" alt="파리바게뜨"></div>
-											<span>파리바게뜨</span>
+											<div><img src="../../images/logo_one_paris.png" alt="파리바게트"></div>
+											<span>파리바게트</span>
 											<dl>
-												<dt>
-													최대 30% 할인되는<br/>
-													빵빵한 혜택
-												</dt>
+												<dt>최대 30% 할인되는<br/>
+													빵빵한 혜택</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-07">
-											<div><img src="../../images/logo_aboutpet.png" alt="어바웃펫"></div>
+											<div><img src="../../images/logo_one_aboutpet.png" alt="어바웃펫"></div>
 											<span>어바웃펫</span>
 											<dl>
 												<dt>
@@ -209,22 +230,22 @@
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-08">
-											<div><img src="../../images/logo_starbucks_m.png" alt="스타벅스"></div>
+											<div><img src="../../images/logo_one_starbucks.png" alt="스타벅스 "></div>
 											<span>스타벅스</span>
 											<dl>
 												<dt>
-													매달 2번, 커피 4잔<br/> 
-													구매 시 1잔 더
+													매달 2번, 커피 4잔<br/>
+													구매 시 1잔 더 
 												</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-09">
-											<div><img src="../../images/logo_emart_m.png" alt="이마트"></div>
+											<div><img src="../../images/logo_one_emart.png" alt="이마트"></div>
 											<span>이마트</span>
 											<dl>
 												<dt>
@@ -235,40 +256,40 @@
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-10">
-											<div><img src="../../images/logo_kukka_m.png" alt="KUKKA"></div>
+											<div><img src="../../images/logo_one_kukka.png" alt="꾸까"></div>
 											<span>꾸까</span>
 											<dl>
 												<dt>
-													계절 따라 가장 예쁜 <br/>
-													꽃으로<br/>
+													계절 따라 가장 예쁜  <br/>
+													꽃으로 <br/>
 													더 특별해지는 일상.
 												</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-11">
-											<div><img src="../../images/logo_ton28_m.png" alt="톤 28"></div>
+											<div><img src="../../images/logo_one_ton28.png" alt="톤 28"></div>
 											<span>톤 28</span>
 											<dl>
 												<dt>
-													매달 받아 보는<br/>
+													매달 받아 보는 <br/>
 													친환경 바를거리
 												</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-12">
-											<div><img src="../../images/logo_modu_m.png" alt="모두의 셔틀 "></div>
+											<div><img src="../../images/logo_one_modu.png" alt="모두의 셔틀"></div>
 											<span>모두의 셔틀</span>
 											<dl>
 												<dt>
-													출퇴근 만원 버스는 <br/>
+													출퇴근 만원 버스는<br/> 
 													그만<br/>
 													이제는 앉아서 출근
 												</dt>
@@ -276,65 +297,66 @@
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-13">
-											<div><img src="../../images/logo_ut_m.png" alt="TMAP"></div>
+											<div><img src="../../images/logo_one_tmap.png" alt="TMAP 플러스 베이직"></div>
 											<span>TMAP 플러스 베이직</span>
 											<dl>
 												<dt>
-													주유/주차/킥보드/<br/>
-													렌터카까지<br/>
+													주유/주차/킥보드/<br/> 
+													렌터카까지<br/> 
 													한 번에 할인
 												</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-14">
-											<div><img src="../../images/logo_bio_m.png" alt="바이오퍼블릭"></div>
+											<div><img src="../../images/logo_one_bio.png" alt="바이오퍼블릭"></div>
 											<span>바이오퍼블릭</span>
 											<dl>
 												<dt>
-													합리적인 가격에<br/>
-													누리는 믿을 수 있는 <br/>
+													합리적인 가격에 <br/> 
+													누리는 믿을 수 있는<br/> 
 													건강식품
 												</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-15">
-											<div><img src="../../images/logo_aia_m.png" alt="AIA Vitality"></div>
-											<span>AIA Vitality</span>
+											<div><img src="../../images/logo_one_aia.png" alt="AIA 바이탈리티"></div>
+											<span>AIA 바이탈리티</span>
 											<dl>
 												<dt>
 													걷기만 해도<br/> 
-													매주 오늘의 커피<br/> 
+													매주 오늘의 커피 <br/> 
 													한 잔이 무료
 												</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-16">
-											<div><img src="../../images/logo_dobrain_m.png" alt="Do Brain"></div>
+											<div><img src="../../images/logo_one_dobrain.png" alt="두브레인"></div>
 											<span>두브레인</span>
 											<dl>
 												<dt>
 													믿을 수 있는<br/> 
 													우리 아이 두뇌 교육,<br/> 
 													반값으로 할인!
+												</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-17">
-											<div><img src="../../images/logo_spoon_m.png" alt="SPOON"></div>
-											<span>스푼 패스</span>
+											<div><img src="../../images/logo_one_spoon.png" alt="스푼패스"></div>
+											<span>스푼패스</span>
 											<dl>
 												<dt>
 													취항저격 방송과<br/> 
@@ -345,68 +367,67 @@
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-18">
-											<div><img src="../../images/wave_logo.png" alt="wavve"></div>
-											<span>wavve</span>
+											<div><img src="../../images/logo_one_wavve.png" alt="웨이브"></div>
+											<span>웨이브</span>
 											<dl>
 												<dt>
-													드라마/예능/영화<br/>
+													드라마/예능/영화<br/> 
 													해외 시리즈 무제한
 												</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-19">
-											<div><img src="../../images/logo_flo_m.png" alt="Flo"></div>
+											<div><img src="../../images/logo_one_flo.png" alt="FLO"></div>
 											<span>플로</span>
 											<dl>
 												<dt>
-													내가 찾던<br/>
-													플레이리스트가<br/>
+													내가 찾던 <br/> 
+													플레이리스트가 <br/> 
 													한 곳에
 												</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-20">
-											<div><img src="../../images/logo_coloring_m.png" alt="v컬러링"></div>
+											<div><img src="../../images/logo_one_vcolor.png" alt="v컬러링"></div>
 											<span>v컬러링</span>
 											<dl>
 												<dt>
-													단순한<br/>
-													통화 연결음에서<br/>
+													단순한 통화 <br/> 
+													연결음에서 <br/> 
 													보이는 컬러링으로
 												</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-21">
-											<div><img src="../../images/logo_onebooks_m.png" alt="원스토어 북패스"></div>
+											<div><img src="../../images/logo_one_pass.png" alt="원스토어 북패스"></div>
 											<span>원스토어 북패스</span>
 											<dl>
 												<dt>
-													5만여 권의 책을<br/> 
+													5만여 권의 책을 <br/> 
 													무료로 감상
 												</dt>
 												<dd>자세히보기</dd>
 											</dl>
 										</a>
 									</li>
-									<li data-aos="fade-up">
+									<li class="swiper-slide">
 										<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-22">
-											<div><img src="../../images/logo_xbox_m.png" alt="XBOX 게임패스 얼티밋"></div>
-											<span>게임패스
-												얼티밋</span>
+											<div><img src="../../images/logo_one_game.png" alt="XBOX 게임패스 얼티밋"></div>
+											<span>XBOX 게임패스 얼티밋</span>
 											<dl>
 												<dt>
-													Xbox 게임패스<br/>
+													Xbox 게임패스 <br/>
 													얼티밋을<br/>
 													할인된 가격으로
 												</dt>
@@ -415,12 +436,17 @@
 										</a>
 									</li>
 								</ul>
+								<div class="swiper-scrollbar"></div>
 							</div>
+							<a href="/partner" class="arrowBtn" data-aos="fade-up">우주 파트너스 전체보기</a>
 						</li>
 						<!--right tab
 						<li class="rightTab">
 							<dl class="subTitle">
-								<dt data-aos="fade-up">합리적인 우주 라이프의 시작을 위해</dt>
+								<dt data-aos="fade-up">
+									합리적인 우주 라이프의<br />
+									시작을 위해
+								</dt>
 								<dd data-aos="fade-up">우주패스 mini</dd>
 							</dl>
 							<div class="monthCost" data-aos="fade-up">
@@ -429,10 +455,11 @@
 								<strong>첫 달 100원</strong>
 							</div>
 							<p data-aos="fade-up">
-								기본 혜택만으로 T우주를 즐기기에 충분한 당신에게 우주패스 mini를 추천합니다.<br/>
-								보다 합리적인 가격으로 아래의 혜택들을 모두 만나 보세요.
+								기본 혜택만으로 T우주를 즐기기에 충분한<br />당신에게 우주패스 mini를 추천합니다.
+								<br /><br />
 							</p>
-							
+							<p data-aos="fade-up">보다 합리적인 가격으로<br />아래의 혜택들을 모두 만나 보세요.
+							</p>
 							<a href="#" class="arrowBtn" data-aos="fade-up" target="_blank">첫달 100원에 구독하기</a>
 							<div class="passAllMerit">
 								<dl>
@@ -444,7 +471,7 @@
 										<a href="javascript:;" class="rocket-layer-open" data-layer="rocket-obj-02">
 											<dl>
 												<dt>아마존</dt>
-												<dd>해외 직구 무료 배송 + 1만원 할인</dd>
+												<dd>해외 직구 무료배송 + 1만원 할인</dd>
 											</dl>
 											<div>자세히보기</div>
 										</a>
@@ -460,17 +487,15 @@
 									</li>
 								</ul>
 								<div data-aos="fade-up">
-									<p>두 가지 혜택 중 하나를 선택하여 즐겨보세요! (택 1 제공)</p>
+									<p>두 가지 혜택 중 하나를 즐겨보세요! (택 1제공)</p>
 									<ul>
 										<li>
 											<a href="javascript:;" class="rocket-layer-open" data-layer="rocket-obj-mini-03">
-												<div><img src="../../images/google_logo_one.png" alt="구글원"></div>
+												<div><img src="../../images/logo_one_google.png" alt="구글원"></div>
 												<span>Google One</span>
 												<dl>
 													<dt>
-														100GB<br/>
-														용량 제공<br/>
-														<em>(9/14부터 선택 가능)</em>
+														100GB 용량 제공
 													</dt>
 													<dd>자세히 보기</dd>
 												</dl>
@@ -478,10 +503,10 @@
 										</li>
 										<li>
 											<a href="javascript:;" class="rocket-layer-open" data-layer="rocket-obj-mini-04">
-												<div><img src="../../images/wave_logo.png" alt="wave"></div>
+												<div><img src="../../images/logo_one_wavve.png" alt="wave"></div>
 												<span>wavve Lite</span>
 												<dl>
-													<dt>부담없이<br/>즐기는 다양한<br/>콘텐츠</dt>
+													<dt>부담없이 즐기는<br />다양한 콘텐츠</dt>
 													<dd>자세히 보기</dd>
 												</dl>
 											</a>
@@ -493,13 +518,6 @@
 					</ul>
 				</div>
 			</article>
-			<div class="pcQr" data-aos="fade-up">
-				<div>
-					<div><img src="../../images/qr_img.png" alt="QR코드"></div>
-					<p>이벤트 참여는 모바일로만 가능합니다.<br />모바일로 접속해 참여해주세요!</p>
-				</div>
-				<a href="#" class="goBtn">공유하기</a>
-			</div>
 		</div>
 		<div class="layer-rocket rocket-obj-01">
 	<div class="layer-top">
@@ -557,7 +575,7 @@
 				</dl>
 				<div>
 					<dl>
-						<dt>해외 직구 무료 배송 + 1만 원 할인</dt>
+						<dt>해외 직구 무료 배송 +<br /> 1만 원 할인</dt>
 						<dd>
 							해외 직구로 합리적인 가격에 상품을 구입하고 <br /> 
 							싶어도 비싸고 부담스러운 해외 배송비.<br /> 
@@ -664,12 +682,12 @@
 		</div>
 	</div>
 </div>
-<div class="layer-rocket rocket-obj-mini-04">
+<div class="layer-rocket rocket-obj-04">
 	<div class="layer-top">
 		<div class="btn-rocket-open">
 			<img src="../../images/bg-rocket.png" alt="rocket"/>
 		</div>
-		<button type="button" class="btn-rocket-close" data-layer="rocket-obj-mini-04">
+		<button type="button" class="btn-rocket-close" data-layer="rocket-obj-04">
 			close rocket layer
 		</button>
 	</div>
@@ -731,7 +749,7 @@
 							T우주에서는 배달 음식비가 <br />
 							매달 8천 원만큼 가벼워집니다.<br />
 							<br />
-							매달 8천원 할인 (배달의민족  5천원 쿠폰 
+							매달 8천원 할인 (배달의민족  5천원 쿠폰 <br />
 							& 배민1 3천원 쿠폰) 으로  <br />
 							맛있는 음식을 부담 없이 즐겨 보세요. 
 						</dd>
@@ -794,7 +812,7 @@
 		<div class="layer-cont-in">
 			<div class="benefitView">
 				<dl>
-					<dt><img src="../../images/logo_aboutpet_m.png" alt="어바웃펫"></dt>
+					<dt><img src="../../images/logo_aboutpet.png" alt="어바웃펫"></dt>
 					<dd>어바웃펫</dd>
 				</dl>
 				<div>
@@ -1123,11 +1141,15 @@
 							4가지 혜택 중 1개 선택<br />
 							(주간 미션 달성 시)
 						</dt>
-						<dd>T우주가 당신의 새로운 운동 습관을 응원할게요!<br />
-							매주 걷기를 통해 목표를 달성하면 매월 최대 12,000원 상당의 혜택을 드려요.<br /><br />
-							SKT 통신비 3,000원 할인, 스타벅스 오늘의 커피 매주 1잔 무료, <br />
-							마트 할인, 도서비 쿠폰까지!<br /><br />
-							걷기 목표를 달성하면 원하는 혜택을 선택해서 받아볼 수 있어요.
+						<dd>T우주가 당신의 새로운 운동 습관을 응원할게요!<br /><br />
+							매주 걷기를 통해 목표를 달성하면 <br />
+							매월 최대 12,000원 상당의 혜택을 드려요.<br /><br />
+							SKT 통신비 3,000원 할인,<br />
+							스타벅스 오늘의 커피 매주 1잔 무료, <br />
+							마트 할인, 도서비 쿠폰을!<br /><br />
+							그리고 첫 가입 후 3개월 동안 우주패스 all의<br />이용요금도 할인해 드려요.<br /><br />
+							걷기 목표를 달성하면 원하는 혜택을 <br />
+							선택해서 받아볼 수 있어요.
 						</dd>
 					</dl>
 					<a href="#" class="arrowBtn">우주패스 구독하러 가기</a>
@@ -1231,7 +1253,7 @@
 				</dl>
 				<div>
 					<dl>
-						<dt>wavve 컨텐츠 이용권 무료
+						<dt>wavve 컨텐츠 이용권 제공
 						</dt>
 						<dd>
 							T우주의 특별한 혜택!<br />
@@ -1428,17 +1450,24 @@
 </footer>
 	</div>
 </body>
-	<!-- <script src="../js/jquery.min.js"></script>
-<script src="../js/swiper.min.js"></script>
-<script src="../js/common.js"></script> -->
-
-
+	
 <script type="text/javascript" src="../../bundle/jquery.chunk.js"></script>
-<!-- <script type="text/javascript" src="../../bundle/three.chunk.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js" integrity="sha512-jeYvJdyAYkpQCY/omvCYQo89qA5YxDW4JBT7COPsHT2sOAanwxkZRFeP9gc69b5reSDpZIoyCqZQZcWZkbB5Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="../../bundle/three.chunk.js"></script>
 <script type="text/javascript" src="../../bundle/vendors.chunk.js"></script>
 <script type="text/javascript" src="../../bundle/main.chunk.js"></script>
 <!-- <script src="../js/jquery.min.js"></script> -->
 <script src="../../js/swiper.min.js"></script>
 <script src="../../js/common.js"></script>
+	
+<script>
+	// Partners slide
+	var mainslider = new Swiper('.partnersSlide', {
+		slidesPerView : "auto",
+		scrollbar: {
+			el: ".swiper-scrollbar",
+			hide: false,
+		},
+		speed : 1000,
+	});
+</script>
 </html>

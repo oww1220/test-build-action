@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="../../images/svg/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../images/svg/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../../css/layout.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<title>T우주</title>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- Header -->
+		<header>
+	<!--logo-->
+	<h1>
+		<a href="/main"><img src="../../images/logo_main.png" alt="T우주 로고"></a>
+	</h1>
+	<!-- siteMap -->
+	<nav>
+		<a href="javascript:void(0)" class="btn-drawer-open">네비게이션</a>
+		<div class="drawer-cont">
+			<a href="javascript:void(0)" class="btn-drawer-close">닫기</a>
+			<ul>
+				<li>
+					<a href="/main">HOME</a>
+				</li>
+				<li>
+					<a href="/pass">우주패스 소개</a>
+				</li>
+				<li>
+					<a href="/ticketbooth">우주 티켓 부스 이벤트</a>
+				</li>
+				<li>
+					<a href="/delivery">우주 택배 이벤트</a>
+				</li>
+				<li>
+					<a href="/madmonster">T우주X매드몬스터</a>
+				</li>
+				<li>
+					<a href="/partner">우주 파트너스 전체 보기</a>
+				</li>
+				<li>
+					<a href="/mypage">마이페이지</a>
+				</li>
+			</ul>
+			<a href="javascript:;" class="logoutBtn">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<div class="bg-overlay"></div>
+		<!-- // Header -->
+		<canvas id="webgl-universe"></canvas>
+
+		<div id="content" class="mypage">
+			<!-- 하단 고정메뉴 -->
+			<ul class="quickMenu02">
+				<li class="menuTicket">
+					<a href="/ticketbooth">티켓팅<br/>이벤트 참여하기</a>
+				</li>
+				<li class="menuEvent">
+					<a href="/delivery">장바구니<br />이벤트 참여하기</a>
+				</li>
+				<li class="menuMad">
+					<a href="/madmonster">T우주X<br />매드몬스터</a>
+				</li>
+			</ul>
+			<article class="userpage">
+				<dl>
+					<dt><span>신희선</span>님</dt>
+					<dd>이벤트 참여 내역을 확인해 주세요.</dd>
+				</dl>
+				<div>
+					<h5>참여내역</h5>
+					<ul>
+						<li class="listNone" data-aos="fade-up">
+							<strong>참여하신 이벤트가 없습니다.</strong>
+						</li>
+						<li class="listTicket" data-aos="fade-up">
+							<h4>우주 티켓 부스 이벤트</h4>
+							<div><img src="../../images/mypage-box-ticket.png" alt="티켓"></div>
+							<dl>
+								<dt>좌석번호 :</dt>
+								<dd>xxxx-xxxx-xxxx-xxxx</dd>
+							</dl>
+							<p>
+								글로벌 우주 파트너스 투어 당첨자는<br/>
+								2021년 10월 13일(수) 발표됩니다.
+							</p>
+						</li>
+						<li class="listDelivery" data-aos="fade-up">
+							<h4>우주 택배 이벤트</h4>
+							<div class="captureImg"><img src="../../images/img-examples-capture.png" alt="코인"></div>
+							<h5>우주 택배 이벤트</h5>
+							<p>
+								추첨은  9월 10일부터  총 4주에 걸쳐<br/>
+								매주 금요일에 진행됩니다.<br/>
+								당첨자들에게는 개별적으로 연락드릴 예정입니다.
+							</p>
+						</li>
+						<li class="listLucky" data-aos="fade-up">
+							<h4>우주 럭키 박스</h4>
+							<div><img src="../../images/mypage-box-passAll.png" alt="코인"></div>
+							<h5>우주패스 all 무료 구독권 1개월</h5>
+							<p>
+								해당 리워드는 XX일 MMS로 일괄 전송 예정입니다.
+							</p>
+						</li>
+						<li class="listLucky" data-aos="fade-up">
+							<h4>우주 럭키 박스</h4>
+							<div><img src="../../images/mypage-box-passMini.png" alt="코인"></div>
+							<h5>우주패스 mini 무료 구독권 1개월</h5>
+							<p>
+								해당 리워드는 XX일 MMS로 일괄 전송 예정입니다.
+							</p>
+						</li>
+						<li class="listLucky" data-aos="fade-up">
+							<h4>우주 럭키 박스</h4>
+							<div><img src="../../images/mypage-box-kukka.png" alt="티켓"></div>
+							<h5>꾸까 10% 할인 쿠폰 (최대 5천원)</h5>
+							<p>F234 QEA3 D3S2 4242</p>
+							<div class="btns-W">
+								<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+								<a href="https://bit.ly/3Cjdsq3" class="btn-normal blue">쿠폰 사용하기</a>
+							</div>
+							<div class="infos">
+								<div class="info-col">
+									<strong>[이용방법]</strong>
+									<div class="info-cont">
+										<p>
+											꾸까 홈페이지에서 로그인 후 구매하실 상품을 선택 및
+											결제 시 할인쿠폰 번호를 입력하여 이용 가능
+										</p>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[유의사항]</strong>
+									<div class="info-cont">
+										<ul>
+											<li>
+												1. 쿠폰을 직접 등록 후에 결제시 이용가능합니다.
+											</li>
+											<li>
+												2. 쿠폰은 꽃다발, 당일배송, 소품 구매시에 적용 가능합니다.
+											</li>
+											<li>
+												3. 할인은 최대 5,000원까지 적용됩니다.
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[고객센터] 1661-1031</strong>
+								</div>
+							</div>
+						</li>
+						<li class="listLucky" data-aos="fade-up">
+							<h4>우주 럭키 박스</h4>
+							<div><img src="../../images/mypage-box-toun28.png" alt="티켓"></div>
+							<h5>톤28 생애 첫 맞춤 구독 1+1 쿠폰</h5>
+							<p>F234 QEA3 D3S2 4242</p>
+							<div class="btns-W">
+								<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+								<a href="https://toun28.com/subscription_skt" class="btn-normal blue">쿠폰 사용하기</a>
+							</div>
+							<div class="infos">
+								<div class="info-col">
+									<div class="info-col">
+										<strong>[사용조건]</strong>
+										<div class="info-cont">
+											<ul>
+												<li>
+													1. 생애 첫 맞춤구독 정기결제시 첫달 결제하면
+													2회차 구독서비스 무료 제공
+												</li>
+												<li>
+													2. 스탠다드 1부위 기준(월 39,000원)
+												</li>
+												<li>
+													3. 프리미엄, 2부위~4부위, 유료토핑 선택하여
+													결제금액이 39,000원이 넘을 경우,
+													2회차는 39,000원 할인하여 결제(무료제공 불가)  
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[사용방법]</strong>
+									<div class="info-cont">
+										<p>
+											T멤버십 전용 혜택 링크 접속하여 구독상담 신청<br/>
+											(혜택 링크 <a href="https://toun28.com/subscription_skt" target="_blank">toun28.com/subscription_skt</a>)
+										</p>
+									</div>	
+								</div>
+								<div class="info-col">
+									<strong>[사용기한]</strong>
+									<div class="info-cont">
+										<p>
+											2021년 12월 31일
+										</p>
+									</div>	
+								</div>
+								<div class="info-col">
+									<strong>[유의사항]</strong>
+									<div class="info-cont">
+										<ul>
+											<li>
+												1. 비대면 전화 구독상담만 적용<br/>
+												(대면 피부진단시 적용  불가)
+											</li>
+											<li>
+												2. 기존 맞춤구독 이력이 있으신 분은 적용이 불가합니다.
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[고객센터] 1588-3512</strong>
+									<div class="info-cont noMargin">
+										<p>
+											운영시간 : 오전10시~오후7시
+										</p>
+									</div>	
+								</div>
+							</div>
+						</li>
+						<li class="listLucky" data-aos="fade-up">
+							<h4>우주 럭키 박스</h4>
+							<div><img src="../../images/mypage-box-bottleworks.png" alt="티켓"></div>
+							<h5>보틀웍스 3천원 할인</h5>
+							<p>F234 QEA3 D3S2 4242</p>
+							<div class="btns-W">
+								<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+								<a href="http://s.godo.kr/yhph" class="btn-normal blue">쿠폰 사용하기</a>
+							</div>
+							<div class="infos">
+								<div class="info-col">
+									<strong>[혜택]</strong>
+									<div class="info-cont">
+										<p>
+											보틀웍스 전 상품 15,000원 이상 구매 시 3,000원 할인
+										</p>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[이용방법]</strong>
+									<div class="info-cont">
+										<p>
+											보틀웍스 홈페이지 (<a href="http://s.godo.kr/yhph" target="_blink">http://s.godo.kr/yhph</a>) → 상품페이지에서 쿠폰 등록 → 결제 시 쿠폰 적용
+										</p>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[유의사항]</strong>
+									<div class="info-cont">
+										<ul>
+											<li>
+												1. 쿠폰의 유효기간은 2021년 12월 31일까지이며,
+												기간 만료 쿠폰은 사용 및 재발급이 불가합니다.
+											</li>
+											<li>
+												2. 보틀웍스 홈페이지에서 회원 가입 후 15,000원 이상 구매 시 1회에 한하여 이용하실 수 있습니다.
+											</li>
+											<li>
+												3. 본 쿠폰은 보틀웍스 정기구독 키트 상품에는
+												사용이 불가하며, 현금으로 환불하거나
+												교환하실 수 없습니다.
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[고객센터] 070-7755-5755</strong>
+								</div>
+							</div>
+						</li>
+						<li class="listLucky" data-aos="fade-up">
+							<h4>우주 럭키 박스</h4>
+							<div><img src="../../images/mypage-box-moddushuttle.png" alt="티켓"></div>
+							<h5>모두의셔틀 1만원 할인</h5>
+							<p>F234 QEA3 D3S2 4242</p>
+							<div class="btns-W">
+								<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+								<a href="https://www.modooshuttle.com/? utm_source=SKT_olkl&utm_medium=sms &utm_campaign=event_coupon" class="btn-normal blue">쿠폰 사용하기</a>
+							</div>
+							<div class="infos">
+								<div class="info-col">
+									<strong>[유효기간]</strong>
+									<div class="info-cont">
+										<p>
+											등록 유효기간 : 2021/12/31<br/>
+											사용 유효기간 : 2022/01/31
+										</p>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[사용조건]</strong>
+									<div class="info-cont">
+										<p>
+											우주 멤버십 쿠폰과 중복사용 가능.<br/>
+											단, 모두의셔틀에서 제공하는 타 이벤트 쿠폰과
+											중복사용 불가. 모두의셔틀의 모든 출근길 경로에서사용 가능
+										</p>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[사용방법]</strong>
+									<div class="info-cont">
+										<p>
+											출근길 신청 후 결제시 쿠폰을 선택하여 사용 가능
+										</p>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[유의사항]</strong>
+									<div class="info-cont">
+										<ul>
+											<li>
+												1. 쿠폰 사용 후 환불시 쿠폰 환불 불가
+											</li>
+											
+										</ul>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[고객센터] 1588-3512</strong>
+									<div class="info-cont noMargin">
+										<p>
+											운영시간 : 평일 06:30 ~ 19:00
+										</p>
+									</div>	
+								</div>
+							</div>
+						</li>
+						<li class="listLucky" data-aos="fade-up">
+							<h4>우주 럭키 박스</h4>
+							<div><img src="../../images/mypage-box-aboutpet.png" alt="티켓"></div>
+							<h5>어바웃펫 3천원 할인 쿠폰</h5>
+							<p>F234 QEA3 D3S2 4242</p>
+							<div class="btns-W">
+								<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+								<a href="https://bit.ly/2VNP93c" class="btn-normal blue">쿠폰 사용하기</a>
+							</div>
+							<div class="infos">
+								<div class="info-col">
+									<strong>[혜택]</strong>
+									<div class="info-cont">
+										<p>
+											어바웃펫 전 상품 10,000원 이상 구매 시 3,000원 할인
+										</p>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[이용방법]</strong>
+									<div class="info-cont">
+										<p>
+											어바웃펫 홈페이지 (<a href="https://bit.ly/2VNP93c" target="_blink">https://bit.ly/2VNP93c</a>) → 상품페이지에서 쿠폰 등록 → 결제 시 쿠폰 적용
+										</p>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[유의사항]</strong>
+									<div class="info-cont">
+										<ul>
+											<li>
+												1. 쿠폰의 유효기간은 2021년 12월 31일까지이며,
+												기간 만료 쿠폰은 사용 및 재발급이 불가합니다.
+											</li>
+											<li>
+												2. 어바웃펫 홈페이지에서 회원 가입 후 10,000원 이상
+												구매 시 1회에 한하여 이용하실 수 있습니다.
+											</li>
+											<li>
+												3. 본 쿠폰은 어바웃펫 정기구독 키트 상품에는 사용이
+												불가하며, 현금으로 환불하거나 교환하실 수 없습니다.
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[고객센터] 1644-9601</strong>
+								</div>
+							</div>
+						</li>
+						<li class="listLucky" data-aos="fade-up">
+							<h4>우주 럭키 박스</h4>
+							<div><img src="../../images/mypage-box-soundgym.png" alt="티켓"></div>
+							<h5>사운드짐 1개월 이용권</h5>
+							<p>F234 QEA3 D3S2 4242</p>
+							<div class="btns-W">
+								<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+								<a href="" class="btn-normal blue">쿠폰 사용하기</a>
+							</div>
+							<div class="infos">
+								<div class="info-col">
+									<strong>[혜택]</strong>
+									<div class="info-cont">
+										<p>
+											홈트, 런닝, 필라테스, 실내자전거 등 600개+운동 콘텐츠 무제한 이용, 체계적인 전문가 프로그램 제공, 다채로운 챌린지 참여, 운동피플과 소통, 정보공유
+										</p>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[이용방법]</strong>
+									<div class="info-cont">
+										<p>
+											사운드짐 앱 실행  → '마이' 탭 선택 → '설정' 선택 →쿠폰 등록 또는 사운드짐 홈페이지 접속 (<a href="https://www.soundgym.kr/" target="_blink">soundgym.kr/</a>) → 쿠폰 등록
+										</p>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[유의사항]</strong>
+									<div class="info-cont">
+										<ul>
+											<li>
+												1. 쿠폰의 유효기간은 2021년 12월 31일까지이며, 기간 만료 쿠폰은 사용 및 재발급이 불가합니다.
+											</li>
+											<li>
+												2. 본 쿠폰은 제 3자를 통해 판매하거나 현금으로 환불 및 교환하실 수 없습니다.
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="info-col">
+									<strong>[고객센터] 070-5157-8210</strong>
+								</div>
+							</div>
+						</li>
+						<li class="listLucky" data-aos="fade-up">
+							<h4>우주 럭키 박스</h4>
+							<div><img src="../../images/mypage-box-tmap.png" alt="티켓"></div>
+							<h5>T모빌리티 T맵 셀럽 1회 이용권</h5>
+							<p>F234 QEA3 D3S2 4242</p>
+							<div class="btns-W">
+								<button type="button" class="btn-normal red">쿠폰 번호 복사하기</button>
+							</div>
+						</li>
+
+
+					</ul>
+				</div>
+			</article>
+		</div>
+		<footer>
+	<div>
+		<div>
+			<div class="fooLogo"><img src="../../images/logo_foo.png" alt="T우주 로고"></div>
+			<p>&copy; T우주 Co.,Ltd.</p>
+		</div>
+		<ul>
+			<li><a href="#">개인정보처리방침</a></li>
+			<li><a href="#">이용약관</a></li>
+		</ul>
+		<!-- <div><address>서울특별시 중구 을지로65 (을지로2가) SK T-타워 SK텔레콤(주)</address></div> -->
+	</div>
+</footer>
+	</div>
+</body>
+	
+<script type="text/javascript" src="../../bundle/jquery.chunk.js"></script>
+<script type="text/javascript" src="../../bundle/three.chunk.js"></script>
+<script type="text/javascript" src="../../bundle/vendors.chunk.js"></script>
+<script type="text/javascript" src="../../bundle/main.chunk.js"></script>
+<!-- <script src="../js/jquery.min.js"></script> -->
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+</html>

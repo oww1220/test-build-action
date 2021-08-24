@@ -64,6 +64,64 @@ $(() => {
         }
     })();
     (() => {
+        let cashGenerator = null;
+        let eventChkFlag = true;
+        function* drawerOpen() {
+            eventChkFlag = false;
+            try {
+                if ($('.layer-rocket').length)
+                    $('.layer-rocket').addClass('low-zIndex');
+                $('.bg-overlay').show();
+                const delay0 = yield Async.wait(100);
+                $('.btn-drawer-open').hide();
+                $('.bg-overlay').addClass('active');
+                $('#content').addClass('hide');
+                const delay1 = yield Async.wait(600);
+                $('.drawer-cont').addClass('bg');
+                const delay2 = yield Async.wait(100);
+                $('.bg-overlay').addClass('hide');
+                $('.btn-drawer-close').fadeIn();
+            }
+            catch (err) {
+                log(err.message);
+            }
+            eventChkFlag = true;
+        }
+        function* drawerClose() {
+            eventChkFlag = false;
+            try {
+                $('.btn-drawer-close').hide();
+                $('.bg-overlay').removeClass('hide');
+                const delay1 = yield Async.wait(100);
+                $('.drawer-cont').removeClass('bg');
+                $('.bg-overlay').removeClass('active');
+                if ($('.layer-rocket').length)
+                    $('.layer-rocket').removeClass('low-zIndex');
+                const delay2 = yield Async.wait(200);
+                $('#content').removeClass('hide');
+                const delay3 = yield Async.wait(100);
+                $('.bg-overlay').hide();
+                $('.btn-drawer-open').fadeIn();
+            }
+            catch (err) {
+                log(err.message);
+            }
+            eventChkFlag = true;
+        }
+        $('.btn-drawer-open').on('click', () => {
+            if (!eventChkFlag)
+                return;
+            cashGenerator = drawerOpen();
+            Async.generaterRun(cashGenerator);
+        });
+        $('.btn-drawer-close').on('click', () => {
+            if (!eventChkFlag)
+                return;
+            cashGenerator = drawerClose();
+            Async.generaterRun(cashGenerator);
+        });
+    })();
+    (() => {
         $(document).on('click', '.rocket-layer-open', (e) => {
             const layer = '.' + $(e.currentTarget).data('layer');
             if (!LayerRocket.eventChkFlag)
