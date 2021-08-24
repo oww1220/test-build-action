@@ -124,7 +124,7 @@
 									<a href="#;" class="def"></a>
 									<a href="#;" class="dropdown">▼</a>
 								</span>
-								<select name="telecom[]" id="sel">
+								<select name="telecom[]" id="sel" style="display: block;">
 									<option value="통신사">통신사</option>
 									<option value="SKT">SKT</option>
 									<option value="KT">KT</option>
@@ -900,6 +900,8 @@
 
 		//test 
 		$('.userInfo .goBtn').on('click', function(){
+			//var idx = $(this).index();
+			//console.log(idx);
 			alert($("select[name='telecom[]']").val());
 		});
 
