@@ -6,10 +6,21 @@
 		<!-- Header -->
 		@@include('./../include/header.html')
 		<!-- // Header -->
-
 		<canvas id="webgl-universe"></canvas>
 
 		<div id="content" class="delivery">
+			<!-- 하단 고정메뉴 -->
+			<ul class="quickMenu02">
+				<li class="menuTicket">
+					<a href="/ticketbooth">티켓팅<br/>이벤트 참여하기</a>
+				</li>
+				<li class="menuEvent on">
+					<a href="/delivery">장바구니<br />이벤트 참여하기</a>
+				</li>
+				<li class="menuMad">
+					<a href="/madmonster">T우주X<br />매드몬스터</a>
+				</li>
+			</ul>
 			<article class="deliveryEvent" data-aos="fade-up">
 				<dl class="subTitle">
 					<dt>최대 1천만 원까지 해외 직구 쇼핑이 무료!</dt>
@@ -28,9 +39,100 @@
 					</p>
 				</div>
 				<p>
-					T우주가 최대 1천만 원까지 무료로<br />
-					선물해 드립니다.
+					T우주가 최대 1천만 원의 쇼핑 혜택을<br />
+					무료로 선물해 드립니다.
 				</p>
+				<a href="#" target="_blank" class="arrowBtn">
+					11번가 아마존 스토어에서<br/>
+					장바구니 담으러가기
+				</a>
+				<div class="userInfoWrap">
+					<a href="javascript:;" class="cartBtn">장바구니 이미지 등록하고 응모하기<span>one</span></a>
+					<div class="userInfo">
+						<h4>연락처 정보를 알려주세요.</h4>
+						<div class="userInfo-input">
+							<!-- 값 오류시 class="wrongValue"추가-->
+							<div class="col-3 input-effect">
+								<input class="effect-24" type="text" placeholder="이름">
+								<label>이름</label>
+								<span class="focus-bg"></span>
+								<strong>이름을 입력해주세요.</strong>
+							</div>
+							<div class="input-birth">
+								<!-- 값 오류시 class="wrongValue"추가-->
+								<div class="col-3 input-effect">
+									<input class="effect-24" type="text" placeholder="생년월일+1자리">
+									<label>생년월일+1자리</label>
+									<span class="focus-bg"></span>
+									<strong>생년월일+1자리 를 입력해주세요.</strong>
+								</div>
+								<div class="input-line">-</div>
+								<div class="input-security">
+									<div class="col-3 input-effect">
+										<input class="effect-24" type="password" placeholder="●">
+										<label></label>
+										<span class="focus-bg"></span>
+									</div>
+									<ul>
+										<li>●</li><li>●</li><li>●</li><li>●</li><li>●</li>
+									</ul>
+								</div>
+							</div>
+							<div class="telecom">
+								<span class="select">
+									<a href="#;" class="def"></a>
+									<a href="#;" class="dropdown">▼</a>
+								</span>
+								<select name="" id="sel">
+									<option value="통신사">통신사</option>
+									<option value="SKT">SKT</option>
+									<option value="KT">KT</option>
+									<option value="LGU+">LG U+</option>
+									<option value="알뜰폰(SKT)">알뜰폰(SKT)</option>
+									<option value="알뜰폰(KT)">알뜰폰(KT)</option>
+									<option value="알뜰폰(LG U+)">알뜰폰(LG U+)</option>
+								</select>
+								<strong>통신사를 선택해주세요.</strong>
+							</div>
+							<div class="col-3 input-effect">
+								<input class="effect-24 phone" type="text" placeholder="휴대폰번호" name="phone" maxlength="13" autocomplete="off" >
+								<label>휴대폰번호</label>
+								<span class="focus-bg"></span>
+								<strong>휴대폰번호를 입력해주세요.</strong>
+							</div>
+							<div class="col-3 input-effect wrongValue">
+								<input class="effect-24" type="text" placeholder="인증번호">
+								<label>인증번호</label>
+								<span class="focus-bg"></span>
+								<a href="javascript:;" class="reissuance">인증번호 재발급</a>
+								<strong>인증번호 발급을 해주세요.</strong>
+								<em>2:32</em>
+							</div>
+						</div>
+						<div class="numberIssuance">
+							<!--class="on"일때 display:block-->
+							<a href="javascript:;" class="goBtn on">인증번호 발급</a>
+							<a href="javascript:;" class="goBtn02">본인 인증하기</a>
+						</div>
+						<ul>
+							<li>
+								<input type="checkbox" id="agree01">
+								<label for="agree01">체크</label>
+								<label for="agree01">개인정보처리방침 및 이용약관 동의</label>
+								<a href="#" target="_blank">자세히보기</a>
+							</li>
+							<li>
+								<input type="checkbox" id="agree02">
+								<label for="agree02">체크</label>
+								<label for="agree02">본인은 만 14세 이상입니다.</label>
+							</li>
+						</ul>
+						<a href="javascript:;" class="cartBtn basket-open-rocket" data-layer="rocket-obj-basket">
+							<span>one</span>
+							장바구니 이미지 등록하기
+						</a>
+					</div>
+				</div>
 			</article>
 			<article class="deliveryInfo" data-aos="fade-up">
 				<dl>
@@ -40,29 +142,34 @@
 				<dl>
 					<dt>이벤트 대상</dt>
 					<dd>
-						우주패스(mini / all)에 가입 후<br />
-						장바구니 이미지 업로드를 모두 마친 분
+						우주패스 all/mini를 구독하신 고객님
 					</dd>
 				</dl>
 				<div>
 					<h4>당첨자 선발 안내</h4>
 					<ul>
 						<li>
-							<h5>매주 화요일 총 4번 추첨</h5>
+							<h5>매주 금요일 총 4번 발표</h5>
 							<div>
 								<dl>
-									<dt>500만원</dt>
+									<dt>
+										500만원<br/>
+										SK pay 포인트
+									</dt>
 									<dd>1명</dd>
 								</dl>
 								<dl>
-									<dt>100만원</dt>
+									<dt>
+										100만원<br/>
+										SK pay 포인트
+									</dt>
 									<dd>3명</dd>
 								</dl>
 							</div>
 						</li>
 						<li>
 							전체 기간 동안 참여한 고객님 중<br />
-							총 1천만 원(1명) 추첨
+							총 1천만 SK pay 포인트 추첨
 						</li>
 					</ul>
 				</div>
@@ -76,55 +183,183 @@
 						<span>최종 당첨자</span><strong>10월 13일 (수)</strong>
 					</dd>
 				</dl>
+				<a href="#" class="arrowBtn" target="_blank"> 첫 달 1,000원 우주패스 구독하기</a>
 				<span>one</span>
 			</article>
 			<article class="deliveryStep">
 				<h5 data-aos="fade-up">참여방법</h5>
 				<ul>
-					<li data-aos="fade-up" class="add-svg">
-						<dl class="step01">
+					<li data-aos="fade-up">
+						<dl class="step01 add-svg">
 							<dt>STEP 1</dt>
 							<dd>우주패스 구독하기</dd>
+							<div class="svg-W">
+								<div id="lottie01"></div>
+							</div>
 						</dl>
-						<div class="svg-W">
-							<div id="lottie01"></div>
-						</div>
 					</li>
-					<li data-aos="fade-up" class="add-svg">
-						<dl class="step02">
+					<li data-aos="fade-up">
+						<dl class="step02 add-svg">
 							<dt>STEP 2</dt>
-							<dd>11번가에서 아마존 스토어 접속하기</dd>
+							<dd>11번가에서 아마존 스토어<br />접속하기</dd>
+							<div class="svg-W">
+								<div id="lottie04"></div>
+							</div>
 						</dl>
-						<div class="svg-W">
-							<div id="lottie04"></div>
-						</div>
+						
+						<a href="#" class="arrowBtn">
+							11번가 아마존 스토어에서<br/>
+							장바구니 담으러가기
+						</a>
 					</li>
-					<li data-aos="fade-up" class="add-svg">
-						<dl class="step03">
+					<li data-aos="fade-up">
+						<dl class="step03 add-svg">
 							<dt>STEP 3</dt>
 							<dd>
-								원하는 상품 장바구니에<br/>
+								원하는 상품 장바구니에<br />
 								담은 후 캡처하기
-								<span>최대 1천만 원까지 담으실 수 있습니다. </span>
+								<span>최대 1,000만원까지 담으실 수 있습니다.</span>
 							</dd>
+							<div class="svg-W">
+								<div id="lottie05"></div>
+							</div>
 						</dl>
-						<div class="svg-W">
-							<div id="lottie05"></div>
-						</div>
+						
 					</li>
-					<li id="importImage" data-aos="fade-up" class="add-svg">
-						<dl class="step04">
+					<li id="importImage" data-aos="fade-up">
+						<dl class="step04 add-svg">
 							<dt>STEP 4</dt>
 							<dd>
-								이벤트 페이지에<br/>
+								이벤트 페이지에<br />
 								캡처 이미지 등록하기
 							</dd>
+							<div class="svg-W">
+								<div id="lottie06"></div>
+							</div>
 						</dl>
-						<div class="svg-W">
-							<div id="lottie06"></div>
+						
+						<div class="userInfoWrap">
+							<a href="javascript:;" class="cartBtn">장바구니 이미지 등록하고 응모하기<span>one</span></a>
+							<div class="userInfo">
+								<h4>연락처 정보를 알려주세요.</h4>
+								<div class="userInfo-input">
+									<!-- 값 오류시 class="wrongValue"추가-->
+									<div class="col-3 input-effect">
+										<input class="effect-24" type="text" placeholder="이름">
+										<label>이름</label>
+										<span class="focus-bg"></span>
+										<strong>이름을 입력해주세요.</strong>
+									</div>
+									<div class="input-birth">
+										<!-- 값 오류시 class="wrongValue"추가-->
+										<div class="col-3 input-effect">
+											<input class="effect-24" type="text" placeholder="생년월일+1자리">
+											<label>생년월일+1자리</label>
+											<span class="focus-bg"></span>
+											<strong>생년월일+1자리 를 입력해주세요.</strong>
+										</div>
+										<div class="input-line">-</div>
+										<div class="input-security">
+											<div class="col-3 input-effect">
+												<input class="effect-24" type="password" placeholder="●">
+												<label></label>
+												<span class="focus-bg"></span>
+											</div>
+											<ul>
+												<li>●</li><li>●</li><li>●</li><li>●</li><li>●</li>
+											</ul>
+										</div>
+									</div>
+									<div class="telecom">
+										<span class="select">
+											<a href="#;" class="def"></a>
+											<a href="#;" class="dropdown">▼</a>
+										</span>
+										<select name="" id="sel2">
+											<option value="통신사">통신사</option>
+											<option value="SKT">SKT</option>
+											<option value="KT">KT</option>
+											<option value="LGU+">LG U+</option>
+											<option value="알뜰폰(SKT)">알뜰폰(SKT)</option>
+											<option value="알뜰폰(KT)">알뜰폰(KT)</option>
+											<option value="알뜰폰(LG U+)">알뜰폰(LG U+)</option>
+										</select>
+										<strong>통신사를 선택해주세요.</strong>
+									</div>
+									<div class="col-3 input-effect">
+										<input class="effect-24 phone" type="text" placeholder="휴대폰번호" name="phone" maxlength="13" autocomplete="off" >
+										<label>휴대폰번호</label>
+										<span class="focus-bg"></span>
+										<strong>휴대폰번호를 입력해주세요.</strong>
+									</div>
+									<div class="col-3 input-effect wrongValue">
+										<input class="effect-24" type="text" placeholder="인증번호">
+										<label>인증번호</label>
+										<span class="focus-bg"></span>
+										<a href="javascript:;" class="reissuance">인증번호 재발급</a>
+										<strong>인증번호 발급을 해주세요.</strong>
+										<em>2:32</em>
+									</div>
+								</div>
+								<div class="numberIssuance">
+									<!--class="on"일때 display:block-->
+									<a href="javascript:;" class="goBtn on">인증번호 발급</a>
+									<a href="javascript:;" class="goBtn02">본인 인증하기</a>
+								</div>
+								<ul>
+									<li>
+										<input type="checkbox" id="agree03">
+										<label for="agree03">체크</label>
+										<label for="agree03">개인정보처리방침 및 이용약관 동의</label>
+										<a href="#" target="_blank">자세히보기</a>
+									</li>
+									<li>
+										<input type="checkbox" id="agree04">
+										<label for="agree04">체크</label>
+										<label for="agree04">본인은 만 14세 이상입니다.</label>
+									</li>
+								</ul>
+								<a href="javascript:;" class="cartBtn basket-open-rocket" data-layer="rocket-obj-basket">
+									<span>one</span>
+									장바구니 이미지 등록하기
+								</a>
+							</div>
 						</div>
 					</li>
 				</ul>
+				<div class="imageFile">
+					<div>
+						<a href="javascript:;" class="closeBtn">닫기</a>
+						<div class="step01 on">
+							<dl>
+								<dt>STEP 1</dt>
+								<dd>아래와 같이 장바구니를<br />캡쳐하여 등록해주세요.</dd>
+							</dl>	
+							<div><img src="../../images/img-examples-1.png" alt="장바구니 캡쳐예시"></div>
+							<div class="goBtn">
+								<label for="imageImport01">이미지 불러오기</label>
+								<input type="file" id="imageImport01" class="blind">
+							</div>
+						</div>
+						<div class="step02">
+							<dl>
+								<dt>STEP 2</dt>
+								<dd>이미지를<br />등록하시겠습니까?</dd>
+							</dl>
+							<div><img src="../../images/img-examples-1.png" alt="장바구니 캡쳐예시"></div>
+							<div class="btnWrap">
+								<a href="javascript:;" class="goBtn">등록하기</a>
+								<div class="goBtn">
+									<label for="imageImport02">이미지 다시 불러오기</label>
+									<input type="file" id="imageImport02" class="blind">
+								</div>
+							</div>
+						</div>
+						<div class="step03">
+							<p>등록이 모두<br />완료되었습니다.</p>
+						</div>
+					</div>
+				</div>
 			</article>
 			<article class="storeRank">
 				<dl>
@@ -132,9 +367,9 @@
 					<dd data-aos="fade-up">TOP 6</dd>
 				</dl>
 				<!-- swiper -->
-				<div class="rankSlide" data-aos="fade-up">
-					<ul>
-						<li>
+				<div class="swiper-container rankSlide" data-aos="fade-up">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
 							<div><img src="../../images/img-ama-top1.png" alt="Samsung Crystal UHD 125 cm"></div>
 							<dl>
 								<dt>Samsung Crystal UHD 125 cm</dt>
@@ -143,7 +378,7 @@
 								</dd>
 							</dl>
 						</li>
-						<li>
+						<li class="swiper-slide">
 							<div><img src="../../images/img-ama-top2.png" alt="iPhone 12 Pro Max 6.7형 디스플레이"></div>
 							<dl>
 								<dt>iPhone 12 Pro Max 6.7형 디스플레이</dt>
@@ -152,7 +387,7 @@
 								</dd>
 							</dl>
 						</li>
-						<li>
+						<li class="swiper-slide">
 							<div><img src="../../images/img-ama-top1.png" alt="Samsung Crystal UHD 125 cm"></div>
 							<dl>
 								<dt>Samsung Crystal UHD 125 cm</dt>
@@ -161,7 +396,7 @@
 								</dd>
 							</dl>
 						</li>
-						<li>
+						<li class="swiper-slide">
 							<div><img src="../../images/img-ama-top1.png" alt="Samsung Crystal UHD 125 cm"></div>
 							<dl>
 								<dt>Samsung Crystal UHD 125 cm</dt>
@@ -170,7 +405,7 @@
 								</dd>
 							</dl>
 						</li>
-						<li>
+						<li class="swiper-slide">
 							<div><img src="../../images/img-ama-top1.png" alt="Samsung Crystal UHD 125 cm"></div>
 							<dl>
 								<dt>Samsung Crystal UHD 125 cm</dt>
@@ -179,7 +414,7 @@
 								</dd>
 							</dl>
 						</li>
-						<li>
+						<li class="swiper-slide">
 							<div><img src="../../images/img-ama-top1.png" alt="Samsung Crystal UHD 125 cm"></div>
 							<dl>
 								<dt>Samsung Crystal UHD 125 cm</dt>
@@ -189,15 +424,9 @@
 							</dl>
 						</li>
 					</ul>
+					<div class="swiper-scrollbar"></div>
 				</div>
 			</article>
-			<div class="pcQr" data-aos="fade-up">
-				<div>
-					<div><img src="../../images/qr_img.png" alt="QR코드"></div>
-					<p>이벤트 참여는 모바일로만 가능합니다.<br />모바일로 접속해 참여해주세요!</p>
-				</div>
-				<a href="#" class="goBtn">공유하기</a>
-			</div>
 			<article class="eventNotice">
 				<h5>*유의사항</h5>
 				<ul>
@@ -216,8 +445,27 @@
 						공휴일 제외, 유료</li>
 				</ul>
 			</article>
+			<!--event alret class="on" 추가시 활성화-->
+			<div class="alertWin">
+				<div>
+					<dl>
+						<dt>이미 이벤트에 참여<br />하셨습니다.</dt>
+						<dd>
+							참여 내역은 마이페이지에서<br />
+							확인하실 수 있습니다.	
+						</dd>
+					</dl>
+					<div>
+						<a href="#" class="goBtn">확인</a>
+						<a href="#" class="arrowBtn">마이페이지</a>
+					</div>
+				</div>
+			</div>
 		</div>
+		@@include('./../include/layer-rocket-basket.html')
 		@@include('./../include/footer.html')
+		
+
 	</div>
 </body>
 	@@include('./../include/footer_js.html')
@@ -228,5 +476,212 @@
 			});
 		};
 		confirm();
+
+		// TOP 6 구매순위 slide
+		var mainslider = new Swiper('.rankSlide', {
+			slidesPerView : "auto",
+			scrollbar: {
+				el: ".swiper-scrollbar",
+				hide: false,
+        	},
+			speed : 1000,
+		});
+
+		/***통신사 selectbox****/
+		$('.select').each(function(idx, item){
+			//console.log(idx, item);
+			var num = idx === 0 ? '': idx+1 
+			var sel = $(item);
+			sel.append("<ul class=options style='display:none;'></ul>");
+			var opts = sel.find('.options');
+			var btn = sel.find('.dropdown');
+			var real = $('#sel' + num);
+			var real_opt = real.find('option');
+
+			//console.log(opts, real, real_opt.length, real_opt);
+			
+			//초기세팅
+			for(var i=0; i<real_opt.length; i++){
+				sel.find('> .options').append('<li><a href=javascript:;></a></li>');
+				if(i === 0){
+					sel.find(' > .def').text(real_opt.eq(i).text());
+					opts.find('li').eq(0).find('a').text(real_opt.eq(i).val());
+				} else if(i >= 1) {
+					opts.find('li').eq(i).find('a').text(real_opt.eq(i).val());
+				}
+			}
+
+			//내용출력칸, 버튼 을 클릭하면
+			sel.on('click','.def, .dropdown', function(e){
+				e.stopPropagation();
+				opts.slideToggle('fast').toggleClass('on');
+				if(opts.hasClass('on')) btn.text('▲');
+				if(sel.hasClass('on radius')) btn.text('▼');
+			});
+
+			//옵션리스트 중 하나를 클릭하면
+			opts.on('click','li', function(e){
+				e.stopPropagation();
+				var idx = $(this).index();
+				var t = $(this).text();
+				sel.find('.def').text(t);
+				opts.slideToggle('fast').removeClass('on');
+				btn.text('▼');
+				//실제 셀렉트 박스 변경
+				real_opt.eq(idx).attr('selected','selected').siblings().removeAttr('selected');
+			});
+
+			//window를 클릭하면
+			$(window).on('click', function(e){
+				if(opts.hasClass('on'))
+				opts.slideToggle('fast').removeClass('on');
+				btn.text('▼');
+				$(".select").addClass("radius");
+			});
+			
+
+		});
+
+		/*
+		$('.select').append("<ul class=options style='display:none;'></ul>");
+
+
+		//변수 설정
+		var sel = $('.select');
+		var opts = $('.select > .options');
+		var btn = $('.select > .dropdown');
+		var real = $('#sel');
+		var real_opt = real.find('option');
+
+		$('.userInfo p').text(real_opt.eq(0).text());
+
+		//초기세팅
+		for(var i=0; i<real_opt.length; i++){
+			$('.select').find('> .options').append('<li><a href=javascript:;></a></li>');
+				if(i === 0){
+					sel.find(' > .def').text(real_opt.eq(i).text());
+				opts.find('li').eq(0).find('a').text(real_opt.eq(i).val());
+			} else if(i >= 1) {
+				opts.find('li').eq(i).find('a').text(real_opt.eq(i).val());
+			}
+		}
+
+
+		//내용출력칸, 버튼 을 클릭하면
+		sel.on('click','.def, .dropdown', function(e){
+			e.stopPropagation();
+			opts.slideToggle('fast').toggleClass('on');
+			if(opts.hasClass('on')) btn.text('▲');
+			if(sel.hasClass('on radius')) btn.text('▼');
+		});
+
+		//옵션리스트 중 하나를 클릭하면
+		opts.on('click','li', function(e){
+			e.stopPropagation();
+			var idx = $(this).index();
+			var t = $(this).text();
+			sel.find('.def').text(t);
+			opts.slideToggle('fast').removeClass('on');
+			btn.text('▼');
+			//실제 셀렉트 박스 변경
+			real_opt.eq(idx).attr('selected','selected').siblings().removeAttr('selected');
+		});
+
+		//window를 클릭하면
+		$(window).on('click', function(e){
+			if(opts.hasClass('on'))
+			opts.slideToggle('fast').removeClass('on');
+			btn.text('▼');
+			$(".select").addClass("radius");
+		});
+		*/
+
+		$(".select a").click(function(){
+			if($(".options").hasClass("on")){
+				$(".select").addClass("radius");
+			}else{
+				$(".select").addClass("on");
+				$(".select").removeClass("radius");
+			}
+		})
+
+		//핸드폰 번호 입력
+		$('.phone').keydown(function(event) {
+			var key = event.charCode || event.keyCode || 0;
+			$text = $(this);
+			if (key !== 8 && key !== 9) {
+				if ($text.val().length === 3) {
+					$text.val($text.val() + '-');
+				}
+				if ($text.val().length === 8) {
+					$text.val($text.val() + '-');
+				}
+			}
+
+			return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));          
+		});
+
+		// JavaScript for label effects only
+		$(function(){
+			$(".col-3 input").val("");
+			
+			$(".input-effect input").focusout(function(){
+				if($(this).val() != ""){
+					$(this).addClass("has-content");
+				}else{
+					$(this).removeClass("has-content");
+				}
+			});
+		});
+
+		//장바구니 이미지 등록
+		function userInfoShow(){
+			$(".deliveryEvent .userInfoWrap > .cartBtn").click(function(){
+				$(".deliveryEvent .userInfoWrap").addClass("on");
+			});
+			$(".deliveryStep .userInfoWrap > .cartBtn").click(function(){
+				$(".deliveryStep .userInfoWrap").addClass("on");
+			});
+		};
+		userInfoShow()
+
+		// 이미지등록 modal
+		function imageImport(){
+			// $(".userInfo > .cartBtn").click(function(){
+			// 	$(".imageFile").addClass("on")
+			// 	$("body, html").css ({
+			// 		"overflow-y":"hidden"
+			// 	});
+			// });
+			// $(".imageFile .closeBtn").click(function(){
+			// 	$("body, html").css ({
+			// 		"overflow-y":"auto"
+			// 	});
+			// 	$(".imageFile").removeClass("on")
+			// });
+			$(".imageFile .step01 .goBtn").click(function(){
+				$(".step01").removeClass("on");
+				$(".step02").addClass("on");
+			});
+			$(".step02 .btnWrap > a").click(function(){
+				$(".step02").removeClass("on");
+				$(".step03").addClass("on");
+			});
+		}
+		imageImport();
+
+
+		// 장바구니 이미지등록
+		$(document).on('click', '.basket-open-rocket', function(e) {
+			var layer = '.' + $(e.currentTarget).data('layer');
+			if (!CommonUI.LayerRocket.eventChkFlag) return;
+			CommonUI.LayerRocket.cashGenerator = CommonUI.LayerRocket.open(layer, function(layer) {
+				//레이어 오픈후 콜백함수 문맥
+				console.log(layer + ': rocket-layer open!');
+			})();
+			CommonUI.Async.generaterRun(CommonUI.LayerRocket.cashGenerator);
+		});
+
+
 	</script>
 </html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./../include/head.html')
+<body>
+	<div id="wrap">
+		<!-- Header -->
+		@@include('./../include/header.html')
+		<!-- // Header -->
+		<canvas id="webgl-universe"></canvas>
+		<div id="content" class="ticketInfo">
+			<article class="userInfo">
+				<div class="olklPass">
+					<div>우주패스를 구독했다면<br />UNV831편에 탑승하는 티켓을 발급받으세요.
+					</div>
+					<div>여러분의 좌석번호로 추첨을 통해<br />글로벌 우주 파트너스 투어 기회를 드립니다.
+					</div>
+				</div>
+				<h4>연락처 정보를 알려주세요.</h4>
+				<div class="userInfo-input">
+					<!-- 값 오류시 class="wrongValue"추가-->
+					<div class="col-3 input-effect">
+						<input class="effect-24" type="text" placeholder="이름">
+						<label>이름</label>
+						<span class="focus-bg"></span>
+						<strong>이름을 입력해주세요.</strong>
+					</div>
+					<div class="input-birth">
+						<!-- 값 오류시 class="wrongValue"추가-->
+						<div class="col-3 input-effect">
+							<input class="effect-24" type="text" placeholder="생년월일+1자리">
+							<label>생년월일+1자리</label>
+							<span class="focus-bg"></span>
+							<strong>생년월일+1자리 를 입력해주세요.</strong>
+						</div>
+						<div class="input-line">-</div>
+						<div class="input-security">
+							<div class="col-3 input-effect">
+								<input class="effect-24" type="password" placeholder="●">
+								<label></label>
+								<span class="focus-bg"></span>
+							</div>
+							<ul>
+								<li>●</li><li>●</li><li>●</li><li>●</li><li>●</li>
+							</ul>
+						</div>
+					</div>
+					<div class="telecom">
+						<span class="select">
+							<a href="#;" class="def"></a>
+							<a href="#;" class="dropdown">▼</a>
+						</span>
+						<select name="" id="sel">
+							<option value="통신사">통신사</option>
+							<option value="SKT">SKT</option>
+							<option value="KT">KT</option>
+							<option value="LGU+">LG U+</option>
+							<option value="알뜰폰(SKT)">알뜰폰(SKT)</option>
+							<option value="알뜰폰(KT)">알뜰폰(KT)</option>
+							<option value="알뜰폰(LG U+)">알뜰폰(LG U+)</option>
+						</select>
+						<strong>통신사를 선택해주세요.</strong>
+					</div>
+					<div class="col-3 input-effect">
+						<input class="effect-24 phone" type="text" placeholder="휴대폰번호" name="phone" maxlength="13" autocomplete="off" >
+						<label>휴대폰번호</label>
+						<span class="focus-bg"></span>
+						<strong>휴대폰번호를 입력해주세요.</strong>
+					</div>
+					<div class="col-3 input-effect wrongValue">
+						<input class="effect-24" type="text" placeholder="인증번호">
+						<label>인증번호</label>
+						<span class="focus-bg"></span>
+						<a href="javascript:;" class="reissuance">인증번호 재발급</a>
+						<strong>인증번호 발급을 해주세요.</strong>
+						<em>2:32</em>
+					</div>
+				</div>
+				<div class="numberIssuance">
+					<a href="javascript:;" class="goBtn">인증번호 발급</a>
+				</div>
+				<ul>
+					<li>
+						<input type="checkbox" id="agree01">
+						<label for="agree01">체크</label>
+						<label for="agree01">개인정보처리방침 및 이용약관 동의</label>
+						<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-agree">자세히보기</a>
+					</li>
+					<!-- <li>
+						<input type="checkbox" id="agree02">
+						<label for="agree02">체크</label>
+						<label for="agree02">제 3자 정보제공 및 마케팅 수신</label>
+						<a href="javascript:void(0);" class="rocket-layer-open" data-layer="rocket-obj-receive">자세히보기</a>
+					</li> -->
+					<li>
+						<input type="checkbox" id="agree03">
+						<label for="agree03">체크</label>
+						<label for="agree03">본인은 상기 내용을 숙지하였으며 이에 동의합니다.</label>
+					</li>
+				</ul>
+				<a href="javascript:;" class="goBtn">티켓 발급하기</a>
+			</article>
+			
+		</div>
+	</div>
+</body>
+	@@include('./../include/layer-rocket-agree.html')
+	@@include('./../include/footer_js.html')
+<script>
+
+	/***통신사 selectbox****/
+	$('.select').each(function(idx, item){
+		//console.log(idx, item);
+		var num = idx === 0 ? '': idx+1 
+		var sel = $(item);
+		sel.append("<ul class=options style='display:none;'></ul>");
+		var opts = sel.find('.options');
+		var btn = sel.find('.dropdown');
+		var real = $('#sel' + num);
+		var real_opt = real.find('option');
+
+		//console.log(opts, real, real_opt.length, real_opt);
+		
+		//초기세팅
+		for(var i=0; i<real_opt.length; i++){
+			sel.find('> .options').append('<li><a href=javascript:;></a></li>');
+			if(i === 0){
+				sel.find(' > .def').text(real_opt.eq(i).text());
+				opts.find('li').eq(0).find('a').text(real_opt.eq(i).val());
+			} else if(i >= 1) {
+				opts.find('li').eq(i).find('a').text(real_opt.eq(i).val());
+			}
+		}
+
+		//내용출력칸, 버튼 을 클릭하면
+		sel.on('click','.def, .dropdown', function(e){
+			e.stopPropagation();
+			opts.slideToggle('fast').toggleClass('on');
+			if(opts.hasClass('on')) btn.text('▲');
+			if(sel.hasClass('on radius')) btn.text('▼');
+		});
+
+		//옵션리스트 중 하나를 클릭하면
+		opts.on('click','li', function(e){
+			e.stopPropagation();
+			var idx = $(this).index();
+			var t = $(this).text();
+			sel.find('.def').text(t);
+			opts.slideToggle('fast').removeClass('on');
+			btn.text('▼');
+			//실제 셀렉트 박스 변경
+			real_opt.eq(idx).attr('selected','selected').siblings().removeAttr('selected');
+		});
+
+		//window를 클릭하면
+		$(window).on('click', function(e){
+			if(opts.hasClass('on'))
+			opts.slideToggle('fast').removeClass('on');
+			btn.text('▼');
+			$(".select").addClass("radius");
+		});
+		
+	});
+
+	/***통신사 selectbox****/
+	/*
+	$('.select').append("<ul class=options style='display:none;'></ul>");
+
+
+	//변수 설정
+	var sel = $('.select');
+	var opts = $('.select > .options');
+	var btn = $('.select > .dropdown');
+	var real = $('#sel');
+	var real_opt = real.find('option');
+
+	$('.userInfo p').text(real_opt.eq(0).text());
+
+	//초기세팅
+	for(var i=0; i<real_opt.length; i++){
+		$('.select').find('> .options').append('<li><a href=javascript:;></a></li>');
+			if(i === 0){
+				sel.find(' > .def').text(real_opt.eq(i).text());
+			opts.find('li').eq(0).find('a').text(real_opt.eq(i).val());
+		} else if(i >= 1) {
+			opts.find('li').eq(i).find('a').text(real_opt.eq(i).val());
+		}
+	}
+
+
+	//내용출력칸, 버튼 을 클릭하면
+	sel.on('click','.def, .dropdown', function(e){
+		e.stopPropagation();
+		opts.slideToggle('fast').toggleClass('on');
+		if(opts.hasClass('on')) btn.text('▲');
+	});
+
+	//옵션리스트 중 하나를 클릭하면
+	opts.on('click','li', function(e){
+		e.stopPropagation();
+		var idx = $(this).index();
+		var t = $(this).text();
+		sel.find('.def').text(t);
+		opts.slideToggle('fast').removeClass('on');
+		btn.text('▼');
+		//실제 셀렉트 박스 변경
+		real_opt.eq(idx).attr('selected','selected').siblings().removeAttr('selected');
+	});
+
+	//window를 클릭하면
+	$(window).on('click', function(e){
+		if(opts.hasClass('on'))
+		opts.slideToggle('fast').removeClass('on');
+		btn.text('▼');
+		$(".select").addClass("radius");
+	});*/
+	
+	$(".select a").click(function(){
+		if($(".options").hasClass("on")){
+			$(".select").addClass("radius");
+		}else{
+			$(".select").addClass("on");
+			$(".select").removeClass("radius");
+		}
+	})
+
+	//핸드폰 번호 입력
+	$('.phone').keydown(function(event) {
+		var key = event.charCode || event.keyCode || 0;
+		$text = $(this);
+		if (key !== 8 && key !== 9) {
+			if ($text.val().length === 3) {
+				$text.val($text.val() + '-');
+			}
+			if ($text.val().length === 8) {
+				$text.val($text.val() + '-');
+			}
+		}
+ 
+    	return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));          
+	});
+
+	// JavaScript for label effects only
+	$(function(){
+		$(".col-3 input").val("");
+		
+		$(".input-effect input").focusout(function(){
+			if($(this).val() != ""){
+				$(this).addClass("has-content");
+			}else{
+				$(this).removeClass("has-content");
+			}
+		});
+	});
+
+
+
+	/*로티*/
+	// aniObj.play(); 메소드 호출로 로티 플레이!
+	// if (document.getElementById('lottie15')) {
+    //     var aniObj = CommonUI.Lottie.init({
+    //         elem: document.getElementById('lottie15'),
+    //         loopFlag: false,
+    //         autoplayFlag: false,
+    //         pathString: '../bundle/json/15_data.json',
+    //     });
+	// 	console.log(aniObj);
+    // }
+
+
+
+</script>
+</html>
