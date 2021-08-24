@@ -45,7 +45,7 @@
 							<a href="#;" class="dropdown">▼</a>
 						</span>
 						<select name="" id="sel">
-							<option value="통신사">통신사</option>
+							<option value="통신사" selected>통신사</option>
 							<option value="SKT">SKT</option>
 							<option value="KT">KT</option>
 							<option value="LGU+">LG U+</option>
@@ -146,7 +146,7 @@ $(window).on('load', function(){
 			opts.slideToggle('fast').removeClass('on');
 			btn.text('▼');
 			//실제 셀렉트 박스 변경
-			real_opt.eq(idx).attr('selected','selected').siblings().removeAttr('selected');
+			real_opt.eq(idx).prop('selected', true);
 		});
 
 		//window를 클릭하면
