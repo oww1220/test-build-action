@@ -124,7 +124,7 @@
 									<a href="#;" class="def"></a>
 									<a href="#;" class="dropdown">▼</a>
 								</span>
-								<select name="" id="sel">
+								<select name="telecom[]" id="sel">
 									<option value="통신사">통신사</option>
 									<option value="SKT">SKT</option>
 									<option value="KT">KT</option>
@@ -883,6 +883,7 @@
 				btn.text('▼');
 				//실제 셀렉트 박스 변경
 				real_opt.eq(idx).attr('selected','selected').siblings().removeAttr('selected');
+
 			});
 
 			//window를 클릭하면
@@ -895,6 +896,13 @@
 			
 
 		});
+
+
+		//test 
+		$('.userInfo .goBtn').on('click', function(){
+			alert($("select[name='telecom[]']").val());
+		});
+
 		
 		
 		/***통신사 selectbox****/
