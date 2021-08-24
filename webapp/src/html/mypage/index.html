@@ -44,6 +44,21 @@
 								2021년 10월 13일(수) 발표됩니다.
 							</p>
 						</li>
+						<li class="listTicket" data-aos="fade-up">
+							<h4>우주 티켓 부스 이벤트</h4>
+							<div><img src="../../images/mypage-box-ticket.png" alt="티켓"></div>
+							<dl>
+								<dt>좌석번호 :</dt>
+								<dd>xxxx-xxxx-xxxx-xxxx</dd>
+							</dl>
+							<p>
+								글로벌 우주 파트너스 투어 당첨자는<br/>
+								2021년 10월 13일(수) 발표됩니다.
+							</p>
+							<div class="btns-W">
+								<a href="javascript:void(0)" data-celebration="1" class="btn-normal blue openLuck">우주 럭키 박스 열기</a>
+							</div>
+						</li>
 						<li class="listDelivery" data-aos="fade-up">
 							<h4>우주 택배 이벤트</h4>
 							<div class="captureImg"><img src="../../images/img-examples-capture.png" alt="코인"></div>
@@ -399,10 +414,75 @@
 				</div>
 			</article>
 		</div>
-
+		@@include('./../include/layer-rocket-celebration.html')
 		@@include('./../include/layer-rocket-agree.html')
 		@@include('./../include/footer.html')
 	</div>
 </body>
 	@@include('./../include/footer_js.html')
+
+	<script>
+
+		//celebration.init().play(); 메소드 호출로 로티 플레이!
+		//celebration.reset(); 으로 reset
+		var celebration = {
+			aniObj: null,
+			init: function() {
+				return this.aniObj = CommonUI.Lottie.init({
+					elem: document.getElementById('lottie15'),
+					loopFlag: false,
+					autoplayFlag: false,
+					pathString: '../../bundle/json/15_data.json',
+				})
+			},
+			reset: function() {
+				if(this.aniObj) this.aniObj.destroy();
+			}
+		}
+		
+		function ticketAni(){
+			$('.openLuck').click(function(){
+	
+				var targetIdx = $(this).data('celebration')-1;
+				var $targetList = $('.winning-lists li');
+				$targetList.hide();
+				$targetList.eq(targetIdx).show();
+	
+				$('.ticketAniWrap').addClass('on');
+				$('.ticketAni').addClass('on');
+				$('.ticketing').addClass('on');
+				$('html, body').css({
+					'overflow':'hidden'
+				})
+				setTimeout(function(){
+					$('.ticketing').removeClass('on');
+					$('.issuanceTicket').addClass('on');
+				},3000);
+			});
+			$('.ticketAniWrap .closeBtn').click(function(){
+				$(this).parent().removeClass('on');
+				$('.issuanceTicket').removeClass('on');
+				celebration.reset();
+				$('html, body').css({
+					'overflow':'auto'
+				})
+			});
+			$('.issuanceTicket > a').click(function(){
+				$('.issuanceTicket').removeClass('on');
+				$('.winning').addClass('on');
+	
+				celebration.init().play(); 
+				
+				$('.ticketAniWrap .closeBtn').click(function(){
+					$('.winning').removeClass('on');
+				});
+			});
+		};
+		ticketAni();
+	
+	
+	
+	
+	
+	</script>
 </html>
