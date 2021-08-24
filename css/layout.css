@@ -287,7 +287,7 @@ header nav > div p span { font-weight: normal; }
 
 .userInfo .userInfo-input div .effect-24 ~ label { position: absolute; left: 14px; width: 100%; top: 15px; color: transparent; -webkit-transition: 0.3s; transition: 0.3s; z-index: -2; font-weight: bold; letter-spacing: -0.28px; font-size: 14px; }
 
-.userInfo .userInfo-input div .effect-24:focus ~ label, .userInfo .userInfo-input div .has-content.effect-24 ~ label { top: 2px; left: 15px; font-size: 12px; color: rgba(255, 255, 255, 0.4); -webkit-transition: 0.3s; transition: 0.3s; z-index: 10; }
+.userInfo .userInfo-input div .effect-24:focus ~ label, .userInfo .userInfo-input div .has-content.effect-24 ~ label { top: 2px; left: 15px; font-size: 12px; color: rgba(255, 255, 255, 0.4); -webkit-transition: 0.3s; transition: 0.3s; }
 
 .userInfo .userInfo-input div > a { display: block; height: 54px; line-height: 54px; padding-left: 20px; font-weight: bold; font-size: 14px; letter-spacing: -0.28px; border-radius: 10px; color: #c9c9c9; }
 
