@@ -27,7 +27,7 @@
 					<div class="input-birth">
 						<!-- 값 오류시 class="wrongValue"추가-->
 						<div class="col-3 input-effect">
-							<input class="effect-24" type="text" placeholder="생년월일+1자리">
+							<input class="effect-24" type="text" placeholder="생년월일+1자리" maxlength="6" oninput="numberMaxLength(this);"/>
 							<label>생년월일+1자리</label>
 							<span class="focus-bg"></span>
 							<strong>생년월일+1자리 를 입력해주세요.</strong>
@@ -107,60 +107,68 @@
 	@@include('./../include/footer_js.html')
 <script>
 
+	// number maxlength
+	function numberMaxLength(e){
+        if(e.value.length > e.maxLength){
+            e.value = e.value.slice(0, e.maxLength);
+        }
+    }
+	
+	$(window).on('load', function(){
 	/***통신사 selectbox****/
-	$('.select').each(function(idx, item){
-		//console.log(idx, item);
-		var num = idx === 0 ? '': idx+1 
-		var sel = $(item);
-		sel.append("<ul class=options style='display:none;'></ul>");
-		var opts = sel.find('.options');
-		var btn = sel.find('.dropdown');
-		var real = $('#sel' + num);
-		var real_opt = real.find('option');
+		$('.select').each(function(idx, item){
+			//console.log(idx, item);
+			var num = idx === 0 ? '': idx+1 
+			var sel = $(item);
+			sel.append("<ul class=options style='display:none;'></ul>");
+			var opts = sel.find('.options');
+			var btn = sel.find('.dropdown');
+			var real = $('#sel' + num);
+			var real_opt = real.find('option');
 
-		//console.log(opts, real, real_opt.length, real_opt);
-		
-		//초기세팅
-		for(var i=0; i<real_opt.length; i++){
-			sel.find('> .options').append('<li><a href=javascript:;></a></li>');
-			if(i === 0){
-				sel.find(' > .def').text(real_opt.eq(i).text());
-				opts.find('li').eq(0).find('a').text(real_opt.eq(i).val());
-			} else if(i >= 1) {
-				opts.find('li').eq(i).find('a').text(real_opt.eq(i).val());
+			//console.log(opts, real, real_opt.length, real_opt);
+			
+			//초기세팅
+			for(var i=0; i<real_opt.length; i++){
+				sel.find('> .options').append('<li><a href=javascript:;></a></li>');
+				if(i === 0){
+					sel.find(' > .def').text(real_opt.eq(i).text());
+					opts.find('li').eq(0).find('a').text(real_opt.eq(i).val());
+				} else if(i >= 1) {
+					opts.find('li').eq(i).find('a').text(real_opt.eq(i).val());
+				}
 			}
-		}
 
-		//내용출력칸, 버튼 을 클릭하면
-		sel.on('click','.def, .dropdown', function(e){
-			e.stopPropagation();
-			opts.slideToggle('fast').toggleClass('on');
-			if(opts.hasClass('on')) btn.text('▲');
-			if(sel.hasClass('on radius')) btn.text('▼');
-		});
+			//내용출력칸, 버튼 을 클릭하면
+			sel.on('click','.def, .dropdown', function(e){
+				e.stopPropagation();
+				opts.slideToggle('fast').toggleClass('on');
+				if(opts.hasClass('on')) btn.text('▲');
+				if(sel.hasClass('on radius')) btn.text('▼');
+			});
 
-		//옵션리스트 중 하나를 클릭하면
-		opts.on('click','li', function(e){
-			e.stopPropagation();
-			var idx = $(this).index();
-			var t = $(this).text();
-			sel.find('.def').text(t);
-			opts.slideToggle('fast').removeClass('on');
-			btn.text('▼');
-			//실제 셀렉트 박스 변경
-			real_opt.eq(idx).attr('selected','selected').siblings().removeAttr('selected');
-		});
+			//옵션리스트 중 하나를 클릭하면
+			opts.on('click','li', function(e){
+				e.stopPropagation();
+				var idx = $(this).index();
+				var t = $(this).text();
+				sel.find('.def').text(t);
+				opts.slideToggle('fast').removeClass('on');
+				btn.text('▼');
+				//실제 셀렉트 박스 변경
+				real_opt.eq(idx).attr('selected','selected').siblings().removeAttr('selected');
+			});
 
-		//window를 클릭하면
-		$(window).on('click', function(e){
-			if(opts.hasClass('on'))
-			opts.slideToggle('fast').removeClass('on');
-			btn.text('▼');
-			$(".select").addClass("radius");
+			//window를 클릭하면
+			$(window).on('click', function(e){
+				if(opts.hasClass('on'))
+				opts.slideToggle('fast').removeClass('on');
+				btn.text('▼');
+				$(".select").addClass("radius");
+			});
+			
 		});
-		
 	});
-
 	/***통신사 selectbox****/
 	/*
 	$('.select').append("<ul class=options style='display:none;'></ul>");
@@ -235,7 +243,6 @@
 				$text.val($text.val() + '-');
 			}
 		}
- 
     	return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));          
 	});
 

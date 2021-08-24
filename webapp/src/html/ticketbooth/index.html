@@ -55,7 +55,7 @@
 							<div class="input-birth">
 								<!-- 값 오류시 class="wrongValue"추가-->
 								<div class="col-3 input-effect">
-									<input class="effect-24" type="text" placeholder="생년월일+1자리">
+									<input class="effect-24 birth" type="text" placeholder="생년월일+1자리" maxlength="6" oninput="numberMaxLength(this);"/>
 									<label>생년월일+1자리</label>
 									<span class="focus-bg"></span>
 									<strong>생년월일+1자리 를 입력해주세요.</strong>
@@ -119,7 +119,7 @@
 								<label for="agree02">본인은 만 14세 이상입니다.</label>
 							</li>
 						</ul>
-						<a href="javascript:;" class="goBtn">본인 인증 하기</a>
+						<a href="javascript:;" class="goBtn">지금 바로 응모하기</a>
 					</div>
 				</div>
 				<div class="eventInfo" data-aos="fade-up">
@@ -210,7 +210,7 @@
 								좌석 번호를 꼭 기억해 주세요.
 							</p>
 							<div>
-								<a href="javascript:;" class="goBtn ticketBtn">티켓 발급 &amp; 응모하기</a>
+								<a href="javascript:;" class="goBtn ticketBtn">지금 바로 응모하기</a>
 							</div>
 						</div>
 						<div class="userInfo">
@@ -226,7 +226,7 @@
 								<div class="input-birth">
 									<!-- 값 오류시 class="wrongValue"추가-->
 									<div class="col-3 input-effect">
-										<input class="effect-24" type="text" placeholder="생년월일+1자리">
+										<input class="effect-24 birth" type="text" placeholder="생년월일+1자리" maxlength="6" oninput="numberMaxLength(this);"/>
 										<label>생년월일+1자리</label>
 										<span class="focus-bg"></span>
 										<strong>생년월일+1자리 를 입력해주세요.</strong>
@@ -290,7 +290,7 @@
 									<label for="agree04">본인은 만 14세 이상입니다.</label>
 								</li>
 							</ul>
-							<a href="javascript:;" class="goBtn">본인 인증 하기</a>
+							<a href="javascript:;" class="goBtn">지금 바로 응모하기</a>
 						</div>
 						<div class="ticketAniWrap">
 							<a href="javascript:void(0);" class="closeBtn">닫기</a>
@@ -387,6 +387,13 @@
 	@@include('./../include/footer_js.html')
 	<script>
 
+		// number maxlength
+		function numberMaxLength(e){
+			if(e.value.length > e.maxLength){
+				e.value = e.value.slice(0, e.maxLength);
+			}
+		}
+
 
 		//쿼리 스트링 체크후 레이어팝업 열림
 		function getParameterByName(name) {
@@ -472,7 +479,7 @@
 		}
 		userOpen()
 
-
+	$(window).on('load', function(){
 		/***통신사 selectbox****/
 		$('.select').each(function(idx, item){
 			//console.log(idx, item);
@@ -527,7 +534,7 @@
 			
 
 		});
-		
+	});	
 		
 		/***통신사 selectbox****/
 		/*

@@ -61,7 +61,7 @@
 							<div class="input-birth">
 								<!-- 값 오류시 class="wrongValue"추가-->
 								<div class="col-3 input-effect">
-									<input class="effect-24" type="text" placeholder="생년월일+1자리">
+									<input class="effect-24" type="text" placeholder="생년월일+1자리" maxlength="6" oninput="numberMaxLength(this);"/>
 									<label>생년월일+1자리</label>
 									<span class="focus-bg"></span>
 									<strong>생년월일+1자리 를 입력해주세요.</strong>
@@ -253,7 +253,7 @@
 									<div class="input-birth">
 										<!-- 값 오류시 class="wrongValue"추가-->
 										<div class="col-3 input-effect">
-											<input class="effect-24" type="text" placeholder="생년월일+1자리">
+											<input class="effect-24 birth" type="text" placeholder="생년월일+1자리" maxlength="6" oninput="numberMaxLength(this);"/>
 											<label>생년월일+1자리</label>
 											<span class="focus-bg"></span>
 											<strong>생년월일+1자리 를 입력해주세요.</strong>
@@ -471,6 +471,14 @@
 </body>
 	@@include('./../include/footer_js.html')
 	<script>
+
+		// number maxlength
+		function numberMaxLength(e){
+			if(e.value.length > e.maxLength){
+				e.value = e.value.slice(0, e.maxLength);
+			}
+		}
+
 		function confirm(){
 			$(".alertWin .goBtn").click(function(){
 				$(".alertWin").removeClass("on");
@@ -488,6 +496,7 @@
 			speed : 1000,
 		});
 
+	$(window).on('load', function(){
 		/***통신사 selectbox****/
 		$('.select').each(function(idx, item){
 			//console.log(idx, item);
@@ -542,7 +551,7 @@
 			
 
 		});
-
+	});
 		/*
 		$('.select').append("<ul class=options style='display:none;'></ul>");
 
