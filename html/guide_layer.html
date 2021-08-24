@@ -2,7 +2,7 @@
 <html lang="ko">
 	<head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="shortcut icon" href="../../images/svg/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../../images/svg/favicon.ico" type="image/x-icon">
@@ -21,37 +21,25 @@
 	</h1>
 	<!-- siteMap -->
 	<nav>
-		<a href="javascript:void(0)" class="btn-drawer-open">네비게이션</a>
-		<div class="drawer-cont">
-			<a href="javascript:void(0)" class="btn-drawer-close">닫기</a>
-			<ul>
-				<li>
-					<a href="/main">HOME</a>
-				</li>
-				<li>
-					<a href="/pass">우주패스 소개</a>
-				</li>
-				<li>
-					<a href="/ticketbooth">우주 티켓 부스 이벤트</a>
-				</li>
-				<li>
-					<a href="/delivery">우주 택배 이벤트</a>
-				</li>
-				<li>
-					<a href="/madmonster">T우주X매드몬스터</a>
-				</li>
-				<li>
-					<a href="/partner">우주 파트너스 전체 보기</a>
-				</li>
-				<li>
-					<a href="/mypage">마이페이지</a>
-				</li>
-			</ul>
-			<a href="javascript:;" class="logoutBtn">로그아웃</a>
-		</div>
+		<ul>
+			<li>
+				<a href="/main">HOME</a>
+			</li>
+			<li>
+				<a href="/pass">우주패스 소개</a>
+			</li>
+			<li>
+				<a href="/ticketbooth">우주 티켓 부스 이벤트</a>
+			</li>
+			<li>
+				<a href="/delivery">우주 택배 이벤트</a>
+			</li>
+			<li>
+				<a href="/madmonster">T우주X매드몬스터</a>
+			</li>
+		</ul>
 	</nav>
 </header>
-<div class="bg-overlay"></div>
 		<!-- // Header -->
 		<canvas id="webgl-universe"></canvas>
 
@@ -119,9 +107,14 @@
 		</div>
 	</div>
 </body>
-	
+	<!-- <script src="../js/jquery.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/common.js"></script> -->
+
+
 <script type="text/javascript" src="../../bundle/jquery.chunk.js"></script>
-<script type="text/javascript" src="../../bundle/three.chunk.js"></script>
+<!-- <script type="text/javascript" src="../../bundle/three.chunk.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js" integrity="sha512-jeYvJdyAYkpQCY/omvCYQo89qA5YxDW4JBT7COPsHT2sOAanwxkZRFeP9gc69b5reSDpZIoyCqZQZcWZkbB5Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="../../bundle/vendors.chunk.js"></script>
 <script type="text/javascript" src="../../bundle/main.chunk.js"></script>
 <!-- <script src="../js/jquery.min.js"></script> -->

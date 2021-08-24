@@ -187,14 +187,11 @@ var CommonUI;
                 const $target = CommonUI.$(layer);
                 try {
                     CommonUI.$('body').addClass('overlay-hidden');
-                    $target.show();
+                    $target.css({ display: 'flex' });
                     const delay0 = yield CommonUI.Async.wait(100);
                     $target.addClass('active');
-                    const delay1 = yield CommonUI.Async.wait(700);
-                    $target.find('.layer-top').addClass('no-cloud');
-                    $target.find('.btn-rocket-open').addClass('open');
-                    const delay2 = yield CommonUI.Async.wait(300);
                     $target.find('.layer-cont').addClass('active');
+                    const delay2 = yield CommonUI.Async.wait(300);
                     $target.find('.btn-rocket-close').addClass('open');
                     if (callback)
                         callback(layer);
@@ -214,14 +211,11 @@ var CommonUI;
                     CommonUI.$('body').removeClass('overlay-hidden');
                     $target.find('.btn-rocket-close').removeClass('open');
                     $target.find('.btn-rocket-close').addClass('close');
-                    $target.removeClass('active');
-                    const delay2 = yield CommonUI.Async.wait(1000);
-                    $target.find('.btn-rocket-open').addClass('close');
-                    $target.find('.btn-rocket-open').removeClass('open');
-                    $target.find('.btn-rocket-close').removeClass('close');
-                    $target.find('.btn-rocket-open').removeClass('close');
-                    $target.find('.layer-top').removeClass('no-cloud');
                     $target.find('.layer-cont').removeClass('active');
+                    const delay1 = yield CommonUI.Async.wait(1000);
+                    $target.removeClass('active');
+                    const delay3 = yield CommonUI.Async.wait(300);
+                    $target.find('.btn-rocket-close').removeClass('close');
                     const delay4 = yield CommonUI.Async.wait(100);
                     $target.hide();
                     if (callback)
