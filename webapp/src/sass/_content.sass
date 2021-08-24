@@ -13,7 +13,7 @@ $bgColor03: #171718
 $bgColor04: #0e1c30
 $bgColor05: #5e45d8
 $bgColor06: #1a1a1a
-$lightGray: rgba(255, 255, 255, 0.4)
+$lightGray: #575757
 $wrongColor: #ff404e
 $point: #ff404e
 $darkGray: #c9c9c9
@@ -32,7 +32,6 @@ $oneColor: #8674e2
 =borderGradient()
 	background-color: rgba(54, 23, 206, 0.24)
 	border: 1px solid $mainColor
-
 
 =font12()
 	font-size: 12px
@@ -68,22 +67,22 @@ $oneColor: #8674e2
 	font-size: 24px
 	line-height: 1.6
 	letter-spacing: -0.48px
-	font-family: 'Noto Sans KR black'
+	font-family: 'Noto Sans KR bold'
 =font28()
 	font-size: 28px
 	line-height: 1.6
 	letter-spacing: -0.56px
 	font-family: 'Noto Sans KR bold'
-=font40()
-	+colorGradation()
-	font-size: 40px
-	line-height: 1.2
-	letter-spacing: -0.8px
 =font44()
 	+colorGradation()
 	font-size: 44px
 	line-height: 1.1
 	letter-spacing: -0.88px
+=font60()
+	font-size: 60px
+	line-height: 1.5
+	letter-spacing: -1.2px
+	font-family: 'Noto Sans KR bold'
 =font80()
 	+colorGradation()
 	font-size: 80px
@@ -92,84 +91,43 @@ $oneColor: #8674e2
 =moreArrow()
 	width: 10px
 	height: 10px
-	border-top: 1px solid $white
-	border-right: 1px solid $white
+	border-top: 1px solid #c9c9c9
+	border-right: 1px solid #c9c9c9
 	transform: rotate(45deg)
 
 /************** Common ***************/
-#content
-	padding-top: 90px
-	max-width: 400px
-	margin: 0 auto
-#wrap .quickMenu02
-	width: 89.4%
-	height: 80px
-	position: fixed
-	bottom: 30px
-	left: 50%
-	transform: translateX(-50%)
-	display: flex
-	justify-content: space-around
-	border-radius: 25px
-	z-index: 10
+body
+	font-size: 20px
+	min-width: 1024px
+#wrap
+	position: relative
 	&::before
 		content: ""
+		background: url("../images/bg_stars.png")
+		background-size: 25%
+		background-repeat: repeat
 		position: absolute
 		top: 0
 		left: 0
 		width: 100%
 		height: 100%
-		background-color: rgba(100, 20, 255, 0.4)
-		border-radius: 25px
 		z-index: -1
-		backdrop-filter: blur(10px)
 
-	li
-		width: 100%
-		a
-			display: block
-			text-align: center
-			color: $white
-			padding-top: 42px
-			+font12()
-		&.on
-			background-color: $mainColor
-			border-radius: 27px
-			a
-				opacity: 1
-		
-		&.menuTicket
-			a
-				background: url("../images/icon_ticket.png")
-				background-repeat: no-repeat
-				background-position: center 12px
-				background-size: 26px 25px
-		&.menuEvent
-			a
-				background: url("../images/icon_cart.png")
-				background-repeat: no-repeat
-				background-position: center 0
-				background-size: 48px
-					
-		&.menuMad
-			a
-				background: url("../images/icon_mad.png")
-				background-repeat: no-repeat
-				background-position: center 0
-				background-size: 48px
+#content
+	margin: 0 auto
+	max-width: 100%
+	padding-top: 150px
 .arrowBtn
 	display: block
 	margin: 0 auto
 	color: $white
 	margin-top: 30px
-	width: 189px
-	height: 50px
-	line-height: 50px
-	background-color: $bgColor02
+	width: 211px
+	height: 56px
+	+font20()
+	line-height: 56px
+	background-color: $point
 	border-radius: 30px
-	font-size: 16px
-	letter-spacing: -0.32px
-	font-family: 'Noto Sans KR black', sans-serif
 	padding-right: 20px
 	position: relative
 	&:after
@@ -179,8 +137,8 @@ $oneColor: #8674e2
 		border-top: 1px solid $white
 		border-right: 1px solid $white
 		position: absolute
-		top: 20px
-		right: 10%
+		top: 23px
+		right: 20%
 		transform: rotate(45deg)
 .goBtn
 	display: block
@@ -188,8 +146,8 @@ $oneColor: #8674e2
 	color: $white
 	margin-top: 30px
 	width: 218px
-	height: 50px
-	line-height: 50px
+	height: 56px
+	line-height: 56px
 	background-color: $bgColor02
 	border-radius: 30px
 	font-size: 16px
@@ -242,39 +200,34 @@ $oneColor: #8674e2
 .subTitle
 	text-align: center
 	dt
-		font-size: 16px
-		line-height: 25px
-		letter-spacing: -0.32px
-		font-family: 'Noto Sans KR bold'
+		+font20()
 	dd
 		+colorGradation()
+		+font80()
 		margin-top: 10px
-		font-size: 44px
-		line-height: 1.1
-		letter-spacing: -0.88px
+		display: inline-block
 .eventNotice
 	margin-top: 80px
-	padding: 19px 8%
+	padding: 40px 0
 	background-color: $bgColor03
 	h5
-		font-size: 12px
-		font-weight: bold
-		letter-spacing: -0.24px
-		line-height: 1.4
+		margin: 0 auto
+		width: 712px
+		+font14()
 	ul
+		margin: 0 auto
+		width: 712px
 		margin-top: 10px
 		li
-			font-size: 12px
-			letter-spacing: -0.24px
+			+font14()
+			line-height: 1.8
 			color: $lightGray
-			line-height: 1.4
 			position: relative
 			padding-left: 10px
-			font-family: 'Noto Sans KR bold'
 			&::before
 				content: ""
 				position: absolute
-				top: 6px
+				top: 12px
 				left: 0
 				width: 3px
 				height: 3px
@@ -313,27 +266,24 @@ $oneColor: #8674e2
 				font-size: 24px
 				line-height: 1.2
 				letter-spacing: -0.48
-				color: $mainColor
 			dd
 				margin-top: 10px
 				font-size: 14px
 				letter-spacing: -0.28px
 				color: $black
-				font-family: 'Noto Sans KR black'
+				font-family: 'Noto Sans KR bold'
 		div
 			display: flex
 			padding: 0 15px
 			.goBtn
 				width: 110px
 			.arrowBtn
-				background-color: #575757
+				background-color: $lightGray
 				margin-left: 4px
-				&::after
-					right: 20%
 .cartBtn
 	margin: 0 auto
 	margin-top: 20px
-	width: 257px
+	width: 230px
 	height: 79px
 	position: relative
 	border-radius: 30px
@@ -341,7 +291,6 @@ $oneColor: #8674e2
 	color: $white
 	background: url("../images/upload.png") no-repeat 0 0
 	background-position: center 11px
-	background-size: 32px 31px
 	padding: 48px 11px 11px
 	font-size: 14px
 	letter-spacing: -0.28px
@@ -358,21 +307,18 @@ $oneColor: #8674e2
 		width: 100%
 		height: 100%
 		border-radius: 30px
-		background-color: $mainColor
 .userInfo
 	padding: 0 8% 63px 8%
 	margin-bottom: 50px
 	position: relative
-	text-align: left
 	&::after
 		content: ""
-		width: 84%
-		margin-left: 8%
+		width: 100%
 		height: 2px
 		position: absolute
 		bottom: 0
 		left: 0
-		background: $mainColor
+		background: linear-gradient(100deg, $frontColor, $backColor)
 	.olklPass
 		div
 			text-align: center
@@ -420,8 +366,6 @@ $oneColor: #8674e2
 					display: none
 				.focus-bg
 					display: none
-				.effect-24:focus ~ label, .has-content.effect-24 ~ label
-					color: $wrongColor
 				strong
 					display: block
 					position: absolute
@@ -431,7 +375,6 @@ $oneColor: #8674e2
 					font-size: 12px
 					letter-spacing: -0.24px
 					line-height: 1.4
-					font-family: 'Noto Sans KR black'
 
 			input
 				background-color: transparent
@@ -447,14 +390,6 @@ $oneColor: #8674e2
 				position: relative
 				border: 0
 				z-index: 2
-			input:focus::-webkit-input-placeholder 
-				color: transparent
-			input:focus::-moz-placeholder
-				color: transparent
-			input:focus:-ms-input-placeholder 
-				color: transparent
-			input:focus::-ms-input-placeholder 
-				color: transparent
 				
 			.effect-24
 				border: 0
@@ -483,11 +418,11 @@ $oneColor: #8674e2
 				transition: 0.3s
 			.effect-24:focus ~ .focus-bg:before,
 			.has-content.effect-24 ~ .focus-bg::before
-				//width: 100%
+				width: 100%
 				transition: 0.3s
-				//left: -2px
-				//top: -2px
-				//height: 51px
+				left: -2px
+				top: -2px
+				height: 51px
 				+borderGradient()
 			.effect-24:focus ~ .focus-bg:after,
 			.has-content.effect-24 ~ .focus-bg:after
@@ -497,7 +432,7 @@ $oneColor: #8674e2
 				top: 0
 				height: 100%
 				border-radius: 10px
-				background: rgba(54, 23, 206, 0.15)
+				background: linear-gradient(100deg, $frontColor, $backColor)
 				opacity: 0.2
 			.effect-24 ~ label
 				position: absolute
@@ -527,43 +462,6 @@ $oneColor: #8674e2
 				letter-spacing: -0.28px
 				border-radius: 10px
 				color: $darkGray
-			&.input-birth 
-				display: flex
-				>div 
-					margin-top: 0
-					width: 47%
-					&.input-line 
-						width: 6%
-						display: flex
-						align-items: center
-						justify-content: center
-					&.wrongValue strong
-						width: 150%
-					&.input-security
-						display: flex
-						.input-effect 
-							width: 32%
-							input
-								text-align: center
-								padding: 0
-							input::-webkit-input-placeholder 
-								font-size: 8px
-							input::-moz-placeholder
-								font-size: 8px
-							input:-ms-input-placeholder 
-								font-size: 8px
-							input::-ms-input-placeholder 
-								font-size: 8px
-							.focus-bg::before 
-								width: 95%
-						>ul
-							width: 61%
-							margin-left: 7%
-							display: flex
-							justify-content: space-around
-							align-items: center
-							li
-								font-size: 8px
 			.reissuance
 				cursor: pointer
 				position: absolute
@@ -626,7 +524,7 @@ $oneColor: #8674e2
 						top: 0
 						height: 100%
 						border-radius: 10px
-						background: rgba(54, 23, 206, 0.15)
+						background: linear-gradient(100deg, $frontColor, $backColor)
 						border-bottom-left-radius: 0
 						border-bottom-right-radius: 0
 						opacity: 0.2
@@ -692,7 +590,7 @@ $oneColor: #8674e2
 			display: none
 			width: 119px
 			text-align: center
-			background-color: $mainColor
+			background-color: $bgColor05
 			font-size: 14px
 			line-height: 36px
 			height: 36px
@@ -706,15 +604,13 @@ $oneColor: #8674e2
 
 	& > ul
 		margin-top: 30px
-		text-align: left
 		li
-			label
+			span
 				font-size: 12px
 				line-height: 27px
 				letter-spacing: -0.24px
 				color: $white
 				margin-left: 5px
-				cursor: pointer
 			a
 				font-size: 12px
 				color: $white
@@ -733,7 +629,7 @@ $oneColor: #8674e2
 		display: block
 		width: 171px
 		text-align: center
-		background-color: #575757
+		background-color: $lightGray
 		&.on
 			background-color: $bgColor02
 
@@ -749,33 +645,26 @@ $oneColor: #8674e2
 		position: relative
 		dt
 			text-align: center
-			img
-				width: 50%
-
 		dd
 			position: absolute
 			bottom: 8px
 			right: 0
-			+font12()
-			color: #575757
+			+font14()
+			color: $lightGray
 	div
 		margin-top: 20px
 		dl
 			text-align: left
-			font-family: 'Noto Sans KR black'
-			line-height: 1.6
 			dt
-				+colorGradation()
-				font-size: 24px
-				letter-spacing: -0.48px
+				+font28()
 				color: $mainColor
+				font-family: 'Noto Sans KR black'
 				span
-					+font16()
+					+font20()
 					font-family: 'Noto Sans KR black'
-					display: block
 			dd
 				margin-top: 20px
-				+font16()
+				+font20()
 				color: $black
 				font-family: 'Noto Sans KR black'
 				span
@@ -787,35 +676,71 @@ $oneColor: #8674e2
 					&:first-child
 						margin-top: 0
 		.arrowBtn
-			width: 249px
 			text-align: center
+			margin-left: 0
+			width: 249px
+			padding: 0 40px
+			display: inline-block
+			+font16()
+			line-height: 50px
+			height: 50px
+			background-color: $mainColor
 			&::after
-				right: 15%
+				content: ""
+				right: 30px
+				top: 21px
+
+.pcQr
+	& > div
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 30px 113px
+		width: 712px
+		margin: 0 auto
+		background-color: $white
+		border-radius: 12px
+		margin-top: 168px
+		p
+			margin-left: 30px
+			+font20()
+			letter-spacing: -0.4
+			color: $black
+			font-family: 'Noto Sans KR black'
+	.goBtn
+		width: 153px
+		text-align: center
+		+font20()
+		line-height: 56px
+
 
 /************** Main ***************/
 .mainVideo
-	padding: 0 8%
 	div
-		width: 100%
+		width: 712px
 		overflow: hidden
 		background-color: #e5e5e5
+		margin: 0 auto
 		video
 			width: 100%
 			height: auto
 .mainTab
-	padding-top: 10px
+	padding-top: 51px
 	margin-top: 20px
+	margin-bottom: 160px
 	// tab Title
 	& > ul
 		margin: 0 8%
 		display: flex
 		justify-content: space-around
-		background-color: rgba(54, 23, 206, 0.445)
+		background: rgba(54, 23, 206, 0.445)
 		width: 84%
 		border-radius: 14px
 		position: relative
 		transition: .3s
 		&.moveLeft
+			margin: 0 auto
+			width: 315px
 			&::before
 				content: ""
 				position: absolute
@@ -828,6 +753,8 @@ $oneColor: #8674e2
 				transition: .3s
 				transform: translateX(0)
 		&.moveRight
+			margin: 0 auto
+			width: 315px
 			&::before
 				content: ""
 				position: absolute
@@ -849,13 +776,12 @@ $oneColor: #8674e2
 				color: $white
 				position: relative
 				+font16()
-				font-family: 'Noto Sans KR black'
+				font-family: 'Noto Sans KR bold'
 			&.on
 				a
 					&:after
 						content: ""
 						background: url("../images/icon_planet.png") no-repeat 0 0
-						background-size: 100%
 						position: absolute
 						top: -10px
 						left: 50%
@@ -868,73 +794,68 @@ $oneColor: #8674e2
 		margin-top: 60px
 		ul
 			.leftTab
-				padding: 0 8%
 				& > dl
 					text-align: center
 					dt
-						+font44()
+						+font80()
 						+colorGradation()
-						line-height: 1.4
 					dd
 						margin-top: 30px
 						font-family: 'Noto Sans KR bold', sans-serif
-						line-height: 1.6
-						letter-spacing: -0.32px
-				& > div
-					margin-top: 50px
+						+font20()
+				.universe
+					margin-top: 90px
 					text-align: center
 					dl
 						dt
-							+font16()
+							+font20()
 						dd
-							margin-top: 10px
-							img
-								width: 180px
-								height: 58px
-					.arrowBtn
-						background-color: $point
-						&::after
-							right: 21%
+							margin-top: 20px
 				h5
-					+font44()
+					+font80()
 					+colorGradation()
 					text-align: center
-					margin-top: 100px
+					margin-top: 130px
 				ul
-					margin-top: 28px
-					margin-bottom: 110px
+					width: 712px
+					margin: 0 auto
+					margin-top: 30px
 					li
-						margin-top: 10px
+						margin-top: 20px
 						width: 100%
 						border-radius: 20px
 						position: relative
-						a
-							.svg-W
-								position: absolute
-								top: -10px
-								right: 0
-								width: 180px
-
 						&:first-child
 							margin-top: 0
 							a
 								&::after
 									content: ""
 									position: absolute
-									top: 30px
-									right: 10%
-									width: 96px
-									height: 88px
+									top: 21px
+									right: 91px
+									width: 150px
+									height: 138px
 									background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0
+									background-size: 100%
 						a
-							padding: 20px
+							padding: 30px 50px
 							display: block
+							background-color: rgba(0, 0, 0, 0.1)
 							border-radius: 30px
+							&::after
+								content: ""
+								position: absolute
+								top: 27px
+								right: 63px
+								width: 181px
+								height: 132px
+								background: url("../images/img-shop-tmb.png") no-repeat 0 0
+								background-size: 100%
 							dl
 								dt
 									padding-right: 101px
 									color: $white
-									+font24()
+									+font28()
 								dd
 									color: $lightGray
 									font-size: 14px
@@ -964,54 +885,62 @@ $oneColor: #8674e2
 								border-radius: 30px
 								text-indent: -9999px
 				& > a
+					background: $mainColor
 					text-align: center
-					padding: 15px 0 15px 40px
+					padding: 48px 0 11px 0
 					margin: 0 auto
 					color: $white
-					margin-top: 40px
-					width: 237px
+					margin-top: 112px
+					width: 340px
+					height: 100px
 					border-radius: 30px
-					+font14()
+					+font20()
 					display: block
-					background: $mainColor url("../images/download.png") no-repeat 0 0
-					background-position: 30px 13px
-
+					position: relative
+					&::before
+						content: ""
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						background: url("../images/download.png") no-repeat 0 0
+						background-position: center 17px
+						
 			.rightTab
 				display: none
 				text-align: center
 				& > dl
 					text-align: center
 					dt
-						+font44()
+						+font80()
 						+colorGradation()
-						line-height: 1.4
 					dd
 						margin-top: 30px
 						font-family: 'Noto Sans KR bold', sans-serif
 						line-height: 1.6
 						letter-spacing: -0.32px
 				& > ul
-					padding: 0 8%
-					margin-top: 60px
+					margin-top: 120px
 					li
-						width: 100%
+						width: 712px
+						margin: 0 auto
 						position: relative
-						margin-top: 10px
+						margin-top: 20px
 						&:first-child
 							margin-top: 0 
 							a
 								background: url("../images/all.png") no-repeat 0 0
 								background-position: 90% center
-								background-size: 123px auto
-								
+								background-size: 219px auto
 						a
-							padding: 20px
+							padding: 20px 50px
 							text-align: left
 							display: block
 							background: url("../images/mini.png") no-repeat 0 0
 							background-position: 90% center
+							background-size: 219px auto
 							border-radius: 30px
-							background-size: 123px auto
 							span
 								display: inline-block
 								text-indent: -9999px
@@ -1028,14 +957,9 @@ $oneColor: #8674e2
 							dl
 								color: $white
 								dt
-									font-size: 24px
-									letter-spacing: -0.48px
-									line-height: 1.6
-									font-family: 'Noto Sans KR black'
+									+font28()
 								dd
-									font-size: 12px
-									line-height: 17px
-									letter-spacing: -0.24px
+									+font14()
 									color: rgba(255, 255, 255, 0.493)
 									position: relative
 									&.mini
@@ -1050,9 +974,9 @@ $oneColor: #8674e2
 									&::before
 										content: ""
 										position: absolute
-										top: 11px
-										left: 58px
-										width: 8px
+										top: 12px
+										left: 76px
+										width: 9px
 										height: 2px
 										background-color: $bgColor05
 										transform: rotate(-45deg)
@@ -1061,21 +985,19 @@ $oneColor: #8674e2
 										position: absolute
 										top: 9px
 										left: 0
-										width: 64px
+										width: 84px
 										height: 2px
 										background-color: $bgColor05
 									strong
-										font-size: 16px
+										+font20()
 										color: $bgColor05
-										line-height: 1.6
-										letter-spacing: -0.32px
-										font-family: 'Noto Sans KR black'
+										font-family: 'Noto Sans KR bold'
 							div
 								margin-top: 10px
 								line-height: 1.4
 								font-size: 14px
 								color: $white
-								font-family: 'Noto Sans KR black'
+								font-family: 'Noto Sans KR bold'
 								position: relative
 								letter-spacing: -0.24px
 								&::after
@@ -1085,25 +1007,26 @@ $oneColor: #8674e2
 									left: 115px
 									+moreArrow()
 				.mainPartner
-					margin-top: 94px
+					width: 710px
+					margin: 0 auto
+					margin-top: 130px
 					margin-bottom: 111px
 					text-align: center
 					position: relative
 					h5
-						font-size: 24px
-						line-height: 38px
-						letter-spacing: -0.48px
-						font-family: 'Noto Sans KR black', sans-serif
+						+font28()
+						font-family: 'Noto Sans KR bold', sans-serif
 					.mainPlanet
-						margin-top: 30px
+						margin-top: 43px
 						ul
 							li
 								display: none
 								&.on
 									display: block
-								div
-									img
-										width: 140px
+									div
+										img
+											width: auto
+											height: 220px
 					//tab slide
 					.tabSlide
 						margin-top: 30px
@@ -1124,9 +1047,9 @@ $oneColor: #8674e2
 											left: -6px
 											width: 36px
 											height: 36px
+											border: 2px solid #8674e2
 											z-index: -1
 											border-radius: 50%
-											border: 2px solid $oneColor
 								& > a
 									display: block
 									position: relative
@@ -1140,8 +1063,8 @@ $oneColor: #8674e2
 					.sliderBtn
 						.swiper-button-prev
 							position: absolute
-							top: 45%
-							left: 8%
+							top: 42%
+							left: 0
 							text-align: center
 							width: 30px
 							height: 30px
@@ -1159,8 +1082,8 @@ $oneColor: #8674e2
 								transform: rotate(-45deg)
 						.swiper-button-next
 							position: absolute
-							top: 45%
-							right: 8%
+							top: 42%
+							right: 0
 							text-align: center
 							width: 30px
 							height: 30px
@@ -1180,9 +1103,14 @@ $oneColor: #8674e2
 
 					.moreBenefit
 						.arrowBtn
-							width: 206px
+							width: 215px
+							font-family: 'Noto Sans KR bold', sans-serif
+							+font20()
+							line-height: 56px
+							padding: 0
+							background-color: $mainColor
 							&::after
-								right: 19%
+								display: none
 					.rocketAni
 						display: none
 						position: fixed
@@ -1271,50 +1199,30 @@ $oneColor: #8674e2
 										.arrowBtn
 											width: 249px
 											margin-left: 0
-.qrPc
-	display: none
+
 /************** ticket ***************/
 .ticket
 	margin-bottom: 100px
-	.quickMenu02
-		li
-			a
-				opacity: 0.4
 	.ticketOpen
 		text-align: center
 		.eventContent
-			margin-top: 40px
+			padding-top: 430px
+			position: relative
+			&::after
+				content: ""
+				width: 100%
+				height: 100%
+				position: absolute
+				top: -170px
+				left: 0
+				background: url("../images/Ticket_KV_1.png") no-repeat 0 0
+				background-position: center
+				background-size: 1040px auto
 			p
-				+font16()
+				+font20()
 				span
 					+colorGradation()
-					color: #5e45d8
-				&.second
-					padding-top: 238px
-					position: relative
-					&::after
-						content: ""
-						width: 100%
-						height: 100%
-						position: absolute
-						top: -80px
-						left: 0
-						background: url("../images/Ticket_KV_1.png") no-repeat 0 0
-						background-position: center top
-						background-size: 100%
-			.goBtn
-				background-color: $point
-			
-			.userInfo
-				display: none
-				margin-bottom: 0
-				margin-top: 50px
-				padding: 0 8%
-				&.on
-					display: block
-				&:after
-					content: ""
-					display: none
+					color: $bgColor05
 		.arrowBtn
 			width: 218px
 			font-size: 16px
@@ -1322,18 +1230,18 @@ $oneColor: #8674e2
 
 		.eventInfo
 			margin: 0 auto
-			margin-top: 80px
+			margin-top: 50px
 			position: relative
 			background-color: rgba(0, 0, 0, 0.1)
-			height: 248px
-			max-width: 315px
 			border-radius: 30px
+			width: 715px
+			padding: 30px 0
 			span
 				+borderGradient()
 				z-index: -1
 				border-radius: 30px
 				width: 100%
-				height: 248px
+				height: 100%
 				display: inline-block
 				position: absolute
 				top: 0
@@ -1341,28 +1249,27 @@ $oneColor: #8674e2
 				text-indent: -9999px
 			dl
 				padding-top: 20px
+				&:first-child
+					padding-top: 0
 				dt
 					+colorGradation()
+					+font20()
+					font-family: 'Noto Sans KR black'
 					color: $point
-					+font16()
 				dd
 					margin-top: 10px
-					font-size: 14px
-					letter-spacing: -0.28px
-					line-height: 1.4
-					font-family: 'Noto Sans KR bold'
+					+font20()
 	.ticketRewards
 		padding: 0 8%
-		margin-top: 70px
+		margin-top: 130px
 		h4
 			text-align: center
 			+colorGradation()
-			font-size: 24px
-			line-height: 1.6
-			letter-spacing: -0.48px
-			font-weight: bold
+			+font60()
 		ul
-			margin-top: 6px
+			margin: 0 auto
+			margin-top: 40px
+			width: 712px
 			li
 				background: linear-gradient(100deg, rgba(255, 189, 113, 0.253), rgba(0, 221, 255, 0.247))
 				border-radius: 20px
@@ -1373,155 +1280,151 @@ $oneColor: #8674e2
 					position: absolute
 					top: 24px
 					right: 13px
-					width: 119px
-					height: 89px
+					width: 169px
+					height: 127px
 					background: url("../images/img-tmb-lucky-1.png") no-repeat 0 0
+					background-size: 100%
 					
 				&:first-child
 					margin-top: 0
-					background: rgba(100, 20, 255, 0.4)
+					background: rgba(54, 23, 206, 0.342)
 					&::before
 						content: ""
 						position: absolute
-						top: 65px
+						top: 10px
 						right: 20px
-						width: 117px
-						height: 110px
+						width: 148px
+						height: 141px
 						background: url("../images/img-tmb-global.png") no-repeat 0 0
+						background-size: 100%
 					a
 						dl
 							dt
-								+font20()
+								+font28()
 								color: $white
-								span
-									+font14()
-									display: block
 							dd
-								margin-top: 90px
-
+								margin-top: 30px
 				a
 					display: block
-					padding: 19px 27px
+					padding: 35px 50px
 					dl
 						dt
-							+font16()
+							+font24()
 							color: $white
+							span
+								+font20()
+								display: block
 						dd
-							margin-top: 40px
-							+font12()
-							color: $white
-							opacity: 0.4
+							margin-top: 57px
+							+font14()
+							color: #c9c9c9
 							position: relative
 							&::after
 								content: ""
 								position: absolute
-								top: 3px
-								left: 58px
+								top: 4px
+								left: 70px
 								+moreArrow()
+
 		div
-			margin-top: 10px
-			font-size: 12px
-			letter-spacing: -0.24px
-			line-height: 1.4
+			margin-top: 30px
 			text-align: center
+			+font14()
 	.ticketParticipate
-		margin-top: 80px
+		padding: 0 8%
+		margin-top: 130px
 		text-align: center
-		& > h4
-			+font24()
+		h4
+			+font60()
 			position: relative
 			display: inline-block
-			&::after
-				content: ""
-				width: 17px
-				height: 22px
-				position: absolute
-				top: -5px
-				right: -20px
-				background: url("../images/stars_icon.png") no-repeat 0 0
-		& > ul
-			margin-top: 10px
-			& > li
-				padding-bottom: 59px
-				margin-top: 50px
+			// &::after
+			// 	content: ""
+			// 	width: 17px
+			// 	height: 22px
+			// 	position: absolute
+			// 	top: -5px
+			// 	right: -20px
+			// 	background: url("../images/stars_icon.png") no-repeat 0 0
+		ul
+			margin-top: 20px
+			li
+				padding-bottom: 90px
+				margin-top: 100px
 				position: relative
 				&::after
 					content: ""
-					margin-left: 8%
-					width: 84%
-					height: 1px
+					width: 712px
+					height: 2px
 					background: $white
 					position: absolute
 					bottom: 0
-					left: 0
+					left: 50%
+					transform: translateX(-50%)
 				&:last-child
 					padding-bottom: 0
 					&::after
 						width: 0
 				&.step01
 					margin-top: 0
+					dl
+						padding-bottom: 400px
 					& > div
 						padding-top: 219px
 						background: url("../images/img-ticket-step1.png") no-repeat 0 0
 						background-position: center 14px
 						background-size: 100%
+						#lottie01
+							width: 700px
+							height: 650px
+							padding-left: 50px
+							position: absolute
+							bottom: 0
+							left: 50%
+							transform: translateX(-50%)
 				&.step02
-					.stepCon
-						padding-top: 214px
+					& > div
+						padding-top: 370px
 						background: url("../images/img-ticket-step2.png") no-repeat 0 0
-						background-position: center -35px
-						background-size: 100%
-						.goBtn
-							background-color: $point
-					.userInfo
-						display: none
-						margin-bottom: 0
-						margin-top: 50px
-						padding: 0
-						&.on
-							display: block
-						&:after
-							content: ""
-							display: none
-						& > ul
-							padding: 0 8%
+						background-position: center top
+						background-size: 562px
 				&.step03
 					& > div
 						padding-top: 251px
 						background: url("../images/img-ticket-step3.png") no-repeat 0 0
 						background-position: center 30px
 						background-size: 100%
-				& > dl
+					.add-svg
+						.svg-W
+							margin: 0 !important
+							width: 100% !important
+
+							#lottie03
+								width: 700px
+								height: 393px
+								margin: 0 auto
+
+				dl
 					margin-top: 10px
 					dt
-						+font16()
+						+font20()
 						font-family: 'Noto Sans KR black'
 						display: inline-block
 						color: $point
 					dd
 						font-family: 'Noto Sans KR black'
-						font-size: 24px
-						line-height: 1.6
-						letter-spacing: -0.48px
+						+font28()
 				& > div
-					& > p
-						font-size: 14px
-						line-height: 1.4
-						letter-spacing: -0.28px
-						font-family: 'Noto Sans KR bold'
-						&.second
-							margin-top: 10px
-					& > div
-						padding: 0 8%
+					p
+						+font20()
+					div
 						.arrowBtn
-							width: 270px
+							width: 100%
 							font-size: 16px
 							letter-spacing: -0.32px
 							display: inline-block
-							&::after
-								right: 7%
 							&:nth-child(2)
-								background-color: $bgColor05
+								background-color: $wrongColor
 								&::after
 									right: 70px
 						&.ticketBtn
@@ -1530,192 +1433,153 @@ $oneColor: #8674e2
 	.eventNotice
 		margin-top: 170px		
 /************** ticket 01 ***************/
-.ticketAniWrap
-	display: none
-	position: fixed
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
-	background-color: $black
-	z-index: 20
-	overflow-y: scroll
-	.ticketAni
+#content.ticketInfo
+	padding-top: 20px
+
+	.ticketAniWrap
 		display: none
-		position: relative
-		margin-top: 90px
+		position: fixed
+		top: 0
+		left: 0
 		width: 100%
 		height: 100%
-		background-color: $white
-		border-top-left-radius: 40px
-		border-top-right-radius: 40px
+		background-color: $black
+		z-index: 5
+		overflow-y: scroll
 		&.on
 			display: block
-			animation: ticketing 2s both
-			
-			.ticketing
-				padding-top: 122px
-				padding-bottom: 613px
-				display: none
-				background: url("../images/img-loading-1.png") no-repeat 0 0
-				background-position: center 100px
-				&.on
-					display: block
-					animation: antiOpacity 2s both
-					animation-delay: 2s
-				h5
-					+colorGradation()
-					font-size: 40px
-					text-align: center
-					color: $mainColor
+		.ticketAni
+			display: none
+			position: relative
+			margin-top: 90px
+			width: 100%
+			height: 100%
+			background-color: $white
+			border-top-left-radius: 40px
+			border-top-right-radius: 40px
 
-			.issuanceTicket
-				display: none
-				padding-top: 122px
-				&.on
-					display: block
-					animation: opacity 1s both
-					animation-delay: 3s
-				dl
-					text-align: center
-					padding-bottom: 120px
-					background: url("../images/img-gift-ticket-bg.png") no-repeat 0 0
-					background-position: center 150px
-					background-size: 375px auto
-					dt
-						+colorGradation()
-						font-size: 40px
-						letter-spacing: -0.8px
-						line-height: 48px
-						color: $mainColor
-					dd
-						font-size: 16px
-						margin-top: 10px
-						font-family: 'Noto Sans KR black'
-						color: $black
-						line-height: 1.6
-						letter-spacing: -0.28px
-						color: #3617ce
-				a
-					text-align: center
-					width: 203px
-			.winning
-				display: none
-				position: relative
-				&.on
-					display: block
-					animation: opacity 1s both
-					&::before
-						display: block
-						animation: opacity 3s infinite
-				&::before
-					content: ""
-					position: absolute
-					top: 0
-					left: 0
-					width: 100%
-					height: 160px
-					background: url("../images/img-particle.png") no-repeat 0 0
-					background-size: 92% auto
-					background-position: center 20px
-					display: none
-
-				dl
-					text-align: center
-					padding: 0 8%
-					margin-bottom: 30px
-					padding-top: 122px
-					dt
-						+colorGradation()
-						font-size: 40px
-						color: $mainColor
-					dd
-						font-size: 16px
-						margin-top: 10px
-						font-family: 'Noto Sans KR black'
-						color: $black
-						line-height: 1.6
-						letter-spacing: -0.32px
-				div
-					text-align: center
-				.mms
-					font-size: 12px
-					font-family: 'Noto Sans KR black'
-					color: $black
-					line-height: 1.4
-					letter-spacing: -0.24px
-					margin-top: 20px
-						
-/************** delivery ***************/
-.delivery
-	margin-bottom: 100px
-	.quickMenu02
-		li
-			a
-				opacity: 0.4
-	.deliveryEvent
-		text-align: center
-		background: url("../images/Delivery_KV_1.png") no-repeat 0 0
-		background-position: center 75px
-		padding: 0 8%
-		.deliverContent
-			padding-top: 210px
-			p
-				+font16()
-		& > p
-			margin-top: 20px
-			+font16()
-			color: $bgColor05
-			font-family: 'Noto Sans KR black'
-		.userInfoWrap
 			&.on
-				& > .cartBtn
+				display: block
+				animation: ticketing 2s both
+				
+				.ticketing
+					padding-top: 122px
+					padding-bottom: 613px
 					display: none
-				.userInfo
-					display: block
-			.cartBtn
-				width: 299px
-				text-align: center
-			.userInfo
-				margin-top: 80px
-				display: none
-				padding: 0
-				margin-bottom: 0
-				&::after
+					background: url("../images/img-loading-1.png") no-repeat 0 0
+					background-position: center 100px
+					&.on
+						display: block
+						animation: antiOpacity 2s both
+						animation-delay: 2s
+					h5
+						+colorGradation()
+						font-size: 40px
+						text-align: center
+
+				.issuanceTicket
 					display: none
-				.cartBtn
-					margin-top: 38px
-					label
+					padding-top: 122px
+					&.on
+						display: block
+						animation: opacity 1s both
+						animation-delay: 3s
+					dl
+						text-align: center
+						padding-bottom: 195px
+						background: url("../images/img-ticket-thumb.png") no-repeat 0 0
+						background-position: center 220px
+						dt
+							+colorGradation()
+							font-size: 40px
+							letter-spacing: -0.8px
+							line-height: 48px
+						dd
+							font-size: 16px
+							margin-top: 10px
+							font-family: 'Noto Sans KR black'
+							color: $black
+							line-height: 1.6
+							letter-spacing: -0.32px
+					a
+						text-align: center
+						width: 203px
+				.winning
+					display: none
+					padding-top: 122px
+					position: relative
+					&.on
+						display: block
+						animation: opacity 1s both
+						&::before
+							display: block
+							animation: opacity 3s infinite
+					&::before
+						content: ""
 						position: absolute
 						top: 0
 						left: 0
 						width: 100%
-						height: 100%
-						cursor: pointer
-						padding-top: 44px
+						height: 160px
+						background: url("../images/img-particle.png") no-repeat 0 0
+						background-size: 92% auto
+						background-position: center 20px
+						display: none
+
+					dl
+						text-align: center
+						padding: 0 8%
+						margin-bottom: 50px
+						dt
+							+colorGradation()
+							font-size: 40px
+						dd
+							font-size: 16px
+							margin-top: 10px
+							font-family: 'Noto Sans KR black'
+							color: $black
+							line-height: 1.6
+							letter-spacing: -0.32px
+					div
+						text-align: center
+					.mms
+						font-size: 12px
+						font-family: 'Noto Sans KR black'
+						color: $black
+						line-height: 1.4
+						letter-spacing: -0.24px
+						margin-top: 51px
+						
+/************** delivery ***************/
+.delivery
+	.deliveryEvent
+		text-align: center
+		background: url("../images/delivery_KV_1.png") no-repeat 0 0
+		background-position: center 170px
+		padding: 0 8%
+		.deliverContent
+			padding-top: 600px
+			p
+				+font20()
+		& > p
+			margin-top: 30px
+			+font28()
+			color: $bgColor05
+			font-family: 'Noto Sans KR black'
 		.arrowBtn
-			width: 299px
-			background: $point url("../images/11.png") no-repeat 0 0
+			width: 100%
+			background: $bgColor02 url("../images/11.png") no-repeat 0 0
 			background-position: 28px center
-			padding-left: 84px
-			height: 76px
-			+font16()
-			display: flex
-			align-items: center
-			text-align: left
-			line-height: 1.2
-			
+			padding-left: 60px
 			&::after
 				right: 25px
-				top: 50%
-				margin-top: -5px
 	.deliveryInfo
+		margin: 0 auto
 		position: relative
-		width: 84%
+		width: 712px
 		border-radius: 30px
-		margin-left: 8%
-		margin-top: 80px
-		padding: 30px 0 36px 0
+		margin-top: 50px
+		padding: 30px 0 57px 0
 		text-align: center
 		& > span
 			+borderGradient()
@@ -1732,39 +1596,28 @@ $oneColor: #8674e2
 			&:first-child
 				margin-top: 0
 			dt
-				+colorGradation()
-				font-size: 16px
-				line-height: 1.6
-				letter-spacing: -0.32px
+				+font20()
 				color: $point
+				font-family: 'Noto Sans KR black'
 			dd
 				margin-top: 10px
-				font-size: 14px
-				line-height: 1.4
-				letter-spacing: -0.28px
-				font-family: 'Noto Sans KR bold'
+				+font20()
 				&.winner
-					text-align: center
 					strong
-						display: block
 						text-align: center
+						display: block
 					span
 						display: block
 						text-align: center
 		& > div
 			margin-top: 20px
 			h4
-				+colorGradation()
-				font-size: 16px
-				line-height: 1.6
-				letter-spacing: -0.32px
+				+font20()
 				color: $point
+				font-family: 'Noto Sans KR black'
 			ul
 				li
-					font-size: 14px
-					line-height: 1.4
-					letter-spacing: -0.28px
-					font-family: 'Noto Sans KR bold'
+					+font20()
 					padding-top: 35px
 					background: url("../images/icon_2.png") no-repeat 0 0
 					background-position: center 10px
@@ -1773,10 +1626,7 @@ $oneColor: #8674e2
 						background-position: center 10px
 						
 					h5
-						font-size: 14px
-						line-height: 1.4
-						letter-spacing: -0.28px
-						font-family: 'Noto Sans KR bold'
+						+font20()
 					div
 						margin-top: 10px
 						display: flex
@@ -1787,95 +1637,85 @@ $oneColor: #8674e2
 							&:first-child
 								border-left: 0
 							dt
-								font-size: 14px
-								line-height: 1.4
-								letter-spacing: -0.28px
-								font-family: 'Noto Sans KR bold'
+								+font20()
 							dd
 								color: $lightGray
-								font-size: 12px
-								letter-spacing: -0.24px
-								line-height: 1.4
-		.arrowBtn
-			width: 281px
-			font-size: 16px
-			font-family: 'Noto Sans KR bold'
-			background-color: $mainColor
-			&::after
-				right: 20px
+								+font14()
+								font-family: 'Noto Sans KR black'
 	.deliveryStep
-		margin-top: 80px
+		margin-top: 130px
 		padding: 0 8%
-		width: 100%
-		text-align: center
 		h5
-			+colorGradation()
-			font-size: 24px
-			line-height: 1.6
-			letter-spacing: -0.48px
-			position: relative
-			display: inline-block
-			&::after
-				content: ""
-				width: 17px
-				height: 22px
-				position: absolute
-				top: -5px
-				right: -20px
-				background: url("../images/stars_icon.png") no-repeat 0 0
+			text-align: center
+			+font60()
 		& > ul
-			margin-top: 10px
+			margin-top: 20px
 			& > li
 				position: relative
-				margin-top: 50px
-				padding-bottom: 35px
+				padding-bottom: 110px
 				&:first-child
 					margin-top: 0
+					& > dl
+						padding-bottom: 435px
 				&::after
 					content: ""
-					width: 100%
+					width: 712px
 					height: 1px
 					background: $white
 					position: absolute
-					bottom: 0
-					left: 0
+					bottom: 85px
+					left: 50%
+					transform: translateX(-50%)
 				&:last-child
+					padding-bottom: 0
 					&::after
 						width: 0
 				& > dl	
 					text-align: center
+					margin: 0 auto
+					width: 712px
+					padding-bottom: 325px
 					dt
-						+colorGradation()
-						font-size: 16px
-						line-height: 1.6
-						letter-spacing: -0.32px
-						display: inline-block
-						color: $point
-					dd
-						font-size: 24px
-						line-height: 1.6
-						letter-spacing: -0.48px
+						+font20()
 						font-family: 'Noto Sans KR black'
+						color: $point
+						display: inline-block
+					dd
+						+font28()
 						span
-							+font14()
+							+font16()
 							display: block
 							margin-top: 10px
-				.arrowBtn
-					width: 299px
-					background: $point url("../images/11.png") no-repeat 0 0
-					background-position: 28px center
-					padding-left: 84px
-					height: 76px
-					+font16()
-					display: flex
-					align-items: center
-					text-align: left
-					line-height: 1.2
-					
-					&::after
-						right: 25px
-						top: 50%
-						margin-top: -5px
+				
+				#lottie01
+					width: 700px
+					height: 500px
+					padding-left: 50px
+					position: absolute
+					top: 0
+					left: 50%
+					transform: translateX(-50%)
+				#lottie04
+					width: 500px
+					height: 500px
+					position: absolute
+					top: 0
+					left: 50%
+					transform: translateX(-50%)
+				#lottie05
+					width: 500px
+					height: 500px
+					position: absolute
+					top: 50px
+					left: 50%
+					transform: translateX(-50%)
+				#lottie06
+					width: 500px
+					height: 500px
+					position: absolute
+					top: 0
+					left: 50%
+					transform: translateX(-50%)
 				.userInfoWrap
 					&.on
 						& > .cartBtn
@@ -1883,9 +1723,9 @@ $oneColor: #8674e2
 						.userInfo
 							display: block
 					.cartBtn
-						width: 299px
 						text-align: center
 					.userInfo
+						margin-top: 80px
 						display: none
 						padding: 0
 						margin-bottom: 0
@@ -1893,7 +1733,6 @@ $oneColor: #8674e2
 							display: none
 						.cartBtn
 							margin-top: 38px
-							width: 299px
 							label
 								position: absolute
 								top: 0
@@ -1908,52 +1747,52 @@ $oneColor: #8674e2
 		text-align: center
 		& > dl
 			dt
-				font-size: 16px
-				line-height: 1.6
-				letter-spacing: -0.32px
-				font-family: 'Noto Sans KR bold'
+				+font20()
 			dd
-				+colorGradation()
-				font-size: 44px
-				line-height: 1.1
-				letter-spacing: -0.88px
+				+font60()
 				color: $mainColor
-		.rankSlide
-			padding: 0 8%
-			margin-top: 37px
-			ul
-				li
-					width: 144px
-					padding: 28px 17px
-					background-color: #1a1a1a
-					margin-left: 8px
-					border-radius: 5px
+				font-family: 'Noto Sans KR black'
 
+		.rankSlide
+			margin-top: 37px
+			width: 100%
+			ul
+				margin: 0 auto
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-around
+				width: 628px
+				align-items: center
+				li
+					width: 202px
+					height: 305px
+					padding: 19px 20px
+					background-color: rgba(255, 255, 255, 0.1)
+					position: relative
 					&:first-child
 						margin-left: 0
+					&:nth-child(n+4)
+						margin-top: 10px
 					& > div
-						height: 70px
 						overflow: hidden
-						width: 108px
 						text-align: center
+						height: 96px
 						img
 							height: 100%
 					dl
-						margin-top: 13px
+						margin-top: 29px
 						text-align: left
 						dt
-							font-size: 12px
-							line-height: 1.4
-							letter-spacing: -0.24px
+							+font20()
 						dd
-							font-size: 12px
-							margin-top: 9px
-							letter-spacing: -0.24px
-							line-height: 1.4
+							+font14()
 							a
 								display: block
 								color: rgba(255, 255, 255, 0.4)
-								position: relative
+								position: absolute
+								bottom: 20px
+								left: 20px
+								
 								&::after
 									content: ""
 									width: 10px
@@ -1962,23 +1801,13 @@ $oneColor: #8674e2
 									border-right: 1px solid rgba(255, 255, 255, 0.4)
 									transform: rotate(45deg)
 									position: absolute
-									top: 3px
-									left: 55px
-			.swiper-scrollbar
-				width: 100%
-				height: 2px
-				margin-top: 30px
-				position: relative
-				background-color: $lightGray
-				overflow: hidden
-				.swiper-scrollbar-drag
-					height: 2px
-					background: $mainColor
-					position: absolute
-					bottom: 0
-					left: 0
+									top: 4px
+									left: 65px
+	.pcQr
+		& > div
+			margin-top: 145px
 	.eventNotice
-		margin-top: 94px
+		margin-top: 266px
 
 .imageFile
 	display: none
@@ -2031,13 +1860,13 @@ $oneColor: #8674e2
 					width: 200px
 					height: auto
 			&.step01
-				label
-					cursor: pointer
-					position: absolute
-					top: 0
-					left: 0
-					width: 100%
-					height: 100%
+					label
+						cursor: pointer
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
 			&.step02
 				.btnWrap
 					margin-top: 31px
@@ -2072,20 +1901,20 @@ $oneColor: #8674e2
 /************** OLKL PASS ***************/
 .spacePass
 	.passTab
-		padding-top: 207px
-		margin-top: 20px
+		padding-top: 560px
 		// tab Title
 		& > ul
 			display: flex
 			justify-content: space-around
-			background-color: rgba(54, 23, 206, 0.445)
+			background: rgba(54, 23, 206, 0.445)
 			width: 84%
 			margin-left: 8%
 			border-radius: 14px
 			position: relative
 			transition: .3s
-			z-index: 2
 			&.moveLeft
+				margin: 0 auto
+				width: 315px
 				&::before
 					content: ""
 					position: absolute
@@ -2094,10 +1923,12 @@ $oneColor: #8674e2
 					width: 50%
 					height: 100%
 					border-radius: 14px
-					background-color: $mainColor
+					background: $mainColor
 					transition: .3s
 					transform: translateX(0)
 			&.moveRight
+				margin: 0 auto
+				width: 315px
 				&::before
 					content: ""
 					position: absolute
@@ -2106,7 +1937,7 @@ $oneColor: #8674e2
 					width: 50%
 					height: 100%
 					border-radius: 14px
-					background-color: $mainColor
+					background: $mainColor
 					transition: .3s
 					transform: translateX(100%)
 			li			
@@ -2115,18 +1946,15 @@ $oneColor: #8674e2
 					display: block
 					height: 54px
 					padding-top: 16px
-					line-height: 26px
 					text-align: center
 					color: $white
-					letter-spacing: -0.32px
-					font-family: 'Noto Sans KR black', sans-serif
 					position: relative
+					+font16()
 				&.on
 					a
 						&:after
 							content: ""
 							background: url("../images/icon_planet.png") no-repeat 0 0
-							background-size: 100%
 							position: absolute
 							top: -10px
 							left: 50%
@@ -2139,24 +1967,24 @@ $oneColor: #8674e2
 			margin-top: 60px
 			ul
 				.leftTab
-					padding-bottom: 110px
+					padding-bottom: 100px
 					&::before
 						content: ""
 						position: absolute
 						top: 0
 						left: 0
 						width: 100%
-						height: 375px
+						height: 600px
 						background: url("../images/pass_bg.png") no-repeat 0 0
 						background-size: cover
 						background-position: center
-						z-index: 0
+						z-index: -1
 					.monthCost
 						position: relative
-						width: 134px
-						height: 60px
+						width: 160px
+						height: 80px
 						text-align: center
-						margin: 36px auto
+						margin: 40px auto 28px auto
 						em
 							position: absolute
 							top: -20px
@@ -2168,9 +1996,9 @@ $oneColor: #8674e2
 							color: rgba(255, 255, 255, 0.616)
 							&::before
 								content: ""
-								width: 70px
+								width: 85px
 								height: 2px
-								background-color: $bgColor05
+								background: $bgColor05
 								position: absolute
 								top: 8px
 								left: 40px
@@ -2181,12 +2009,12 @@ $oneColor: #8674e2
 								background-color: $bgColor05
 								position: absolute
 								top: 11px
-								left: 102px
+								left: 119px
 								transform: rotate(-45deg)
 							
 						strong
-							+font16()
-							line-height: 60px
+							+font20()
+							line-height: 80px
 							position: absolute
 							top: 0
 							left: 0
@@ -2200,7 +2028,7 @@ $oneColor: #8674e2
 								height: 16px
 								position: absolute
 								top: -10px
-								right: 0
+								right: 10px
 								background: url("../images/illust_all.png") no-repeat 0 0
 							&::after
 								content: ""
@@ -2208,7 +2036,7 @@ $oneColor: #8674e2
 								height: 16px
 								position: absolute
 								top: -16px
-								right: -13px
+								right: -3px
 								background: url("../images/illust_all_small.png") no-repeat 0 0
 						span
 							position: absolute
@@ -2222,142 +2050,149 @@ $oneColor: #8674e2
 							text-indent: -9999px
 							border: 2px solid $bgColor05
 					& > p
-						+font16()
+						+font20()
 						text-align: center
 						&.second
 							margin-top: 10px
 					.arrowBtn
-						width: 70%
+						width: 305px
 						text-align: center
+						margin-top: 50px
+						background-color: $mainColor
 						&::after
-							right: 15%
+							right: 40px
+							top: 23px
 					.passAllMerit
 						padding: 0 8%
-						margin-top: 92px
+						margin-top: 130px
 						& > dl
 							text-align: center
 							dt
-								+font40()
+								+font60()
 								+colorGradation()
 								position: relative
 								display: inline-block
 								&::after
 									content: ""
-									width: 17px
-									height: 22px
+									width: 28px
+									height: 36px
 									position: absolute
 									top: -5px
 									right: -20px
 									background: url("../images/stars_icon.png") no-repeat 0 0
+									background-size: 100%
 							dd
 								margin-top: 10px
-								font-size: 24px
-								letter-spacing: -0.48px
-								line-height: 1.6
-								font-family: 'Noto Sans KR bold'
+								+font28()
 						ul
-							margin-top: 30px
+							margin: 0 auto
+							margin-top: 40px
+							width: 712px
+
 							li
 								border-radius: 20px
-								margin-top: 10px
+								margin-top: 20px
 								position: relative
 								&.listAmazon
 									background: linear-gradient(100deg, rgba(0, 204, 255, 0.288), rgba(126, 20, 255, 0.329))
 									&::before
 										content: ""
 										position: absolute
-										bottom: 14px
-										right: 18px
-										width: 87px
-										height: 27px
+										top: 50%
+										right: 40px
+										width: 161px
+										height: 50px
 										background: url("../images/logo_amazon.png") no-repeat 0 0
 										background-size: 100%
+										transform: translateY(-50%)
 								&.list11
 									background: linear-gradient(100deg, rgba(255, 255, 255, 0.336), rgba(244, 49, 65, 0.363))
 									&::before
 										content: ""
 										position: absolute
-										bottom: 14px
-										right: 18px
-										width: 67px
-										height: 26px
-										background: url("../images/logo_11.png") no-repeat 0 0
+										top: 50%
+										right: 40px
+										width: 107px
+										height: 46px
+										background: url("../images/logo_11_l.png") no-repeat 0 0
 										background-size: 100%
+										transform: translateY(-50%)
 								&.listGoogle
 									background: linear-gradient(100deg, rgba(114, 228, 215, 0.329), rgba(0, 123, 139, 0.336))
 									&::before
 										content: ""
 										position: absolute
-										bottom: 14px
-										right: 18px
-										width: 67px
-										height: 39.4px
+										top: 50%
+										right: 40px
+										width: 143px
+										height: 85px
 										background: url("../images/svg/google_logo.svg") no-repeat 0 0
 										background-size: 100%
+										transform: translateY(-50%)
 								a
 									display: block
 									color: $white
-									padding: 19px 27px
+									padding: 30px 50px
 									dl
 										dt
-											letter-spacing: -0.32px
-											font-family: 'Noto Sans KR bold'
-											line-height: 1.6
+											+font28()
 										dd
-											font-size: 12px
-											line-height: 1.4
-											letter-spacing: -0.24
+											+font20()
 									div
 										margin-top: 29px
-										font-size: 12px
-										letter-spacing: -0.24px
-										line-height: 1.4
+										+font14()
 										color: $white
 										opacity: 0.4
 										position: relative
 										&::after
 											content: ""
 											position: absolute
-											top: 3px
-											left: 55px
+											top: 5px
+											left: 70px
 											+moreArrow()
 						& > div
-							padding-top: 34px
-							margin-top: 20px
+							padding-top: 64px
+							margin-top: 30px
 							background: url("../images/plus_icon.png") no-repeat 0 0
 							background-position: top center
+							background-size: 44px 44px
 							p
 								text-align: center
-								+font16()
+								+font20()
 								strong
 									display: inline-block
-									+font24Gradation()
+									+colorGradation()
+									+font28()
+									font-family: 'Noto Sans KR black'
 									color: $point
-									margin: 10px 0
 					h5
-						margin-top: 100px
+						margin-top: 130px
 						margin-bottom: 30px
 						+colorGradation()
 						text-align: center
-						font-size: 24px
-						line-height: 1.6
-						letter-spacing: -0.48px
+						+font28()
 					.partnersSlide
-						padding: 0 8%
+						width: 715px
+						margin: 0 auto
 						ul
+							display: flex
+							align-items: center
+							flex-wrap: wrap
 							li
-								width: 148px
+								width: 170px
 								background-color: rgba(87, 87, 87, 0.411)
-								padding: 10px 12px 10px 12px
+								padding: 15px 20px
 								position: relative
 								border-radius: 10px
-								margin-left: 6px
-								&:first-child
+								margin-left: 10px
+								&:nth-child(4n+1)
 									margin-left: 0
+								&:nth-child(n+5)
+									margin-top: 10px
 								&::before
 									content: ""
 									position: absolute
-									top: 110px
+									top: 120px
 									left: 0
 									width: 100%
 									height: 1px
@@ -2375,18 +2210,20 @@ $oneColor: #8674e2
 											height: 60px
 									span
 										position: absolute
-										top: 87px
+										top: 95px
 										left: 50%
 										transform: translateX(-50%)
-										+font12()
+										+font14()
 										width: 100%
 										text-align: center
 									dl
-										padding-top: 36px
-										+font12()
+										padding-top: 50px
 										dt
-											height: 50px
+											height: 100px
+											text-align: center
+											+font16()
 										dd
+											+font14()
 											margin-top: 10px
 											color: $white
 											opacity: 0.4
@@ -2394,43 +2231,31 @@ $oneColor: #8674e2
 											&::after
 												content: ""
 												position: absolute
-												top: 3px
-												left: 55px
+												top: 5px
+												left: 65px
 												+moreArrow()
-						.swiper-scrollbar
-							width: 100%
-							overflow: hidden
-							height: 2px
-							margin-top: 30px
-							position: relative
-							background-color: $lightGray
-							.swiper-scrollbar-drag
-								height: 2px
-								background: $mainColor
-								position: absolute
-								bottom: 0
-								left: 0				
+											
 				.rightTab
 					display: none
 					text-align: center
-					padding-bottom: 180px
+					padding-bottom: 120px
 					&::before
 						content: ""
 						position: absolute
 						top: 0
 						left: 0
 						width: 100%
-						height: 375px
+						height: 600px
 						background: url("../images/pass_mini.png") no-repeat 0 0
 						background-size: cover
 						background-position: center
-						z-index: 0
+						z-index: -1
 					.monthCost
 						position: relative
-						width: 134px
-						height: 60px
+						width: 160px
+						height: 80px
 						text-align: center
-						margin: 36px auto
+						margin: 40px auto 40px auto
 						em
 							position: absolute
 							top: -20px
@@ -2442,7 +2267,7 @@ $oneColor: #8674e2
 							color: rgba(255, 255, 255, 0.616)
 							&::before
 								content: ""
-								width: 70px
+								width: 85px
 								height: 2px
 								background: $bgColor05
 								position: absolute
@@ -2455,11 +2280,11 @@ $oneColor: #8674e2
 								background-color: $bgColor05
 								position: absolute
 								top: 11px
-								left: 102px
+								left: 119px
 								transform: rotate(-45deg)
 						strong
-							+font16()
-							line-height: 60px
+							+font20()
+							line-height: 80px
 							position: absolute
 							top: 0
 							left: 0
@@ -2473,7 +2298,7 @@ $oneColor: #8674e2
 								height: 16px
 								position: absolute
 								top: -10px
-								right: 0
+								right: 10px
 								background: url("../images/illust_all.png") no-repeat 0 0
 							&::after
 								content: ""
@@ -2481,7 +2306,7 @@ $oneColor: #8674e2
 								height: 16px
 								position: absolute
 								top: -16px
-								right: -13px
+								right: -3px
 								background: url("../images/illust_all_small.png") no-repeat 0 0
 							
 						span
@@ -2496,39 +2321,42 @@ $oneColor: #8674e2
 							display: inline-block
 							text-indent: -9999px
 					& > p
-						+font16()
+						+font20()
 						text-align: center
+						&.second
+							margin-top: 10px
 					.arrowBtn
-						width: 70%
+						background-color: $mainColor
+						width: 287px
 						text-align: center
 						&::after
-							right: 15%
+							right: 40px
+							top: 23px
 					.passAllMerit
-						padding: 0 8%
-						margin-top: 92px
+						margin-top: 109px
 						& > dl
 							text-align: center
 							dt
-								+font40()
+								+font60()
 								+colorGradation()
 								position: relative
 								display: inline-block
 								&::after
 									content: ""
-									width: 17px
-									height: 22px
+									width: 28px
+									height: 36px
 									position: absolute
 									top: -5px
-									right: -20px
+									right: -30px
 									background: url("../images/stars_icon.png") no-repeat 0 0
+									background-size: 100%
 							dd
 								margin-top: 10px
-								font-size: 24px
-								letter-spacing: -0.48px
-								line-height: 1.6
-								font-family: 'Noto Sans KR bold'
+								+font28()
 						& > ul
-							margin-top: 30px
+							margin: 0 auto
+							margin-top: 40px
+							width: 712px
 							li
 								text-align: left
 								border-radius: 20px
@@ -2539,75 +2367,76 @@ $oneColor: #8674e2
 									&::before
 										content: ""
 										position: absolute
-										bottom: 14px
-										right: 18px
-										width: 87px
-										height: 27px
+										top: 50%
+										right: 40px
+										width: 161px
+										height: 50px
 										background: url("../images/logo_amazon.png") no-repeat 0 0
 										background-size: 100%
+										transform: translateY(-50%)
 								&.list11
 									background: linear-gradient(100deg, rgba(255, 255, 255, 0.336), rgba(244, 49, 65, 0.363))
 									&::before
 										content: ""
 										position: absolute
-										bottom: 14px
-										right: 18px
-										width: 67px
-										height: 26px
-										background: url("../images/logo_11.png") no-repeat 0 0	
-										background-size: 100%						
+										top: 50%
+										right: 40px
+										width: 107px
+										height: 46px
+										background: url("../images/logo_11_l.png") no-repeat 0 0
+										background-size: 100%
+										transform: translateY(-50%)						
 								a
 									display: block
 									color: $white
-									padding: 19px 27px
+									padding: 30px 50px
 									dl
 										dt
-											letter-spacing: -0.32px
-											font-family: 'Noto Sans KR bold'
-											line-height: 1.6
+											+font28()
 										dd
-											font-size: 12px
-											line-height: 1.4
-											letter-spacing: -0.24
+											+font20()
 									div
-										margin-top: 29px
-										font-size: 12px
-										letter-spacing: -0.24px
-										line-height: 1.4
+										margin-top: 17px
+										+font14()
 										color: $white
 										opacity: 0.4
 										position: relative
 										&::after
 											content: ""
 											position: absolute
-											top: 3px
-											left: 55px
+											top: 4px
+											left: 70px
 											+moreArrow()
 						& > div
-							padding-top: 34px
+							margin: 0 auto
+							padding-top: 60px
 							margin-top: 20px
 							background: url("../images/plus_icon.png") no-repeat 0 0
 							background-position: top center
+							background-size: 44px 44px
+							width: 712px
 							p
 								text-align: center
-								+font16()
+								+font20()
 							ul
+								margin-top: 17px
 								display: flex
+								align-items: center
+								flex-wrap: wrap
 								justify-content: center
-								margin-top: 10px
 								li
-									width: 148px
+									width: 170px
 									background-color: rgba(87, 87, 87, 0.411)
-									padding: 0 12px 10px 12px
+									padding: 15px 20px
 									position: relative
 									border-radius: 10px
-									margin-left: 6px
+									margin-left: 10px
 									&:first-child
 										margin-left: 0
 									&::before
 										content: ""
 										position: absolute
-										top: 105px
+										top: 120px
 										left: 0
 										width: 100%
 										height: 1px
@@ -2616,27 +2445,29 @@ $oneColor: #8674e2
 										display: block
 										color: $white
 										div
-											height: 85px
+											height: 76px
 											display: flex
 											justify-content: center
 											align-items: center
-											img
-												width: 60px
-												height: 60px
 										span
 											position: absolute
-											top: 80px
+											top: 95px
 											left: 50%
 											transform: translateX(-50%)
-											+font12()
+											+font14()
 											width: 100%
 										dl
-											padding-top: 36px
+											padding-top: 50px
 											+font12()
 											text-align: left
 											dt
-												height: 34px
+												height: 110px
+												+font20()
+												text-align: center
+												em 
+													+font14()
 											dd
+												+font14()
 												margin-top: 10px
 												color: $white
 												opacity: 0.4
@@ -2644,19 +2475,19 @@ $oneColor: #8674e2
 												&::after
 													content: ""
 													position: absolute
-													top: 3px
-													left: 55px
+													top: 5px
+													left: 70px
 													+moreArrow()
-
+	.pcQr
+		margin-bottom: 89px
+		& > div
+			margin-top:	0
 /************** mad ***************/
 .mad
 	padding-bottom: 111px
-	.quickMenu02
-		li
-			a
-				opacity: 0.4
 	.madVideo
-		padding: 0 8%
+		width: 712px
+		margin: 0 auto
 		div
 			text-align: center
 			width: 100%
@@ -2667,34 +2498,33 @@ $oneColor: #8674e2
 				height: auto
 			span
 				position: absolute
-				bottom: 20px
+				bottom: 67px
 				left: 50%
 				transform: translateX(-50%)
-				+font12()
+				+font20()
 			img
 				width: 100%
 	.madPass
 		& > dl
 			text-align: center
-			margin-top: 32px
+			margin-top: 58px
+			margin-bottom: 130px
 			dt
-				+font24Gradation()
+				+font60()
+				margin-bottom: 40px
 			dd
-				+font16()
-				margin-top: 12px
+				+font20()
 		h5
-			+font24()
+			margin-top: 130px
+			+font28()
 			text-align: center
-			margin-top: 100px
 			margin-bottom: 30px
 		.madSlide
-			
-			padding: 0 8%
+			width: 712px
 			ul
 				li
 					overflow: hidden
 					div
-						max-height: 250px
 						display: flex
 						img
 							border-radius: 30px
@@ -2713,58 +2543,49 @@ $oneColor: #8674e2
 					position: absolute
 					bottom: 0
 					left: 0
-
 		& > ul
-			margin-top: 100px
-			padding: 0 8%
+			width: 712px
+			margin: 0 auto
+			margin-top: 120px
 			li
-				margin-top: 10px
+				margin-top: 20px
 				width: 100%
 				border-radius: 20px
 				position: relative
-				a
-					&::after
-						content: ""
-						position: absolute
-						top: 27px
-						right: 5%
-						width: 129px
-						height: 93px
-						background: url("../images/img-shop-tmb.png") no-repeat 0 0
-
 				&:first-child
 					margin-top: 0
 					a
 						&::after
 							content: ""
 							position: absolute
-							top: 30px
-							right: 5%
-							width: 96px
-							height: 88px
+							top: 21px
+							right: 91px
+							width: 150px
+							height: 138px
 							background: url("../images/img-ticket-tmb-1.png") no-repeat 0 0
+							background-size: 100%
 				a
-					padding: 20px
+					padding: 30px 50px
 					display: block
 					background-color: rgba(0, 0, 0, 0.1)
-					border-radius: 20px
-					span
+					border-radius: 30px
+					&::after
+						content: ""
 						position: absolute
-						top: 0
-						left: 0
-						width: 100%
-						height: 100%
-						+borderGradient()
-						z-index: -1
-						border-radius: 20px
-						text-indent: -9999px
+						top: 27px
+						right: 63px
+						width: 181px
+						height: 132px
+						background: url("../images/img-shop-tmb.png") no-repeat 0 0
+						background-size: 100%
 					dl
 						dt
+							padding-right: 101px
 							color: $white
-							+font24()
-							padding-right: 106px
+							+font28()
 						dd
-							color: $lightGray
+							color: $white
+							opacity: 0.6
 							font-size: 14px
 							line-height: 20px
 							letter-spacing: -0.28px
@@ -2775,12 +2596,22 @@ $oneColor: #8674e2
 								content: ""
 								width: 10px
 								height: 10px
-								border-top: 1px solid $lightGray
-								border-right: 1px solid $lightGray
+								border-top: 1px solid $white
+								border-right: 1px solid $white
 								position: absolute
 								top: 5px
 								left: 98px
 								transform: rotate(45deg)
+					span
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						+borderGradient()
+						z-index: -1
+						border-radius: 30px
+						text-indent: -9999px
 			
 /************** partners ***************/
 .partners
@@ -2823,9 +2654,6 @@ $oneColor: #8674e2
 							justify-content: center
 							align-items: center
 							width: 105px
-							img
-								width: 80px
-								height: 80px
 								
 						dd
 							+font14()
@@ -2930,24 +2758,64 @@ $oneColor: #8674e2
 			margin-top: 40px
 			h5
 				+font16()
-			> ul
-				> li
+			ul
+				li
 					text-align: center
 					padding: 20px 20px 30px 20px
 					margin-top: 10px
 					width: 100%
 					height: 100%
 					position: relative
-					border: 1px solid $mainColor
 					border-radius: 30px
-					background-color: rgba(54, 23, 206, 0.24)
-					& + li 
-						margin-top: 25px
+					background: linear-gradient(100deg, rgba(0, 204, 255, 0.247), rgba(126, 20, 255, 0.247))
+					span
+						text-indent: -9999px
+						+borderGradient()
+						background-image: linear-gradient($bgColor, $bgColor), linear-gradient(100deg, $frontColor, $backColor)
+						z-index: -1
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						border-radius: 30px
+					&.listTicket
+						h4
+							background: url("../images/Component 3.png") no-repeat 0 0
 					&.listNone
 						padding: 81px 0
+						background: transparent
+						&::before
+							content: ""
+							background-color: $black
+							width: 100%
+							height: 100%
+							position: absolute
+							top: 0
+							left: 0
+							z-index: -1
+							border: 1px solid transparent
+							background-origin: border-box
+							background-clip: content-box, border-box
+							border-radius: 30px
+						&::after
+							content: ""
+							border: 2px dotted $black
+							width: 100%
+							height: 100%
+							position: absolute
+							top: 0
+							left: 0
+							z-index: -2
+							border-radius: 30px
 						strong
 							+font16Gradation()
 							width: 100%
+							
+						span
+							background-image: linear-gradient($bgColor, $bgColor), linear-gradient(100deg, $frontColor, $backColor)
+							z-index: -2
+
 					h4
 						text-align: left
 						padding-left: 70px
@@ -2957,13 +2825,9 @@ $oneColor: #8674e2
 						line-height: 26px
 					div
 						margin: 10px 0
-						&.captureImg
-							img
-								width: 100px
 						img
 							width: 100%
-						&.btns-W 
-							margin: 10px 0 0
+
 					dl
 						+font16()
 						font-family: 'Noto Sans KR black'
@@ -2980,39 +2844,10 @@ $oneColor: #8674e2
 					a
 						margin-top: 10px
 						width: 100%
-					.goBtn
-						background-color: $point
-				.infos
-					margin: 30px 0 0 
-					.info-col 
-						& + .info-col 
-							margin: 30px 0 0
-						strong
-							display: block
-							text-align: left
-							+font16()
-					.info-cont
-						margin: 18px 0 0
-						text-align: left
-						&.noMargin
-							margin: 0px 0 0
-						+font12()
-						p
-							margin: 0px 0 0
-							line-height: 16.8px
-						a 
-							+font12()
-							color: #fff
-						ul li
-							text-indent: -14px
-							padding-left: 15px
-    						
-
-
 
 /************** mypageInfo ***************/	
 #content.mypageInfo
-	padding-top: 90px
+	padding-top: 20px
 	.userInfo 
 		.userInfo-input div 
 			.reissuance
@@ -3028,8 +2863,7 @@ $oneColor: #8674e2
 /************** 미디어쿼리 ***************/
 @media only screen and (max-width: 370px)
 	.delivery .deliveryInfo .arrowBtn
-		+font14()
-		width: 240px
+		+font12()
 		line-height: 50px
 @media only screen and (max-width: 320px)
 	.partners .listPartners > div ul li > div div
@@ -3049,14 +2883,8 @@ $oneColor: #8674e2
 		width: 100%		
 	.delivery .deliveryEvent .arrowBtn
 		+font14()
-		//line-height: 50px
+		line-height: 50px
 		width: 100%		
-	.delivery .deliveryEvent .userInfoWrap .cartBtn
-		width: 100%
-	.delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn
-		width: 100%
-	.delivery .deliveryStep > ul > li .userInfoWrap .cartBtn
-		width: 100%
 	.delivery .deliveryInfo .arrowBtn::after
 		right: 5%
 	.delivery .deliveryStep > ul > li > dl.step02

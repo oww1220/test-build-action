@@ -216,24 +216,25 @@ namespace CommonUI {
                     $('body').addClass('overlay-hidden');
 
                     //레이어팝업 열림
-                    $target.show();
+                    $target.css({ display: 'flex' });
 
                     const delay0 = yield Async.wait(100);
 
+                    //레이어팝업 열림
                     $target.addClass('active');
 
-                    const delay1 = yield Async.wait(700);
+                    //const delay1 = yield Async.wait(700);
 
                     //구름삭제
-                    $target.find('.layer-top').addClass('no-cloud');
+                    //$target.find('.layer-top').addClass('no-cloud');
 
                     //로켓발사
-                    $target.find('.btn-rocket-open').addClass('open');
-
-                    const delay2 = yield Async.wait(300);
+                    //$target.find('.btn-rocket-open').addClass('open');
 
                     //테두리 변경
                     $target.find('.layer-cont').addClass('active');
+
+                    const delay2 = yield Async.wait(300);
 
                     //닫기버튼활성화
                     $target.find('.btn-rocket-close').addClass('open');
@@ -258,25 +259,27 @@ namespace CommonUI {
                     $target.find('.btn-rocket-close').removeClass('open');
                     $target.find('.btn-rocket-close').addClass('close');
 
-                    //const delay1 = yield Async.wait(300);
+                    $target.find('.layer-cont').removeClass('active');
+                    const delay1 = yield Async.wait(1000);
 
                     //레이어팝업 닫힘
                     $target.removeClass('active');
+
                     //$('.btn-rocket-open').removeClass('open');
 
-                    const delay2 = yield Async.wait(1000);
+                    //const delay2 = yield Async.wait(1000);
 
                     //로켓 위로
-                    $target.find('.btn-rocket-open').addClass('close');
-                    $target.find('.btn-rocket-open').removeClass('open');
+                    //$target.find('.btn-rocket-open').addClass('close');
+                    //$target.find('.btn-rocket-open').removeClass('open');
 
-                    //const delay3 = yield Async.wait(300);
+                    const delay3 = yield Async.wait(300);
 
                     //초기화
                     $target.find('.btn-rocket-close').removeClass('close');
-                    $target.find('.btn-rocket-open').removeClass('close');
-                    $target.find('.layer-top').removeClass('no-cloud');
-                    $target.find('.layer-cont').removeClass('active');
+                    //$target.find('.btn-rocket-open').removeClass('close');
+                    //$target.find('.layer-top').removeClass('no-cloud');
+                    //$target.find('.layer-cont').removeClass('active');
 
                     const delay4 = yield Async.wait(100);
 

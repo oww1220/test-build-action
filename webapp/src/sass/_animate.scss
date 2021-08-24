@@ -12,7 +12,7 @@ $bgColor03: #171718;
 $bgColor04: #0e1c30;
 $bgColor05: #5e45d8;
 $bgColor06: #1a1a1a;
-$lightGray: rgba(255, 255, 255, 0.4);
+$lightGray: #575757;
 $wrongColor: #ff404e;
 $point: #ff404e;
 $darkGray: #c9c9c9;
@@ -102,8 +102,8 @@ $oneColor: #8674e2;
 @mixin moreArrow() {
 	width: 10px;
 	height: 10px;
-	border-top: 1px solid $white;
-	border-right: 1px solid $white;
+	border-top: 1px solid #c9c9c9;
+	border-right: 1px solid #c9c9c9;
 	transform: rotate(45deg);
 }
 
@@ -116,6 +116,8 @@ $oneColor: #8674e2;
     font: 0/0 a;
 }
 
+
+
 #webgl-universe {
     background: radial-gradient(circle farthest-corner at center top, #000, #000);
     position: fixed;
@@ -126,6 +128,9 @@ $oneColor: #8674e2;
     width: 100%;
     height: 100%;
 	z-index: -3
+}
+#wrap::before {
+    display: none;
 }
 #webgl-planet {
     width: 100% !important;
@@ -165,7 +170,6 @@ header nav > div {
     pointer-events: none;
     transition: transform 0.7s;
     z-index: -2;
-    display: none;
     &.active {
         transform: scale(1);
     }
@@ -182,7 +186,7 @@ header nav > div {
     right: 0;
     background-size: cover;
     transform: scale(1);
-    transform-origin: 50% 46%;
+    transform-origin: 50% 32%;
     transition: transform 2.5s, background-color 2.3s;
     z-index: 111;
 
@@ -200,8 +204,10 @@ header nav > div {
         justify-content: center;
         background-color: #fff;
         overflow: hidden;
-        width: 200px;
-        height: 100px;
+        > div {
+            width: 700px;
+            height: 380px;
+        }
     }
 
     &.active {
@@ -210,9 +216,7 @@ header nav > div {
     }
 }
 
-
 #content{
-    transition: opacity .5s;
     &.hide {
         opacity: 0;
     } 
@@ -227,24 +231,26 @@ header nav > div {
         top: 0;
         left: 0;
         width: 100%;
-        height: 547px;
-        background: url('../images/tour-cont-bg.png') no-repeat 0 0;
+        height: 1000px;
+        background: url('../images/tour-cont-bg.png') no-repeat center;
         background-size: cover;
-        background-position: center;
         z-index: 0;
     }
     .btn-back {
-        background: url('../images/tour-cont-prev.png') center center no-repeat;
-        background-size: 40px;
-        width: 40px;
-        height: 40px;
-        @include Hide_txt;
-        position: absolute;
-        top:20px;
-        left:20px;
+        width: 305px;
+        height: 56px;
+        display: inline-flex;
+        @include font20;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 30px;
+        position: relative;
+        color: #000;
     }
     .tourTop {
         margin-bottom: 30px;
+        text-align: center;
         .subTitle {
             dt {
                 line-height: 1.6;
@@ -255,66 +261,76 @@ header nav > div {
                 position: relative;
                 &:after {
                     content: "";
-                    width: 17px;
-                    height: 22px;
+                    width: 28px;
+                    height: 36px;
                     position: absolute;
                     top: -5px;
                     right: 0px;
                     background: url('../images/stars_icon.png') no-repeat 0 0;
+                    background-size: 100%;
                 }
             }
         }
         .ribbon {
             background: url('../images/tour-cont-ribbon.png') center center no-repeat;
-            background-size: 218px;
-            width: 218px;
-            height: 45px;
-            margin: 16px auto 0;
+            background-size: 436px;
+            width: 436px;
+            height: 90px;
+            margin: 29px auto 0;
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-top: 8px;
+            padding-top: 15px;
             box-sizing: border-box;
             span {
                 display: block;
-                @include font14;
+                @include font24;
             }
         }
         .tourTop-info {
-            margin-top: 27px;
+            margin-top: 50px;
             P {
-                @include font14();
+                @include font20();
                 text-align: center;
                 + p {
                     margin-top: 30px;
                 }
             }
         }
+        .btn-back {
+            margin-top: 37px;
+        }
     }
 
     .tourCont {
-        padding: 101px 0 0;
+        padding: 170px 0 0;
+        text-align: center;
         .tit {
             position: relative;
-            @include font24;
+            @include font40;
+            line-height: 1.5;
             text-align: center;
             color: #ff404e;
             &:before {
                 content: "";
-                width: 68px;
-                height: 52px;
+                width: 100px;
+                height: 76.8px;
                 position: absolute;
-                top: -57px;
+                top: -95px;
                 left:50%;
-                margin-left: -34px;
+                margin-left: -50px;
                 background: url('../images/tour-cont-universe.png') no-repeat 0 0;
-                background-size: 68px;
+                background-size: 100px;
             }
+        }
+        .btn-back {
+            margin-top: 60px;
         }
     }
     .tourCont-list {
-        padding:0 8%;
+        width: 712px;
+        margin: 0 auto;
         > li {
             margin-top: 20px;
         }
@@ -327,23 +343,23 @@ header nav > div {
             > strong {
                 display: block;
                 text-align: center;
-                @include font20;
+                @include font28;
             }
             .cover {
-                width: 204px;
-                margin: 20px auto 0;
+                width: 153px;
+                margin: 40px auto 0;
                 img {
                     width: 100%;
                 }
             }
             .infos {
-                margin-top: 20px;
+                margin-top: 40px;
                 p {
                     text-align: center;
-                    @include font14;
+                    @include font20;
                     color: #7f7d8f;
                     + p{
-                        margin-top:20px;
+                        margin-top:40px;
                     }
                 }
             }
@@ -359,13 +375,26 @@ body.overlay-hidden {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 55;
-    display: none;
+    z-index: -1;
     width: 100%;
     height: 100%;
-    transition: transform 1s;
-    transform: translateY(120%);
+    // transition: transform 1s;
+    // transform: translateY(120%);
+    opacity: 0;
+    display: none;
     //transform: translateY(53%);
+	&::after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		opacity: 0.7;
+		z-index: -1;
+	}
+		
     .layer-top {
         display: flex;
         justify-content: center;
@@ -374,28 +403,44 @@ body.overlay-hidden {
         transition: all 1s;
         margin-bottom: -5px;
         height: 28vw;
+		z-index: 100;
         &.no-cloud {
             background-position: center -300%;
-            padding-bottom: 0;
         }
     }
 
     .layer-cont {
-        height: calc(100% - 26vw);
+		width: 510px;
+		max-height: 100vh;
+        //height: auto;
         background-color: #fff;
         overflow-x: hidden;
         overflow-y: auto;
         transition: all 0.5s;
+		opacity: 1;
+        border-radius: 60px;
+        transition: transform 1s;
+        transform: translateY(120%);
+		&.w600 {
+            width: 600px;
+        }
+		&::-webkit-scrollbar {
+			width:4px; 
+			height:4px;
+		}
+		&::-webkit-scrollbar-thumb {
+			transition: all .5s;
+		}
         .layer-cont-in {
             color: #000;
             //padding: 20px;
-            padding-bottom: 30px;
-            opacity: 0;
+            padding-bottom: 61px;
+            opacity: 1;
         }
         &.active {
-            border-radius: 37px 37px 0 0;
+            transform: translateY(0);
+
             .layer-cont-in {
-                opacity: 1;
             }
         }
     }
@@ -408,6 +453,7 @@ body.overlay-hidden {
         background-color: transparent;
         border: 0;
         width: 12vw;
+        display: none;
         img {
             width: 100%;
         }
@@ -421,21 +467,23 @@ body.overlay-hidden {
 
     .btn-rocket-close {
         position: absolute;
-        top: 8vw;
+        top: 100px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
         left: 50%;
-        margin-left: -5vw;
+        margin-left: -20px;
         background: url('../images/rocket-close.png') no-repeat center;
         background-size: 70%;
         background-color: #fff;
         border-radius: 100%;
-        width: 10vw;
-        height: 10vw;
+        width: 40px;
+        height: 40px;
         border: 0;
         font: 0/0 a;
         transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
         transform-origin: 50% 100%;
         filter: blur(40px);
         opacity: 0;
+        z-index: 1;
         &.open {
             animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
         }
@@ -509,6 +557,18 @@ body.overlay-hidden {
                 text-align: center;
             }
         }
+        > div {
+            text-align: center;
+            dl {
+                dt {
+                    text-align: center;
+                }
+                dd {
+                    text-align: center;
+                }
+            }
+        }
+    
     }
 
     .imageFileView {
@@ -518,7 +578,7 @@ body.overlay-hidden {
             dl {
                 margin-bottom: 30px;
                 dt {
-                    background: #3617ce;
+                    background: linear-gradient(to right, #00cdff, #7d14ff);
                     color: transparent;
                     -webkit-background-clip: text;
                     font-family: 'Noto Sans KR black', sans-serif;
@@ -533,12 +593,6 @@ body.overlay-hidden {
                     letter-spacing: -0.48px;
                     color: #000000;
                     font-family: 'Noto Sans KR black';
-                    span {
-                        display: block;
-                        @include font14;
-                        color: #ff404e;
-                        margin-top: 10px;
-                    }
                 }
             }
             div {
@@ -549,13 +603,6 @@ body.overlay-hidden {
                     height: auto;
                 }
             }
-			&.step01 {
-				.goBtn{
-					width: 185px;
-                    background-color: #ff404e;
-				}
-			}
-				
             &.step02 {
                 .btnWrap {
                     display: flex;
@@ -570,11 +617,6 @@ body.overlay-hidden {
                         }
                     }
                 }
-				& > div {
-					img {
-						border: 2px solid #6414ff;
-					}
-				}
             }
             &.step03 {
                 padding-top: 60%;
@@ -582,7 +624,7 @@ body.overlay-hidden {
                 background: url('../images/btn-check.png') no-repeat 0 0;
                 background-position: center 20%;
                 p {
-                    background: #3617ce;
+                    background: linear-gradient(to right, #00cdff, #7d14ff);
                     color: transparent;
                     -webkit-background-clip: text;
                     font-family: 'Noto Sans KR black', sans-serif;
@@ -608,12 +650,12 @@ body.overlay-hidden {
             background-size: contain;
             margin-top: 47px;
             .sub-tit {
-                @include font16;
+                @include font20;
                 color: #000;
                 text-align: center;
             }
             h4 {
-                @include font40;
+                @include font60;
                 text-align: center;
                 color: #3617ce;
                 margin-top: 10px;
@@ -629,9 +671,9 @@ body.overlay-hidden {
                 }
             }
             ul {
-                margin-top:20px;
+                margin-top:28.6px;
                 li {
-                    @include font14;
+                    @include font20;
                     text-align: center;
                     + li {
                         margin-top:10px;
@@ -644,10 +686,10 @@ body.overlay-hidden {
             padding: 0 8%;
             .list-tit {
                 background: url('../images/luckyView-ribbon.png') center center no-repeat;
-                background-size: 218px;
-                width: 218px;
-                height: 45px;
-                margin: 30px auto 13px;
+                background-size: 327px;
+                width: 327px;
+                height: 67.5px;
+                margin: 50.5px auto 13px;
                 text-align: center;
                 display: flex;
                 align-items: center;
@@ -655,7 +697,7 @@ body.overlay-hidden {
                 box-sizing: border-box;
                 span {
                     display: block;
-                    @include font14;
+                    @include font24;
                     color: #fff;
                     position: relative;
                     top: -5px;
@@ -665,19 +707,21 @@ body.overlay-hidden {
                 > ul {
                     flex-wrap: wrap;
                     display: flex;
+                    width: 440px;
+                    margin: 0 auto;
                     li {
-                        width: calc(50% - 7.5px);
+                        width: 210px;
                         box-sizing: border-box;
                         background: url('../images/luckyView-bg-stars.png') no-repeat center center;
                         background-size: cover;
                         border-radius: 30px;
                         overflow: hidden;
-                        margin-top: 15px;
+                        margin-top: 20px;
                         &:nth-child(odd) {
-                            margin-right: 7.5px;
+                            margin-right: 10px;
                         }
                         &:nth-child(even) {
-                            margin-left: 7.5px;
+                            margin-left: 10px;
                         }
                     }
                 }
@@ -688,16 +732,16 @@ body.overlay-hidden {
                     flex-flow: column;
                     padding: 30px 0;
                     .cover {
-                        padding: 0 25px;
+                        padding: 0 30px;
                         img {
                             width: 100%;
                         }
                     }
                     .infos {
                         padding: 0 5px;
-                        margin-top: 15px;
+                        margin-top: 30px;
                         text-align: center;
-                        @include font12;
+                        @include font20;
                         @include BreakWord;
                         color:#fff;
                         line-height: 1.4;
@@ -707,55 +751,22 @@ body.overlay-hidden {
         }
     }
 
-    .agreeView {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        padding: 50px 8% 0;
-        .agree-col {
-            + .agree-col {
-                margin-top: 30px;
-            }
-            .tit {
-                @include font14;
-                margin-bottom: 10px;
-            }
-            .cont {
-                @include font12;
-                margin-bottom: 20px;
-            }
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                border-spacing: 0;
-                border: 0 none;
-                word-break: keep-all;
-                th {
-                    @include BreakWord;
-                    border: 1px solid #000;
-                    white-space: normal;
-                    padding: 11px 5px;
-                    text-align: center;
-                }
-                td {
-                    @include BreakWord;
-                    border: 1px solid #000;
-                    white-space: normal;
-                    padding: 11px 5px;
-                    text-align: center;
-                }
-            }
-        }
-    }
-
     &.active {
-        display: block;
-        transform: translateY(0);
+        //transform: translateY(0);
+        opacity: 1;
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: center;
+        z-index: 55;
     }
     &.low-zIndex {
         z-index: 45;
     }
 }
+
+_:-ms-fullscreen, :root .layer-rocket .layer-cont { max-height: 700px; }
+
 
 body.fixed {
     overflow: hidden;
@@ -795,8 +806,7 @@ body.fixed {
 }
 
 /*티켓레이어 수정*/
-.ticketAniWrap {
-	z-index: 100;
+#content.ticketInfo .ticketAniWrap {
     display: block;
     background-color: transparent;
     overflow:hidden;
@@ -819,14 +829,6 @@ body.fixed {
                 overflow: hidden;
             }
         }
-        .issuanceTicket {
-            span {
-                display: block;
-                @include font12;
-                text-align: center;
-                color: #ff404e;
-            }
-        }
         .winning.add-svg {
             height: 100%;
             .svg-W {
@@ -841,40 +843,12 @@ body.fixed {
                 transform: translate(-50%, -50%);
                 overflow:hidden;
                 > div {
-                    transform: scale(1.7);
-                    transform-origin: 60% 60%;
+                    transform: scale(1.6);
+                    transform-origin: center;
                 }
             }   
             .svg-cont {
                 position: relative;
-            }
-            .winning-lists {
-                li {
-                    display: none;
-                    padding-bottom: 50px;
-                }
-                .cover {
-                    width: 252px;
-                    margin: 0 auto;
-                    img {
-                        width: 100%;
-                    }
-                }
-                .infos {
-                    margin-top: 30px;
-                    .num {
-                        @include font14;
-                        color:#000;
-                    }
-                    .guide {
-                        @include font12;
-                        color: #ff404e;
-                        margin-top: 4px;
-                    }
-                }
-                .btns-W {
-                    margin-top: 30px;
-                }
             }
         }
 
@@ -906,33 +880,6 @@ body.fixed {
     
 }
 
-.btns-W {
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-    .btn-normal {
-        width: 100%;
-        max-width: 275px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 12px 40px;
-        border-radius: 30px;
-        color: #fff;
-        @include font16;
-        &.red {
-            background-color: #ff404e;
-        }
-        &.blue {
-            background-color: #3617ce;
-        }
-    }
-    button + button {
-        margin-top: 10px;
-    }
-}
-
 /*add svg*/
 .ticket .ticketParticipate ul li.step01 {
     .add-svg {
@@ -941,7 +888,6 @@ body.fixed {
         .svg-W {
             padding: 0;
             width: 116%;
-            margin: -15% 0 -15% -8%;
             //transform: scale(1.3);
         }
     }
@@ -968,18 +914,6 @@ body.fixed {
             padding: 0;
             width: 116%;
             margin: -15% 0 -15% -8%;
-        }
-    }
-}
-
-.delivery .deliveryStep > ul > li > dl.step02 {
-    &.add-svg {
-        background-image: none;
-        padding: 0;
-        .svg-W {
-            padding: 0;
-            width: 116%;
-            margin: -20% 0 -20% -8%;
         }
     }
 }
@@ -1014,9 +948,9 @@ body.fixed {
     .add-svg {
         .svg-W {
             position: absolute;
-            top: 20px;
-            right: 0;
-            width: 150px;
+            top: 8px;
+            right: 40px;
+            width: 230px;
         }
         &::after {
             display: none;
@@ -1030,15 +964,16 @@ body.fixed {
     .add-svg {
         .svg-W {
             position: absolute;
-            top: -10px;
-            right: 0;
-            width: 170px;
+            top: -30px;
+            right: 30px;
+            width: 240px;
         }
         &::after {
             display: none;
         }
     }
 } 
+
 
 .ticket .ticketRewards ul li:first-child {
     &.add-svg {
@@ -1048,9 +983,9 @@ body.fixed {
         }
         .svg-W {
             position: absolute;
-            top: 10px;
-            right: -30px;
-            width: 200px;
+            top: -110px;
+            right: -50px;
+            width: 300px;
         }
     }
 }
@@ -1063,9 +998,9 @@ body.fixed {
         }
         .svg-W {
             position: absolute;
-            top: -70px;
-            right: -40px;
-            width: 230px;
+            top: -150px;
+            right: -75px;
+            width: 350px;
         }
     }
 }

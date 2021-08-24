@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+// import * as THREE from 'three';
 
 export class Stage {
     public renderParam: { width: number; height: number };
@@ -36,17 +36,17 @@ export class Stage {
     }
 
     _setScene() {
-        this.scene = new THREE.Scene();
+        this.scene = new window.THREE.Scene();
     }
 
     _setRender() {
         const elem: any = document.getElementById('webgl-universe');
-        this.renderer = new THREE.WebGLRenderer({
+        this.renderer = new window.THREE.WebGLRenderer({
             canvas: elem,
             alpha: true,
         });
-        this.renderer.setPixelRatio(window.devicePixelRatio);
-        this.renderer.setSize(this.renderParam.width, this.renderParam.height);
+        this.renderer!.setPixelRatio(window.devicePixelRatio);
+        this.renderer!.setSize(this.renderParam.width, this.renderParam.height);
     }
 
     _setCamera() {
@@ -54,7 +54,7 @@ export class Stage {
         const windowHeight = window.innerHeight;
 
         if (!this.isInitialized) {
-            this.camera = new THREE.PerspectiveCamera(120, this.renderParam.width / this.renderParam.height);
+            this.camera = new window.THREE.PerspectiveCamera(125, this.renderParam.width / this.renderParam.height);
         }
 
         this.camera!.aspect = windowWidth / windowHeight;
@@ -64,7 +64,7 @@ export class Stage {
     }
 
     _setFog() {
-        this.scene!.fog = new THREE.Fog(0x000000, 50, 2000);
+        this.scene!.fog = new window.THREE.Fog(0x000000, 50, 2000);
     }
     _render() {
         let rot = 0;
@@ -72,7 +72,7 @@ export class Stage {
         const radian = (rot * Math.PI) / 180;
         this.camera!.position.x = 1000 * Math.sin(radian);
         this.camera!.position.z = 1000 * Math.cos(radian);
-        this.camera!.lookAt(new THREE.Vector3(0, 0, 0));
+        this.camera!.lookAt(new window.THREE.Vector3(0, 0, 0));
         this.renderer!.render(this.scene!, this.camera!);
     }
 
@@ -97,28 +97,28 @@ export class Mesh {
     }
 
     _setMesh() {
-        const geometry = new THREE.Geometry();
-        for (let i = 0; i < 6000; i++) {
-            const star = new THREE.Vector3();
-            star.x = THREE.MathUtils.randFloatSpread(2000);
-            star.y = THREE.MathUtils.randFloatSpread(2000);
-            star.z = THREE.MathUtils.randFloatSpread(2000);
+        const geometry = new window.THREE.Geometry();
+        for (let i = 0; i < 20000; i++) {
+            const star = new window.THREE.Vector3();
+            star.x = window.THREE.MathUtils.randFloatSpread(2000);
+            star.y = window.THREE.MathUtils.randFloatSpread(2000);
+            star.z = window.THREE.MathUtils.randFloatSpread(2000);
 
             geometry.vertices.push(star);
         }
-        const texture = new THREE.TextureLoader().load('../../images/ico-star.png');
-        const material = new THREE.PointsMaterial({
+        const texture = new window.THREE.TextureLoader().load('../../images/ico-star.png');
+        const material = new window.THREE.PointsMaterial({
             color: 0xffffff,
-            size: 3,
+            size: 1,
             map: texture,
         });
         material.alphaTest = 0.5;
-        this.mesh = new THREE.Points(geometry, material);
+        this.mesh = new window.THREE.Points(geometry, material);
         this.stage.scene.add(this.mesh);
     }
 
     _render() {
-        this.mesh!.rotation.y += 0.0005;
+        this.mesh!.rotation.y += 0.0002;
     }
 
     onRaf() {
