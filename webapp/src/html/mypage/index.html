@@ -56,7 +56,7 @@
 								2021년 10월 13일(수) 발표됩니다.
 							</p>
 							<div class="btns-W">
-								<a href="javascript:void(0)" data-celebration="1" class="btn-normal blue openLuck">우주 럭키 박스 열기</a>
+								<a href="javascript:void(0)" data-celebration="4" class="btn-normal blue openLuck">우주 럭키 박스 열기</a>
 							</div>
 						</li>
 						<li class="listDelivery" data-aos="fade-up">
@@ -442,41 +442,36 @@
 		
 		function ticketAni(){
 			$('.openLuck').click(function(){
-	
 				var targetIdx = $(this).data('celebration')-1;
 				var $targetList = $('.winning-lists li');
 				$targetList.hide();
 				$targetList.eq(targetIdx).show();
-	
+
 				$('.ticketAniWrap').addClass('on');
 				$('.ticketAni').addClass('on');
-				$('.ticketing').addClass('on');
+				$('.issuanceTicket').removeClass('on');
+				setTimeout(function(){
+					$('.winning').addClass('on');
+					celebration.init().play(); 
+				},500);
+
 				$('html, body').css({
 					'overflow':'hidden'
 				})
-				setTimeout(function(){
-					$('.ticketing').removeClass('on');
-					$('.issuanceTicket').addClass('on');
-				},3000);
+
 			});
+
+
 			$('.ticketAniWrap .closeBtn').click(function(){
 				$(this).parent().removeClass('on');
 				$('.issuanceTicket').removeClass('on');
+				$('.winning').removeClass('on');
 				celebration.reset();
 				$('html, body').css({
 					'overflow':'auto'
 				})
 			});
-			$('.issuanceTicket > a').click(function(){
-				$('.issuanceTicket').removeClass('on');
-				$('.winning').addClass('on');
-	
-				celebration.init().play(); 
-				
-				$('.ticketAniWrap .closeBtn').click(function(){
-					$('.winning').removeClass('on');
-				});
-			});
+			
 		};
 		ticketAni();
 	
