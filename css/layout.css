@@ -167,7 +167,7 @@ header nav > div p span { font-weight: normal; }
 
 #wrap .quickMenu02 li { width: 100%; }
 
-#wrap .quickMenu02 li a { display: block; text-align: center; color: #ffffff; padding-top: 42px; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
+#wrap .quickMenu02 li a { display: block; text-align: center; color: #ffffff; padding-top: 42px; font-size: 12px; letter-spacing: -0.24px; line-height: 1.4; font-family: 'Noto Sans KR bold'; margin-top: 5px; }
 
 #wrap .quickMenu02 li.on { background-color: #3617ce; border-radius: 27px; }
 
