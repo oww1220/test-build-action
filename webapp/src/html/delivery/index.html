@@ -25,7 +25,7 @@
 				</li>
 				<li class="menuMad">
 					<a href="/madmonster"
-					ga_category="T우주_우주 택배" ga_action="클릭" ga_label="T우주X매드몬스터">T우주X<br />매드몬스터</a>
+					ga_category="T우주_우주 택배" ga_action="클릭" ga_label="T우주X매드몬스터">T우주x<br />매드몬스터</a>
 				</li>
 			</ul>
 			<article class="deliveryEvent" data-aos="fade-up">
@@ -36,7 +36,7 @@
 				<div class="deliverContent">
 					<p>
 						아마존 해외 직구 제품을 하나만 사도<br />
-						 무료로 배송되는 T우주!<br />
+						무료로 배송되는 T우주!<br />
 						<br />
 						이번만큼은 배송비뿐만 아니라<br />
 						해외 직구 비용까지 T우주가 책임집니다!<br />
@@ -164,14 +164,14 @@
 							<div>
 								<dl>
 									<dt>
-										500만원<br/>
+										500만 원<br/>
 										SK pay 포인트
 									</dt>
 									<dd>1명</dd>
 								</dl>
 								<dl>
 									<dt>
-										100만원<br/>
+										100만 원<br/>
 										SK pay 포인트
 									</dt>
 									<dd>3명</dd>
@@ -194,10 +194,10 @@
 				<dl>
 					<dt>당첨자 발표</dt>
 					<dd class="winner">
-						<span>1주 차(8월 31일 - 9월 6일)</span> → <strong>9월 10일 (금)</strong><br />
-						<span>2주 차(9월 7일 - 12일)</span> → <strong>9월 17일 (금)</strong><br />
-						<span>3주 차(9월 15일 - 20일)</span> → <strong>9월 24일 (금)</strong><br />
-						<span>4주 차(9월 21일 - 26일)</span> → <strong>10월 1일 (금)</strong><br />
+						<span>1주 차(8. 31 - 9. 6 응모)</span> → <strong>9월 10일 (금)</strong><br />
+						<span>2주 차(9. 7 - 12 응모)</span> → <strong>9월 17일 (금)</strong><br />
+						<span>3주 차(9. 15 - 20 응모)</span> → <strong>9월 24일 (금)</strong><br />
+						<span>4주 차(9. 21 - 26 응모)</span> → <strong>10월 1일 (금)</strong><br />
 						<span>최종 당첨자</span> → <strong>10월 13일 (수)</strong>
 					</dd>
 				</dl>
@@ -350,7 +350,7 @@
 						</div>
 					</li>
 				</ul>
-				<div class="imageFile">
+				<!-- <div class="imageFile">
 					<div>
 						<a href="javascript:;" class="closeBtn">닫기</a>
 						<div class="step01 on">
@@ -382,7 +382,7 @@
 							<p>등록이 모두<br />완료되었습니다.</p>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</article>
 			<article class="storeRank">
 				<dl>
@@ -725,6 +725,12 @@
 			})();
 			CommonUI.Async.generaterRun(CommonUI.LayerRocket.cashGenerator);
 		});
+
+		$(document).on('click', '.rocket-obj-basket .btn-rocket-close', function(e) {
+			setTimeout(function(){
+				location.reload();
+			},500)
+		});	
 
 
 	</script>
