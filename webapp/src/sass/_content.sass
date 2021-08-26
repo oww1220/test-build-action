@@ -597,8 +597,27 @@ $oneColor: #8674e2
 					top: 23px
 					right: 0
 					+moreArrow()
-
-
+		.selphone-txt
+			position: relative
+			margin-top: 8px
+			padding-left: 15px
+			height: 100%
+			span
+				color: #c9c9c9
+				font-size: 12px
+				line-height: 1.4
+				letter-spacing: -0.24px
+				display: inline-block
+    			height: 34px
+			&:before
+				content: ""
+				position: absolute
+				top: 7px
+				left: 5px;
+				width: 3px
+				height: 3px
+				border-radius: 50%
+				background-color: rgba(255, 255, 255, 0.4)
 		.telecom
 			.select
 				display: inline-block
