@@ -815,9 +815,9 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryInfo > dl dd.winner { text-align: center; }
 
-.delivery .deliveryInfo > dl dd.winner strong { display: block; text-align: center; }
+.delivery .deliveryInfo > dl dd.winner strong { text-align: center; }
 
-.delivery .deliveryInfo > dl dd.winner span { display: block; text-align: center; }
+.delivery .deliveryInfo > dl dd.winner span { font-size: 12px; line-height: 1.4; letter-spacing: -0.24px; text-align: center; }
 
 .delivery .deliveryInfo > div { margin-top: 20px; }
 
