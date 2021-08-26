@@ -149,7 +149,7 @@ header nav > div .btn-drawer-close::after { content: ""; width: 20px; height: 1p
 
 header nav > div ul { padding-top: 35%; }
 
-header nav > div ul li a { display: block; font-size: 32px; color: #ffffff; letter-spacing: -0.64px; line-height: 1.6; font-family: 'Noto Sans KR bold'; }
+header nav > div ul li a { display: block; font-size: 28px; color: #ffffff; letter-spacing: -0.64px; line-height: 1.6; font-family: 'Noto Sans KR bold'; }
 
 header nav > div .logoutBtn { margin-top: 179px; font-size: 16px; line-height: 25px; letter-spacing: -0.32px; font-family: 'Noto Sans KR bold'; color: #ffffff; margin-top: 30px; display: block; }
 
@@ -336,6 +336,12 @@ header nav > div p span { font-weight: normal; }
 .userInfo .userInfo-input div .reissuance { cursor: pointer; position: absolute; bottom: -40px; right: 5px; font-size: 12px; letter-spacing: -0.24px; padding-right: 12px; }
 
 .userInfo .userInfo-input div .reissuance::after { content: ""; position: absolute; top: 23px; right: 0; width: 10px; height: 10px; border-top: 1px solid #ffffff; border-right: 1px solid #ffffff; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.userInfo .userInfo-input .selphone-txt { position: relative; margin-top: 8px; padding-left: 15px; height: 100%; }
+
+.userInfo .userInfo-input .selphone-txt span { color: #c9c9c9; font-size: 12px; line-height: 1.4; letter-spacing: -0.24px; display: inline-block; display-height: 34px; }
+
+.userInfo .userInfo-input .selphone-txt:before { content: ""; position: absolute; top: 7px; left: 5px; width: 3px; height: 3px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.4); }
 
 .userInfo .userInfo-input .telecom .select { display: inline-block; width: 100%; height: 54px; line-height: 54px; position: relative; font-size: 14px; border-radius: 10px; }
 
