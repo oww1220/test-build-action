@@ -1244,7 +1244,7 @@ header nav > div p span { font-weight: normal; }
 
 .partners .listPartners > div ul li > dl dt img { width: 80px; height: 80px; }
 
-.partners .listPartners > div ul li > dl dd { font-size: 14px; letter-spacing: -0.28px; line-height: 1.4; font-family: 'Noto Sans KR bold'; }
+.partners .listPartners > div ul li > dl dd { ine-height: 1.4; font-family: 'Noto Sans KR bold'; letter-spacing: -1.18px; font-size: 14px; }
 
 .partners .listPartners > div ul li > div { padding: 20px 25px 15px 25px; }
 
