@@ -974,8 +974,6 @@ header nav > div p span { font-weight: normal; }
 
 .spacePass .passTab .tabContent { margin-top: 60px; }
 
-.spacePass .passTab .tabContent ul .leftTab { padding-bottom: 110px; }
-
 .spacePass .passTab .tabContent ul .leftTab::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 375px; background: url("../images/pass_bg.png") no-repeat 0 0; background-size: cover; background-position: center; z-index: 0; }
 
 .spacePass .passTab .tabContent ul .leftTab .monthCost { position: relative; width: 134px; height: 60px; text-align: center; margin: 36px auto; }
