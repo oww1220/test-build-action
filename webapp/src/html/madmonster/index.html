@@ -2,6 +2,10 @@
 <html lang="ko">
 	@@include('./../include/head.html')
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZDPRDG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
 	<div id="wrap">
 		<!-- Header -->
 		@@include('./../include/header.html')
@@ -12,13 +16,16 @@
 			<!-- 하단 고정메뉴 -->
 			<ul class="quickMenu02">
 				<li class="menuTicket">
-					<a href="/ticketbooth">티켓팅<br/>이벤트 참여하기</a>
+					<a href="/ticketbooth" 
+					ga_category="T우주_X 매드몬스터" ga_action="클릭" ga_label="티켓팅이벤트참여하기">티켓팅<br/>이벤트 참여하기</a>
 				</li>
 				<li class="menuEvent">
-					<a href="/delivery">장바구니<br />이벤트 참여하기</a>
+					<a href="/delivery"
+					ga_category="T우주_X 매드몬스터" ga_action="클릭" ga_label="장바구니이벤트참여하기">장바구니<br />이벤트 참여하기</a>
 				</li>
-				<li class="menuMad on">
-					<a href="/madmonster">T우주X<br />매드몬스터</a>
+				<li class="menuMad">
+					<a href="/madmonster"
+					ga_category="T우주_X 매드몬스터" ga_action="클릭" ga_label="T우주X매드몬스터">T우주X<br />매드몬스터</a>
 				</li>
 			</ul>
 			<!--main video-->
@@ -48,7 +55,8 @@
 				</dl>
 				<ul>
 					<li data-aos="fade-up">
-						<a href="/ticketbooth" class="add-svg">
+						<a href="/ticketbooth" class="add-svg"
+						ga_category="T우주_X 매드몬스터" ga_action="클릭" ga_label="우주 티켓 부스 이벤트 참여하기">
 							<dl>
 								<dt>우주 티켓 부스</dt>
 								<dd>이벤트 참여하기</dd>
@@ -61,7 +69,8 @@
 						</a>
 					</li>
 					<li data-aos="fade-up">
-						<a href="/delivery" class="add-svg">
+						<a href="/delivery" class="add-svg"
+						ga_category="T우주_X 매드몬스터" ga_action="클릭" ga_label="우주 택배 이벤트 참여하기">
 							<dl>
 								<dt>우주 택배</dt>
 								<dd>이벤트 참여하기</dd>
