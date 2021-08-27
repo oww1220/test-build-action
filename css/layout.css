@@ -627,6 +627,8 @@ header nav > div p span { font-weight: normal; }
 
 .ticket .ticketOpen .eventContent p.second::after { content: ""; width: 100%; height: 100%; position: absolute; top: -80px; left: 0; background: url("../images/Ticket_KV_1.png") no-repeat 0 0; background-position: center top; background-size: 100%; }
 
+.ticket .ticketOpen .eventContent .goBtn.ticketBtn { background-color: #ff404e; }
+
 .ticket .ticketOpen .eventContent .userInfo { display: none; margin-bottom: 0; margin-top: 50px; padding: 0 8%; }
 
 .ticket .ticketOpen .eventContent .userInfo.on { display: block; }
@@ -807,9 +809,9 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryEvent .userInfoWrap .userInfo .cartBtn { margin-top: 38px; }
 
-.delivery .deliveryEvent .userInfoWrap .userInfo .cartBtn span { border: 1px solid #3617ce; background-color: rgba(54, 23, 206, 0.24); }
+.delivery .deliveryEvent .userInfoWrap .userInfo .cartBtn span { border: 1px solid #575757; background-color: #575757; }
 
-.delivery .deliveryEvent .userInfoWrap .userInfo .cartBtn.active span { background-color: #3617ce; }
+.delivery .deliveryEvent .userInfoWrap .userInfo .cartBtn.active span { border: 1px solid #3617ce; background-color: #3617ce; }
 
 .delivery .deliveryEvent .userInfoWrap .userInfo .cartBtn label { position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; padding-top: 44px; }
 
@@ -899,9 +901,9 @@ header nav > div p span { font-weight: normal; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn { margin-top: 38px; width: 299px; }
 
-.delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn span { border: 1px solid #3617ce; background-color: rgba(54, 23, 206, 0.24); }
+.delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn span { border: 1px solid #575757; background-color: #575757; }
 
-.delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn.active span { background-color: #3617ce; }
+.delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn.active span { border: 1px solid #3617ce; background-color: #3617ce; }
 
 .delivery .deliveryStep > ul > li .userInfoWrap .userInfo .cartBtn label { position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; padding-top: 44px; }
 
