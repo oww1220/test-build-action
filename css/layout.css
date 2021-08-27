@@ -1684,6 +1684,8 @@ body.fixed { overflow: hidden; position: fixed; }
 
 .btns-W button + button { margin-top: 10px; }
 
+.btns-W button + a { margin-top: 10px; }
+
 /*add svg*/
 .ticket .ticketParticipate ul li.step01 .add-svg { background-image: none; padding: 0; }
 
