@@ -1252,9 +1252,9 @@ header nav > div p span { font-weight: normal; }
 
 .partners .listPartners > div ul li::before { content: ""; position: absolute; top: 0; left: 129px; width: 1px; height: 100%; border-right: 4px dotted #000000; }
 
-.partners .listPartners > div ul li > dl { padding: 20px 12px 15px 12px; text-align: center; }
+.partners .listPartners > div ul li > dl { padding: 20px 0px 15px 0px; width: 129px; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-.partners .listPartners > div ul li > dl dt { height: 100px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 105px; }
+.partners .listPartners > div ul li > dl dt { height: 100px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 129px; }
 
 .partners .listPartners > div ul li > dl dt img { width: 80px; height: 80px; }
 
@@ -1565,7 +1565,7 @@ body.overlay-hidden { overflow: hidden; }
 
 .layer-rocket .luckyView .luckyView-top .cover { padding: 0 8%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-.layer-rocket .luckyView .luckyView-top .cover img { width: 80%; max-width: 400px; }
+.layer-rocket .luckyView .luckyView-top .cover img { width: 80%; max-width: 400px; margin-right: 5%; }
 
 .layer-rocket .luckyView .luckyView-top ul { margin-top: 20px; }
 
