@@ -19,6 +19,7 @@
 				<a href="javascript:;" class="goBtn" data-celebration="7">(사운드짐)티켓 발급</a>
 				<a href="javascript:;" class="goBtn" data-celebration="8">(보틀웍스)티켓 발급</a>
 				<a href="javascript:;" class="goBtn" data-celebration="9">(T모빌리티)티켓 발급</a>
+				<a href="javascript:;" class="goBtn" data-celebration="10">당첨되지 않았습니다.</a>
 
 			</article>
 			
@@ -76,10 +77,13 @@
 			})
 		});
 		$('.issuanceTicket > a').click(function(){
+			var $targetList = $('.winning-lists li');
+			var $losetarget = $('.winning-lists .loseTicket');
+
 			$('.issuanceTicket').removeClass('on');
 			$('.winning').addClass('on');
 
-			celebration.init().play(); 
+			if(!$losetarget.is(':visible')) celebration.init().play(); 
 			
 			$('.ticketAniWrap .closeBtn').click(function(){
 				$('.winning').removeClass('on');
