@@ -81,6 +81,7 @@
 				<a href="javascript:;" class="goBtn" data-celebration="7">(사운드짐)티켓 발급</a>
 				<a href="javascript:;" class="goBtn" data-celebration="8">(보틀웍스)티켓 발급</a>
 				<a href="javascript:;" class="goBtn" data-celebration="9">(T모빌리티)티켓 발급</a>
+				<a href="javascript:;" class="goBtn" data-celebration="10">당첨되지 않았습니다.</a>
 
 			</article>
 			
@@ -347,8 +348,22 @@
 							<button type="button" class="btn-normal blue">쿠폰 사용하기</button>
 						</div>
 					</li>
-
-
+					<!-- 당첨되지 않았습니다. -->
+					<li class="loseTicket">
+						<div class="lose-cover cover">
+							<img src="../../images/winning-loseticket.png" alt="ticket">
+						</div>
+						<dl>
+							<dt>아쉽게도 당첨되지<br/>않았습니다.</dt>
+							<dd>
+								우주 택배도 참여하여 장바구니를 인증하고,<br/>
+								천만 원 해외 직구 쇼핑 지원금에 신청해 보세요!
+							</dd>
+						</dl>
+						<div class="btns-W">
+							<button type="button" class="btn-normal red">우주 택배 바로가기</button>
+						</div>
+					</li>
 				</ul>
 
 				
@@ -574,10 +589,13 @@
 			})
 		});
 		$('.issuanceTicket > a').click(function(){
+			var $targetList = $('.winning-lists li');
+			var $losetarget = $('.winning-lists .loseTicket');
+
 			$('.issuanceTicket').removeClass('on');
 			$('.winning').addClass('on');
 
-			celebration.init().play(); 
+			if(!$losetarget.is(':visible')) celebration.init().play(); 
 			
 			$('.ticketAniWrap .closeBtn').click(function(){
 				$('.winning').removeClass('on');
