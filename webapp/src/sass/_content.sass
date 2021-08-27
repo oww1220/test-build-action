@@ -197,6 +197,8 @@ $oneColor: #8674e2
 	letter-spacing: -0.32px
 	font-family: 'Noto Sans KR bold'
 	cursor: pointer
+	&.active
+		background-color: #ff404e !important
 .goBtn02
 	display: block
 	text-align: center
@@ -1349,7 +1351,7 @@ $oneColor: #8674e2
 						background-position: center top
 						background-size: 100%
 			.goBtn
-				background-color: $point
+				//background-color: $point
 			
 			.userInfo
 				display: none
@@ -1738,6 +1740,11 @@ $oneColor: #8674e2
 					display: none
 				.cartBtn
 					margin-top: 38px
+					span 
+						border: 1px solid #3617ce
+						background-color: rgba(54, 23, 206, 0.24)
+					&.active span
+						background-color: #3617ce
 					label
 						position: absolute
 						top: 0
@@ -1746,6 +1753,8 @@ $oneColor: #8674e2
 						height: 100%
 						cursor: pointer
 						padding-top: 44px
+					
+
 		.arrowBtn
 			width: 299px
 			background: $point url("../images/11.png") no-repeat 0 0
@@ -1950,6 +1959,11 @@ $oneColor: #8674e2
 						.cartBtn
 							margin-top: 38px
 							width: 299px
+							span 
+								border: 1px solid #3617ce
+								background-color: rgba(54, 23, 206, 0.24)
+							&.active span
+								background-color: #3617ce
 							label
 								position: absolute
 								top: 0
