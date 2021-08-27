@@ -50,6 +50,12 @@
 	}
 	
 	function ticketAni(){
+
+	$('.copyTxt').on('click', function(){
+		var txtValue = $(this).parent().parent().find('.num span').text();
+		//console.log(txtValue);
+	});
+
 		$('.userInfo > .goBtn').click(function(){
 
 			var targetIdx = $(this).data('celebration')-1;
@@ -66,7 +72,7 @@
 			setTimeout(function(){
 				$('.ticketing').removeClass('on');
 				$('.issuanceTicket').addClass('on');
-			},2000);
+			},2);
 		});
 		$('.ticketAniWrap .closeBtn').click(function(){
 			$(this).parent().removeClass('on');
