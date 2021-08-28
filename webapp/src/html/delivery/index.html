@@ -713,10 +713,20 @@
 			// 	});
 			// 	$(".imageFile").removeClass("on")
 			// });
-			$(".imageFile .step01 .goBtn").click(function(){
-				$(".step01").removeClass("on");
-				$(".step02").addClass("on");
+
+			/* step1 img등록후 다음단계*/
+			$('.imageFileView .step01 input').on('change', function(){
+				var imgVal = $(this).val();
+				//console.log(imgVal);
+				if(imgVal) {
+					$('.step01').removeClass('on');
+					$('.step02').addClass('on');
+				}
 			});
+			// $(".imageFileView .step01 .goBtn").click(function(){
+			// 	$(".step01").removeClass("on");
+			// 	$(".step02").addClass("on");
+			// });
 			$(".step02 .btnWrap > a").click(function(){
 				$(".step02").removeClass("on");
 				$(".step03").addClass("on");
