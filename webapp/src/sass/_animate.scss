@@ -132,10 +132,24 @@ $oneColor: #8674e2;
     background-color: transparent;
 }
 
-#content {
-    position: relative;
+/**/
+#wrap {
+    display: flex;
+    flex-flow: column; 
+    min-height: 100vh;
+    align-items: center;
 }
 
+#content {
+    width: 100%;
+    position: relative;
+    margin: 0;
+}
+
+footer {
+    margin-top: auto;
+}
+/**/
 
 header nav > div {
     background: none;
