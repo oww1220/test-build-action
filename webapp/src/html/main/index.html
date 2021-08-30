@@ -239,8 +239,25 @@
 	@@include('./../include/footer_js.html')
 	
 <script>
-	// Main tab slide
 
+	// main intro check
+
+	function introCheck() {
+		if(sessionStorage.getItem('mainIntro')){
+			$('.intro-overlay').hide();
+			return;
+		}
+		else {
+			setTimeout(function(){
+				sessionStorage.setItem('mainIntro', true);
+			}, 4500);
+		}
+	}
+	introCheck();
+	
+
+
+	// Main tab slide
 	function swiperPartner() {
 		var swiperPartnerIns = null;
 		if($('.tabSlide .swiper-slide').length >= 7) {
